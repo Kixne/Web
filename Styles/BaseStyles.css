@@ -1,0 +1,105 @@
+/*********Variables*********/
+:root{
+    --purple: #6400cc;
+
+    --white: #fff;
+    --black: #000;
+    --lightGray: #666;
+    --darkGray: #111;
+    
+    --magenta: #f0f;
+    --cyan: #0ff;
+
+    --background01: #222;
+}
+/*********End variables*********/
+
+
+/*********Importing fonts*********/
+@font-face{
+    font-family: "nunito";
+    src: url(../Sources/Fonts/Nunito-Regular.ttf);
+} 
+@font-face{
+    font-family: "aladin";
+    src: url(../Sources/Fonts/Aladin-Regular.ttf);
+}
+/*********End. Importing fonts*********/
+
+
+/*********Reseting Styles*********/
+body{
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    background: var(--background01);
+}
+body, body *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: nunito;
+    text-decoration: none;
+    color: var(--white);
+}
+a{
+    display: inline-block;
+}
+/*********End. Reseting Styles*********/
+
+/*********Header Styles*********/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: .5em;
+    border-bottom: .1em solid var(--purple);
+    background: var(--black);
+}
+/*Logo Styles*/
+.header__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__logo-text{
+    font-family: aladin;
+    font-size: 2.5em;;
+    margin-left: .1em;
+    padding-top: .1em;
+    color: var(--white);
+    text-shadow: 0.1em 0em .1em var(--purple);
+}
+.header__logo-image{
+    border-radius: 20% 0;
+    border: .1em solid var(--white);
+}
+/*********End. Header Styles*********/
+
+
+.main{
+    margin-top: 4.4em;
+}
+
+
+/*********Footer Styles*********/
+.footer{
+    margin-top: 1em;
+    background: #000;
+    color: #fff;
+    border-top: .1em solid var(--purple);
+}
+.footer__license{
+    padding: .5em;
+    font-size: .8em;
+    text-align: center;
+    color: var(--lightGray);
+}
+/*********End. Footer Styles*********/
