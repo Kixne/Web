@@ -115,6 +115,22 @@ a{
     width: 100%;
     background: linear-gradient( var(--black), #0000);
 }
+.kxWelcome__text{
+    position: absolute;
+    margin-top: 10%;
+    width: 70%;
+    text-align: center;
+    font-size: 2em;
+    font-family: Aladin;
+    color: var(--white);
+}
+.kxWelcome__text-tagLine{
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: .8rem;
+}
 .kxWelcome__ground{
     position: absolute;
     bottom: 0;
