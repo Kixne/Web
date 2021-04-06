@@ -4,16 +4,18 @@
 
     --white: #fff;
     --black: #000;
+    
+    --gray01: #111;
+    --gray02: #222;
+    --gray04: #444;
+    --gray06: #666;
+
+    --background02: red;
+    --background03: #444;
     --lightGray: #666;
-    --darkGray: #111;
     
     --magenta: #f0f;
     --cyan: #0ff;
-
-
-    --background01: #111;
-    --background02: #222;
-    --background03: #444;
 }
 /*********End variables*********/
 
@@ -38,7 +40,6 @@ body, body *{
     max-width: 100%;
     font-family: nunito;
     text-decoration: none;
-    color: var(--white);
 }
 body{
     display: flex;
@@ -46,10 +47,14 @@ body{
     max-width: 1366px;
     margin: 0 auto;
     font-size: 16px;
-    background: var(--background01);
+    background: var(--gray01);
+}
+h2, h3,h4,h5,h6{
+    margin-left: .2rem;
 }
 a{
-    display: inline-block;
+    display: block;
+    color: var(--purple);
 }
 /*********End. Reseting Styles*********/
 
@@ -102,14 +107,55 @@ a{
 /*********End. Header Styles*********/
 
 
-/* Main section */
-.main{
-    margin-top: 4.5em;  /* This value is equal header height */
+/* Nav styles */
+.nav{
+    position: fixed;
+    z-index: 200;
+    right: 0;
+    width: 80%;
+    display: none;
+/*     display: flex; */
+    flex-direction: column;
+    max-height: 100%;
+    background: var(--gray02);
+    color: var(--white);
 }
+.nav__header{
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--black);
+}
+.nav__header-text{
+    padding: 1rem;
+}
+.nav__link{
+    padding: .8rem;
+    padding-left: 1.6rem;
+    color: var(--white);
+}
+.nav__link:hover{
+    background: var(--background03);
+}
+.btnCloseMenu{
+    text-align: center;
+    padding: .8rem;
+    border-top: .1em solid var(--purple);
+    background: linear-gradient(var(--gray01), var(--gray04));
+    color: var(--white);
+}
+.btnCloseMenu:hover{
+    background: linear-gradient( var(--black), var(--gray02));
+}
+/* End Nav styles */
+
+
+/* KxWelcome */
 .kxWelcome{
+    margin-top: 4.4em;
     position: relative;
     display: flex;
     justify-content: center;
+    color: var(--white);    
 }
 .kxWelcome__image{
     width: 100%;
@@ -122,7 +168,7 @@ a{
     text-align: center;
     font-size: 2em;
     font-family: Aladin;
-    color: var(--white);
+    text-shadow: 0 0 .1em var(--cyan), 0 0 .4em var(--magenta), 0 0 .2em var(--magenta);
 }
 .kxWelcome__text-tagLine{
     display: block;
@@ -138,23 +184,41 @@ a{
     width: 100%;
     height: 2em;
     border-radius: 100% 100% 0 0;
-    background: linear-gradient( var(--background03), var(--background02));
+    background: linear-gradient( var(--purple), var(--gray01));
 }
-.groundBottom{
-    width: 100%;
-    height: 2em;
-    border-radius: 0 0 100% 100%;
-    background: linear-gradient( var(--background02), var(--background03));
+/* End KxWelcome */
+
+
+/* Main section */
+.main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 0.4em auto;
+    margin-bottom: 2rem;
+    width: 96%;
+    max-width: 1280px;
 }
-.mainSection{
-    padding: 1em 0;
-    background-color: var(--background02);
+
+.content{
+    background-color: var(--white);
+    border-radius: .8em 0;
+    overflow: hidden;
+    padding: .8rem .4rem;
+}
+
+.mainSection__subSection-header{
+    font-size: 1.75rem;
+    font-family: aladin;
+    margin-left: .2rem;
+}
+.mainSection__subSection-text{
+    padding-left: .8rem;
 }
 /* End. Main section */
 
 /*********Footer Styles*********/
 .footer{
-    margin-top: 1em;
     background: #000;
     color: #fff;
     border-top: .1em solid var(--purple);
@@ -163,6 +227,70 @@ a{
     padding: .5em;
     font-size: .8em;
     text-align: center;
-    color: var(--lightGray);
 }
 /*********End. Footer Styles*********/
+
+.myArticle img{
+    position: relative;
+}
+
+.subSectionCard__link{
+    width: 100%;
+    text-align: center;
+    padding: .8rem;
+    margin-top: .8rem;
+    background-color: var(--white);
+}
+
+
+/* Animations */
+.animationContent{
+    margin: auto;
+    margin-top: 2rem;
+    width: 90%;
+}
+.myArticle{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: .4em 0;
+    background: linear-gradient( 90deg, #000, #444);
+    color: white;
+}
+.myArticle div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .4em 0;
+    overflow: hidden;
+}
+.animatedBorder:before, .animatedBorder:after{
+    content: '';
+    position: absolute;
+    left: -.2rem;
+    top: -.2rem;
+    background: linear-gradient( 90deg,#6400cc, cyan, magenta, #6400cc );
+    background-size: 300%;
+    width: calc(100% + .4rem);
+    height: calc(100% + .4rem);
+    z-index: -1;
+    animation: BorderAnimation 16s ease infinite;
+    border-radius: .4rem 0;
+    overflow: hidden;
+}
+.animatedBorder:after{
+    filter: blur(.4rem);
+}
+
+@keyframes BorderAnimation {
+    0% {
+        background-position: 0% 300%;
+    }
+    50% {
+        background-position: 300% 0%;
+    }
+    100% {
+        background-position: 0% 300%;
+    }
+}
+/* End Animations */

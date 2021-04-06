@@ -16,11 +16,11 @@
     <link rel="stylesheet" media="only screen and (max-width:320px)" href="./Styles/Responsive/Index320px.css">
     <link rel="stylesheet" media="only screen and (max-width:768px)" href="./Styles/Responsive/Index768px.css">
     <link rel="stylesheet" media="only screen and (max-width:1024px)" href="./Styles/Responsive/Index1024px.css">
-    <link rel="stylesheet" media="only screen and (max-width:1366px)" href="./Styles/Responsive/Index1280px.css">
+    <link rel="stylesheet" media="only screen and (mix-width:1025px)" href="./Styles/Responsive/Index1280px.css">
 
-    <link rel="icon" type="image/png"  href="./Sources/Icons/IconKx16px.png">
-    <link rel="icon" type="image/png"  href="./Sources/Icons/IconKx16px.png">
-    <link rel="icon" type="image/png"  href="./Sources/Icons/IconKx16px.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Sources/Icons/IconKx16px.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Sources/Icons/IconKx32px.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="./Sources/Icons/IconKx64px.png">
     <title>Kixne&#153</title>
 </head>
 
@@ -38,78 +38,399 @@
     </header>
     <!---------End. Header Tags--------->
     
+    <!-- Nav tags -->
+    <nav class="nav">
+        <div class="nav__header">
+            <span class="nav__header-text">
+                Menu<span> X</span>
+            </span>
+        </div>
+        
+        <a href="#" class="nav__link">
+            <span class="flaticon-"></span>section01
+        </a>
+
+        <a href="#" class="nav__link">
+            <span class="flaticon-"></span>section02
+        </a>
+
+        <a href="#" class="nav__link">
+            <span class="flaticon-"></span>section03
+        </a>
+
+        <a href="#" class="nav__link">
+            <span class="flaticon-"></span>section04
+        </a>
+
+        <span class="btnCloseMenu">
+            Close menu
+        </span>
+    </nav>
+    <!-- End nav tags -->
+
+
+    <!-- KxWelcome or banner -->
+    <div class="kxWelcome">
+        <picture class="kxWelcome__image">
+            <source srcset="
+            ./Sources/Images/KxWelcome0320px.webp,
+            ./Sources/Images/KxWelcome0320px.png"
+            media="(max-width:320px)" />
+            
+            <source srcset="
+            ./Sources/Images/KxWelcome0360px.webp,
+            ./Sources/Images/KxWelcome0360px.png"
+            media="(max-width:360px)" />
+            
+            <source srcset="
+            ./Sources/Images/KxWelcome0480px.webp,
+            ./Sources/Images/KxWelcome0480px.png"
+            media="(max-width:480px)" />
+
+            <source srcset="
+            ./Sources/Images/KxWelcome0683px.webp,
+            ./Sources/Images/KxWelcome0683px.png"
+            media="(max-width:683px)" />
+
+            <source srcset="
+            ./Sources/Images/KxWelcome0720px.webp,
+            ./Sources/Images/KxWelcome0720px.png"
+            media="(max-width:720px)" />
+
+            <source srcset="
+            ./Sources/Images/KxWelcome0768px.webp,
+            ./Sources/Images/KxWelcome0768px.png"
+            media="(max-width:768px)" />
+
+            <source srcset="
+            ./Sources/Images/KxWelcome1024px.webp,
+            ./Sources/Images/KxWelcome1024px.png"
+            media="(max-width:1024px)" />
+
+            <source srcset="
+            ./Sources/Images/KxWelcome1068px.webp,
+            ./Sources/Images/KxWelcome1068px.png"
+            media="(max-width:1068px)" />
+
+            <source srcset="
+            ./Sources/Images/KxWelcome1200px.webp,
+            ./Sources/Images/KxWelcome1200px.png"
+            media="(max-width:1200px)" />
+
+            <source srcset="
+            ./Sources/Images/KxWelcome1280px.webp,
+            ./Sources/Images/KxWelcome1280px.png"
+            media="(max-width:1280px)" />
+
+            <source srcset="
+            ./Sources/Images/KxWelcome1366px.webp,
+            ./Sources/Images/KxWelcome1366px.png"
+            media="(min-width:1281px)" />
+
+            <img src="./Sources/Images/KxWelcome720px.webp"/>
+        
+        </picture>
+
+        <p class="kxWelcome__text">
+            Develop the best version of yourself<br>
+            <span class="kxWelcome__text-tagLine">and become a technological specialist.</span>
+        </p>
+       
+        <span class="kxWelcome__ground"></span> 
+    </div>
+    <!-- End KxWelcome -->
+
 
     <!-- Main tags -->
     <main class="main">
-        <div class="kxWelcome">
-            <picture class="kxWelcome__image">
-                <source srcset="
-                ./Sources/Images/KxWelcome0320px.webp,
-                ./Sources/Images/KxWelcome0320px.png"
-                media="(max-width:320px)" />
-                
-                <source srcset="
-                ./Sources/Images/KxWelcome0360px.webp,
-                ./Sources/Images/KxWelcome0360px.png"
-                media="(max-width:360px)" />
-                
-                <source srcset="
-                ./Sources/Images/KxWelcome0480px.webp,
-                ./Sources/Images/KxWelcome0480px.png"
-                media="(max-width:480px)" />
-    
-                <source srcset="
-                ./Sources/Images/KxWelcome0683px.webp,
-                ./Sources/Images/KxWelcome0683px.png"
-                media="(max-width:683px)" />
-    
-                <source srcset="
-                ./Sources/Images/KxWelcome0720px.webp,
-                ./Sources/Images/KxWelcome0720px.png"
-                media="(max-width:720px)" />
-    
-                <source srcset="
-                ./Sources/Images/KxWelcome0768px.webp,
-                ./Sources/Images/KxWelcome0768px.png"
-                media="(max-width:768px)" />
-    
-                <source srcset="
-                ./Sources/Images/KxWelcome1024px.webp,
-                ./Sources/Images/KxWelcome1024px.png"
-                media="(max-width:1024px)" />
-    
-                <source srcset="
-                ./Sources/Images/KxWelcome1068px.webp,
-                ./Sources/Images/KxWelcome1068px.png"
-                media="(max-width:1068px)" />
-    
-                <source srcset="
-                ./Sources/Images/KxWelcome1200px.webp,
-                ./Sources/Images/KxWelcome1200px.png"
-                media="(max-width:1200px)" />
-    
-                <source srcset="
-                ./Sources/Images/KxWelcome1280px.webp,
-                ./Sources/Images/KxWelcome1280px.png"
-                media="(max-width:1280px)" />
-    
-                <source srcset="
-                ./Sources/Images/KxWelcome1366px.webp,
-                ./Sources/Images/KxWelcome1366px.png"
-                media="(min-width:1281px)" />
-    
-                <img src="./Sources/Images/KxWelcome720px.webp"/>
-            
-            </picture>
-            <p class="kxWelcome__text">Develop the best version of yourself<br>
-                <span class="kxWelcome__text-tagLine">and become a technological specialist.</span></p>
-            <span class="kxWelcome__ground"></span> 
-        </div>
+        <!-- Home tags -->
+        <section class="mainSection mainSection__home">
+            <div class="content">
+                <p class="mainSection__subSection-header">
+                    Greetings visitor !
+                </p>
+                <p class="mainSection__subSection-text">
+                    We are a community, professionals and specialists dedicated to education, principally through digital platforms.<br><br>We will give you knowledges at the forefront and of high-quality in technological areas, and therefore the ability to develop the best version of yourself.
+                </p>
+            </div>
 
-        <section class="mainSection">
-
+            <!-- this div contains subSection links, maybe isnt necesary -->
+            <div class="subSectionLinksContainer">
+                <div class="animationContent">
+                    <article class="myArticle animatedBorder">
+                        <div>
+                            <picture loading="lazy" class="kxWelcome__image" alt="Kx courses section image">
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0360px.webp,
+                                ./Sources/Images/Image480px.png"
+                                media="(max-width:320px)" />
+                                
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0360px.webp,
+                                ./Sources/Images/KxWelcome0360px.png"
+                                media="(max-width:360px)" />
+                                
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0480px.webp,
+                                ./Sources/Images/KxWelcome0480px.png"
+                                media="(max-width:480px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0683px.webp,
+                                ./Sources/Images/KxWelcome0683px.png"
+                                media="(max-width:683px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0720px.webp,
+                                ./Sources/Images/KxWelcome0720px.png"
+                                media="(max-width:720px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0768px.webp,
+                                ./Sources/Images/KxWelcome0768px.png"
+                                media="(max-width:768px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1024px.webp,
+                                ./Sources/Images/KxWelcome1024px.png"
+                                media="(max-width:1024px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1068px.webp,
+                                ./Sources/Images/KxWelcome1068px.png"
+                                media="(max-width:1068px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1200px.webp,
+                                ./Sources/Images/KxWelcome1200px.png"
+                                media="(max-width:_Ñ:l m1200px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1280px.webp,
+                                ./Sources/Images/KxWelcome1280px.png"
+                                media="(max-width:1280px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1366px.webp,
+                                ./Sources/Images/KxWelcome1366px.png"
+                                media="(min-width:1281px)" />
+                    
+                                <img src="./Sources/Images/KxWelcome720px.p"/>
+                            
+                            </picture>
+                            <h3>Courses</h3>
+                            <p>Increase your skills learning about an technological topic of your interest, or follow some of our guides to have the same themary of an Kx Professional or and Kx Specialist</p>
+                            <a href="#" class="subSectionCard__link">Go to Learn</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="animationContent">
+                    <article class="myArticle animatedBorder">
+                        <div>
+                            <picture loading="lazy" class="kxWelcome__image" alt="Kx courses section image">
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0360px.webp,
+                                ./Sources/Images/Image480px.png"
+                                media="(max-width:320px)" />
+                                
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0360px.webp,
+                                ./Sources/Images/KxWelcome0360px.png"
+                                media="(max-width:360px)" />
+                                
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0480px.webp,
+                                ./Sources/Images/KxWelcome0480px.png"
+                                media="(max-width:480px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0683px.webp,
+                                ./Sources/Images/KxWelcome0683px.png"
+                                media="(max-width:683px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0720px.webp,
+                                ./Sources/Images/KxWelcome0720px.png"
+                                media="(max-width:720px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0768px.webp,
+                                ./Sources/Images/KxWelcome0768px.png"
+                                media="(max-width:768px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1024px.webp,
+                                ./Sources/Images/KxWelcome1024px.png"
+                                media="(max-width:1024px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1068px.webp,
+                                ./Sources/Images/KxWelcome1068px.png"
+                                media="(max-width:1068px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1200px.webp,
+                                ./Sources/Images/KxWelcome1200px.png"
+                                media="(max-width:_Ñ:l m1200px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1280px.webp,
+                                ./Sources/Images/KxWelcome1280px.png"
+                                media="(max-width:1280px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1366px.webp,
+                                ./Sources/Images/KxWelcome1366px.png"
+                                media="(min-width:1281px)" />
+                    
+                                <img src="./Sources/Images/KxWelcome720px.p"/>
+                            
+                            </picture>
+                            <h3>Questions</h3>
+                            <p>Are you unquied by one part of the content that are no so easy to understand, or do you want to make us a question about some topic, then, enter here and discover the diferents forms that we have to help you to solve your dude</p>
+                            <a href="#" class="subSectionCard__link">Solve my ask</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="animationContent">
+                    <article class=" myArticle animatedBorder">
+                        <div class="subSectionCard" >
+                            <picture loading="lazy" class="kxWelcome__image" alt="Kx courses section image">
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0360px.webp,
+                                ./Sources/Images/Image480px.png"
+                                media="(max-width:320px)" />
+                                
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0360px.webp,
+                                ./Sources/Images/KxWelcome0360px.png"
+                                media="(max-width:360px)" />
+                                
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0480px.webp,
+                                ./Sources/Images/KxWelcome0480px.png"
+                                media="(max-width:480px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0683px.webp,
+                                ./Sources/Images/KxWelcome0683px.png"
+                                media="(max-width:683px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0720px.webp,
+                                ./Sources/Images/KxWelcome0720px.png"
+                                media="(max-width:720px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome0768px.webp,
+                                ./Sources/Images/KxWelcome0768px.png"
+                                media="(max-width:768px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1024px.webp,
+                                ./Sources/Images/KxWelcome1024px.png"
+                                media="(max-width:1024px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1068px.webp,
+                                ./Sources/Images/KxWelcome1068px.png"
+                                media="(max-width:1068px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1200px.webp,
+                                ./Sources/Images/KxWelcome1200px.png"
+                                media="(max-width:_Ñ:l m1200px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1280px.webp,
+                                ./Sources/Images/KxWelcome1280px.png"
+                                media="(max-width:1280px)" />
+                    
+                                <source srcset="
+                                ./Sources/Images/KxWelcome1366px.webp,
+                                ./Sources/Images/KxWelcome1366px.png"
+                                media="(min-width:1281px)" />
+                    
+                                <img src="./Sources/Images/KxWelcome720px.p"/>
+                            
+                            </picture>
+                            <h3>Support us</h3>
+                            <p>If you are satisfied whit our content, if you want to colaborate to upgrade and update our content, or if you are a so kindness person and you want to know, how can you help us of some form, common whit us and learn some methots that you can support us</p>
+                            <a href="#" class="subSectionCard__link">View methods</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="animationContent">
+                <article class="myArticle animatedBorder">
+                    <div>
+                        <picture loading="lazy" class="kxWelcome__image" alt="Kx courses section image">
+                            <source srcset="
+                            ./Sources/Images/KxWelcome0360px.webp,
+                            ./Sources/Images/Image480px.png"
+                            media="(max-width:320px)" />
+                            
+                            <source srcset="
+                            ./Sources/Images/KxWelcome0360px.webp,
+                            ./Sources/Images/KxWelcome0360px.png"
+                            media="(max-width:360px)" />
+                            
+                            <source srcset="
+                            ./Sources/Images/KxWelcome0480px.webp,
+                            ./Sources/Images/KxWelcome0480px.png"
+                            media="(max-width:480px)" />
+                
+                            <source srcset="
+                            ./Sources/Images/KxWelcome0683px.webp,
+                            ./Sources/Images/KxWelcome0683px.png"
+                            media="(max-width:683px)" />
+                
+                            <source srcset="
+                            ./Sources/Images/KxWelcome0720px.webp,
+                            ./Sources/Images/KxWelcome0720px.png"
+                            media="(max-width:720px)" />
+                
+                            <source srcset="
+                            ./Sources/Images/KxWelcome0768px.webp,
+                            ./Sources/Images/KxWelcome0768px.png"
+                            media="(max-width:768px)" />
+                
+                            <source srcset="
+                            ./Sources/Images/KxWelcome1024px.webp,
+                            ./Sources/Images/KxWelcome1024px.png"
+                            media="(max-width:1024px)" />
+                
+                            <source srcset="
+                            ./Sources/Images/KxWelcome1068px.webp,
+                            ./Sources/Images/KxWelcome1068px.png"
+                            media="(max-width:1068px)" />
+                
+                            <source srcset="
+                            ./Sources/Images/KxWelcome1200px.webp,
+                            ./Sources/Images/KxWelcome1200px.png"
+                            media="(max-width:_Ñ:l m1200px)" />
+                
+                            <source srcset="
+                            ./Sources/Images/KxWelcome1280px.webp,
+                            ./Sources/Images/KxWelcome1280px.png"
+                            media="(max-width:1280px)" />
+                
+                            <source srcset="
+                            ./Sources/Images/KxWelcome1366px.webp,
+                            ./Sources/Images/KxWelcome1366px.png"
+                            media="(min-width:1281px)" />
+                
+                            <img src="./Sources/Images/KxWelcome720px.p"/>
+                        
+                        </picture>
+                        <h3>About us</h3>
+                        <p>Know about our philosophy, learn why we share all our content whit you, see ours officials contacts sites, check whit how are we assosiate and discover another interesting thing about us</p>
+                        <a href="#" class="subSectionCard__link">Know us</a>
+                    </div>
+                </article>
+            </div>
         </section>
-
+        <!-- End Home tags -->
     </main>
     <span class="groundBottom"></span>
     <!-- End. Main tags -->
@@ -127,5 +448,5 @@
     </footer>
     <!---------End. Footer Tags--------->
 </body>
-
+kjñl
 </html>
