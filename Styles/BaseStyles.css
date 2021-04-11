@@ -12,7 +12,6 @@
 
     --background02: red;
     --background03: #444;
-    --lightGray: #666;
     
     --magenta: #f0f;
     --cyan: #0ff;
@@ -96,12 +95,13 @@ a{
     padding: .5em;
     margin-right: 1em;
     border-radius: 8%;
-    border: .1em solid var( --lightGray);
-    color: var( --lightGray);
+    border: .1em solid var( --gray06);
+    color: var( --gray06);
 }
 .btnMenu:hover{
-/*     border: .1em solid var( --lightGray);*/
-    color: var( --white); 
+    color: var( --white);
+    background: linear-gradient( var(--gray01), var(--gray02));
+    border: .1rem solid var(--white);
     box-shadow: 0 0 .5em var(--white);
 }
 /*********End. Header Styles*********/
@@ -194,7 +194,7 @@ a{
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin: 0.4em auto;
+    margin: 1rem auto;
     margin-bottom: 2rem;
     width: 96%;
     max-width: 1280px;
@@ -234,14 +234,29 @@ a{
     position: relative;
 }
 
+.subSectionCard__title{
+    font-family: aladin;
+    font-size: 2rem;
+    margin-left: .4rem;
+}
+.subSectionCard__text{
+    padding: 0 .8rem;
+}
+
 .subSectionCard__link{
     width: 100%;
     text-align: center;
     padding: .8rem;
     margin-top: .8rem;
-    background-color: var(--white);
+    border-top: .1rem solid var(--purple);
+    background: linear-gradient( 90deg, var(--gray04) , var(--white));
+    color: var(--black);
 }
-
+.subSectionCard__link:hover{
+    background: linear-gradient( 90deg, var(--gray01) , var(--gray02));
+    border-top: .1rem solid var(--gray06);
+    color: var(--white);
+}
 
 /* Animations */
 .animationContent{
@@ -260,7 +275,6 @@ a{
 .myArticle div{
     display: flex;
     flex-direction: column;
-    align-items: center;
     border-radius: .4em 0;
     overflow: hidden;
 }
