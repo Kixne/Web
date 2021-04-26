@@ -1,0 +1,97 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?29012748bf808f5729fb65e2255f3d15") format("truetype"),
+url("./flaticon.woff?29012748bf808f5729fb65e2255f3d15") format("woff"),
+url("./flaticon.woff2?29012748bf808f5729fb65e2255f3d15") format("woff2"),
+url("./flaticon.eot?29012748bf808f5729fb65e2255f3d15#iefix") format("embedded-opentype"),
+url("./flaticon.svg?29012748bf808f5729fb65e2255f3d15#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "hourglass": "\f101",
+    "clock": "\f102",
+    "calendar": "\f103",
+    "writing": "\f104",
+    "star": "\f105",
+    "learn": "\f106",
+    "information": "\f107",
+    "loving-heart-shape": "\f108",
+    "bitcoin": "\f109",
+    "paypal": "\f10a",
+    "folder": "\f10b",
+    "question": "\f10c",
+    "youtube": "\f10d",
+    "phone-call": "\f10e",
+    "power-button": "\f10f",
+    "chat-bubble": "\f110",
+    "rewind-button": "\f111",
+    "forward-button": "\f112",
+);
+
+.flaticon-hourglass:before {
+    content: map-get($flaticon-map, "hourglass");
+}
+.flaticon-clock:before {
+    content: map-get($flaticon-map, "clock");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon-map, "calendar");
+}
+.flaticon-writing:before {
+    content: map-get($flaticon-map, "writing");
+}
+.flaticon-star:before {
+    content: map-get($flaticon-map, "star");
+}
+.flaticon-learn:before {
+    content: map-get($flaticon-map, "learn");
+}
+.flaticon-information:before {
+    content: map-get($flaticon-map, "information");
+}
+.flaticon-loving-heart-shape:before {
+    content: map-get($flaticon-map, "loving-heart-shape");
+}
+.flaticon-bitcoin:before {
+    content: map-get($flaticon-map, "bitcoin");
+}
+.flaticon-paypal:before {
+    content: map-get($flaticon-map, "paypal");
+}
+.flaticon-folder:before {
+    content: map-get($flaticon-map, "folder");
+}
+.flaticon-question:before {
+    content: map-get($flaticon-map, "question");
+}
+.flaticon-youtube:before {
+    content: map-get($flaticon-map, "youtube");
+}
+.flaticon-phone-call:before {
+    content: map-get($flaticon-map, "phone-call");
+}
+.flaticon-power-button:before {
+    content: map-get($flaticon-map, "power-button");
+}
+.flaticon-chat-bubble:before {
+    content: map-get($flaticon-map, "chat-bubble");
+}
+.flaticon-rewind-button:before {
+    content: map-get($flaticon-map, "rewind-button");
+}
+.flaticon-forward-button:before {
+    content: map-get($flaticon-map, "forward-button");
+}

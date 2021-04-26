@@ -189,14 +189,14 @@ a{
 /* End KxWelcome */
 
 
-/* Main section */
+/* Main */
 .main{
     display: flex;
     flex-direction: column;
-    align-content: center;
-    margin: 1rem auto;
-    margin-bottom: 2rem;
-    width: 96%;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
     max-width: 1280px;
 }
 
@@ -215,7 +215,18 @@ a{
 .mainSection__subSection-text{
     padding-left: .8rem;
 }
-/* End. Main section */
+
+/* mainSections */
+.mainSection{
+    background: var(--white);
+    width: 96%;
+}
+
+#mainSection__home{
+    background: none;
+}
+/* End. Main */
+
 
 /*********Footer Styles*********/
 .footer{
@@ -234,7 +245,7 @@ a{
     position: relative;
 }
 
-.subSectionCard__title{
+.subSectionCard__title strong{
     font-family: aladin;
     font-size: 2rem;
     margin-left: .4rem;

@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?29012748bf808f5729fb65e2255f3d15") format("truetype"),
+url("./flaticon.woff?29012748bf808f5729fb65e2255f3d15") format("woff"),
+url("./flaticon.woff2?29012748bf808f5729fb65e2255f3d15") format("woff2"),
+url("./flaticon.eot?29012748bf808f5729fb65e2255f3d15#iefix") format("embedded-opentype"),
+url("./flaticon.svg?29012748bf808f5729fb65e2255f3d15#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-hourglass:before {
+    content: "\f101";
+}
+.flaticon-clock:before {
+    content: "\f102";
+}
+.flaticon-calendar:before {
+    content: "\f103";
+}
+.flaticon-writing:before {
+    content: "\f104";
+}
+.flaticon-star:before {
+    content: "\f105";
+}
+.flaticon-learn:before {
+    content: "\f106";
+}
+.flaticon-information:before {
+    content: "\f107";
+}
+.flaticon-loving-heart-shape:before {
+    content: "\f108";
+}
+.flaticon-bitcoin:before {
+    content: "\f109";
+}
+.flaticon-paypal:before {
+    content: "\f10a";
+}
+.flaticon-folder:before {
+    content: "\f10b";
+}
+.flaticon-question:before {
+    content: "\f10c";
+}
+.flaticon-youtube:before {
+    content: "\f10d";
+}
+.flaticon-phone-call:before {
+    content: "\f10e";
+}
+.flaticon-power-button:before {
+    content: "\f10f";
+}
+.flaticon-chat-bubble:before {
+    content: "\f110";
+}
+.flaticon-rewind-button:before {
+    content: "\f111";
+}
+.flaticon-forward-button:before {
+    content: "\f112";
+}

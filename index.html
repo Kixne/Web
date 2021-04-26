@@ -14,9 +14,7 @@
     <link rel="stylesheet" href="./Styles/BaseStyles.css">
     <!-- Responsive css -->
     <link rel="stylesheet" media="only screen and (max-width:320px)" href="./Styles/Responsive/Index320px.css">
-    <link rel="stylesheet" media="only screen and (max-width:768px)" href="./Styles/Responsive/Index768px.css">
-    <link rel="stylesheet" media="only screen and (max-width:1024px)" href="./Styles/Responsive/Index1024px.css">
-    <link rel="stylesheet" media="only screen and (mix-width:1025px)" href="./Styles/Responsive/Index1280px.css">
+    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
 
     <link rel="icon" type="image/png" sizes="16x16" href="./Sources/Icons/IconKx16px.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./Sources/Icons/IconKx32px.png">
@@ -71,7 +69,7 @@
 
     <!-- KxWelcome / banner -->
     <div class="kxWelcome">
-        <img loading="lazy" alt="Kx banner image" class="KxWelcome__image"
+        <img alt="Kx banner image" class="KxWelcome__image"
         src="./Sources/Images/KxWelcome/KxWelcome0480px.png"
         srcset="
         ./Sources/Images/KxWelcome/KxWelcome0320px.webp 320w,
@@ -113,7 +111,7 @@
     <main class="main">
 
         <!-- Home subSection tags -->
-        <section class="mainSection mainSection__home">
+        <section class="mainSection" id="mainSection__home">
             <div class="content">
                 <p class="mainSection__subSection-header">
                     Greetings visitor !
@@ -157,7 +155,7 @@
                             (max-widt:320px) 1280w,
                             (max-widt:320px) 1366w,
                             (max-widt:320px) 1920w">
-                            <h3 class="subSectionCard__title">Courses</h3>
+                            <p class="subSectionCard__title"><strong>Courses</strong></p>
                             <p class="subSectionCard__text">Increase your skills learning about an technological topic of your interest, or follow some of our Kx guides</p>
                             <a href="#" class="subSectionCard__link">Go to Learn</a>
                         </div>
@@ -195,7 +193,7 @@
                             (max-widt:320px) 1280w,
                             (max-widt:320px) 1366w,
                             (max-widt:320px) 1920w">
-                            <h3 class="subSectionCard__title">Questions</h3>
+                            <p class="subSectionCard__title"><strong>Questions</strong></p>
                             <p class="subSectionCard__text">have you an inquiry of a part of the content, or do you want to make us a question about any topic, then, see how can we help you to solve your questions</p>
                             <a href="#" class="subSectionCard__link">Solve my ask</a>
                         </div>
@@ -234,7 +232,7 @@
                             (max-widt:320px) 1366w,
                             (max-widt:320px) 1920w">
 
-                            <h3 class="subSectionCard__title">Support us</h3>
+                            <p class="subSectionCard__title"><strong>Support us</strong></p>
                             <p class="subSectionCard__text">did you like it our content, do you want to help us, or do you want to collaborate to upgrade or update our content, find out how to do it in this section </p>
                             <a href="#" class="subSectionCard__link">View methods</a>
                         </div>
@@ -273,7 +271,7 @@
                         (max-widt:320px) 1280w,
                         (max-widt:320px) 1366w,
                         (max-widt:320px) 1920w">
-                        <h3 class="subSectionCard__title">About us</h3>
+                        <p class="subSectionCard__title"><strong>About us</strong></p>
                         <p class="subSectionCard__text">Learn about our philosophy, find out why we share all our content with you, see our official contacts and discover another interesting things about us.</p>
                         <a href="#" class="subSectionCard__link">Know us</a>
                     </div>
@@ -284,18 +282,62 @@
 
 
         <!-- Courses subSection -->
+        <section class="mainSection" id=" mainSection__courses">
+            <section class="mainSection__subSection subSection__courses">
+
+                <header class="mainSection__header">
+                    Courses
+                </header>
+                <div class="coursesCardsContainer">
+                    
+                </div>
+            </section>
+
+            <section class="mainSection__subSection">
+                <header class="mainSection__header">
+                    CourseName
+                </header>
+            </section>
+
+            <section class="mainSection__subSection">
+                <header class="mainSection__header">
+                    Module
+                </header>
+            </section>
+        </section>
         <!-- End Courses subSection -->
 
 
         <!-- Questions subSection -->
+        <section class="mainSection" id=" mainSection__questions">
+            <section class="mainSection__subSection">
+                    sub1
+                </section>
+                <section class="mainSection__subSection">
+                    sub2
+                </section>
+                    <section class="mainSection__subSection">
+                    sub3
+                </section>
+            </section>
         <!-- End Questions subSection -->
 
 
         <!-- SupportUs subSection -->
+        <section class="mainSection" id=" mainSection__supportUs">
+            <section class="mainSection__subSection">
+                    sub1
+                </section>
+            </section>
         <!-- End SupportUs subSection -->
 
 
         <!-- AboutUs subSection -->
+        <section class="mainSection" id="mainSection__aboutUs">
+            <section class="mainSection__subSection">
+                    sub1
+                </section>
+            </section>
         <!-- End AboutUs subSection -->
     </main>
 
@@ -311,5 +353,6 @@
        
     </footer>
     <!---------End. Footer Tags--------->
+    <script src="./Scripts/BaseScripts.js"></script>
 </body>
 </html>
