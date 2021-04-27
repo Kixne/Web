@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./Styles/BaseStyles.css">
     <!-- Responsive css -->
     <link rel="stylesheet" media="only screen and (max-width:320px)" href="./Styles/Responsive/Index320px.css">
-    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="./Sources/Icons/Flaticon/font/flaticon.css">
 
     <link rel="icon" type="image/png" sizes="16x16" href="./Sources/Icons/IconKx16px.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./Sources/Icons/IconKx32px.png">
@@ -31,7 +31,7 @@
             <h1 class="header__logo-text">Kixne&#153</h1>
         </div>
         <span class="btnMenu">
-            Menu<span class="flaticon-menu"></span>
+            Menu<i class="flaticon-menu"></i>
         </span>
     </header>
     <!---------End. Header Tags--------->
@@ -45,19 +45,23 @@
         </div>
         
         <a href="#" class="nav__link">
-            <span class="flaticon-"></span>section01
+            <i class=" flaticon flaticon-"></i>Home
         </a>
 
         <a href="#" class="nav__link">
-            <span class="flaticon-"></span>section02
+            <i class="flaticon flaticon-learn"></i>Courses
         </a>
 
         <a href="#" class="nav__link">
-            <span class="flaticon-"></span>section03
+            <i class="flaticon flaticon-question"></i>Questions
         </a>
 
         <a href="#" class="nav__link">
-            <span class="flaticon-"></span>section04
+            <i class="flaticon flaticon-loving-heart-shape"></i>Support Us!
+        </a>
+
+        <a href="#" class="nav__link">
+            <i class="flaticon flaticon-information"></i>About Us
         </a>
 
         <span class="btnCloseMenu">
@@ -155,7 +159,7 @@
                             (max-widt:320px) 1280w,
                             (max-widt:320px) 1366w,
                             (max-widt:320px) 1920w">
-                            <p class="subSectionCard__title"><strong>Courses</strong></p>
+                            <p class="subSectionCard__title"><i class="flaticon-learn myArticle__flaticon"></i><strong>Courses</strong></p>
                             <p class="subSectionCard__text">Increase your skills learning about an technological topic of your interest, or follow some of our Kx guides</p>
                             <a href="#" class="subSectionCard__link">Go to Learn</a>
                         </div>
@@ -193,7 +197,7 @@
                             (max-widt:320px) 1280w,
                             (max-widt:320px) 1366w,
                             (max-widt:320px) 1920w">
-                            <p class="subSectionCard__title"><strong>Questions</strong></p>
+                            <p class="subSectionCard__title"><i class="flaticon-question myArticle__flaticon"></i><strong>Questions</strong></p>
                             <p class="subSectionCard__text">have you an inquiry of a part of the content, or do you want to make us a question about any topic, then, see how can we help you to solve your questions</p>
                             <a href="#" class="subSectionCard__link">Solve my ask</a>
                         </div>
@@ -232,7 +236,7 @@
                             (max-widt:320px) 1366w,
                             (max-widt:320px) 1920w">
 
-                            <p class="subSectionCard__title"><strong>Support us</strong></p>
+                            <p class="subSectionCard__title"><i class="flaticon-loving-heart-shape myArticle__flaticon"></i><strong>Support us</strong></p>
                             <p class="subSectionCard__text">did you like it our content, do you want to help us, or do you want to collaborate to upgrade or update our content, find out how to do it in this section </p>
                             <a href="#" class="subSectionCard__link">View methods</a>
                         </div>
@@ -271,7 +275,7 @@
                         (max-widt:320px) 1280w,
                         (max-widt:320px) 1366w,
                         (max-widt:320px) 1920w">
-                        <p class="subSectionCard__title"><strong>About us</strong></p>
+                        <p class="subSectionCard__title"><i class="flaticon-information myArticle__flaticon"></i><strong>About us</strong></p>
                         <p class="subSectionCard__text">Learn about our philosophy, find out why we share all our content with you, see our official contacts and discover another interesting things about us.</p>
                         <a href="#" class="subSectionCard__link">Know us</a>
                     </div>
@@ -283,25 +287,117 @@
 
         <!-- Courses subSection -->
         <section class="mainSection" id=" mainSection__courses">
+            <!-- CoursesCards subSection -->
             <section class="mainSection__subSection subSection__courses">
-
                 <header class="mainSection__header">
-                    Courses
+                   <i class="flaticon-learn"></i>Courses
                 </header>
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis impedit modi, incidunt eos iusto magni nisi ab ducimus perspiciatis sit.</p>
+
                 <div class="coursesCardsContainer">
-                    
+                    <article class="courseCard">
+                        <h3 class="courseCard__title">
+                            <a href="#" class="courseCard__title-link">
+                                Web anatomy &#60/HTML&#62
+                            </a>
+                        </h3>
+                        <a class="courseCard__link" href="#">
+                            <img class="courseCard__image" loading="lazy" alt="Course Image" title="Kx HTML5 course"
+                                src="./Sources/Images/HTML/CourseHTML0480px.webp"
+                                srcset="
+                                ./Sources/Images/HTML/CourseHTML0320px.webp 320w,
+                                ./Sources/Images/HTML/CourseHTML0360px.webp 360w,
+                                ./Sources/Images/HTML/CourseHTML0480px.webp 480w,
+                                ./Sources/Images/HTML/CourseHTML0683px.webp 683w,
+                                ./Sources/Images/HTML/CourseHTML0320px.webp 684w
+                                "
+                                sizes="
+                                (max-widt:320px) 320w,
+                                (max-widt:360px) 360w,
+                                (max-widt:480px) 480w,
+                                (max-widt:683px) 683w,
+                                (min-widt:684px) 684w">
+                        </a>
+                        <div class="courseCard__body">
+                            <p class="courseCard__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, aspernatur?
+                            </p>
+                            <div class="courseCard__details">
+                                <!-- quality, version and duration -->
+                                <span class="courseCard__details-item courseCard__details-quality">
+                                    <i class="flaticon flaticon-star"></i>10.0
+                                </span>
+                                <span class="courseCard__details-item courseCard__details-version">
+                                    <i class="flaticon flaticon-calendar"></i>21.04.31
+                                </span>
+                                <span class="courseCard__details-item courseCard__details-duration">
+                                    <i class="flaticon flaticon-clock"></i>00:00
+                                </span>
+                            </div>
+                            <a href="#" class="courseCard__link courseCard__button">
+                                Coming soon<i class="flaticon flaticon-learn"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="courseCard">
+                        <h3 class="courseCard__title">
+                            <a href="#" class="courseCard__title-link">
+                                Web anatomy {CSS}
+                            </a>
+                        </h3>
+                        <a class="courseCard__link" href="#">
+                            <img class="courseCard__image" loading="lazy" alt="Course Image" title="Course image tooltip"
+                                src="./Sources/Images/CSS/CourseCSS0480px.webp"
+                                srcset="
+                                ./Sources/Images/CSS/CourseCSS0320px.webp 320w,
+                                ./Sources/Images/CSS/CourseCSS0360px.webp 360w,
+                                ./Sources/Images/CSS/CourseCSS0480px.webp 480w,
+                                ./Sources/Images/CSS/CourseCSS0683px.webp 683w,
+                                ./Sources/Images/CSS/CourseCSS0320px.webp 684w
+                                "
+                                sizes="
+                                (max-widt:320px) 320w,
+                                (max-widt:360px) 360w,
+                                (max-widt:480px) 480w,
+                                (max-widt:683px) 683w,
+                                (min-widt:684px) 684w">
+                        </a>
+                        <div class="courseCard__body">
+                            <p class="courseCard__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, aspernatur?
+                            </p>
+                            <div class="courseCard__details">
+                                <!-- quality, version and duration -->
+                                <span class="courseCard__details-item courseCard__details-quality">
+                                    <i class="flaticon flaticon-star"></i>10.0
+                                </span>
+                                <span class="courseCard__details-item courseCard__details-version">
+                                    <i class="flaticon flaticon-calendar"></i>21.04.31
+                                </span>
+                                <span class="courseCard__details-item courseCard__details-duration">
+                                    <i class="flaticon flaticon-clock"></i>00:00
+                                </span>
+                            </div>
+                            <a href="#" class="courseCard__link courseCard__button">
+                                Coming soon<i class="flaticon flaticon-learn"></i>
+                            </a>
+                        </div>
+                    </article>                
                 </div>
             </section>
 
+            <!-- Course subSection -->
             <section class="mainSection__subSection">
                 <header class="mainSection__header">
-                    CourseName
+                    <i class="flaticon-learn"></i>CourseName
                 </header>
             </section>
 
+            <!-- Module subSection -->
             <section class="mainSection__subSection">
                 <header class="mainSection__header">
-                    Module
+                    <i class="flaticon-learn"></i>Module title
                 </header>
             </section>
         </section>
@@ -310,34 +406,37 @@
 
         <!-- Questions subSection -->
         <section class="mainSection" id=" mainSection__questions">
+            <header>
+                <i class="flaticon-question"></i>Questions
+            </header>
             <section class="mainSection__subSection">
-                    sub1
-                </section>
-                <section class="mainSection__subSection">
-                    sub2
-                </section>
-                    <section class="mainSection__subSection">
-                    sub3
-                </section>
+                subSection
             </section>
+        </section>
         <!-- End Questions subSection -->
 
 
         <!-- SupportUs subSection -->
         <section class="mainSection" id=" mainSection__supportUs">
+            <header>
+                <i class="flaticon-loving-heart-shape"></i>Support Us!
+            </header>
             <section class="mainSection__subSection">
-                    sub1
-                </section>
+                subSection
             </section>
+        </section>
         <!-- End SupportUs subSection -->
 
 
         <!-- AboutUs subSection -->
         <section class="mainSection" id="mainSection__aboutUs">
+            <header>
+                <i class="flaticon-information"></i>About Us
+            </header>
             <section class="mainSection__subSection">
-                    sub1
-                </section>
+                subSection
             </section>
+        </section>
         <!-- End AboutUs subSection -->
     </main>
 

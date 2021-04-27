@@ -55,6 +55,12 @@ a{
     display: block;
     color: var(--purple);
 }
+.flaticon{
+    margin-right: .2em;
+}
+.text{
+    margin-left: .8em;
+}
 /*********End. Reseting Styles*********/
 
 
@@ -130,7 +136,7 @@ a{
 }
 .nav__link{
     padding: .8rem;
-    padding-left: 1.6rem;
+    padding-left: .8rem;
     color: var(--white);
 }
 .nav__link:hover{
@@ -199,7 +205,6 @@ a{
     margin-top: 1rem;
     max-width: 1280px;
 }
-
 .content{
     background-color: var(--white);
     border-radius: .8em 0;
@@ -207,6 +212,17 @@ a{
     padding: .8rem .4rem;
 }
 
+/* mainSections */
+.mainSection{
+    background: var(--white);
+    width: 96%;
+}
+.mainSection__header{
+    font-size: 2rem;
+    font-family: aladin;
+    margin: .4rem;
+    margin-bottom: 0;
+}
 .mainSection__subSection-header{
     font-size: 1.75rem;
     font-family: aladin;
@@ -215,13 +231,6 @@ a{
 .mainSection__subSection-text{
     padding-left: .8rem;
 }
-
-/* mainSections */
-.mainSection{
-    background: var(--white);
-    width: 96%;
-}
-
 #mainSection__home{
     background: none;
 }
@@ -231,8 +240,8 @@ a{
 /*********Footer Styles*********/
 .footer{
     background: #000;
-    color: #fff;
     border-top: .1em solid var(--purple);
+    color: #fff;
 }
 .footer__license{
     padding: .5em;
@@ -241,10 +250,21 @@ a{
 }
 /*********End. Footer Styles*********/
 
+
+
+
+
+
+
 .myArticle img{
     position: relative;
 }
 
+
+.myArticle__flaticon{
+    margin-left: .4rem;
+    font-size: 1.5em;
+}
 .subSectionCard__title strong{
     font-family: aladin;
     font-size: 2rem;
@@ -253,7 +273,6 @@ a{
 .subSectionCard__text{
     padding: 0 .8rem;
 }
-
 .subSectionCard__link{
     width: 100%;
     text-align: center;
@@ -319,3 +338,65 @@ a{
     }
 }
 /* End Animations */
+
+
+
+
+
+
+
+
+
+
+/* Courses section styles */
+.coursesCardsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.courseCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 96%;
+    margin-top: 1em;
+    box-shadow: 0 0 .8em var(--black);
+    background: linear-gradient(var(--black), #0000 );
+}
+.courseCard__title{
+    padding-top: .4em;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+}
+.courseCard__title-link{
+    font-family: aladin;
+    color: var(--white);
+}
+.courseCard__body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: none;
+}
+.courseCard__text{
+    padding: .2em;
+}
+.courseCard__details{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: .4em;
+}
+.courseCard__button{
+    width: 100%;
+    text-align: center;
+    padding: .8em;
+    margin-top: .4em;
+    background: var(--gray04);
+    color: var(--white);
+}
+.courseCard__button:hover{
+    background-color: var(--gray01);
+}
+/* End Courses section styles */
