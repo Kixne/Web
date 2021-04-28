@@ -52,14 +52,15 @@ h2, h3, h4, h5, h6{
     margin-left: .2rem;
 }
 a{
-    display: block;
+    display: inline-block;
     color: var(--purple);
+    text-decoration: none;
 }
 .flaticon{
     margin-right: .2em;
 }
 .text{
-    margin-left: .8em;
+    padding: 0 .8em;
 }
 /*********End. Reseting Styles*********/
 
@@ -165,7 +166,6 @@ a{
 }
 .kxWelcome__image{
     width: 100%;
-    background: linear-gradient( var(--black), #0000);
 }
 .kxWelcome__text{
     position: absolute;
@@ -174,7 +174,7 @@ a{
     text-align: center;
     font-size: 2em;
     font-family: Aladin;
-    text-shadow: 0 0 .1em var(--cyan), 0 0 .4em var(--magenta), 0 0 .2em var(--magenta);
+    text-shadow: 0 0 .1em var(--black), 0 0 .4em var(--magenta), 0 0 .2em var(--cyan);
 }
 .kxWelcome__text-tagLine{
     display: block;
@@ -188,9 +188,9 @@ a{
     bottom: 0;
     z-index: -1;
     width: 100%;
-    height: 2em;
+    height: 1.6em;
     border-radius: 100% 100% 0 0;
-    background: linear-gradient( var(--purple), var(--gray01));
+    background: linear-gradient( var(--purple), #0000);
 }
 /* End KxWelcome */
 
@@ -348,7 +348,7 @@ a{
 
 
 
-/* Courses section styles */
+/* CoursesCards section styles */
 .coursesCardsContainer{
     display: flex;
     flex-direction: column;
@@ -380,7 +380,7 @@ a{
     border-top: none;
 }
 .courseCard__text{
-    padding: .2em;
+    padding: 0 .8em;
 }
 .courseCard__details{
     width: 100%;
@@ -399,4 +399,47 @@ a{
 .courseCard__button:hover{
     background-color: var(--gray01);
 }
+
+.course__text::first-line{
+    font-size: 1.25em;
+}
+.course__details{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 /* End Courses section styles */
+
+
+
+
+
+
+
+
+
+
+/* Course section styles */
+.course__sources{
+    margin-top: 1em;
+}
+.course__sources-header{
+    font-size: 1.6em;
+    text-align: center;
+    font-family: aladin;
+}
+.course__source-list-header{
+    margin-top: .4em;
+    margin-left: .4em;
+    border-bottom: .1em solid var(--purple);
+}
+.course__source-item-link{
+    margin-left: .8em;
+    padding: .2em;
+    list-style: none;
+    color: var(--black);
+}
+.course__source-item-link:hover{
+    color: var(--purple);
+}
+/* End Course section styles */

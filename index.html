@@ -73,7 +73,7 @@
 
     <!-- KxWelcome / banner -->
     <div class="kxWelcome">
-        <img alt="Kx banner image" class="KxWelcome__image"
+        <img loading="lazy" alt="Kx banner image" class="KxWelcome__image"
         src="./Sources/Images/KxWelcome/KxWelcome0480px.png"
         srcset="
         ./Sources/Images/KxWelcome/KxWelcome0320px.webp 320w,
@@ -99,8 +99,8 @@
         (max-widt:320px) 1200w,
         (max-widt:320px) 1280w,
         (max-widt:320px) 1366w,
-        (max-widt:320px) 1920w">
-        
+        (max-widt:320px) 1920w"
+        >
 
         <p class="kxWelcome__text">
             Develop the best version of yourself<br>
@@ -125,7 +125,7 @@
                 </p>
             </div>
 
-            <!-- this div contains subSection links, maybe isnt necesary -->
+            <!-- this div contains subSection linkCards, maybe isnt necesary -->
             <div class="subSectionLinksContainer">
                 
                 <!-- subSection Courses -->
@@ -292,7 +292,7 @@
                 <header class="mainSection__header">
                    <i class="flaticon-learn"></i>Courses
                 </header>
-                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis impedit modi, incidunt eos iusto magni nisi ab ducimus perspiciatis sit.</p>
+                <p class="text">Learn about an specific technological area, or follow any of our guides to specialize in its preferred technological topic, and become a professional or specialist</p>
 
                 <div class="coursesCardsContainer">
                     <article class="courseCard">
@@ -392,6 +392,113 @@
                 <header class="mainSection__header">
                     <i class="flaticon-learn"></i>CourseName
                 </header>
+                <img class="course__image" loading="lazy" alt="Course Image" title="Kx course image"
+                    src="./Tests/Sources/Images/Test/Test0480px.png"
+                    srcset="
+                    ./Tests/Sources/Images/Test/Test0320px.png 320w,
+                    ./Tests/Sources/Images/Test/Test0360px.png 360w,
+                    ./Tests/Sources/Images/Test/Test0480px.png 480w,
+                    ./Tests/Sources/Images/Test/Test0683px.png 683w,
+                    ./Tests/Sources/Images/Test/Test0320px.png 684w
+                    "
+                    sizes="
+                    (max-widt:320px) 320w,
+                    (max-widt:360px) 360w,
+                    (max-widt:480px) 480w,
+                    (max-widt:683px) 683w,
+                    (min-widt:684px) 684w"
+                >
+                <div class="course__details">
+                    <!-- quality, version and duration -->
+                    <span class="course__details-item course__details-quality">
+                        <i class="flaticon flaticon-star"></i>10.0
+                    </span>
+                    <span class="course__details-item course__details-version">
+                        <i class="flaticon flaticon-calendar"></i>21.04.31
+                    </span>
+                    <span class="course__details-item course__details-duration">
+                        <i class="flaticon flaticon-clock"></i>00:00
+                    </span>
+                </div>
+                <p class="text course__text">
+                    <b>Course description</b><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero rem ut nisi itaque dolorem reprehenderit molestiae amet est aspernatur nesciunt, facilis porro! Unde adipisci quis alias, ullam reiciendis accusantium aliquid.
+                </p>
+                <div class="course__sources">
+                    <header class="course__sources-header">
+                        <i class="flaticon flaticon-learn"></i>
+                        Course resources
+                        <i class="flaticon flaticon-learn"></i>
+                    </header>
+                    <ul class="course__source-list">
+                        <header class="course__source-list-header">
+                            <b>Resources links</b>
+                        </header>
+                        <li class="course__source-item">
+                            <a href="#" class="course__source-item-link">
+                                <i class="flaticon flaticon-star"></i>Printable manual (.pdf)
+                            </a>
+                        </li>
+
+                        <li class="course__source-item">
+                            <a href="#" class="course__source-item-link">
+                                <i class="flaticon flaticon-star"></i>Digital manual
+                            </a>
+                        </li>
+                        
+                        <li class="course__source-item">
+                            <a href="#" class="course__source-item-link">
+                                <i class="flaticon flaticon-star"></i>Printable proposed exersices (.pdf)
+                            </a>
+                        </li>
+                        
+                        <li class="course__source-item">
+                            <a href="#" class="course__source-item-link">
+                                <i class="flaticon flaticon-star"></i>Digital proposed exersices
+                            </a>
+                        </li>
+                        
+                        <li class="course__source-item">
+                            <a href="#" class="course__source-item-link">
+                                <i class="flaticon flaticon-star"></i>Modules (720p videos)
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="course__source-list">
+                        <header class="course__source-list-header">
+                            <b>Resources links +ad</b>
+                        </header>
+                        <li class="course__source-item">
+                            <a href="#" class="course__source-item-link">
+                                <i class="flaticon flaticon-star"></i>Printable manual (.pdf)
+                            </a>
+                        </li>
+
+                        <li class="course__source-item">
+                            <a href="#" class="course__source-item-link">
+                                <i class="flaticon flaticon-star"></i>Digital manual
+                            </a>
+                        </li>
+                        
+                        <li class="course__source-item">
+                            <a href="#" class="course__source-item-link">
+                                <i class="flaticon flaticon-star"></i>Printable proposed exersices (.pdf)
+                            </a>
+                        </li>
+                        
+                        <li class="course__source-item">
+                            <a href="#" class="course__source-item-link">
+                                <i class="flaticon flaticon-star"></i>Digital proposed exersices
+                            </a>
+                        </li>
+                        
+                        <li class="course__source-item">
+                            <a href="#" class="course__source-item-link">
+                                <i class="flaticon flaticon-star"></i>Modules (720p videos)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </section>
 
             <!-- Module subSection -->
@@ -399,6 +506,33 @@
                 <header class="mainSection__header">
                     <i class="flaticon-learn"></i>Module title
                 </header>
+                <img class="course__image" loading="lazy" alt="Module Image" title="Kx Module image"
+                    src="./Tests/Sources/Images/Test/Test0480px.png"
+                    srcset="
+                    ./Tests/Sources/Images/Test/Test0320px.png 320w,
+                    ./Tests/Sources/Images/Test/Test0360px.png 360w,
+                    ./Tests/Sources/Images/Test/Test0480px.png 480w,
+                    ./Tests/Sources/Images/Test/Test0683px.png 683w,
+                    ./Tests/Sources/Images/Test/Test0320px.png 684w
+                    "
+                    sizes="
+                    (max-widt:320px) 320w,
+                    (max-widt:360px) 360w,
+                    (max-widt:480px) 480w,
+                    (max-widt:683px) 683w,
+                    (min-widt:684px) 684w"
+                >
+                <div class="moduleControls">
+                    <span class="moduleControl-item">
+                        <i class="flaticon-loving-heart-shape"></i>Prev
+                    </span>
+                    <span class="moduleControl-item">
+                        Modules
+                    </span>
+                    <span class="moduleControl-item">
+                        Next<i class="flaticon-loving-heart-shape"></i>
+                    </span>
+                </div>
             </section>
         </section>
         <!-- End Courses subSection -->
