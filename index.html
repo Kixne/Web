@@ -5,15 +5,15 @@
 
 
 <head>
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name= "robots" content= "index">
     <meta name="description" content="Professional content at the forefront and hight quality in technological areas. </br>Develop the best version of yourself and become a technological specialist.">
     
     <link rel="stylesheet" href="./Styles/BaseStyles.css">
-    <!-- Responsive css -->
-    <link rel="stylesheet" media="only screen and (max-width:320px)" href="./Styles/Responsive/Index320px.css">
+    <!-- <link rel="stylesheet" media="only screen and (max-width:320px)" href="./Styles/Responsive/Index320px.css"> -->
+   
     <link rel="stylesheet" type="text/css" href="./Sources/Icons/Flaticon/font/flaticon.css">
 
     <link rel="icon" type="image/png" sizes="16x16" href="./Sources/Icons/IconKx16px.png">
@@ -31,7 +31,7 @@
             <h1 class="header__logo-text">Kixne&#153</h1>
         </div>
         <span class="btnMenu">
-            Menu<i class="flaticon-menu"></i>
+            Menu <i class="flaticon-list"></i>
         </span>
     </header>
     <!---------End. Header Tags--------->
@@ -40,12 +40,12 @@
     <nav class="nav">
         <div class="nav__header">
             <span class="nav__header-text">
-                Menu<span> X</span>
+                Menu <i class="flaticon flaticon-cancel"></i>
             </span>
         </div>
         
         <a href="#" class="nav__link">
-            <i class=" flaticon flaticon-"></i>Home
+            <i class=" flaticon flaticon-home"></i>Home
         </a>
 
         <a href="#" class="nav__link">
@@ -65,7 +65,7 @@
         </a>
 
         <span class="btnCloseMenu">
-            Close menu
+            Close <i class="flaticon flaticon-cancel"></i>
         </span>
     </nav>
     <!-- End nav tags -->
@@ -328,7 +328,7 @@
                                     <i class="flaticon flaticon-star"></i>10.0
                                 </span>
                                 <span class="courseCard__details-item courseCard__details-version">
-                                    <i class="flaticon flaticon-calendar"></i>21.04.31
+                                    <i class="flaticon flaticon-writing"></i>21.04.31
                                 </span>
                                 <span class="courseCard__details-item courseCard__details-duration">
                                     <i class="flaticon flaticon-clock"></i>00:00
@@ -373,7 +373,7 @@
                                     <i class="flaticon flaticon-star"></i>10.0
                                 </span>
                                 <span class="courseCard__details-item courseCard__details-version">
-                                    <i class="flaticon flaticon-calendar"></i>21.04.31
+                                    <i class="flaticon flaticon-writing"></i>21.04.31
                                 </span>
                                 <span class="courseCard__details-item courseCard__details-duration">
                                     <i class="flaticon flaticon-clock"></i>00:00
@@ -389,7 +389,7 @@
 
             <!-- Course subSection -->
             <section class="mainSection__subSection">
-                <header class="mainSection__header">
+                <header id="courseName" class="mainSection__header">
                     <i class="flaticon-learn"></i>CourseName
                 </header>
                 <img class="course__image" loading="lazy" alt="Course Image" title="Kx course image"
@@ -414,7 +414,7 @@
                         <i class="flaticon flaticon-star"></i>10.0
                     </span>
                     <span class="course__details-item course__details-version">
-                        <i class="flaticon flaticon-calendar"></i>21.04.31
+                        <i class="flaticon flaticon-writing"></i>21.04.31
                     </span>
                     <span class="course__details-item course__details-duration">
                         <i class="flaticon flaticon-clock"></i>00:00
@@ -423,78 +423,124 @@
                 <p class="text course__text">
                     <b>Course description</b><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero rem ut nisi itaque dolorem reprehenderit molestiae amet est aspernatur nesciunt, facilis porro! Unde adipisci quis alias, ullam reiciendis accusantium aliquid.
                 </p>
-                <div class="course__sources">
-                    <header class="course__sources-header">
-                        <i class="flaticon flaticon-learn"></i>
-                        Course resources
-                        <i class="flaticon flaticon-learn"></i>
+                <ul class="course__modulesList">
+                    <header class="course__modulesList-header">
+                        <b><i class="flaticon flaticon-learn"></i>Course modules</b>
                     </header>
-                    <ul class="course__source-list">
-                        <header class="course__source-list-header">
-                            <b>Resources links</b>
+                    <li class="course__modulesList-item">
+                        <a href="#" class="course__modulesList-item-link">
+                            <i class="flaticon flaticon-play-button"></i>Module Name
+                            <span>
+                                <i class="flaticon flaticon-clock"></i>00:00
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="course__modulesList-item">
+                        <a href="#" class="course__modulesList-item-link">
+                            <i class="flaticon flaticon-play-button"></i>Module Name
+                            <span>
+                                <i class="flaticon flaticon-clock"></i>00:00
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="course__modulesList-item">
+                        <a href="#" class="course__modulesList-item-link">
+                            <i class="flaticon flaticon-play-button"></i>Module Name
+                            <span>
+                                <i class="flaticon flaticon-clock"></i>00:00
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="course__modulesList-item">
+                        <a href="#" class="course__modulesList-item-link">
+                            <i class="flaticon flaticon-play-button"></i>Module Name
+                            <span>
+                                <i class="flaticon flaticon-clock"></i>00:00
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="course__modulesList-item">
+                        <a href="#" class="course__modulesList-item-link">
+                            <i class="flaticon flaticon-play-button"></i>Module Name
+                            <span>
+                                <i class="flaticon flaticon-clock"></i>00:00
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="course__resources">
+                    
+                    <ul class="course__resource-list">
+                        <header class="course__resource-list-header">
+                            <b><i class="flaticon flaticon-folder"></i>Resources links</b>
                         </header>
-                        <li class="course__source-item">
-                            <a href="#" class="course__source-item-link">
-                                <i class="flaticon flaticon-star"></i>Printable manual (.pdf)
+                        <li class="course__resource-item">
+                            <a href="#" class="course__resource-item-link">
+                                <i class="flaticon flaticon-direct-download"></i>Printable manual (.pdf)
                             </a>
                         </li>
 
-                        <li class="course__source-item">
-                            <a href="#" class="course__source-item-link">
-                                <i class="flaticon flaticon-star"></i>Digital manual
+                        <li class="course__resource-item">
+                            <a href="#" class="course__resource-item-link">
+                                <i class="flaticon flaticon-direct-download"></i>Digital manual
                             </a>
                         </li>
                         
-                        <li class="course__source-item">
-                            <a href="#" class="course__source-item-link">
-                                <i class="flaticon flaticon-star"></i>Printable proposed exersices (.pdf)
+                        <li class="course__resource-item">
+                            <a href="#" class="course__resource-item-link">
+                                <i class="flaticon flaticon-direct-download"></i>Printable proposed exersices (.pdf)
                             </a>
                         </li>
                         
-                        <li class="course__source-item">
-                            <a href="#" class="course__source-item-link">
-                                <i class="flaticon flaticon-star"></i>Digital proposed exersices
+                        <li class="course__resource-item">
+                            <a href="#" class="course__resource-item-link">
+                                <i class="flaticon flaticon-direct-download"></i>Digital proposed exersices
                             </a>
                         </li>
                         
-                        <li class="course__source-item">
-                            <a href="#" class="course__source-item-link">
-                                <i class="flaticon flaticon-star"></i>Modules (720p videos)
+                        <li class="course__resource-item">
+                            <a href="#" class="course__resource-item-link">
+                                <i class="flaticon flaticon-direct-download"></i>Modules (videos HD)
                             </a>
                         </li>
                     </ul>
 
-                    <ul class="course__source-list">
-                        <header class="course__source-list-header">
-                            <b>Resources links +ad</b>
+                    <ul class="course__resource-list">
+                        <header class="course__resource-list-header">
+                            <b><i class="flaticon flaticon-folder"></i>Resources links +ad</b>
                         </header>
-                        <li class="course__source-item">
-                            <a href="#" class="course__source-item-link">
-                                <i class="flaticon flaticon-star"></i>Printable manual (.pdf)
+                        <li class="course__resource-item">
+                            <a href="#" class="course__resource-item-link">
+                                <i class="flaticon flaticon-direct-download"></i>Printable manual (.pdf)
                             </a>
                         </li>
 
-                        <li class="course__source-item">
-                            <a href="#" class="course__source-item-link">
-                                <i class="flaticon flaticon-star"></i>Digital manual
+                        <li class="course__resource-item">
+                            <a href="#" class="course__resource-item-link">
+                                <i class="flaticon flaticon-direct-download"></i>Digital manual
                             </a>
                         </li>
                         
-                        <li class="course__source-item">
-                            <a href="#" class="course__source-item-link">
-                                <i class="flaticon flaticon-star"></i>Printable proposed exersices (.pdf)
+                        <li class="course__resource-item">
+                            <a href="#" class="course__resource-item-link">
+                                <i class="flaticon flaticon-direct-download"></i>Printable proposed exersices (.pdf)
                             </a>
                         </li>
                         
-                        <li class="course__source-item">
-                            <a href="#" class="course__source-item-link">
-                                <i class="flaticon flaticon-star"></i>Digital proposed exersices
+                        <li class="course__resource-item">
+                            <a href="#" class="course__resource-item-link">
+                                <i class="flaticon flaticon-direct-download"></i>Digital proposed exersices
                             </a>
                         </li>
                         
-                        <li class="course__source-item">
-                            <a href="#" class="course__source-item-link">
-                                <i class="flaticon flaticon-star"></i>Modules (720p videos)
+                        <li class="course__resource-item">
+                            <a href="#" class="course__resource-item-link">
+                                <i class="flaticon flaticon-direct-download"></i>All Modules (HD)
                             </a>
                         </li>
                     </ul>
@@ -522,17 +568,23 @@
                     (max-widt:683px) 683w,
                     (min-widt:684px) 684w"
                 >
-                <div class="moduleControls">
-                    <span class="moduleControl-item">
-                        <i class="flaticon-loving-heart-shape"></i>Prev
-                    </span>
-                    <span class="moduleControl-item">
+                <div class="module__controls">
+                    <a href="#" class="module__control-item">
+                        <i class="flaticon-rewind-button"></i> Prev
+                    </a>
+                    <a href="#" class="module__control-item">
                         Modules
-                    </span>
-                    <span class="moduleControl-item">
-                        Next<i class="flaticon-loving-heart-shape"></i>
-                    </span>
+                    </a>
+                    <a href="#" class="module__control-item">
+                        Next <i class="flaticon-forward-button"></i>
+                    </a>
                 </div>
+
+                <p class="module__description text">
+                    <b>Module description</b> <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, voluptatem!
+                </p>
+
             </section>
         </section>
         <!-- End Courses subSection -->

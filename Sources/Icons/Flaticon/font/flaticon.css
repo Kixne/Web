@@ -1,10 +1,10 @@
 @font-face {
     font-family: "flaticon";
-    src: url("./flaticon.ttf?29012748bf808f5729fb65e2255f3d15") format("truetype"),
-url("./flaticon.woff?29012748bf808f5729fb65e2255f3d15") format("woff"),
-url("./flaticon.woff2?29012748bf808f5729fb65e2255f3d15") format("woff2"),
-url("./flaticon.eot?29012748bf808f5729fb65e2255f3d15#iefix") format("embedded-opentype"),
-url("./flaticon.svg?29012748bf808f5729fb65e2255f3d15#flaticon") format("svg");
+    src: url("./flaticon.ttf?f4f04e12f3ccd04417e4e9a9240c4b2b") format("truetype"),
+url("./flaticon.woff?f4f04e12f3ccd04417e4e9a9240c4b2b") format("woff"),
+url("./flaticon.woff2?f4f04e12f3ccd04417e4e9a9240c4b2b") format("woff2"),
+url("./flaticon.eot?f4f04e12f3ccd04417e4e9a9240c4b2b#iefix") format("embedded-opentype"),
+url("./flaticon.svg?f4f04e12f3ccd04417e4e9a9240c4b2b#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -18,57 +18,63 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-hourglass:before {
+.flaticon-clock:before {
     content: "\f101";
 }
-.flaticon-clock:before {
+.flaticon-writing:before {
     content: "\f102";
 }
-.flaticon-calendar:before {
+.flaticon-star:before {
     content: "\f103";
 }
-.flaticon-writing:before {
+.flaticon-learn:before {
     content: "\f104";
 }
-.flaticon-star:before {
+.flaticon-information:before {
     content: "\f105";
 }
-.flaticon-learn:before {
+.flaticon-loving-heart-shape:before {
     content: "\f106";
 }
-.flaticon-information:before {
+.flaticon-bitcoin:before {
     content: "\f107";
 }
-.flaticon-loving-heart-shape:before {
+.flaticon-paypal:before {
     content: "\f108";
 }
-.flaticon-bitcoin:before {
+.flaticon-folder:before {
     content: "\f109";
 }
-.flaticon-paypal:before {
+.flaticon-question:before {
     content: "\f10a";
 }
-.flaticon-folder:before {
+.flaticon-youtube:before {
     content: "\f10b";
 }
-.flaticon-question:before {
+.flaticon-phone-call:before {
     content: "\f10c";
 }
-.flaticon-youtube:before {
+.flaticon-chat-bubble:before {
     content: "\f10d";
 }
-.flaticon-phone-call:before {
+.flaticon-rewind-button:before {
     content: "\f10e";
 }
-.flaticon-power-button:before {
+.flaticon-forward-button:before {
     content: "\f10f";
 }
-.flaticon-chat-bubble:before {
+.flaticon-direct-download:before {
     content: "\f110";
 }
-.flaticon-rewind-button:before {
+.flaticon-list:before {
     content: "\f111";
 }
-.flaticon-forward-button:before {
+.flaticon-play-button:before {
     content: "\f112";
+}
+.flaticon-home:before {
+    content: "\f113";
+}
+.flaticon-cancel:before {
+    content: "\f114";
 }

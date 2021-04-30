@@ -2,11 +2,11 @@ $flaticon-font: "flaticon";
 
 @font-face {
     font-family: $flaticon-font;
-    src: url("./flaticon.ttf?29012748bf808f5729fb65e2255f3d15") format("truetype"),
-url("./flaticon.woff?29012748bf808f5729fb65e2255f3d15") format("woff"),
-url("./flaticon.woff2?29012748bf808f5729fb65e2255f3d15") format("woff2"),
-url("./flaticon.eot?29012748bf808f5729fb65e2255f3d15#iefix") format("embedded-opentype"),
-url("./flaticon.svg?29012748bf808f5729fb65e2255f3d15#flaticon") format("svg");
+    src: url("./flaticon.ttf?f4f04e12f3ccd04417e4e9a9240c4b2b") format("truetype"),
+url("./flaticon.woff?f4f04e12f3ccd04417e4e9a9240c4b2b") format("woff"),
+url("./flaticon.woff2?f4f04e12f3ccd04417e4e9a9240c4b2b") format("woff2"),
+url("./flaticon.eot?f4f04e12f3ccd04417e4e9a9240c4b2b#iefix") format("embedded-opentype"),
+url("./flaticon.svg?f4f04e12f3ccd04417e4e9a9240c4b2b#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -21,34 +21,30 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 }
 
 $flaticon-map: (
-    "hourglass": "\f101",
-    "clock": "\f102",
-    "calendar": "\f103",
-    "writing": "\f104",
-    "star": "\f105",
-    "learn": "\f106",
-    "information": "\f107",
-    "loving-heart-shape": "\f108",
-    "bitcoin": "\f109",
-    "paypal": "\f10a",
-    "folder": "\f10b",
-    "question": "\f10c",
-    "youtube": "\f10d",
-    "phone-call": "\f10e",
-    "power-button": "\f10f",
-    "chat-bubble": "\f110",
-    "rewind-button": "\f111",
-    "forward-button": "\f112",
+    "clock": "\f101",
+    "writing": "\f102",
+    "star": "\f103",
+    "learn": "\f104",
+    "information": "\f105",
+    "loving-heart-shape": "\f106",
+    "bitcoin": "\f107",
+    "paypal": "\f108",
+    "folder": "\f109",
+    "question": "\f10a",
+    "youtube": "\f10b",
+    "phone-call": "\f10c",
+    "chat-bubble": "\f10d",
+    "rewind-button": "\f10e",
+    "forward-button": "\f10f",
+    "direct-download": "\f110",
+    "list": "\f111",
+    "play-button": "\f112",
+    "home": "\f113",
+    "cancel": "\f114",
 );
 
-.flaticon-hourglass:before {
-    content: map-get($flaticon-map, "hourglass");
-}
 .flaticon-clock:before {
     content: map-get($flaticon-map, "clock");
-}
-.flaticon-calendar:before {
-    content: map-get($flaticon-map, "calendar");
 }
 .flaticon-writing:before {
     content: map-get($flaticon-map, "writing");
@@ -83,9 +79,6 @@ $flaticon-map: (
 .flaticon-phone-call:before {
     content: map-get($flaticon-map, "phone-call");
 }
-.flaticon-power-button:before {
-    content: map-get($flaticon-map, "power-button");
-}
 .flaticon-chat-bubble:before {
     content: map-get($flaticon-map, "chat-bubble");
 }
@@ -94,4 +87,19 @@ $flaticon-map: (
 }
 .flaticon-forward-button:before {
     content: map-get($flaticon-map, "forward-button");
+}
+.flaticon-direct-download:before {
+    content: map-get($flaticon-map, "direct-download");
+}
+.flaticon-list:before {
+    content: map-get($flaticon-map, "list");
+}
+.flaticon-play-button:before {
+    content: map-get($flaticon-map, "play-button");
+}
+.flaticon-home:before {
+    content: map-get($flaticon-map, "home");
+}
+.flaticon-cancel:before {
+    content: map-get($flaticon-map, "cancel");
 }
