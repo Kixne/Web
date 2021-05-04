@@ -58,7 +58,8 @@ a{
 }
 .flaticon{
     display: inline-block;
-    margin-right: .4em;
+/*     margin: auto .4em auto .2em; */
+    margin: 0 .2em;
 }
 .text{
     padding: 0 .8em;
@@ -206,7 +207,6 @@ a{
     flex-direction: column;
     align-items: center;
     margin: auto;
-    margin-bottom: 1.5rem;
     margin-top: 1rem;
     max-width: 1280px;
 }
@@ -219,8 +219,9 @@ a{
 
 /* mainSections */
 .mainSection{
-    background: var(--white);
+    padding-bottom: 2em;
     width: 96%;
+    background: var(--white);
 }
 .mainSection__header{
     font-size: 2rem;
@@ -244,9 +245,10 @@ a{
 
 /*********Footer Styles*********/
 .footer{
+    margin-top: 1em;
+    color: #fff;
     background: #000;
     border-top: .1em solid var(--purple);
-    color: #fff;
 }
 .footer__license{
     padding: .5em;
@@ -480,3 +482,73 @@ a{
     font-size: 1.2em;
 }
 /* End Courses section styles */
+
+
+
+
+
+
+
+
+
+
+/* SupportUs Section styles */
+
+/* subSection supportUs__card styles */
+.subSection__methods{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.supportUs__card{
+    width: 96%;
+    margin-top: 1em;
+    border: .1em solid var(--black);
+    box-shadow: .2em .2em .4em var(--black);
+}
+.support__button{
+    width: 100%;
+    display: inline-block;
+    padding: .4em;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    color: var(--black);
+    background: var(--gray06);
+}
+.support__button:hover{
+    color: var(--purple);
+    background: var(--black);
+}
+
+
+/* End subSection SupportUs styles */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* this display none are just temporaly */
+#mainSection__home{
+    display: none;
+}
+#mainSection__courses{
+    display: none;
+}
+#mainSection__questions{
+    display: none;
+}
+/* #mainSection__supportUs{
+    display: none;
+} */
+#mainSection__aboutUs{
+    display: none;
+}
