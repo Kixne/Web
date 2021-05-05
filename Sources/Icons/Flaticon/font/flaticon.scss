@@ -2,11 +2,11 @@ $flaticon-font: "flaticon";
 
 @font-face {
     font-family: $flaticon-font;
-    src: url("./flaticon.ttf?f4f04e12f3ccd04417e4e9a9240c4b2b") format("truetype"),
-url("./flaticon.woff?f4f04e12f3ccd04417e4e9a9240c4b2b") format("woff"),
-url("./flaticon.woff2?f4f04e12f3ccd04417e4e9a9240c4b2b") format("woff2"),
-url("./flaticon.eot?f4f04e12f3ccd04417e4e9a9240c4b2b#iefix") format("embedded-opentype"),
-url("./flaticon.svg?f4f04e12f3ccd04417e4e9a9240c4b2b#flaticon") format("svg");
+    src: url("./flaticon.ttf?7c347afb92d3432ddcd9f906376c9e23") format("truetype"),
+url("./flaticon.woff?7c347afb92d3432ddcd9f906376c9e23") format("woff"),
+url("./flaticon.woff2?7c347afb92d3432ddcd9f906376c9e23") format("woff2"),
+url("./flaticon.eot?7c347afb92d3432ddcd9f906376c9e23#iefix") format("embedded-opentype"),
+url("./flaticon.svg?7c347afb92d3432ddcd9f906376c9e23#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -41,6 +41,13 @@ $flaticon-map: (
     "play-button": "\f112",
     "home": "\f113",
     "cancel": "\f114",
+    "technics": "\f115",
+    "games": "\f116",
+    "video-player": "\f117",
+    "mail": "\f118",
+    "contact": "\f119",
+    "call": "\f11a",
+    "bug-fixing": "\f11b",
 );
 
 .flaticon-clock:before {
@@ -102,4 +109,25 @@ $flaticon-map: (
 }
 .flaticon-cancel:before {
     content: map-get($flaticon-map, "cancel");
+}
+.flaticon-technics:before {
+    content: map-get($flaticon-map, "technics");
+}
+.flaticon-games:before {
+    content: map-get($flaticon-map, "games");
+}
+.flaticon-video-player:before {
+    content: map-get($flaticon-map, "video-player");
+}
+.flaticon-mail:before {
+    content: map-get($flaticon-map, "mail");
+}
+.flaticon-contact:before {
+    content: map-get($flaticon-map, "contact");
+}
+.flaticon-call:before {
+    content: map-get($flaticon-map, "call");
+}
+.flaticon-bug-fixing:before {
+    content: map-get($flaticon-map, "bug-fixing");
 }
