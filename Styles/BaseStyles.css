@@ -67,6 +67,48 @@ a{
 /*********End. Reseting Styles*********/
 
 
+/* Modifier class styles */
+.display-n{
+    display: none;
+}
+.display-y{
+    display: flex;
+}
+/* End Modifier class styles */
+
+
+/* spiner styles*/
+.spinerContent{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    display: none; /* Switch to flex with JS */
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+.spinerContent__spiner{
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    border: .8em solid #222;
+    border-left: .8em solid #6400cc;
+    animation: spiner .25s linear infinite;
+}
+@keyframes spiner {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* End Spiner styles */
+
+
 /*********Header Styles*********/
 .header{
     display: flex;
@@ -75,7 +117,7 @@ a{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 9998;
     width: 100%;
     height: 4.5em;
     background: var(--black);
@@ -119,45 +161,55 @@ a{
 /* Nav styles */
 .nav{
     position: fixed;
-    z-index: 200;
+    z-index: 9999;
     right: 0;
     width: 80%;
-    display: none;
-/*     display: flex; */
+    /* display its modified with JS */
     flex-direction: column;
     max-height: 100%;
-    background: var(--gray02);
+    overflow: scroll;
     color: var(--white);
+    background: var(--gray02);
+    border-left: .1em solid var(--gray06);
 }
 .nav__header{
     display: flex;
     justify-content: flex-end;
     background-color: var(--black);
 }
+.nav__header:hover{
+    background: linear-gradient( var(--gray01), var(--black));
+}
+
 .nav__header-text{
     padding: 1rem;
     font-size: 1.2em;
-}
-.nav__header-text:hover{
     color: var(--gray06);
 }
-.nav__link{
-    padding: .8rem;
-    padding-left: .8rem;
+.nav__header-text:hover{
     color: var(--white);
+    cursor: pointer;
+}
+.nav__link{
+    flex-grow: 1;
+    padding: 1rem;
+    padding-left: 1.6rem;
+    color: var(--white);
+    display: flex;
+    align-items: center;
 }
 .nav__link:hover{
     background: var(--background03);
 }
-.btnCloseMenu{
+.btnMenuClose{
     text-align: center;
-    padding: .8rem;
-    border-top: .1em solid var(--purple);
+    padding: 1rem;
     background: linear-gradient(var(--gray01), var(--gray04));
     color: var(--white);
 }
-.btnCloseMenu:hover{
+.btnMenuClose:hover{
     background: linear-gradient( var(--black), var(--gray02));
+    cursor: pointer;
 }
 /* End Nav styles */
 
@@ -245,10 +297,11 @@ a{
 
 /*********Footer Styles*********/
 .footer{
+    padding: .4em;
     margin-top: 1em;
     color: #fff;
     background: #000;
-    border-top: .1em solid var(--purple);
+    border-top: .2em solid var(--purple);
 }
 .footer__license{
     padding: .5em;
