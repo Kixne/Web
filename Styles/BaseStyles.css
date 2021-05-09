@@ -162,11 +162,11 @@ a{
 .nav{
     position: fixed;
     z-index: 9999;
+    top: 0;
     right: 0;
     width: 80%;
-    /* display its modified with JS */
-    flex-direction: column;
     max-height: 100%;
+    flex-direction: column;
     overflow: scroll;
     color: var(--white);
     background: var(--gray02);
@@ -178,12 +178,11 @@ a{
     background-color: var(--black);
 }
 .nav__header:hover{
-    background: linear-gradient( var(--gray01), var(--black));
+    background: linear-gradient( var(--gray02), var(--black));
 }
-
 .nav__header-text{
     padding: 1rem;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: var(--gray06);
 }
 .nav__header-text:hover{
@@ -191,21 +190,21 @@ a{
     cursor: pointer;
 }
 .nav__link{
-    flex-grow: 1;
+    display: flex;
     padding: 1rem;
     padding-left: 1.6rem;
     color: var(--white);
-    display: flex;
-    align-items: center;
 }
 .nav__link:hover{
     background: var(--background03);
 }
 .btnMenuClose{
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding: 1rem;
-    background: linear-gradient(var(--gray01), var(--gray04));
+    font-size: 1.em;
     color: var(--white);
+    background: linear-gradient(var(--gray01), var(--gray04));
 }
 .btnMenuClose:hover{
     background: linear-gradient( var(--black), var(--gray02));
@@ -220,18 +219,19 @@ a{
     position: relative;
     display: flex;
     justify-content: center;
-    color: var(--white);    
+    color: var(--white);
+    overflow: hidden; 
 }
 .kxWelcome__image{
     width: 100%;
 }
 .kxWelcome__text{
     position: absolute;
-    margin-top: 10%;
     width: 70%;
-    text-align: center;
+    margin-top: 10%;
     font-size: 2em;
     font-family: Aladin;
+    text-align: center;
     text-shadow: 0 0 .1em var(--black), 0 0 .4em var(--magenta), 0 0 .2em var(--cyan);
 }
 .kxWelcome__text-tagLine{
@@ -253,7 +253,8 @@ a{
 /* End KxWelcome */
 
 
-/* Main */
+
+/* Main tag and content, structure styles*/
 .main{
     display: flex;
     flex-direction: column;
@@ -262,37 +263,62 @@ a{
     margin-top: 1rem;
     max-width: 1280px;
 }
+.main__mainSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+    margin-top: 1rem;
+    padding-bottom:1em;
+    background-color: var(--gray02);
+    border: 1px solid var(--gray06);
+}
+.main__mainSection:first-child{
+    border: none;
+}
+.mainSection__header{
+    margin-left: 0.4em;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-family: aladin;
+    color: var(--white);
+    text-shadow: 0 0 .2em var(--purple);
+}
+.mainSection__text{
+    color: var(--white);
+}
+.mainSection__subSection{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    padding: 1em 0;
+    margin-top: .8em;
+    border-radius: .8em;
+    overflow: hidden;
+    background: var(--white);
+}
+.mainSection__subSection-header{
+    font-size: 1.75rem;
+    font-family: aladin;
+    margin-left: .4em;
+}
+.mainSection__subSection-text{
+    padding-left: .8rem;
+}
+/* Main tag and content, structure styles*/
+
+
+/* Home Subsection styles */
+#mainSection__home{
+    background: none;
+}
 .content{
     background-color: var(--white);
     border-radius: .8em 0;
     overflow: hidden;
     padding: .8rem .4rem;
 }
-
-/* mainSections */
-.mainSection{
-    padding-bottom: 2em;
-    width: 96%;
-    background: var(--white);
-}
-.mainSection__header{
-    font-size: 2rem;
-    font-family: aladin;
-    margin: .4rem;
-    margin-bottom: 0;
-}
-.mainSection__subSection-header{
-    font-size: 1.75rem;
-    font-family: aladin;
-    margin-left: .2rem;
-}
-.mainSection__subSection-text{
-    padding-left: .8rem;
-}
-#mainSection__home{
-    background: none;
-}
-/* End. Main */
+/* End Home Subsection styles */
 
 
 /*********Footer Styles*********/
@@ -346,7 +372,7 @@ a{
     color: var(--white);
 }
 
-/* Animations */
+
 .animationContent{
     margin: auto;
     margin-top: 2rem;
@@ -588,7 +614,7 @@ a{
 
 
 /* this display none are just temporaly */
-#mainSection__home{
+/* #mainSection__home{
     display: none;
 }
 #mainSection__courses{
@@ -597,9 +623,9 @@ a{
 #mainSection__questions{
     display: none;
 }
-/* #mainSection__supportUs{
-    display: none;
-} */
-#mainSection__aboutUs{
+#mainSection__supportUs{
     display: none;
 }
+#mainSection__aboutUs{
+    display: none;
+} */
