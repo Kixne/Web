@@ -11,79 +11,98 @@
     <meta name= "robots" content= "index">
     <meta name="description" content="Professional content at the forefront and hight quality in technological areas. </br>Develop the best version of yourself and become a technological specialist.">
     
-    <link rel="stylesheet" href="./Styles/BaseStyles.css">
-    <!-- <link rel="stylesheet" media="only screen and (max-width:320px)" href="./Styles/Responsive/Index320px.css"> -->
-   
-    <link rel="stylesheet" type="text/css" href="./Sources/Icons/Flaticon/font/flaticon.css">
-
     <link rel="icon" type="image/png" sizes="16x16" href="./Sources/Icons/IconKx16px.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./Sources/Icons/IconKx32px.png">
     <link rel="icon" type="image/png" sizes="64x64" href="./Sources/Icons/IconKx64px.png">
     <title>Kixne&#153</title>
+    
+    <link rel="stylesheet" type="text/css" href="./Sources/Icons/KxIcons-v1.0/KxIcons.css">
+    <link rel="stylesheet" href="./Styles/BaseStyles.css">
+   
 </head>
 
 
 <body>
     <!-- Spiner (Really its just decorative, doesnt work with servers) -->
-    <div class="spinerContent">
+    <div class="spinerContent display-n">
         <div class="spinerContent__spiner"></div>
     </div>
     <!-- End Spiner -->
 
-     <!---------Header Tags--------->
+     <!---------Header--------->
      <header class="header">
         <div class="header__logo">
             <img src="./Sources/Icons/IconKx32px.png" alt="Kx Isologo" class="header__logo-image">
             <h1 class="header__logo-text">Kixne&#153</h1>
         </div>
         <span class="btnMenu">
-            Menu <i class="flaticon-list"></i>
+            Menu
+            <span class="Kx-icon Kx-menu"></span>
         </span>
     </header>
-    <!---------End. Header Tags--------->
-    
-    <!-- Nav tags -->
+    <!---------End. Header--------->
+
+    <!-- Nav -->
     <nav class="nav display-n">
-        <div class="nav__header">
+        <header class="nav__header">
             <span class="nav__header-text">
-                Menu <i class="flaticon flaticon-list"></i>
+                Menu <i class="Kx-icon Kx-menu"></i>
             </span>
+        </header>
+        
+        <span class="nav__link">
+            <span class=" Kx-icon Kx-home"></span>Home
+        </span>
+
+        <span class="nav__link">
+            <span class="Kx-icon Kx-learn"></span>Courses
+        </span>
+        
+        <span class="nav__link">
+            <span class="Kx-icon Kx-contact-question"></span>Questions
+        </span>
+
+        <span class="nav__link navLinkLangs">
+            <span class="Kx-icon Kx-languages"></span>Languajes
+            <span class="Kx-icon arrow Kx-arrow-down display-y"></span>
+            <span class="Kx-icon arrow Kx-arrow-up display-n"></span>
+        </span>
+        
+        <div class="langsList-container display-n">
+            <ul class="langsList">
+                <li class="langsList-item">
+                    <a href="#">English (en)
+                    </a>
+                </li>
+                <li class="langsList-item">
+                    <a href="#">Spanish (es)
+                    </a>
+                </li>
+            </ul>
         </div>
         
-        <a href="#" class="nav__link">
-            <i class=" flaticon flaticon-home"></i>Home
-        </a>
+        <span class="nav__link">
+            <span class="Kx-icon Kx-heart"></span>Support Us!
+        </span>
 
-        <a href="#" class="nav__link">
-            <i class="flaticon flaticon-learn"></i>Courses
-        </a>
-        
-        <a href="#" class="nav__link">
-            <i class="flaticon flaticon-question"></i>Questions
-        </a>
-
-        <a href="#" class="nav__link">
-            <i class="flaticon flaticon-loving-heart-shape"></i>Support Us!
-        </a>
-
-        <a href="#" class="nav__link">
-            <i class="flaticon flaticon-information"></i>About Us
-        </a>
+        <span class="nav__link">
+            <span class="Kx-icon Kx-information"></span>About Us
+        </span>
 
         <span class="btnMenuClose">
-            Close <i class="flaticon flaticon-cancel"></i>
+            Close <span class="Kx-icon Kx-cancel"></span>
         </span>
     </nav>
-    <!-- End nav tags -->
+    <!-- End Nav -->
 
 
     <!-- KxWelcome / banner -->
-    <div class="kxWelcome">
+    <div id="kxWelcome">
         <img loading="lazy" alt="Kx banner image" class="KxWelcome__image"
         src="./Sources/Images/KxWelcome/KxWelcome0480px.png"
         srcset="
         ./Sources/Images/KxWelcome/KxWelcome0320px.webp 320w,
-        ./Sources/Images/KxWelcome/KxWelcome0326px.webp 360w,
+        ./Sources/Images/KxWelcome/KxWelcome0360px.webp 360w,
         ./Sources/Images/KxWelcome/KxWelcome0480px.webp 480w,
         ./Sources/Images/KxWelcome/KxWelcome0683px.webp 683w,
         ./Sources/Images/KxWelcome/KxWelcome0720px.webp 720w,
@@ -96,16 +115,16 @@
         "
         sizes="
         (max-widt:320px) 320w,
-        (max-widt:320px) 360w,
-        (max-widt:320px) 480w,
-        (max-widt:320px) 683w,
-        (max-widt:320px) 720w,
-        (max-widt:320px) 1024w,
-        (max-widt:320px) 1068w,
-        (max-widt:320px) 1200w,
-        (max-widt:320px) 1280w,
-        (max-widt:320px) 1366w,
-        (max-widt:320px) 1920w"
+        (max-widt:360px) 360w,
+        (max-widt:480px) 480w,
+        (max-widt:683px) 683w,
+        (max-widt:720px) 720w,
+        (max-widt:1024px) 1024w,
+        (max-widt:1068px) 1068w,
+        (max-widt:1200px) 1200w,
+        (max-widt:1280px) 1280w,
+        (max-widt:1366px) 1366w,
+        (max-widt:1920px) 1920w"
         >
 
         <p class="kxWelcome__text">
@@ -120,8 +139,8 @@
 
     <main class="main">
 
-        <!-- Home mainSection tags -->
-        <section class="main__mainSection" id="mainSection__home">
+        <!-- Home mainSection -->
+        <section class="main__mainSection display-y" id="mainSection__home">
             <div class="content">
                 <p class="mainSection__subSection-header">
                     Greetings visitor !
@@ -131,7 +150,7 @@
                 </p>
             </div>
 
-            <!-- this div contains subSection linkCards, maybe isnt necesary -->
+            <!-- this div contains subSection linkCards -->
             <div class="subSectionLinksContainer">
                 
                 <!-- subSection Card Courses -->
@@ -165,7 +184,10 @@
                             (max-widt:1280px) 1280w,
                             (max-widt:1366px) 1366w,
                             (max-widt:1920px) 1920w">
-                            <p class="subSectionCard__title"><i class="flaticon-learn myArticle__flaticon"></i><strong>Courses</strong></p>
+                            <p class="subSectionCard__title">
+                                <i class="Kx-learn myArticle__flaticon"></i>
+                                <strong>Courses</strong>
+                            </p>
                             <p class="subSectionCard__text">Increase your skills learning about an technological topic of your interest, or follow some of our Kx guides</p>
                             <a href="#mainSection__courses" class="subSectionCard__link">Go to Learn</a>
                         </div>
@@ -203,7 +225,10 @@
                             (max-widt:1280px) 1280w,
                             (max-widt:1366px) 1366w,
                             (max-widt:1920px) 1920w">
-                            <p class="subSectionCard__title"><i class="flaticon-question myArticle__flaticon"></i><strong>Questions</strong></p>
+                            <p class="subSectionCard__title">
+                                <i class="Kx-contact-question myArticle__flaticon"></i>
+                                <strong>Questions</strong>
+                            </p>
                             <p class="subSectionCard__text">have you an inquiry of a part of the content, or do you want to make us a question about any topic, then, see how can we help you to solve your questions</p>
                             <a href="#mainSection__questions" class="subSectionCard__link">Solve my ask</a>
                         </div>
@@ -242,7 +267,10 @@
                             (max-widt:1366px) 1366w,
                             (max-widt:1920px) 1920w">
 
-                            <p class="subSectionCard__title"><i class="flaticon-loving-heart-shape myArticle__flaticon"></i><strong>Support us</strong></p>
+                            <p class="subSectionCard__title">
+                                <i class="Kx-heart myArticle__flaticon"></i>
+                                <strong>Support us</strong>
+                            </p>
                             <p class="subSectionCard__text">did you like it our content, do you want to help us, or do you want to collaborate to upgrade or update our content, find out how to do it in this section </p>
                             <a href="#mainSection__supportUs" class="subSectionCard__link">View methods</a>
                         </div>
@@ -280,7 +308,10 @@
                             (max-widt:1280px) 1280w,
                             (max-widt:1366px) 1366w,
                             (max-widt:1920px) 1920w">
-                            <p class="subSectionCard__title"><i class="flaticon-information myArticle__flaticon"></i><strong>About us</strong></p>
+                            <p class="subSectionCard__title">
+                                <i class="Kx-information myArticle__flaticon"></i>
+                                <strong>About us</strong>
+                            </p>
                             <p class="subSectionCard__text">Learn about our philosophy, find out why we share all our content with you, see our official contacts and discover another interesting things about us.</p>
                             <a href="#mainSection__aboutUs" class="subSectionCard__link">Know us</a>
                         </div>
@@ -289,29 +320,32 @@
             </div>
             
         </section>
-        <!-- End Home mainSection tags -->
+        <!-- End Home mainSection -->
 
 
         <!-- Courses mainSection -->
-        <section class="main__mainSection" id="mainSection__courses">
+        <section class="main__mainSection display-n" id="mainSection__courses">
             
             <header class="mainSection__header">
-               <i class=" flaticon flaticon-learn"></i>
+               <span class="Kx-icon Kx-learn"></span>
                Courses
-               <i class=" flaticon flaticon-learn"></i>
+               <span class="Kx-icon Kx-learn"></span>
             </header>
             <p class="text mainSection__text">Learn about an technological area, or follow any of our guides to specialize in its preferred topic, and become a professional or specialist</p>
             
             <!-- subSection CoursesCards -->
             <section class="mainSection__subSection subSection__courses">
+                <header class="mainSection__subSection-header">
+                    <span class="Kx-learn"></span>Courses
+                </header>
 
                 <div class="coursesCardsContainer">
                     <article class="courseCard">
-                        <h3 class="courseCard__title">
-                            <a href="#" class="courseCard__title-link">
+                        <a href="#" class="courseCard__title-link">
+                            <h3 class="courseCard__title">
                                 Web anatomy &#60/HTML&#62
-                            </a>
-                        </h3>
+                            </h3>
+                        </a>
                         <a class="courseCard__link" href="#">
                             <img class="courseCard__image" loading="lazy" alt="Course Image" title="Kx HTML5 course"
                                 src="./Sources/Images/HTML/CourseHTML0480px.webp"
@@ -336,27 +370,27 @@
                             <div class="courseCard__details">
                                 <!-- quality, version and duration -->
                                 <span class="courseCard__details-item courseCard__details-quality">
-                                    <i class="flaticon flaticon-star"></i>10.0
+                                    <span class="Kx-icon Kx-star"></span>10.0
                                 </span>
                                 <span class="courseCard__details-item courseCard__details-version">
-                                    <i class="flaticon flaticon-writing"></i>21.04.31
+                                    <span class="Kx-icon Kx-version"></span>21.04.31
                                 </span>
                                 <span class="courseCard__details-item courseCard__details-duration">
-                                    <i class="flaticon flaticon-clock"></i>00:00
+                                    <span class="Kx-icon Kx-clock"></span>00:00
                                 </span>
                             </div>
                             <a href="#" class="courseCard__link courseCard__button">
-                                Coming soon<i class="flaticon flaticon-learn"></i>
+                                Coming soon<span class="Kx-icon Kx-learn"></span>
                             </a>
                         </div>
                     </article>
 
                     <article class="courseCard">
-                        <h3 class="courseCard__title">
-                            <a href="#" class="courseCard__title-link">
+                        <a href="#" class="courseCard__title-link">
+                            <h3 class="courseCard__title">
                                 Web anatomy {CSS}
-                            </a>
-                        </h3>
+                            </h3>
+                        </a>
                         <a class="courseCard__link" href="#">
                             <img class="courseCard__image" loading="lazy" alt="Course Image" title="Kx CSS3 course"
                                 src="./Sources/Images/CSS/CourseCSS0480px.webp"
@@ -381,17 +415,17 @@
                             <div class="courseCard__details">
                                 <!-- quality, version and duration -->
                                 <span class="courseCard__details-item courseCard__details-quality">
-                                    <i class="flaticon flaticon-star"></i>10.0
+                                    <span class="Kx-icon Kx-star"></span>10.0
                                 </span>
                                 <span class="courseCard__details-item courseCard__details-version">
-                                    <i class="flaticon flaticon-writing"></i>21.04.31
+                                    <span class="Kx-icon Kx-version"></span>21.04.31
                                 </span>
                                 <span class="courseCard__details-item courseCard__details-duration">
-                                    <i class="flaticon flaticon-clock"></i>00:00
+                                    <span class="Kx-icon Kx-clock"></span>00:00
                                 </span>
                             </div>
                             <a href="#" class="courseCard__link courseCard__button">
-                                Coming soon<i class="flaticon flaticon-learn"></i>
+                                Coming soon<span class="Kx-icon Kx-learn"></span>
                             </a>
                         </div>
                     </article>                
@@ -401,7 +435,7 @@
             <!-- subSection Course -->
             <section class="mainSection__subSection">
                 <header class="mainSection__subSection-header">
-                    <i class="flaticon-learn"></i>CourseName
+                    <span class="Kx-learn"></span>Kx CourseName
                 </header>
                 <img class="course__image" loading="lazy" alt="Course Image" title="Kx course image"
                     src="./Tests/Sources/Images/Test/Test0480px.png"
@@ -422,63 +456,64 @@
                 <div class="course__details">
                     <!-- quality, version and duration -->
                     <span class="course__details-item course__details-quality">
-                        <i class="flaticon flaticon-star"></i>10.0
+                        <span class="Kx-icon Kx-star"></span>10.0
                     </span>
                     <span class="course__details-item course__details-version">
-                        <i class="flaticon flaticon-writing"></i>21.04.31
+                        <span class="Kx-icon Kx-version"></span>21.04.31
                     </span>
                     <span class="course__details-item course__details-duration">
-                        <i class="flaticon flaticon-clock"></i>00:00
+                        <span class="Kx-icon Kx-clock"></span>00:00
                     </span>
                 </div>
                 <p class="text course__text">
                     <b>Course description</b><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero rem ut nisi itaque dolorem reprehenderit molestiae amet est aspernatur nesciunt, facilis porro! Unde adipisci quis alias, ullam reiciendis accusantium aliquid.
                 </p>
+
                 <ul class="course__modulesList">
                     <header class="course__modulesList-header">
-                        <b><i class="flaticon flaticon-learn"></i>Course modules</b>
+                        <b><span class="Kx-icon Kx-learn"></span>Course modules</b>
                     </header>
                     <li class="course__modulesList-item">
                         <a href="#" class="course__modulesList-item-link">
-                            <i class="flaticon flaticon-play-button"></i>Module Name
+                            <span class="Kx-icon Kx-play-button"></span>Module Name
                             <span>
-                                <i class="flaticon flaticon-clock"></i>00:00
+                                <span class="Kx-icon Kx-clock"></span>00:00
                             </span>
                         </a>
                     </li>
 
                     <li class="course__modulesList-item">
                         <a href="#" class="course__modulesList-item-link">
-                            <i class="flaticon flaticon-play-button"></i>Module Name
+                            <span class="Kx-icon Kx-play-button"></span>Module Name
                             <span>
-                                <i class="flaticon flaticon-clock"></i>00:00
+                                <span class="Kx-icon Kx-clock"></span>00:00
                             </span>
                         </a>
                     </li>
                     
                     <li class="course__modulesList-item">
                         <a href="#" class="course__modulesList-item-link">
-                            <i class="flaticon flaticon-play-button"></i>Module Name
+                            <span class="Kx-icon Kx-play-button"></span>Module Name
                             <span>
-                                <i class="flaticon flaticon-clock"></i>00:00
+                                <span class="Kx-icon Kx-clock"></span>00:00
                             </span>
                         </a>
                     </li>
                     
                     <li class="course__modulesList-item">
                         <a href="#" class="course__modulesList-item-link">
-                            <i class="flaticon flaticon-play-button"></i>Module Name
+                            <span class="Kx-icon Kx-play-button"></span>Module Name
                             <span>
-                                <i class="flaticon flaticon-clock"></i>00:00
+                                <span class="Kx-icon Kx-clock"></span>00:00
                             </span>
                         </a>
                     </li>
                     
                     <li class="course__modulesList-item">
                         <a href="#" class="course__modulesList-item-link">
-                            <i class="flaticon flaticon-play-button"></i>Module Name
+                            <span class="Kx-icon Kx-play-button"></span>Module Name
                             <span>
-                                <i class="flaticon flaticon-clock"></i>00:00
+                                <span class="Kx-icon Kx-clock"></span>00:00
                             </span>
                         </a>
                     </li>
@@ -488,70 +523,70 @@
                     
                     <ul class="course__resource-list">
                         <header class="course__resource-list-header">
-                            <b><i class="flaticon flaticon-folder"></i>Resources links</b>
+                            <b><span class="Kx-icon Kx-directory"></span>Resources links</b>
                         </header>
                         <li class="course__resource-item">
                             <a href="#" class="course__resource-item-link">
-                                <i class="flaticon flaticon-direct-download"></i>Printable manual (.pdf)
+                                <span class="Kx-icon Kx-direct-download"></span>Printable manual (.pdf)
                             </a>
                         </li>
 
                         <li class="course__resource-item">
                             <a href="#" class="course__resource-item-link">
-                                <i class="flaticon flaticon-direct-download"></i>Digital manual
+                                <span class="Kx-icon Kx-direct-download"></span>Digital manual
                             </a>
                         </li>
                         
                         <li class="course__resource-item">
                             <a href="#" class="course__resource-item-link">
-                                <i class="flaticon flaticon-direct-download"></i>Printable proposed exersices (.pdf)
+                                <span class="Kx-icon Kx-direct-download"></span>Printable proposed exersices (.pdf)
                             </a>
                         </li>
                         
                         <li class="course__resource-item">
                             <a href="#" class="course__resource-item-link">
-                                <i class="flaticon flaticon-direct-download"></i>Digital proposed exersices
+                                <span class="Kx-icon Kx-direct-download"></span>Digital proposed exersices
                             </a>
                         </li>
                         
                         <li class="course__resource-item">
                             <a href="#" class="course__resource-item-link">
-                                <i class="flaticon flaticon-direct-download"></i>Modules (videos HD)
+                                <span class="Kx-icon Kx-direct-download"></span>Modules (videos HD)
                             </a>
                         </li>
                     </ul>
 
                     <ul class="course__resource-list">
                         <header class="course__resource-list-header">
-                            <b><i class="flaticon flaticon-folder"></i>Resources links +ad</b>
+                            <b><span class="Kx-icon Kx-directory"></span>Resources links +ad</b>
                         </header>
                         <li class="course__resource-item">
                             <a href="#" class="course__resource-item-link">
-                                <i class="flaticon flaticon-direct-download"></i>Printable manual (.pdf)
+                                <span class="Kx-icon Kx-direct-download"></span>Printable manual (.pdf)
                             </a>
                         </li>
 
                         <li class="course__resource-item">
                             <a href="#" class="course__resource-item-link">
-                                <i class="flaticon flaticon-direct-download"></i>Digital manual
+                                <span class="Kx-icon Kx-direct-download"></span>Digital manual
                             </a>
                         </li>
                         
                         <li class="course__resource-item">
                             <a href="#" class="course__resource-item-link">
-                                <i class="flaticon flaticon-direct-download"></i>Printable proposed exersices (.pdf)
+                                <span class="Kx-icon Kx-direct-download"></span>Printable proposed exersices (.pdf)
                             </a>
                         </li>
                         
                         <li class="course__resource-item">
                             <a href="#" class="course__resource-item-link">
-                                <i class="flaticon flaticon-direct-download"></i>Digital proposed exersices
+                                <span class="Kx-icon Kx-direct-download"></span>Digital proposed exersices
                             </a>
                         </li>
                         
                         <li class="course__resource-item">
                             <a href="#" class="course__resource-item-link">
-                                <i class="flaticon flaticon-direct-download"></i>All Modules (HD)
+                                <span class="Kx-icon Kx-direct-download"></span>All Modules (HD)
                             </a>
                         </li>
                     </ul>
@@ -563,31 +598,18 @@
                 <header class="mainSection__subSection-header">
                     <i class="flaticon-learn"></i>Module title
                 </header>
-                <img class="course__image" loading="lazy" alt="Module Image" title="Kx Module image"
-                    src="./Tests/Sources/Images/Test/Test0480px.png"
-                    srcset="
-                    ./Tests/Sources/Images/Test/Test0320px.png 320w,
-                    ./Tests/Sources/Images/Test/Test0360px.png 360w,
-                    ./Tests/Sources/Images/Test/Test0480px.png 480w,
-                    ./Tests/Sources/Images/Test/Test0683px.png 683w,
-                    ./Tests/Sources/Images/Test/Test0320px.png 684w
-                    "
-                    sizes="
-                    (max-widt:320px) 320w,
-                    (max-widt:360px) 360w,
-                    (max-widt:480px) 480w,
-                    (max-widt:683px) 683w,
-                    (min-widt:684px) 684w"
-                >
+                <div class="videoContainer">
+                    <iframe class="videoContainer__video" id="courses__moduleVideo" src="https://www.youtube.com/embed/XFbJrmdiv-s?enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <div class="module__controls">
                     <a href="#" class="module__control-item">
-                        <i class="flaticon-rewind-button"></i> Prev
+                        <span class="Kx-icon Kx-button-rewind"></span> Prev
                     </a>
                     <a href="#" class="module__control-item">
                         Modules
                     </a>
                     <a href="#" class="module__control-item">
-                        Next <i class="flaticon-forward-button"></i>
+                        Next <span class="Kx-icon Kx-button-forward"></span>
                     </a>
                 </div>
 
@@ -598,18 +620,18 @@
 
                 <ul class="course__resource-list">
                     <header class="course__resource-list-header">
-                        <b><i class="flaticon flaticon-folder"></i>Module resources</b>
+                        <b><span class="Kx-icon Kx-directory"></span>Module resources</b>
                     </header>
                     
                     <li class="course__resource-item">
                         <a href="#" class="course__resource-item-link">
-                            <i class="flaticon flaticon-direct-download"></i>Module (video HD)
+                            <span class="Kx-icon Kx-direct-download"></span>Module (video HD)
                         </a>
                     </li>
                     
                     <li class="course__resource-item">
                         <a href="#" class="course__resource-item-link">
-                            <i class="flaticon flaticon-direct-download"></i>Module (video HD) +ad
+                            <span class="Kx-icon Kx-direct-download"></span>Module (video HD) +ad
                         </a>
                     </li>
                 </ul>
@@ -620,12 +642,12 @@
 
 
         <!-- Questions mainSection -->
-        <section class="main__mainSection" id="mainSection__questions">
+        <section class="main__mainSection display-n" id="mainSection__questions">
             
             <header class="mainSection__header">
-                <i class="flaticon flaticon-question"></i>
+                <span class="Kx-icon Kx-contact-question"></span>
                 Questions
-                <i class="flaticon flaticon-question"></i>
+                <span class="Kx-icon Kx-contact-question"></span>
             </header>
             <p class="text mainSection__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem exercitationem suscipit at, nisi magni reprehenderit.
@@ -660,105 +682,167 @@
 
 
         <!-- SupportUs mainSection -->
-        <section class="main__mainSection" id="mainSection__supportUs">
+        <section class="main__mainSection display-n" id="mainSection__supportUs">
             
             <header class="mainSection__header">
-                <i class="flaticon flaticon-loving-heart-shape"></i>
+                <span class="Kx-icon Kx-heart"></span>
                 Support Us!
-                <i class="flaticon flaticon-loving-heart-shape"></i>
+                <span class="Kx-icon Kx-heart"></span>
             </header>
+
             <p class="text mainSection__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem exercitationem suscipit at, nisi magni reprehenderit.
             </p>
-            
-            <!-- subsection Methods -->
+
+            <!-- subsection Make us recognizing -->
             <section class="mainSection__subSection subSection__methods">
-                
+                <header class="mainSection__subSection-header">
+                    Make us recognizing
+                </header>
+
                 <!-- supportUsCard Kx accounts -->
-                <section class="supportUs__card">
+                <section class="subSection__subSection supportUsCard">
                     <img loading="lazy" src="./Tests/Sources/Images/ContactUs.png" alt="Kx accounts image" title="Official Kx accounts">
                     <p class="text">
                         The easiest form to support us, is commenting and sharing ours sites
                     </p>
+
                     <a href="#" class="support__button">
-                        <i class="flaticon flaticon-contact"></i>
+                        <span class="Kx-icon Kx-contact"></span>
                         Official accounts
                     </a>
                 </section>
                 
+            </section>
+
+            <!-- subsection Everyone can help -->
+            <section class="mainSection__subSection subSection__methods">
+                <header class="mainSection__subSection-header">
+                    Everyone can help
+                </header>
+                
                 <!-- supportUsCard ads -->
-                <section class="supportUs__card">
-                    <img loading="lazy" src="./Tests/Sources/Images/Ads.png" alt="Watch ad image" title="Kx ads">
+                <section class="subSection__subSection supportUsCard">
+                    <img loading="lazy" src="./Tests/Sources/Images/Ads.png" alt="Watch ad image" title="Kx Ads">
                     <p class="text">
                         Watch an ad and get a surprice advice from us, as a gratitude
                     </p>
                     <a href="#" class="support__button">
-                        <i class="flaticon flaticon-video-player"></i>
+                        <span class="Kx-icon Kx-video-player"></span>
                         Watch Ad
                     </a>
                 </section>
                 
                 <!-- supportUsCard games -->
-                <section class="supportUs__card">
+                <section class="subSection__subSection supportUsCard">
                     <img loading="lazy" src="./Tests/Sources/Images/Bling.png" alt="Games image" title="Kx Games">
                     <p class="text">
                         Play a game, collect coins and help us while you have fun every day
                     </p>
                     <a href="#" class="support__button">
-                        <i class="flaticon flaticon-games"></i>
+                        <span class="Kx-icon Kx-games"></span>
                         View games
                     </a>
                 </section>
                 
+            </section>
+            
+            <!-- subsection Talk with us -->
+            <section class="mainSection__subSection subSection__methods">
+    
+                <header class="mainSection__subSection-header">
+                    Talk with us
+                </header>
+                
                 <!-- supportUsCard UI/UX -->
-                <section class="supportUs__card">
-                <img loading="lazy" src="./Tests/Sources/Images/UIUX.png" alt="UI/Ux image" title="IU/UX">
+                <section class="subSection__subSection supportUsCard">
+                <img loading="lazy" src="./Tests/Sources/Images/UIUX.png" alt="UI/Ux image" title="Kx IU/UX">
                     <p class="text">
                         Contact us, and tell us your ideas to update or upgrade our UX and UI
                     </p>
+
                     <a href="#" class="support__button">
-                        <i class="flaticon flaticon-contact"></i>
-                        Contac methods
+                        <span class="Kx-icon Kx-contact-mail"></span>
+                        Contac us
                     </a>
                 </section>
 
                 <!-- supportUsCard report mistake -->
-                <section class="supportUs__card">
+                <section class="subSection__subSection supportUsCard">
                     <img loading="lazy" src="./Tests/Sources/Images/ReportMistake.png" alt="Report mistake image" title="Report mistake">
                     <p class="text">
-                        If you find a mistake or a bug, tell us that, we will fix it as soon as possible
+                        If you find a mistake or a bug, tell us that, we'll fix it as soon as possible
                     </p>
                     <a href="#" class="support__button">
-                        <i class="flaticon flaticon-bug-fixing"></i>
+                        <span class="Kx-icon Kx-bug-fixing"></span>
                         Report mistake
                     </a>
                 </section>
 
-                <!-- supportUsCard PayPay donation -->
-                <section class="supportUs__card">
+            </section>
+
+            <!-- subsection Donations -->
+            <section class="mainSection__subSection subSection__methods">
+                <header class="mainSection__subSection-header">
+                    Donations
+                </header>
+
+                <!-- supportUsCard PayPay -->
+                <section class="subSection__subSection supportUsCard">
                     <img loading="lazy" src="./Tests/Sources/Images/PayPal.png" alt="Kx PayPal image" title="Kx PayPal">
                     <p class="text">
                         If you want to help us grow faster, can support us with what you can
                     </p>
                     <a href="#" class="support__button">
-                        <i class="flaticon flaticon-paypal"></i>
+                        <span class="Kx-icon Kx-paypal"></span>
                         Donate
                     </a>
                 </section>
 
-                <!-- supportUsCard Crypto donations -->
-                <section class="supportUs__card">
-                    <img loading="lazy" src="./Tests/Sources/Images/Wallets.png" alt="Crypto wallets image" title="Kx crypto wallets">
+                <!-- supportUsCard Crypto -->
+                <section class="subSection__subSection supportUsCard">
+                    <img loading="lazy" src="./Tests/Sources/Images/Wallets.png" alt="Crypto wallets image" title="Kx Crypto Wallets">
                     <p class="text">
                         If you want to help us grow, can send us some cryptos to ours wallet
                     </p>
+
+                    <!-- support method details -->
+                    <div class="supportUsCard__details display-y">
+                        <div class="supportUsCard__details-header">
+                            CryptoWallets
+                        </div>
+                        <ul>
+                            <li class="basicList__item">
+                                <span class="Kx-icon Kx-crypto-bitcoin"></span>
+                                <b>Bitcoin</b>
+                                <br>putHereCopiableWalletDirection
+                            </li>
+                            
+                            <li class="basicList__item">
+                                <span class="Kx-icon Kx-crypto-chia"></span>
+                                <b>Chia</b>
+                                <br>putHereCopiableWalletDirection
+                            </li>
+                            
+                            <li class="basicList__item">
+                                <span class="Kx-icon Kx-crypto-ethereum"></span>
+                                <b>Ethereum</b>
+                                <br>putHereCopiableWalletDirection
+                            </li>
+                            
+                            <li class="basicList__item">
+                                <span class="Kx-icon Kx-crypto-litecoin"></span>
+                                <b>Litecoin</b>
+                                <br>putHereCopiableWalletDirection
+                            </li>
+                        </ul>
+                    </div>
+
                     <a href="#" class="support__button">
-                        <i class="flaticon flaticon-bitcoin"></i>
+                        <i class="Kx-icon Kx-crypto-wallet"></i>
                         Wallets
                     </a>
                 </section>
-
-
             </section>
             
         </section>
@@ -766,33 +850,105 @@
 
 
         <!-- AboutUs mainSection -->
-        <section class="main__mainSection" id="mainSection__aboutUs">
+        <section class="main__mainSection display-n" id="mainSection__aboutUs">
             <header class="mainSection__header">
                 <i class="flaticon flaticon-information"></i>
                 About Us
                 <i class="flaticon flaticon-information"></i>
             </header>
             <p class="text mainSection__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, rem.
+                Know what is Kixne, learn how are part of this and what to be part of the community joining us, learn about our filosofy, and discover more interesting things about us 
             </p>
-
-            <!-- subSection -->
+            
+            <!-- subSection KnowUs-->
             <section class="mainSection__subSection">
-                subSection 1
+                <header class="mainSection__subSection-header">
+                    Know Us
+                </header>
+                <div class="videoContainer">
+                    <iframe class="videoContainer__video" id="aboutUs__knowUsVideo" src="https://www.youtube.com/embed/XFbJrmdiv-s?enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                
+                <!-- Whats Kixne -->
+                <div class="subSection__subSection">
+                    <header class="textCard__header">
+                        What is Kixne?
+                    </header>
+                    <ul class="basicList">
+                        <li class="basicList__item">
+                            Kixne is a technological learnin area and personal development
+                        </li>
+
+                        <li class="basicList__item">
+                            Kixne is technology, are forefront knowledges and is improvement
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Who we are? -->
+                <div class="subSection__subSection">
+                    <header class="textCard__header">
+                        Who we are?
+                    </header>
+                    <p class="text">
+                        We are a community, specialists, profesionals and learners, where each one of us, have a common culture of mutual support, discipline and respect.
+                    </p>
+                </div>
+
+                <!-- Kx history -->
+                <div class="subSection__subSection">
+                    <header class="textCard__header">
+                        History
+                    </header>
+                    <p class="text texrCard__text">
+                        Kixne arises to make accessible knowledges at the forefront and of hight quality, to everyone who wants to expand their knowledges on techological issues.
+                        <br><br>In addition, we also make accessible the subjects that our specialists have receive in their professions and the knowledges learned by their experiences.
+                    </p>
+                </div>
+
             </section>
 
-            <!-- subSection -->
+            <!-- subSection Filosofy-->
             <section class="mainSection__subSection">
-                subSection 2
-            </section>
+                <header class="mainSection__subSection-header">
+                    Filosofy
+                </header>
 
-            <!-- subSection -->
-            <section class="mainSection__subSection">
-                subSection 3
+                <!-- Mision -->
+                <div class="subSection__subSection">
+                    <header class="textCard__header">
+                        Mision
+                    </header>
+                    <p class="text texrCard__text">
+                        We are Kixne, specialists dedicated to professional education in technological areas through digital platforms. Providing information at the forefront to our entire community.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="subSection__subSection">
+                    <header class="textCard__header">
+                        Vision
+                    </header>
+                    <p class="text texrCard__text">
+                        Our approach is to grow and be recognized worldwide as a community of very high prestige, with knowledges and tehnology at the forefront and of high quality.
+                    </p>
+                </div>
+
+                <!-- Values -->
+                <div class="subSection__subSection">
+                    <header class="textCard__header">
+                        Values
+                    </header>
+                    <p class="text texrCard__text">
+                        We believe that <b>solidarity</b> are the base to form a community of high prestige, where each one of us, will be recognized by our <b>professionalism</b>, our <b>discipline</b> and our <b>respect.</b>
+                    </p>
+                </div>
             </section>
 
         </section>
         <!-- End AboutUs subSection -->
+
     </main>
 
 
@@ -807,6 +963,8 @@
        
     </footer>
     <!---------End. Footer Tags--------->
+    <!-- YouTube iframe API -->
+    <script src="https://www.youtube.com/player_api"></script>   
     <script src="./Scripts/BaseScripts.js"></script>
 </body>
 </html>

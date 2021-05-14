@@ -1,4 +1,4 @@
-/*********Variables*********/
+/********* Variables *********/
 :root{
     --purple: #6400cc;
 
@@ -16,10 +16,10 @@
     --magenta: #f0f;
     --cyan: #0ff;
 }
-/*********End variables*********/
+/********* End Variables *********/
 
 
-/*********Importing fonts*********/
+/********* Importing fonts *********/
 @font-face{
     font-family: "nunito";
     src: url(../Sources/Fonts/Nunito-Regular.ttf);
@@ -28,10 +28,10 @@
     font-family: "aladin";
     src: url(../Sources/Fonts/Aladin-Regular.ttf);
 }
-/*********End. Importing fonts*********/
+/********* End Importing fonts *********/
 
 
-/*********Reseting Styles*********/
+/********* Reseting styles *********/
 body, body *{
     margin: 0;
     padding: 0;
@@ -56,28 +56,17 @@ a{
     color: var(--purple);
     text-decoration: none;
 }
-.flaticon{
+.Kx-icon{
     display: inline-block;
-/*     margin: auto .4em auto .2em; */
     margin: 0 .2em;
 }
 .text{
     padding: 0 .8em;
 }
-/*********End. Reseting Styles*********/
+/********* End Reseting styles *********/
 
 
-/* Modifier class styles */
-.display-n{
-    display: none;
-}
-.display-y{
-    display: flex;
-}
-/* End Modifier class styles */
-
-
-/* spiner styles*/
+/********* Spiner styles *********/
 .spinerContent{
     position: fixed;
     top: 0;
@@ -85,7 +74,7 @@ a{
     z-index: 10000;
     height: 100%;
     width: 100%;
-    display: none; /* Switch to flex with JS */
+    /* display switch with JS */
     justify-content: center;
     align-items: center;
     background: #000;
@@ -96,7 +85,7 @@ a{
     border-radius: 50%;
     border: .8em solid #222;
     border-left: .8em solid #6400cc;
-    animation: spiner .25s linear infinite;
+    animation: spiner .15s ease-in infinite;
 }
 @keyframes spiner {
     0%{
@@ -106,10 +95,108 @@ a{
         transform: rotate(360deg);
     }
 }
-/* End Spiner styles */
+/********* End Spiner styles *********/
 
 
-/*********Header Styles*********/
+/********* Modifier classes styles *********/
+.display-n{
+    display: none;
+}
+.display-y{
+    display: flex;
+}
+.videoContainer{
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    width: 98%;
+    margin: 0 auto;
+}
+.videoContainer__video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.textCard__header{
+    margin-top: .2em;
+    margin-left: .4em;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.basicList__item{
+    padding: 0 .2em;
+    margin-top: .4em;
+    margin-left: 1.6em;
+}
+/********* End Modifier classes styles *********/
+
+
+/********* Main structure styles *********/
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    max-width: 1280px;
+}
+.main__mainSection{
+    /* display are added with the class display-y */
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+    margin-top: 1rem;
+    padding-bottom:1em;
+    background-color: var(--gray02);
+    border: 1px solid var(--gray06);
+}
+.main__mainSection:first-child{
+    /* Quit the border to minSection Home */
+    border: none;
+}
+.mainSection__header{
+    margin-top: 1rem;
+    font-size: 2.4rem;
+    font-family: aladin;
+    color: var(--white);
+    text-shadow: 0 0 .2em var(--purple);
+    cursor: default;
+}
+.mainSection__text{
+    color: var(--white);
+}
+.mainSection__subSection{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    padding: 1em 0;
+    margin-top: .8em;
+    border-radius: .8em;
+    overflow: hidden;
+    background: var(--white);
+}
+.mainSection__subSection-header{
+    font-size: 2rem;
+    font-family: aladin;
+    margin: auto .4em 0;
+}
+.mainSection__subSection-text{
+    padding-left: .8rem;
+}
+.subSection__subSection{
+    width: 96%;
+    margin: 1em auto 0;
+    border-radius: 1em 0;
+    overflow: hidden;
+    border: 1px solid var(--black);
+    box-shadow: .2em .2em .4em var(--gray02);
+}
+/********* End Main structure styles *********/
+
+
+/********* Header styles *********/
 .header{
     display: flex;
     justify-content: space-between;
@@ -126,6 +213,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: default;
 }
 .header__logo-image{
     display: flex;
@@ -143,22 +231,24 @@ a{
     text-shadow: 0.1em 0em .1em var(--purple);
 }
 .btnMenu{
-    padding: .5em;
-    margin-right: 1em;
-    border-radius: 8%;
-    border: .1em solid var( --gray06);
+    padding: .4rem;
+    margin-right: 1rem;
+    font-size: 1.2em;
     color: var( --gray06);
+    border-radius: 8%;
+    border: .1rem solid var( --gray06);
 }
 .btnMenu:hover{
     color: var( --white);
     background: linear-gradient( var(--gray01), var(--gray02));
     border: .1rem solid var(--white);
-    box-shadow: 0 0 .5em var(--white);
+    box-shadow: 0 0 .4em var(--gray06);
+    cursor: pointer;
 }
-/*********End. Header Styles*********/
+/********* End Header styles *********/
 
 
-/* Nav styles */
+/********* Nav styles *********/
 .nav{
     position: fixed;
     z-index: 9999;
@@ -182,7 +272,8 @@ a{
 }
 .nav__header-text{
     padding: 1rem;
-    font-size: 1.4em;
+    font-family: aladin;
+    font-size: 2em;
     color: var(--gray06);
 }
 .nav__header-text:hover{
@@ -194,9 +285,27 @@ a{
     padding: 1rem;
     padding-left: 1.6rem;
     color: var(--white);
+    cursor: pointer;
 }
 .nav__link:hover{
     background: var(--background03);
+}
+.navLinkLangs .arrow{
+    position: absolute;
+    right: 0;
+    margin-right: 2em;
+}
+.langsList{
+    width: 100%;
+    list-style: none;
+}
+.langsList-item a{
+    width: 100%;
+    padding: 1em 1em 1em 4em;
+    color: var(--white);
+}
+.langsList-item:hover{
+    background: var(--black);
 }
 .btnMenuClose{
     display: flex;
@@ -210,17 +319,18 @@ a{
     background: linear-gradient( var(--black), var(--gray02));
     cursor: pointer;
 }
-/* End Nav styles */
+/********* End Nav styles *********/
 
 
-/* KxWelcome */
-.kxWelcome{
+/********* KxWelcome styles *********/
+#kxWelcome{
     margin-top: 4.4em;
     position: relative;
     display: flex;
     justify-content: center;
     color: var(--white);
-    overflow: hidden; 
+    overflow: hidden;
+    cursor: default;
 }
 .kxWelcome__image{
     width: 100%;
@@ -250,65 +360,10 @@ a{
     border-radius: 100% 100% 0 0;
     background: linear-gradient( var(--purple), #0000);
 }
-/* End KxWelcome */
+/********* End KxWelcome styles *********/
 
 
-
-/* Main tag and content, structure styles*/
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    margin-top: 1rem;
-    max-width: 1280px;
-}
-.main__mainSection{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 98%;
-    margin-top: 1rem;
-    padding-bottom:1em;
-    background-color: var(--gray02);
-    border: 1px solid var(--gray06);
-}
-.main__mainSection:first-child{
-    border: none;
-}
-.mainSection__header{
-    margin-left: 0.4em;
-    margin-top: 1rem;
-    font-size: 2rem;
-    font-family: aladin;
-    color: var(--white);
-    text-shadow: 0 0 .2em var(--purple);
-}
-.mainSection__text{
-    color: var(--white);
-}
-.mainSection__subSection{
-    display: flex;
-    flex-direction: column;
-    width: 96%;
-    padding: 1em 0;
-    margin-top: .8em;
-    border-radius: .8em;
-    overflow: hidden;
-    background: var(--white);
-}
-.mainSection__subSection-header{
-    font-size: 1.75rem;
-    font-family: aladin;
-    margin-left: .4em;
-}
-.mainSection__subSection-text{
-    padding-left: .8rem;
-}
-/* Main tag and content, structure styles*/
-
-
-/* Home Subsection styles */
+/********* mainSection home styles *********/
 #mainSection__home{
     background: none;
 }
@@ -318,29 +373,6 @@ a{
     overflow: hidden;
     padding: .8rem .4rem;
 }
-/* End Home Subsection styles */
-
-
-/*********Footer Styles*********/
-.footer{
-    padding: .4em;
-    margin-top: 1em;
-    color: #fff;
-    background: #000;
-    border-top: .2em solid var(--purple);
-}
-.footer__license{
-    padding: .5em;
-    font-size: .8em;
-    text-align: center;
-}
-/*********End. Footer Styles*********/
-
-
-
-
-
-
 
 .myArticle img{
     position: relative;
@@ -367,11 +399,10 @@ a{
     color: var(--black);
 }
 .subSectionCard__link:hover{
-    background: linear-gradient( 90deg, var(--gray01) , var(--gray02));
+    background: linear-gradient( 90deg, var(--black) , var(--gray02));
     border-top: .1rem solid var(--gray06);
     color: var(--white);
 }
-
 
 .animationContent{
     margin: auto;
@@ -381,80 +412,71 @@ a{
 .myArticle{
     position: relative;
     width: 100%;
-    margin: 0 auto;
-    border-radius: .4em 0;
-    background: linear-gradient( 90deg, #000, #444);
     color: white;
+    background: linear-gradient( 90deg, #000, #444);
 }
 .myArticle div{
     display: flex;
     flex-direction: column;
-    border-radius: .4em 0;
     overflow: hidden;
 }
 .animatedBorder:before, .animatedBorder:after{
     content: '';
     position: absolute;
-    left: -.2rem;
+    z-index: -1;
     top: -.2rem;
-    background: linear-gradient( 90deg,#6400cc, cyan, magenta, #6400cc );
-    background-size: 300%;
+    left: -.2rem;
     width: calc(100% + .4rem);
     height: calc(100% + .4rem);
-    z-index: -1;
-    animation: BorderAnimation 16s ease infinite;
-    border-radius: .4rem 0;
     overflow: hidden;
+    /* backGradient must be before backSize */
+    background: linear-gradient( 90deg,#6400cc, cyan, magenta, #6400cc, cyan, magenta , #6400cc );
+    background-size: 300%;
+    animation: BorderAnimation 10s linear infinite;
 }
-.animatedBorder:after{
+.myArticle, .myArticle div, .animatedBorder:before, .animatedBorder:after{
+    border-radius: 2rem 0;
+}
+.animatedBorder::before{
+    /* animatedBorder::after acts like solid border */
     filter: blur(.4rem);
 }
-@keyframes BorderAnimation {
+@keyframes BorderAnimation{
     0% {
-        background-position: 0% 300%;
-    }
-    50% {
-        background-position: 300% 0%;
+        background-position-x: 0%;
     }
     100% {
-        background-position: 0% 300%;
+        background-position-x: 300%;
     }
 }
-/* End Animations */
+/********* End mainSection home styles *********/
 
 
+/********* mainSection courses styles *********/
 
-
-
-
-
-
-
-
-/* Courses section styles */
-
-/* subSection CoursesCards styles */
+/* subSection coursesCards styles */
 .coursesCardsContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .courseCard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 96%;
+    display: flex;
     margin-top: 1em;
-    box-shadow: 0 0 .8em var(--black);
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1em 0;
+    overflow: hidden;
+    border: 1px solid var(--black);
+    box-shadow: .2em .2em .8em var(--gray02);
     background: linear-gradient(var(--black), #0000 );
 }
 .courseCard__title{
-    padding-top: .4em;
     width: 100%;
+    padding-top: .4rem;
     font-size: 2rem;
     text-align: center;
-}
-.courseCard__title-link{
     font-family: aladin;
     color: var(--white);
 }
@@ -462,7 +484,6 @@ a{
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-top: none;
 }
 .courseCard__text{
     padding: 0 .8em;
@@ -472,6 +493,7 @@ a{
     display: flex;
     justify-content: space-around;
     margin-top: .4em;
+    cursor: default;
 }
 .courseCard__button{
     width: 100%;
@@ -485,17 +507,19 @@ a{
     background-color: var(--gray01);
 }
 
-/* subSection Course styles */
+/* subSection course styles */
+.course__details{
+    width: 100%;
+    margin-top: .4em;
+    display: flex;
+    justify-content: space-around;
+    cursor: default;
+}
 .course__text{
     margin-top: 1em;
 }
 .course__text::first-line{
     font-size: 1.25em;
-}
-.course__details{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
 }
 .course__modulesList{
     margin-top: 2em;
@@ -537,7 +561,7 @@ a{
     color: var(--purple);
 }
 
-/* subSection Module styles */
+/* subSection module styles */
 .module__controls{
     display: flex;
     justify-content: space-around;
@@ -560,30 +584,20 @@ a{
 .module__description::first-line{
     font-size: 1.2em;
 }
-/* End Courses section styles */
+/********* End mainSection courses styles *********/
 
 
+/********* mainSection questions styles *********/
+/********* End mainSection questions styles *********/
 
 
+/********* mainSection supportUs styles *********/
 
-
-
-
-
-
-/* SupportUs Section styles */
-
-/* subSection supportUs__card styles */
+/* supportUs__card styles */
 .subSection__methods{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.supportUs__card{
-    width: 96%;
-    margin-top: 1em;
-    border: .1em solid var(--black);
-    box-shadow: .2em .2em .4em var(--black);
 }
 .support__button{
     width: 100%;
@@ -599,33 +613,35 @@ a{
     color: var(--purple);
     background: var(--black);
 }
-/* End subSection supportUs__card styles */
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* this display none are just temporaly */
-/* #mainSection__home{
-    display: none;
+.supportUsCard__details{
+    /* display, with display-y or display-n classes */
+    flex-direction: column;
+    margin: .8em 0;
 }
-#mainSection__courses{
-    display: none;
+.supportUsCard__details-header{
+    margin-left: .4em;
+    font-size: 1.2em;
+    font-weight: bold;
 }
-#mainSection__questions{
-    display: none;
+/********* End mainSection supportUs styles */
+
+
+/********* mainSection aboutUs styles *********/
+/********* End mainSection aboutUs styles */
+
+
+/********* Footer styles *********/
+.footer{
+    padding: .4em;
+    margin-top: 1em;
+    color: #fff;
+    background: #000;
+    border-top: .2em solid var(--purple);
 }
-#mainSection__supportUs{
-    display: none;
+.footer__license{
+    padding: .5em;
+    font-size: .8em;
+    text-align: center;
 }
-#mainSection__aboutUs{
-    display: none;
-} */
+/********* End Footer styles *********/
