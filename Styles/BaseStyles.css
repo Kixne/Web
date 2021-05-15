@@ -56,13 +56,6 @@ a{
     color: var(--purple);
     text-decoration: none;
 }
-.Kx-icon{
-    display: inline-block;
-    margin: 0 .2em;
-}
-.text{
-    padding: 0 .8em;
-}
 /********* End Reseting styles *********/
 
 
@@ -96,42 +89,6 @@ a{
     }
 }
 /********* End Spiner styles *********/
-
-
-/********* Modifier classes styles *********/
-.display-n{
-    display: none;
-}
-.display-y{
-    display: flex;
-}
-.videoContainer{
-    position: relative;
-    height: 0;
-    padding-bottom: 56.25%;
-    width: 98%;
-    margin: 0 auto;
-}
-.videoContainer__video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-.textCard__header{
-    margin-top: .2em;
-    margin-left: .4em;
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-.basicList__item{
-    padding: 0 .2em;
-    margin-top: .4em;
-    margin-left: 1.6em;
-}
-/********* End Modifier classes styles *********/
 
 
 /********* Main structure styles *********/
@@ -169,6 +126,7 @@ a{
 }
 .mainSection__subSection{
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 96%;
     padding: 1em 0;
@@ -182,9 +140,6 @@ a{
     font-family: aladin;
     margin: auto .4em 0;
 }
-.mainSection__subSection-text{
-    padding-left: .8rem;
-}
 .subSection__subSection{
     width: 96%;
     margin: 1em auto 0;
@@ -194,6 +149,54 @@ a{
     box-shadow: .2em .2em .4em var(--gray02);
 }
 /********* End Main structure styles *********/
+
+
+/********* Modifier classes styles *********/
+.Kx-icon{
+    display: inline-block;
+    margin: 0 .2em;
+}
+.display-y{
+    display: flex;
+}
+.display-n{
+    display: none;
+}
+.text{
+    padding: 0 .8em;
+}
+.videoContainer{
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    width: 98%;
+    margin: 0 auto;
+}
+.videoContainer__video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.textCard__header{
+    margin-top: .2em;
+    margin-left: .4em;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.basicList__item{
+    padding: 0 .2em;
+    margin-top: .4em;
+    margin-left: 1.6em;
+}
+/********* End Modifier classes styles *********/
+
+
+
+
+
+
 
 
 /********* Header styles *********/
@@ -367,18 +370,33 @@ a{
 #mainSection__home{
     background: none;
 }
-.content{
+.greetingsContainer{
     background-color: var(--white);
     border-radius: .8em 0;
     overflow: hidden;
     padding: .8rem .4rem;
 }
-
-.myArticle img{
+.mainSectionLinksContainer{
+    display: flex;
+    flex-direction: column;
+}
+/* mainSectionCard styles */
+.mainSectionCard-container{
+    position: relative;
+    width: 100%;
+    color: white;
+    background: linear-gradient( 90deg, #000, #444);
+}
+.mainSectionCard{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.mainSectionCard__img{
     position: relative;
 }
-.myArticle__flaticon{
-    margin-left: .4rem;
+.mainSectionCard__icon{
+    margin-left: .8rem;
     font-size: 1.5em;
 }
 .subSectionCard__title strong{
@@ -386,10 +404,14 @@ a{
     font-size: 2rem;
     margin-left: .4rem;
 }
-.subSectionCard__text{
-    padding: 0 .8rem;
-}
 .subSectionCard__link{
+
+
+
+
+
+
+
     width: 100%;
     text-align: center;
     padding: .8rem;
@@ -403,22 +425,11 @@ a{
     border-top: .1rem solid var(--gray06);
     color: var(--white);
 }
-
-.animationContent{
+.animatedBorderContainer{
+    /* this element make the border and his child content, easy to move */
     margin: auto;
     margin-top: 2rem;
     width: 90%;
-}
-.myArticle{
-    position: relative;
-    width: 100%;
-    color: white;
-    background: linear-gradient( 90deg, #000, #444);
-}
-.myArticle div{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
 }
 .animatedBorder:before, .animatedBorder:after{
     content: '';
@@ -434,12 +445,12 @@ a{
     background-size: 300%;
     animation: BorderAnimation 10s linear infinite;
 }
-.myArticle, .myArticle div, .animatedBorder:before, .animatedBorder:after{
-    border-radius: 2rem 0;
-}
 .animatedBorder::before{
     /* animatedBorder::after acts like solid border */
     filter: blur(.4rem);
+}
+.mainSectionCard-container, .mainSectionCard, .animatedBorder:before, .animatedBorder:after{
+    border-radius: 2rem 0;
 }
 @keyframes BorderAnimation{
     0% {
@@ -453,7 +464,6 @@ a{
 
 
 /********* mainSection courses styles *********/
-
 /* subSection coursesCards styles */
 .coursesCardsContainer{
     display: flex;
@@ -594,12 +604,6 @@ a{
 /********* mainSection supportUs styles *********/
 
 /* supportUs__card styles */
-.subSection__methods{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .methodCard__details{
     /* display, with display-y or display-n classes */
     flex-direction: column;
