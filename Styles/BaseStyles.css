@@ -599,7 +599,18 @@ a{
     flex-direction: column;
     align-items: center;
 }
-.support__button{
+
+.methodCard__details{
+    /* display, with display-y or display-n classes */
+    flex-direction: column;
+    margin: .8em 0;
+}
+.methodCard__details-header{
+    margin-left: .4em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.methodCard__button{
     width: 100%;
     display: inline-block;
     padding: .4em;
@@ -609,20 +620,9 @@ a{
     color: var(--black);
     background: var(--gray06);
 }
-.support__button:hover{
+.methodCard__button:hover{
     color: var(--purple);
     background: var(--black);
-}
-
-.supportUsCard__details{
-    /* display, with display-y or display-n classes */
-    flex-direction: column;
-    margin: .8em 0;
-}
-.supportUsCard__details-header{
-    margin-left: .4em;
-    font-size: 1.2em;
-    font-weight: bold;
 }
 /********* End mainSection supportUs styles */
 

@@ -140,7 +140,7 @@
     <main class="main">
 
         <!-- Home mainSection -->
-        <section class="main__mainSection display-y" id="mainSection__home">
+        <section class="main__mainSection display-n" id="mainSection__home">
             <div class="content">
                 <p class="mainSection__subSection-header">
                     Greetings visitor !
@@ -642,7 +642,7 @@
 
 
         <!-- Questions mainSection -->
-        <section class="main__mainSection display-n" id="mainSection__questions">
+        <section class="main__mainSection display-y" id="mainSection__questions">
             
             <header class="mainSection__header">
                 <span class="Kx-icon Kx-contact-question"></span>
@@ -650,31 +650,107 @@
                 <span class="Kx-icon Kx-contact-question"></span>
             </header>
             <p class="text mainSection__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem exercitationem suscipit at, nisi magni reprehenderit.
+                Find diferen forms and communities to solve your doubts, or if you dont find an answer, ask us directly!
             </p>
 
-            <!-- subSection FrequentQuestions-->
+            <!-- subSection Frequent questions-->
             <section class="mainSection__subSection">
                 <header class="mainSection__subSection-header">
                     <i class="flaticon flaticon-question"></i>Frequent questions
                 </header>
-                subSection example content
+                <p class="text">
+                    We are starting, at this time, we have no content for this section<br>we apologyce.
+                </p>
             </section>
             
-            <!-- subSection help groups -->
-            <section class="mainSection__subSection">
+            <!-- subSection Help groups -->
+            <section class="mainSection__subSection subSection__methods">
                 <header class="mainSection__subSection-header">
                     <i class="flaticon flaticon-question"></i>Help groups
                 </header>
-                subSection example content
+                <p class="text">
+                    We give you diferen groups, so you can join the one in accordance with your skills and experience
+                </p>
+
+                <!-- methodUsCard Name -->
+                <section class="subSection__subSection methodCard">
+                    <img loading="lazy" src="./Tests/Sources/Images/ContactUs.png" alt="Crypto wallets image" title="Kx Crypto Wallets">
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- method details -->
+                    <div class="methodCard__details display-y">
+                        <div class="methodCard__details-header">
+                            methodCard details header
+                        </div>
+                        <p class="text">
+                            Some example content <br>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="methodCard__button">
+                        <i class="Kx-icon Kx-crypto-wallet"></i>
+                        Wallets
+                    </a>
+                </section>
+                
             </section>
             
             <!-- subSection Ask us-->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection subSection__methods">
                 <header class="mainSection__subSection-header">
                     <i class="flaticon flaticon-question"></i>Ask us!
                 </header>
-                subSection example content
+                <p class="text">
+                    You didnt find an answer with our community?, thats saddened us. Try here, and we will try to solve it.
+                </p>
+
+                <!-- methodCard direct contacts -->
+                <section class="subSection__subSection methodCard">
+                    <img loading="lazy" src="./Tests/Sources/Images/ContactUs.png" alt="Kx accounts image" title="Official Kx accounts">
+                    <p class="text">
+                        Ask us directly. we will try to solve your doubts as soon as a possible
+                    </p>
+
+                    <!-- method details -->     
+                    <div class="methodCard__details display-y">
+                        
+                        <div class="methodCard__details-header">
+                            Official contacts
+                        </div> 
+                        
+                        <p class="text">
+                            This may take some time, at the moment we are few people, we hope you understand delays.
+                        </p>
+
+                        <ul>
+                            <li class="basicList__item">
+                                <span class="Kx-icon Kx-telegram"></span>
+                                <b>Telegram</b>
+                                <br>+503 #### #### or UserName
+                            </li>
+                            
+                            <li class="basicList__item">
+                                <span class="Kx-icon Kx-contact-mail"></span>
+                                <b>eMail</b>
+                                <br>Kx.Questions@gmail.com
+                            </li>
+                            
+                            <li class="basicList__item">
+                                <span class="Kx-icon Kx-contact-phone-call"></span>
+                                <b>Phone</b> (please, just use when its totally necesary)
+                                <br>+503 #### ####
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="methodCard__button">
+                        <span class="Kx-icon Kx-contact"></span>
+                        Direct contacts
+                    </a>
+                </section>
             </section>
 
         </section>
@@ -700,14 +776,14 @@
                     Make us recognizing
                 </header>
 
-                <!-- supportUsCard Kx accounts -->
-                <section class="subSection__subSection supportUsCard">
+                <!-- methodCard Kx accounts -->
+                <section class="subSection__subSection methodCard">
                     <img loading="lazy" src="./Tests/Sources/Images/ContactUs.png" alt="Kx accounts image" title="Official Kx accounts">
                     <p class="text">
                         The easiest form to support us, is commenting and sharing ours sites
                     </p>
 
-                    <a href="#" class="support__button">
+                    <a href="#" class="methodCard__button">
                         <span class="Kx-icon Kx-contact"></span>
                         Official accounts
                     </a>
@@ -721,30 +797,42 @@
                     Everyone can help
                 </header>
                 
-                <!-- supportUsCard ads -->
-                <section class="subSection__subSection supportUsCard">
+                <!-- methodCard ads -->
+                <section class="subSection__subSection methodCard">
                     <img loading="lazy" src="./Tests/Sources/Images/Ads.png" alt="Watch ad image" title="Kx Ads">
                     <p class="text">
                         Watch an ad and get a surprice advice from us, as a gratitude
                     </p>
-                    <a href="#" class="support__button">
+                    <a href="#" class="methodCard__button">
                         <span class="Kx-icon Kx-video-player"></span>
                         Watch Ad
                     </a>
                 </section>
                 
-                <!-- supportUsCard games -->
-                <section class="subSection__subSection supportUsCard">
-                    <img loading="lazy" src="./Tests/Sources/Images/Bling.png" alt="Games image" title="Kx Games">
+                <!-- methodCard games big time -->
+                <section class="subSection__subSection methodCard">
+                    <img loading="lazy" src="./Tests/Sources/Images/BigTime0320px.png" alt="Games image" title="Kx Games">
                     <p class="text">
-                        Play a game, collect coins and help us while you have fun every day
+                        Play a game, collect tikets and help us while you have fun every day
                     </p>
-                    <a href="#" class="support__button">
+                    <a href="#" class="methodCard__button">
                         <span class="Kx-icon Kx-games"></span>
                         View games
                     </a>
                 </section>
-                
+
+                <!-- methodCard games bling -->
+                <section class="subSection__subSection methodCard">
+                    <img loading="lazy" src="./Tests/Sources/Images/Bling.png" alt="Games image" title="Kx Games">
+                    <p class="text">
+                        Play a game, collect coins and help us while you have fun every day
+                    </p>
+                    <a href="#" class="methodCard__button">
+                        <span class="Kx-icon Kx-games"></span>
+                        View games
+                    </a>
+                </section>
+
             </section>
             
             <!-- subsection Talk with us -->
@@ -754,26 +842,26 @@
                     Talk with us
                 </header>
                 
-                <!-- supportUsCard UI/UX -->
-                <section class="subSection__subSection supportUsCard">
+                <!-- methodCard UI/UX -->
+                <section class="subSection__subSection methodCard">
                 <img loading="lazy" src="./Tests/Sources/Images/UIUX.png" alt="UI/Ux image" title="Kx IU/UX">
                     <p class="text">
                         Contact us, and tell us your ideas to update or upgrade our UX and UI
                     </p>
 
-                    <a href="#" class="support__button">
+                    <a href="#" class="methodCard__button">
                         <span class="Kx-icon Kx-contact-mail"></span>
                         Contac us
                     </a>
                 </section>
 
-                <!-- supportUsCard report mistake -->
-                <section class="subSection__subSection supportUsCard">
+                <!-- methodCard report mistake -->
+                <section class="subSection__subSection methodCard">
                     <img loading="lazy" src="./Tests/Sources/Images/ReportMistake.png" alt="Report mistake image" title="Report mistake">
                     <p class="text">
                         If you find a mistake or a bug, tell us that, we'll fix it as soon as possible
                     </p>
-                    <a href="#" class="support__button">
+                    <a href="#" class="methodCard__button">
                         <span class="Kx-icon Kx-bug-fixing"></span>
                         Report mistake
                     </a>
@@ -787,28 +875,28 @@
                     Donations
                 </header>
 
-                <!-- supportUsCard PayPay -->
-                <section class="subSection__subSection supportUsCard">
+                <!-- methodCard PayPay -->
+                <section class="subSection__subSection methodCard">
                     <img loading="lazy" src="./Tests/Sources/Images/PayPal.png" alt="Kx PayPal image" title="Kx PayPal">
                     <p class="text">
                         If you want to help us grow faster, can support us with what you can
                     </p>
-                    <a href="#" class="support__button">
+                    <a href="#" class="methodCard__button">
                         <span class="Kx-icon Kx-paypal"></span>
                         Donate
                     </a>
                 </section>
 
-                <!-- supportUsCard Crypto -->
-                <section class="subSection__subSection supportUsCard">
+                <!-- methodCard Crypto -->
+                <section class="subSection__subSection methodCard">
                     <img loading="lazy" src="./Tests/Sources/Images/Wallets.png" alt="Crypto wallets image" title="Kx Crypto Wallets">
                     <p class="text">
                         If you want to help us grow, can send us some cryptos to ours wallet
                     </p>
 
                     <!-- support method details -->
-                    <div class="supportUsCard__details display-y">
-                        <div class="supportUsCard__details-header">
+                    <div class="methodCard__details display-y">
+                        <div class="methodCard__details-header">
                             CryptoWallets
                         </div>
                         <ul>
@@ -838,7 +926,7 @@
                         </ul>
                     </div>
 
-                    <a href="#" class="support__button">
+                    <a href="#" class="methodCard__button">
                         <i class="Kx-icon Kx-crypto-wallet"></i>
                         Wallets
                     </a>
