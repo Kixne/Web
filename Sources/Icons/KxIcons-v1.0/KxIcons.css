@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'KxIcons';
   src:
-    url('fonts/KxIcons.ttf?80zn33') format('truetype'),
-    url('fonts/KxIcons.woff?80zn33') format('woff'),
-    url('fonts/KxIcons.svg?80zn33#KxIcons') format('svg');
+    url('fonts/KxIcons.ttf?tdhl8f') format('truetype'),
+    url('fonts/KxIcons.woff?tdhl8f') format('woff'),
+    url('fonts/KxIcons.svg?tdhl8f#KxIcons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,111 +24,132 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.Kx-arrow-down:before {
+.Kx-youtube:before {
   content: "\e900";
 }
-.Kx-arrow-up:before {
+.Kx-video-player:before {
   content: "\e901";
 }
-.Kx-bitg-time:before {
+.Kx-version:before {
   content: "\e902";
 }
-.Kx-bug-fixing:before {
+.Kx-telegram:before {
   content: "\e903";
 }
-.Kx-button-forward:before {
+.Kx-technics:before {
   content: "\e904";
 }
-.Kx-button-rewind:before {
+.Kx-star:before {
   content: "\e905";
 }
-.Kx-cancel:before {
+.Kx-button-play:before {
   content: "\e906";
 }
-.Kx-clock:before {
+.Kx-paypal:before {
   content: "\e907";
 }
-.Kx-contact:before {
+.Kx-menu:before {
   content: "\e908";
 }
-.Kx-contact-chat:before {
+.Kx-learn:before {
   content: "\e909";
 }
-.Kx-contact-mail:before {
+.Kx-languages:before {
   content: "\e90a";
 }
-.Kx-contact-phone:before {
+.Kx-information:before {
   content: "\e90b";
 }
-.Kx-contact-phone-call:before {
+.Kx-home:before {
   content: "\e90c";
 }
-.Kx-contact-question:before {
+.Kx-heart:before {
   content: "\e90d";
 }
-.Kx-crypto-bitcoin:before {
+.Kx-group-talking:before {
   content: "\e90e";
 }
-.Kx-crypto-chia:before {
+.Kx-group:before {
   content: "\e90f";
 }
-.Kx-crypto-ethereum:before {
+.Kx-github:before {
   content: "\e910";
 }
-.Kx-crypto-litecoin:before {
+.Kx-git:before {
   content: "\e911";
 }
-.Kx-crypto-wallet:before {
+.Kx-games:before {
   content: "\e912";
 }
-.Kx-direct-download:before {
+.Kx-facebook:before {
   content: "\e913";
 }
 .Kx-directory:before {
   content: "\e914";
 }
-.Kx-games:before {
+.Kx-direct-download:before {
   content: "\e915";
 }
-.Kx-heart:before {
+.Kx-crypto-wallet:before {
   content: "\e916";
 }
-.Kx-home:before {
+.Kx-crypto-litecoin:before {
   content: "\e917";
 }
-.Kx-information:before {
+.Kx-crypto-ethereum:before {
   content: "\e918";
 }
-.Kx-languages:before {
+.Kx-crypto-chia:before {
   content: "\e919";
 }
-.Kx-learn:before {
+.Kx-crypto-bitcoin:before {
   content: "\e91a";
 }
-.Kx-menu:before {
+.Kx-copy:before {
   content: "\e91b";
 }
-.Kx-paypal:before {
+.Kx-contact-question:before {
   content: "\e91c";
 }
-.Kx-play-button:before {
+.Kx-contact-phone-call:before {
   content: "\e91d";
 }
-.Kx-star:before {
+.Kx-contact-phone:before {
   content: "\e91e";
 }
-.Kx-technics:before {
+.Kx-contact-mail:before {
   content: "\e91f";
 }
-.Kx-telegram:before {
+.Kx-contact-chat:before {
   content: "\e920";
 }
-.Kx-version:before {
+.Kx-contact:before {
   content: "\e921";
 }
-.Kx-video-player:before {
+.Kx-clock:before {
   content: "\e922";
 }
-.Kx-youtube:before {
+.Kx-button-cancel:before {
   content: "\e923";
+}
+.Kx-button-rewind:before {
+  content: "\e924";
+}
+.Kx-button-forward:before {
+  content: "\e925";
+}
+.Kx-bug-fixing:before {
+  content: "\e926";
+}
+.Kx-bitg-time:before {
+  content: "\e927";
+}
+.Kx-arrow-up:before {
+  content: "\e928";
+}
+.Kx-arrow-send:before {
+  content: "\e929";
+}
+.Kx-arrow-down:before {
+  content: "\e92a";
 }

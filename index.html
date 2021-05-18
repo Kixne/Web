@@ -90,7 +90,7 @@
         </span>
 
         <span class="btnMenuClose">
-            Close <span class="Kx-icon Kx-cancel"></span>
+            Close <span class="Kx-icon Kx-button-cancel"></span>
         </span>
     </nav>
     <!-- End Nav -->
@@ -126,12 +126,10 @@
         (max-widt:1366px) 1366w,
         (max-widt:1920px) 1920w"
         >
-
         <p class="kxWelcome__text">
             Develop the best version of yourself<br>
             <span class="kxWelcome__text-tagLine">and become a technological specialist.</span>
         </p>
-       
         <span class="kxWelcome__ground"></span> 
     </div>
     <!-- End KxWelcome -->
@@ -139,8 +137,8 @@
 
     <main class="main">
 
-        <!-- Home mainSection -->
-        <section class="main__mainSection display-y" id="mainSection__home">
+        <!-- mainSection Home -->
+        <section class="main__mainSection display-n" id="mainSection__home">
             <div class="greetingsContainer">
                 <header class="mainSection__subSection-header">
                     Greetings visitor!
@@ -323,15 +321,15 @@
                             </p>
                             <a href="#mainSection__aboutUs" class="subSectionCard__link">Know us</a>
                         </section>
-                    </section>
+                    </div>
                 </div>
             </div>
             
         </section>
-        <!-- End Home mainSection -->
+        <!-- End mainSection Home -->
 
 
-        <!-- Courses mainSection -->
+        <!-- mainSection Courses -->
         <section class="main__mainSection display-n" id="mainSection__courses">
             
             <header class="mainSection__header">
@@ -344,10 +342,12 @@
             <!-- subSection CoursesCards -->
             <section class="mainSection__subSection subSection__courses">
                 <header class="mainSection__subSection-header">
-                    <span class="Kx-learn"></span>Courses
+                    <span class="Kx-icon Kx-learn"></span>Courses
                 </header>
 
                 <div class="coursesCardsContainer">
+                    
+                    <!-- Web HTML -->
                     <article class="courseCard">
                         <a href="#" class="courseCard__title-link">
                             <h3 class="courseCard__title">
@@ -393,6 +393,7 @@
                         </div>
                     </article>
 
+                    <!-- Web CSS -->
                     <article class="courseCard">
                         <a href="#" class="courseCard__title-link">
                             <h3 class="courseCard__title">
@@ -436,7 +437,99 @@
                                 Coming soon<span class="Kx-icon Kx-learn"></span>
                             </a>
                         </div>
-                    </article>                
+                    </article>
+                    
+                    <!-- Git & Github -->
+                    <article class="courseCard">
+                        <a href="#" class="courseCard__title-link">
+                            <h3 class="courseCard__title">
+                                Git & GitHub
+                            </h3>
+                        </a>
+                        <a class="courseCard__link" href="#">
+                            <img class="courseCard__image" loading="lazy" alt="Course Image" title="Kx CSS3 course"
+                                src="./Sources/Images/CSS/CourseCSS0480px.webp"
+                                srcset="
+                                ./Sources/Images/CSS/CourseCSS0320px.webp 320w,
+                                ./Sources/Images/CSS/CourseCSS0360px.webp 360w,
+                                ./Sources/Images/CSS/CourseCSS0480px.webp 480w,
+                                ./Sources/Images/CSS/CourseCSS0683px.webp 683w,
+                                ./Sources/Images/CSS/CourseCSS0320px.webp 684w
+                                "
+                                sizes="
+                                (max-widt:320px) 320w,
+                                (max-widt:360px) 360w,
+                                (max-widt:480px) 480w,
+                                (max-widt:683px) 683w,
+                                (min-widt:684px) 684w">
+                        </a>
+                        <div class="courseCard__body">
+                            <p class="courseCard__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, aspernatur?
+                            </p>
+                            <div class="courseCard__details">
+                                <!-- quality, version and duration -->
+                                <span class="courseCard__details-item courseCard__details-quality">
+                                    <span class="Kx-icon Kx-star"></span>10.0
+                                </span>
+                                <span class="courseCard__details-item courseCard__details-version">
+                                    <span class="Kx-icon Kx-version"></span>21.04.31
+                                </span>
+                                <span class="courseCard__details-item courseCard__details-duration">
+                                    <span class="Kx-icon Kx-clock"></span>00:00
+                                </span>
+                            </div>
+                            <a href="#" class="courseCard__link courseCard__button">
+                                Coming soon<span class="Kx-icon Kx-learn"></span>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Mathematics (calculus) -->
+                    <article class="courseCard">
+                        <a href="#" class="courseCard__title-link">
+                            <h3 class="courseCard__title">
+                                Mathematics (calculus)
+                            </h3>
+                        </a>
+                        <a class="courseCard__link" href="#">
+                            <img class="courseCard__image" loading="lazy" alt="Course Image" title="Kx CSS3 course"
+                                src="./Sources/Images/CSS/CourseCSS0480px.webp"
+                                srcset="
+                                ./Sources/Images/CSS/CourseCSS0320px.webp 320w,
+                                ./Sources/Images/CSS/CourseCSS0360px.webp 360w,
+                                ./Sources/Images/CSS/CourseCSS0480px.webp 480w,
+                                ./Sources/Images/CSS/CourseCSS0683px.webp 683w,
+                                ./Sources/Images/CSS/CourseCSS0320px.webp 684w
+                                "
+                                sizes="
+                                (max-widt:320px) 320w,
+                                (max-widt:360px) 360w,
+                                (max-widt:480px) 480w,
+                                (max-widt:683px) 683w,
+                                (min-widt:684px) 684w">
+                        </a>
+                        <div class="courseCard__body">
+                            <p class="courseCard__text">
+                                Master mathematics (calculus) and develop skills to apply it and create different types of solutions.
+                            </p>
+                            <div class="courseCard__details">
+                                <!-- quality, version and duration -->
+                                <span class="courseCard__details-item courseCard__details-quality">
+                                    <span class="Kx-icon Kx-star"></span>10.0
+                                </span>
+                                <span class="courseCard__details-item courseCard__details-version">
+                                    <span class="Kx-icon Kx-version"></span>21.04.31
+                                </span>
+                                <span class="courseCard__details-item courseCard__details-duration">
+                                    <span class="Kx-icon Kx-clock"></span>00:00
+                                </span>
+                            </div>
+                            <a href="#" class="courseCard__link courseCard__button">
+                                Coming soon<span class="Kx-icon Kx-learn"></span>
+                            </a>
+                        </div>
+                    </article>
                 </div>
             </section>
 
@@ -483,7 +576,7 @@
                     </header>
                     <li class="course__modulesList-item">
                         <a href="#" class="course__modulesList-item-link">
-                            <span class="Kx-icon Kx-play-button"></span>Module Name
+                            <span class="Kx-icon Kx-button-play"></span>Module Name
                             <span>
                                 <span class="Kx-icon Kx-clock"></span>00:00
                             </span>
@@ -492,7 +585,7 @@
 
                     <li class="course__modulesList-item">
                         <a href="#" class="course__modulesList-item-link">
-                            <span class="Kx-icon Kx-play-button"></span>Module Name
+                            <span class="Kx-icon Kx-button-play"></span>Module Name
                             <span>
                                 <span class="Kx-icon Kx-clock"></span>00:00
                             </span>
@@ -501,7 +594,7 @@
                     
                     <li class="course__modulesList-item">
                         <a href="#" class="course__modulesList-item-link">
-                            <span class="Kx-icon Kx-play-button"></span>Module Name
+                            <span class="Kx-icon Kx-button-play"></span>Module Name
                             <span>
                                 <span class="Kx-icon Kx-clock"></span>00:00
                             </span>
@@ -510,7 +603,7 @@
                     
                     <li class="course__modulesList-item">
                         <a href="#" class="course__modulesList-item-link">
-                            <span class="Kx-icon Kx-play-button"></span>Module Name
+                            <span class="Kx-icon Kx-button-play"></span>Module Name
                             <span>
                                 <span class="Kx-icon Kx-clock"></span>00:00
                             </span>
@@ -519,7 +612,7 @@
                     
                     <li class="course__modulesList-item">
                         <a href="#" class="course__modulesList-item-link">
-                            <span class="Kx-icon Kx-play-button"></span>Module Name
+                            <span class="Kx-icon Kx-button-play"></span>Module Name
                             <span>
                                 <span class="Kx-icon Kx-clock"></span>00:00
                             </span>
@@ -646,11 +739,11 @@
 
             </section>
         </section>
-        <!-- End Courses mainSection -->
+        <!-- End mainSection Courses -->
 
 
-        <!-- Questions mainSection -->
-        <section class="main__mainSection display-n" id="mainSection__questions">
+        <!-- mainSection Questions -->
+        <section class="main__mainSection display-y" id="mainSection__questions">
             
             <header class="mainSection__header">
                 <span class="Kx-icon Kx-contact-question"></span>
@@ -667,7 +760,8 @@
                     <i class="flaticon flaticon-question"></i>Frequent questions
                 </header>
                 <p class="text">
-                    We are starting, at this time, we have no content for this section<br>we apologyce.
+                    We are starting.<br>
+                    At this time, we have no content for this section, we apologyce.
                 </p>
             </section>
             
@@ -680,28 +774,107 @@
                     We give you diferen groups, so you can join the one in accordance with your skills and experience
                 </p>
 
-                <!-- methodUsCard Name -->
+                <!-- methodCard Develpers (general purpose) -->
                 <section class="subSection__subSection methodCard">
                     <img loading="lazy" src="./Tests/Sources/Images/ContactUs.png" alt="Crypto wallets image" title="Kx Crypto Wallets">
                     <p class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        If you need a group to ask any kind of questions about programming and developing. This is your group
                     </p>
-                    <!-- method details -->
-                    <div class="methodCard__details display-y">
-                        <div class="methodCard__details-header">
-                            methodCard details header
-                        </div>
-                        <p class="text">
-                            Some example content <br>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        </p>
 
+                    <!-- method details -->
+                    <div class="methodCard__details display-n">
+                        <div class="methodCard__details-header">
+                            Developers (General purpose)
+                        </div>
+                        <ul>
+                            <li class="basicList__item">
+                                <a href="https://t.me/joinchat/dy0jHBgSuxI3MTEx" target="_blank" rel="noopener noreferrer">
+                                    <span class="Kx-icon Kx-telegram"></span>Developers (Telegram)
+                                </a>
+                            </li>
+                            <li class="basicList__item">
+                                <span class="Kx-icon Kx-facebook"></span>GroupName or link
+                            </li>
+                        </ul>
                     </div>
 
-                    <a href="#" class="methodCard__button">
-                        <i class="Kx-icon Kx-crypto-wallet"></i>
-                        Wallets
-                    </a>
+                    <span class="methodCard__button">
+                        <i class="Kx-icon Kx-group"></i>
+                        Groups
+                    </span>
+                </section>
+
+                <!-- methodCard Frontent web development -->
+                <section class="subSection__subSection methodCard">
+                    <img loading="lazy" alt="Frontend group image"
+                        src="./Sources/Images/Groups/FrontendWebDesign/FrontendWebDesign0480px.png"
+                        srcset="
+                        ./Sources/Images/Groups/FrontendWebDesign/FrontendWebDesign0320px.webp 320w,
+                        ./Sources/Images/Groups/FrontendWebDesign/FrontendWebDesign0360px.webp 360w,
+                        ./Sources/Images/Groups/FrontendWebDesign/FrontendWebDesign0480px.webp 480w,
+                        ./Sources/Images/Groups/FrontendWebDesign/FrontendWebDesign0683px.webp 683w
+                        "
+                        sizes="
+                        (max-widt:320px) 320w,
+                        (max-widt:360px) 360w,
+                        (max-widt:480px) 480w,
+                        (max-widt:683px) 683w"
+                    >
+                    <p class="text">
+                        Questions and mutual support about frameworks, languages and everything related to frontend web development
+                    </p>
+
+                    <!-- method details -->
+                    <div class="methodCard__details display-n">
+                        <div class="methodCard__details-header">
+                            Web development (Frontent)
+                        </div>
+                        <ul>
+                            <li class="basicList__item">
+                                <a href="https://t.me/joinchat/yDUVcR0_gNdkZTAx" target="_blank" rel="noopener noreferrer">
+                                    <span class="Kx-icon Kx-telegram"></span>Frontend development (Telegram)
+                                </a>
+                            </li>
+                            <li class="basicList__item">
+                                <span class="Kx-icon Kx-facebook"></span>GroupName or link
+                            </li>
+                        </ul>
+                    </div>
+
+                    <span class="methodCard__button">
+                        <i class="Kx-icon Kx-group"></i>
+                        Groups
+                    </span>
+                </section>
+
+                <!-- methodCard Mathematics (calcule) -->
+                <section class="subSection__subSection methodCard">
+                    <img loading="lazy" src="./Tests/Sources/Images/ContactUs.png" alt="Crypto wallets image" title="Kx Crypto Wallets">
+                    <p class="text">
+                        Mutual support to solve our doubts, and master mathematics (calculus)
+                    </p>
+
+                    <!-- method details -->
+                    <div class="methodCard__details display-n">
+                        <div class="methodCard__details-header">
+                            Mathematics (Calcule)
+                        </div>
+                        <ul>
+                            <li class="basicList__item">
+                                <a href="https://t.me/joinchat/V396O6lDM5RlMTU5" target="_blank" rel="noopener noreferrer">
+                                    <span class="Kx-icon Kx-telegram"></span>Mathematics (Telegram)
+                                </a>
+                            </li>
+                            <li class="basicList__item">
+                                <span class="Kx-icon Kx-facebook"></span>GroupName or link
+                            </li>
+                        </ul>
+                    </div>
+
+                    <span class="methodCard__button">
+                        <i class="Kx-icon Kx-group"></i>
+                        Groups
+                    </span>
                 </section>
                 
             </section>
@@ -723,49 +896,44 @@
                     </p>
 
                     <!-- method details -->     
-                    <div class="methodCard__details display-y">
-                        
+                    <div class="methodCard__details display-n">
+
                         <div class="methodCard__details-header">
                             Official contacts
-                        </div> 
-                        
+                        </div>        
                         <p class="text">
                             This may take some time, at the moment we are few people, we hope you understand delays.
                         </p>
 
                         <ul>
                             <li class="basicList__item">
-                                <span class="Kx-icon Kx-telegram"></span>
-                                <b>Telegram</b>
-                                <br>+503 #### #### or UserName
+                                <a href="https://t.me/Kixne" target="_blank" rel="noopener">
+                                    <span class="Kx-icon Kx-telegram"></span>
+                                    <b>Telegram</b> (Kixne™)
+                                </a>
                             </li>
                             
                             <li class="basicList__item">
                                 <span class="Kx-icon Kx-contact-mail"></span>
-                                <b>eMail</b>
-                                <br>Kx.Questions@gmail.com
-                            </li>
-                            
-                            <li class="basicList__item">
-                                <span class="Kx-icon Kx-contact-phone-call"></span>
-                                <b>Phone</b> (please, just use when its totally necesary)
-                                <br>+503 #### ####
+                                <b>Kx.Questions@gmail.com</b>
                             </li>
                         </ul>
                     </div>
-
-                    <a href="#" class="methodCard__button">
+                    
+                    <span class="methodCard__button">
                         <span class="Kx-icon Kx-contact"></span>
                         Direct contacts
-                    </a>
+                    </span>
                 </section>
+                
+                
             </section>
 
         </section>
-        <!-- End Questions mainSection -->
+        <!-- End mainSection Questions -->
 
 
-        <!-- SupportUs mainSection -->
+        <!-- mainSection SupportUs -->
         <section class="main__mainSection display-n" id="mainSection__supportUs">
             
             <header class="mainSection__header">
@@ -791,7 +959,21 @@
                         The easiest form to support us, is commenting and sharing ours sites
                     </p>
 
-                    <a href="#" class="methodCard__button">
+                    <!-- method details -->
+                    <div class="methodCard__details display-n">
+                        <div class="methodCard__details-header">
+                            Official accounts
+                        </div>
+                        <ul>
+                            <li class="basicList__item">
+                                <a href="https://www.youtube.com/channel/UCqR_vxvL5YOSbNZw7Is7_Xw" target="_blank" rel="noopener noreferrer">
+                                    <span class="Kx-icon Kx-youtube"></span>Kixne (YouTube)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a class="methodCard__button">
                         <span class="Kx-icon Kx-contact"></span>
                         Official accounts
                     </a>
@@ -811,34 +993,240 @@
                     <p class="text">
                         Watch an ad and get a surprice advice from us, as a gratitude
                     </p>
-                    <a href="#" class="methodCard__button">
+                    
+                    <!-- method details -->
+                    <div class="methodCard__details display-n">
+                    </div>
+                    
+                    <span class="methodCard__button">
                         <span class="Kx-icon Kx-video-player"></span>
                         Watch Ad
-                    </a>
+                    </span>
                 </section>
                 
-                <!-- methodCard games big time -->
+                <!-- methodCard Big time -->
                 <section class="subSection__subSection methodCard">
                     <img loading="lazy" src="./Tests/Sources/Images/BigTime0320px.png" alt="Games image" title="Kx Games">
                     <p class="text">
                         Play a game, collect tikets and help us while you have fun every day
                     </p>
-                    <a href="#" class="methodCard__button">
+
+                    <!-- method details -->
+                    <div class="methodCard__details display-n">
+                        
+                        <div class="methodCard__details-header">
+                            How to help?
+                        </div>
+                        <ol>
+                            <li class="basicList__item">
+                                Install 1 or more big time games
+                            </li>
+                            <li class="basicList__item">
+                                <div class="copyableElement-container">
+                                    <span class="copyableElement-fake">
+                                        Ingres our refered code
+                                    </span>
+                                    <input type="text" value="QX14W" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
+                            </li>
+                            <li class="basicList__item">
+                                Play daily, 1 or 2 hours
+                            </li>
+                            <li class="basicList__item">
+                                Save your tikets in the bank
+                            </li>
+                            <li class="basicList__item">
+                                Wait until you accumulate 1,000,000 tikets
+                            </li>
+                            <li class="basicList__item">
+                                Claim all your tikets form the bank
+                            </li>
+                            <li class="basicList__item">
+                                Exchange the tikets (convert them)
+                            </li>
+                            <li class="basicList__item">
+                                If you still want to support us, send us the ammount to our paypal account
+                            </li>
+                        </ol>
+                        
+                        <div class="methodCard__details-header">
+                            Recommended game
+                        </div>
+                        <ol>
+                            <li class="basicList__item">
+                                Total recall (main app)
+                            </li>
+                        </ol>
+                        
+                        <div class="methodCard__details-header">
+                            How much did you will play?
+                        </div>
+                        <ul>
+                            <li class="basicList__item">
+                                1:00h daily (aprox 5000 tikets),  you will get the tikets approximately 200 days
+                            </li>
+                            <li class="basicList__item">
+                                1:30h daily (aprox 7500 tikets),  you will get the tikets approximately 133 days
+                            </li>
+                            <li class="basicList__item">
+                                2:00h daily (aprox 10000 tikets),  you will get the tikets approximately 100 days
+                            </li>
+                        </ul>
+                        
+                        <div class="methodCard__details-header">
+                            If you have high skills...
+                        </div>
+                        <ul>
+                            <li class="basicList__item">
+                                1:00h daily (aprox +6000 tikets),  you will get the tikets maximum in 167 days
+                            </li>
+                            <li class="basicList__item">
+                                1:30h daily (aprox +9000 tikets),  you will get the tikets maximum in 111 days
+                            </li>
+                            <li class="basicList__item">
+                                2:00h daily (aprox +12000 tikets),  you will get the tikets maximum in 83 days
+                            </li>
+                        </ul>
+
+                        <div class="methodCard__details-header">
+                            Official account
+                        </div>
+                        <ul>
+                            <!-- Kixne Paypal account -->
+                            <li class="basicList__item">
+                                <div class="copyableElement-container">
+                                    <span class="Kx-icon Kx-paypal copyableElement-fake">
+                                        <b>Paypal account</b>
+                                    </span>
+                                    <input type="text" value="Kx wallet direction" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <span class="methodCard__button">
                         <span class="Kx-icon Kx-games"></span>
                         View games
-                    </a>
+                    </span>
                 </section>
 
-                <!-- methodCard games bling -->
+                <!-- methodCard Bling -->
                 <section class="subSection__subSection methodCard">
                     <img loading="lazy" src="./Tests/Sources/Images/Bling.png" alt="Games image" title="Kx Games">
                     <p class="text">
                         Play a game, collect coins and help us while you have fun every day
                     </p>
-                    <a href="#" class="methodCard__button">
+
+                    <!-- method details -->
+                    <div class="methodCard__details display-n">
+                        
+                        <div class="methodCard__details-header">
+                            How to help?
+                        </div>
+                        <ol>
+                            <li class="basicList__item">
+                                Install 3 or more bling games
+                            </li>
+                            <li class="basicList__item">
+                                Play daily, 1 or 2 hours
+                            </li>
+                            <li class="basicList__item">
+                                wait until you accumulate 10,000,000 bling coins
+                            </li>
+                            <li class="basicList__item">
+                                Send the coins to your account (it will be automatly created whit your email)
+                            </li>
+                            <li class="basicList__item">
+                                Wait until you receive the payment (maximum 48h)
+                            </li>
+                            <li class="basicList__item">
+                                If you still want to support us, send us your BTC to our BTC wallet
+                            </li>
+                        </ol>
+                        
+                        <div class="methodCard__details-header">
+                            Recommended games
+                        </div>
+                        <ol>
+                            <li class="basicList__item">
+                                Bitcoin food fight
+                            </li>
+                            <li class="basicList__item">
+                                Bitcoin blast
+                            </li>
+                            <li class="basicList__item">
+                                Bitcoin blocks
+                            </li>
+                            <li class="basicList__item">
+                                We could not run the other games, because that we dont know if recommending them
+                            </li>
+                        </ol>
+                        
+                        <div class="methodCard__details-header">
+                            Tips:
+                        </div>
+                        <ul>
+                            <li class="basicList__item">
+                                In the second game, it reaches level 10 and then, it only loses intentionally
+                            </li>
+                            <li class="basicList__item">
+                                In the third game, it reaches level 10 and then, it only loses intentionally
+                            </li>
+                        </ul>
+                        
+                        <div class="methodCard__details-header">
+                            If you play once a day:
+                        </div>
+                        <ul>
+                            <li class="basicList__item">
+                                3 games aprox 1h,  you will get the coins approximately 128 days
+                            </li>
+                            <li class="basicList__item">
+                                4 games aprox 1:30h,  you will get the coins approximately 96 days
+                            </li>
+                            <li class="basicList__item">
+                                5 games (only if you want), aprox 2:00h,  you will get the coins approximately 77 days
+                            </li>
+                        </ul>
+                        
+                        <div class="methodCard__details-header">
+                            If you play 3 rounds every 2 days:
+                        </div>
+                        <ul>
+                            <li class="basicList__item">
+                                3 games aprox 3:00h every 2 days, you will get the coins approximately 86 days
+                            </li>
+                            <li class="basicList__item">
+                                4 games aprox 4:30h every 2 days, you will get the coins approximately 64 days
+                            </li>
+                            <li class="basicList__item">
+                                5 games (only if you want) aprox 6:00h every 2 days,  you will get the coins approximately 51 days
+                            </li>
+                        </ul>
+
+                        <div class="methodCard__details-header">
+                            Official wallet
+                        </div>
+                        <ul>
+                            <!-- CryptoWallet Bitcoin (coinBase) -->
+                            <li class="basicList__item">
+                                <div class="copyableElement-container">
+                                    <span class="Kx-icon Kx-crypto-bitcoin copyableElement-fake">
+                                        <b>Bitcoin</b>
+                                    </span>
+                                    <input type="text" value="Kx wallet direction" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <span class="methodCard__button">
                         <span class="Kx-icon Kx-games"></span>
                         View games
-                    </a>
+                    </span>
                 </section>
 
             </section>
@@ -857,10 +1245,14 @@
                         Contact us, and tell us your ideas to update or upgrade our UX and UI
                     </p>
 
-                    <a href="#" class="methodCard__button">
+                    <!-- method details -->
+                    <div class="methodCard__details display-n">
+                    </div>
+                    
+                    <span class="methodCard__button">
                         <span class="Kx-icon Kx-contact-mail"></span>
                         Contac us
-                    </a>
+                    </span>
                 </section>
 
                 <!-- methodCard report mistake -->
@@ -869,10 +1261,15 @@
                     <p class="text">
                         If you find a mistake or a bug, tell us that, we'll fix it as soon as possible
                     </p>
-                    <a href="#" class="methodCard__button">
+
+                    <!-- method details -->
+                    <div class="methodCard__details display-n">
+                    </div>
+                    
+                    <span class="methodCard__button">
                         <span class="Kx-icon Kx-bug-fixing"></span>
                         Report mistake
-                    </a>
+                    </span>
                 </section>
 
             </section>
@@ -889,7 +1286,12 @@
                     <p class="text">
                         If you want to help us grow faster, can support us with what you can
                     </p>
-                    <a href="#" class="methodCard__button">
+                    
+                    <!-- method details -->
+                    <div class="methodCard__details display-n">
+                    </div>
+                                        
+                    <a href="https://www.paypal.com/donate?hosted_button_id=F4MYSKJR5BULL" target="_blank" rel="noopener" class="methodCard__button">
                         <span class="Kx-icon Kx-paypal"></span>
                         Donate
                     </a>
@@ -899,58 +1301,87 @@
                 <section class="subSection__subSection methodCard">
                     <img loading="lazy" src="./Tests/Sources/Images/Wallets.png" alt="Crypto wallets image" title="Kx Crypto Wallets">
                     <p class="text">
-                        If you want to help us grow, can send us some cryptos to ours wallet
+                        If you want to help us grow, can send us some cryptos to our wallets
                     </p>
 
                     <!-- support method details -->
-                    <div class="methodCard__details display-y">
+                    <div class="methodCard__details display-n">
                         <div class="methodCard__details-header">
                             CryptoWallets
                         </div>
+                        <!-- Wallets directions -->
                         <ul>
+                            <!-- Wallet Bitcoin -->
                             <li class="basicList__item">
                                 <span class="Kx-icon Kx-crypto-bitcoin"></span>
                                 <b>Bitcoin</b>
-                                <br>putHereCopiableWalletDirection
+                                <div class="copyableElement-container">
+                                    <span class="copyableElement-fake">
+                                        BTC wallet direction
+                                    </span>
+                                    <input type="text" value="Kx wallet direction" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
                             </li>
                             
+                            <!-- Wallet Chia -->
                             <li class="basicList__item">
                                 <span class="Kx-icon Kx-crypto-chia"></span>
                                 <b>Chia</b>
-                                <br>putHereCopiableWalletDirection
+                                <div class="copyableElement-container">
+                                    <span class="copyableElement-fake">
+                                        CHX wallet direction
+                                    </span>
+                                    <input type="text" value="Kx wallet direction" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
                             </li>
                             
+                            <!-- Wallet Ethereum -->
                             <li class="basicList__item">
                                 <span class="Kx-icon Kx-crypto-ethereum"></span>
                                 <b>Ethereum</b>
-                                <br>putHereCopiableWalletDirection
+                                <div class="copyableElement-container">
+                                     <div class="copyableElement-fake">
+                                        ETH wallet direction
+                                    </div>
+                                    <input type="text" value="Kx wallet direction" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
                             </li>
                             
+                            <!-- Wallet Litecoin -->
                             <li class="basicList__item">
                                 <span class="Kx-icon Kx-crypto-litecoin"></span>
                                 <b>Litecoin</b>
-                                <br>putHereCopiableWalletDirection
+                                <div class="copyableElement-container">
+                                    <span class="copyableElement-fake">
+                                        LTC wallet direction
+                                    </span>
+                                    <input type="text" value="Kx wallet direction" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
                             </li>
                         </ul>
                     </div>
 
-                    <a href="#" class="methodCard__button">
+                    <span class="methodCard__button">
                         <i class="Kx-icon Kx-crypto-wallet"></i>
                         Wallets
-                    </a>
+                    </span>
                 </section>
             </section>
             
         </section>
-        <!-- End SupportUs mainSection -->
+        <!-- End mainSection SupportUs -->
 
 
-        <!-- AboutUs mainSection -->
+        <!-- mainSection AboutUs -->
         <section class="main__mainSection display-n" id="mainSection__aboutUs">
             <header class="mainSection__header">
-                <i class="flaticon flaticon-information"></i>
+                <i class="Kx-icon Kx-information"></i>
                 About Us
-                <i class="flaticon flaticon-information"></i>
+                <i class="Kx-icon Kx-information"></i>
             </header>
             <p class="text mainSection__text">
                 Know what is Kixne, learn how are part of this and what to be part of the community joining us, learn about our filosofy, and discover more interesting things about us 
@@ -1043,7 +1474,7 @@
             </section>
 
         </section>
-        <!-- End AboutUs subSection -->
+        <!-- End mainSection AboutUs -->
 
     </main>
 
