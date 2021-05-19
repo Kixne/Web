@@ -174,6 +174,12 @@ function CopyElement(x){
     $copyableElement[x].select();
     document.execCommand("copy");
     $copyableElement[x].classList.replace("display-y", "display-n");
+    
+    let $copyButton= document.querySelectorAll(".button-copy")[x];
+    $copyButton.textContent= "Copied";
+    setTimeout(function(){
+        $copyButton.textContent= "Copy";
+    }, 1000);
 }
 const $copyButtons= document.querySelectorAll(".button-copy");
 /* copy buttons onclick "listeners" */
