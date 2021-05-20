@@ -17,51 +17,71 @@ function SpinerShow(show){
 
 
 /********* Toggle nav visibility function*********/
-function NavShow(){
-    let menu = document.querySelector(".nav");
-    menu.classList.toggle("display-n");
-    menu.classList.toggle("display-y");
+function NavShow(x){
+    let menu = document.querySelectorAll(".nav");
+    menu[x].classList.toggle("display-n");
+    menu[x].classList.toggle("display-y");
 }
+
+/* Toggle Menu buttons Visibiility function */
+function ToggleMenuButtonsVisibility(){
+    let $menuButton = document.querySelectorAll(".btnMenu");
+    $menuButton[0].classList.toggle("display-y");
+    $menuButton[0].classList.toggle("display-n");
+    $menuButton[1].classList.toggle("display-y");
+    $menuButton[1].classList.toggle("display-n");
+}
+
 /* Nav toggler buttons (Kx web menu) */
-document.querySelector(".btnMenu").onclick= function(){
-    NavShow();
+document.querySelectorAll(".btnMenu")[0].onclick= function(){
+    NavShow(0);
 }
-document.querySelector(".nav__header-text").onclick= function(){
-    NavShow();
+document.querySelectorAll(".nav__header-text")[0].onclick= function(){
+    NavShow(0);
 }
-document.querySelector(".btnMenuClose").onclick= function(){
-    NavShow();
+document.querySelectorAll(".btnMenuClose")[0].onclick= function(){
+    NavShow(0);
+}
+
+/* Language picker toggler buttons
+(Borrows nav scripts) */
+document.querySelectorAll(".btnMenu")[1].onclick= function(){
+    NavShow(1);
+}
+document.querySelectorAll(".nav__header-text")[1].onclick= function(){
+    NavShow(1);
+}
+document.querySelectorAll(".btnMenuClose")[1].onclick= function(){
+    NavShow(1);
 }
 /********* Toggle nav visibility function*********/
 
 
-
+/********* ToglingToMainSection function *********/
+function TogglingToMainSection(mainSectionNumber){
+    SpinerShow(true);
+    /* StopAllPlayers(); */
+    ToggleMainSectionVisibility(mainSectionNumber);
+    NavShow(0);
+    SpinerShow(false);
+}
 
 /* nav subSections links */
 const $navLinks = document.querySelectorAll(".nav__link");
 /* main__mainSection Home */
 $navLinks[0].onclick = function(){
-    SpinerShow(true);
-    ToggleMainSectionVisibility(0);
-    NavShow();
-    /* StopAllPlayers(); */
-    SpinerShow(false);
+    document.querySelectorAll(".btnMenu")[0].classList.replace("display-y", "display-n");
+    document.querySelectorAll(".btnMenu")[1].classList.replace("display-n", "display-y");
+    TogglingToMainSection(0);
+    /* Hidding btnMenu (nav) */
 };
 /* main__mainSection Courses */
 $navLinks[1].onclick = function(){
-    SpinerShow(true);
-    ToggleMainSectionVisibility(1);
-    NavShow();
-    /* StopAllPlayers(); */
-    SpinerShow(false);
+    TogglingToMainSection(1);
 };
 /* main__mainSection Questions */
 $navLinks[2].onclick = function(){
-    SpinerShow(true);
-    ToggleMainSectionVisibility(2);
-    NavShow();
-    /* StopAllPlayers(); */
-    SpinerShow(false);
+    TogglingToMainSection(2);
 };
 /* $navLinks[3] correspond to toggle langs visibility */
 $navLinks[3].onclick = function(){
@@ -76,19 +96,11 @@ $navLinks[3].onclick = function(){
 };
 /* main__mainSection SupporUs */
 $navLinks[4].onclick = function(){
-    SpinerShow(true);
-    ToggleMainSectionVisibility(3);
-    NavShow();
-    /* StopAllPlayers(); */
-    SpinerShow(false);
+    TogglingToMainSection(3);
 };
 /* main__mainSection AboutUs */
 $navLinks[5].onclick = function(){
-    SpinerShow(true);
-    ToggleMainSectionVisibility(4);
-    NavShow();
-    /* StopAllPlayers(); */
-    SpinerShow(false);
+    TogglingToMainSection(4);
 };
 
 
@@ -208,3 +220,18 @@ for (let i = 0; i < $methodCardButtons.length; i++) {
     }
 }
 /********* End Toggle methodDetails visibility function *********/
+
+
+
+
+/* Home mainSectionCards links*/
+const $mainSectionCardLinks = document.querySelectorAll(".mainSectionCard__link");
+for (let i = 0; i < $mainSectionCardLinks.length; i++) {
+    $mainSectionCardLinks[i].onclick= function(){
+        ToggleMenuButtonsVisibility();
+        NavShow(0);
+        TogglingToMainSection(i+1);
+    }
+}
+
+/* Adding mainSectionCards mainSrction toggling functionality */

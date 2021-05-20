@@ -402,12 +402,12 @@ span{
     margin-left: .8rem;
     font-size: 1.5em;
 }
-.subSectionCard__title strong{
+.mainSectionCard__title strong{
     font-family: aladin;
     font-size: 2rem;
     margin-left: .4rem;
 }
-.subSectionCard__link{
+.mainSectionCard__link{
 
 
 
@@ -423,7 +423,7 @@ span{
     background: linear-gradient( 90deg, var(--gray04) , var(--white));
     color: var(--black);
 }
-.subSectionCard__link:hover{
+.mainSectionCard__link:hover{
     background: linear-gradient( 90deg, var(--black) , var(--gray02));
     border-top: .1rem solid var(--gray06);
     color: var(--white);

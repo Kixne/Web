@@ -35,9 +35,13 @@
             <img src="./Sources/Icons/IconKx32px.png" alt="Kx Isologo" class="header__logo-image">
             <h1 class="header__logo-text">Kixne&#153</h1>
         </div>
-        <span class="btnMenu">
+        <span class="btnMenu display-n">
             Menu
             <span class="Kx-icon Kx-menu"></span>
+        </span>
+        <span class="btnMenu display-y">
+            Langs
+            <span class="Kx-icon Kx-languages"></span>
         </span>
     </header>
     <!---------End. Header--------->
@@ -95,6 +99,31 @@
     </nav>
     <!-- End Nav -->
 
+    <!-- Languages picker (Borrows nav styles) -->
+    <nav class="nav display-n">
+        <header class="nav__header">
+            <span class="nav__header-text">
+                Languages <i class="Kx-icon Kx-languages"></i>
+            </span>
+        </header>
+        
+        <a href="#" class="nav__link">
+            <span class="Kx-icon Kx-languages"></span>English <br>(right now dont work)
+        </a>
+
+        <a href="#" class="nav__link">
+            <span class="Kx-icon Kx-languages"></span>Spanish <br>(right now dont work)
+        </a>
+
+        <a href="#" class="nav__link">
+            <span class="Kx-icon Kx-languages"></span>Japanese <br>(right now dont work)
+        </a>
+
+        <span class="btnMenuClose">
+            Close <span class="Kx-icon Kx-button-cancel"></span>
+        </span>
+    </nav>
+    <!-- End Languages picker -->
 
     <!-- KxWelcome / banner -->
     <div id="kxWelcome">
@@ -182,14 +211,14 @@
                             (max-widt:1280px) 1280w,
                             (max-widt:1366px) 1366w,
                             (max-widt:1920px) 1920w">
-                            <header class="subSectionCard__title">
+                            <header class="mainSectionCard__title">
                                 <span class="Kx-learn mainSectionCard__icon"></span>
                                 <strong>Courses</strong>
                             </header>
                             <p class="text">
                                 Increase your skills learning about an technological topic of your interest, or follow some of our Kx guides
                             </p>
-                            <a href="#mainSection__courses" class="subSectionCard__link">Go to Learn</a>
+                            <span class="mainSectionCard__link">Go to Learn</span>
                         </section>
                     </div>
                 </div>
@@ -225,14 +254,14 @@
                             (max-widt:1280px) 1280w,
                             (max-widt:1366px) 1366w,
                             (max-widt:1920px) 1920w">
-                            <header class="subSectionCard__title">
+                            <header class="mainSectionCard__title">
                                 <span class="Kx-contact-question mainSectionCard__icon"></span>
                                 <strong>Questions</strong>
                             </header>
                             <p class="text">
                                 have you an inquiry of a part of the content, or do you want to make us a question about any topic, then, see how can we help you to solve your questions
                             </p>
-                            <a href="#mainSection__questions" class="subSectionCard__link">Solve my ask</a>
+                            <span class="mainSectionCard__link">Solve my ask</span>
                         </section>
                     </div>
                 </div>
@@ -269,14 +298,14 @@
                             (max-widt:1366px) 1366w,
                             (max-widt:1920px) 1920w">
 
-                            <header class="subSectionCard__title">
+                            <header class="mainSectionCard__title">
                                 <span class="Kx-heart mainSectionCard__icon"></span>
                                 <strong>Support us</strong>
                             </header>
                             <p class="text">
                                 did you like it our content, do you want to help us, or do you want to collaborate to upgrade or update our content, find out how to do it in this section 
                             </p>
-                            <a href="#mainSection__supportUs" class="subSectionCard__link">View methods</a>
+                            <span class="mainSectionCard__link">View methods</span>
                         </section>
                     </div>
                 </div>
@@ -312,14 +341,14 @@
                             (max-widt:1280px) 1280w,
                             (max-widt:1366px) 1366w,
                             (max-widt:1920px) 1920w">
-                            <header class="subSectionCard__title">
+                            <header class="mainSectionCard__title">
                                 <span class="Kx-information mainSectionCard__icon"></span>
                                 <strong>About us</strong>
                             </header>
                             <p class="text">
                                 Learn about our philosophy, find out why we share all our content with you, see our official contacts and discover another interesting things about us.
                             </p>
-                            <a href="#mainSection__aboutUs" class="subSectionCard__link">Know us</a>
+                            <span class="mainSectionCard__link">Know us!</span>
                         </section>
                     </div>
                 </div>
@@ -447,21 +476,16 @@
                             </h3>
                         </a>
                         <a class="courseCard__link" href="#">
-                            <img class="courseCard__image" loading="lazy" alt="Course Image" title="Kx CSS3 course"
-                                src="./Sources/Images/CSS/CourseCSS0480px.webp"
+                            <img class="courseCard__image" loading="lazy" alt="Git & GitHub Image" title="Kx Git & GitHub course"
+                                src="./Sources/Images/MainSection_Courses/Git&GitHub/Git&GitHub0480px.png"
                                 srcset="
-                                ./Sources/Images/CSS/CourseCSS0320px.webp 320w,
-                                ./Sources/Images/CSS/CourseCSS0360px.webp 360w,
-                                ./Sources/Images/CSS/CourseCSS0480px.webp 480w,
-                                ./Sources/Images/CSS/CourseCSS0683px.webp 683w,
-                                ./Sources/Images/CSS/CourseCSS0320px.webp 684w
-                                "
+                                ./Sources/Images/MainSection_Courses/Git&GitHub/Git&GitHub0320px.webp 320w,
+                                ./Sources/Images/MainSection_Courses/Git&GitHub/Git&GitHub0360px.webp 360w,
+                                ./Sources/Images/MainSection_Courses/Git&GitHub/Git&GitHub0480px.webp 480w"
                                 sizes="
                                 (max-widt:320px) 320w,
                                 (max-widt:360px) 360w,
-                                (max-widt:480px) 480w,
-                                (max-widt:683px) 683w,
-                                (min-widt:684px) 684w">
+                                (max-widt:480px) 480w,">
                         </a>
                         <div class="courseCard__body">
                             <p class="courseCard__text">
@@ -809,12 +833,12 @@
                 <!-- methodCard Frontent web development -->
                 <section class="subSection__subSection methodCard">
                     <img loading="lazy" alt="Frontend group image"
-                        src="./Sources/Images/Groups/FrontendWebDesign/FrontendWebDesign0480px.png"
+                        src="./Sources/Images/MainSection_Questions/WebDevelopment/Frontend/FrontendWebDevelopment0480px.png"
                         srcset="
-                        ./Sources/Images/Groups/FrontendWebDesign/FrontendWebDesign0320px.webp 320w,
-                        ./Sources/Images/Groups/FrontendWebDesign/FrontendWebDesign0360px.webp 360w,
-                        ./Sources/Images/Groups/FrontendWebDesign/FrontendWebDesign0480px.webp 480w,
-                        ./Sources/Images/Groups/FrontendWebDesign/FrontendWebDesign0683px.webp 683w
+                        ./Sources/Images/MainSection_Questions/WebDevelopment/Frontend/FrontendWebDevelopment0320px.webp 320w,
+                        ./Sources/Images/MainSection_Questions/WebDevelopment/Frontend/FrontendWebDevelopment0360px.webp 360w,
+                        ./Sources/Images/MainSection_Questions/WebDevelopment/Frontend/FrontendWebDevelopment0480px.webp 480w,
+                        ./Sources/Images/MainSection_Questions/WebDevelopment/Frontend/FrontendWebDevelopment0683px.webp 683w
                         "
                         sizes="
                         (max-widt:320px) 320w,
@@ -977,8 +1001,24 @@
                         <ul>
                             <li class="basicList__item">
                                 <a href="https://www.youtube.com/channel/UCqR_vxvL5YOSbNZw7Is7_Xw" target="_blank" rel="noopener noreferrer">
-                                    <span class="Kx-icon Kx-youtube"></span>Kixne (YouTube)
+                                    <span class="Kx-icon Kx-youtube"></span>Kixne (YouTube channel)
                                 </a>
+                            </li>
+                        </ul>
+
+                        <div class="methodCard__details-header">
+                            Share and make our community grow
+                        </div>
+                        <ul>
+                            <!-- YouTube channel -->
+                            <li class="basicList__item">
+                                <div class="copyableElement-container">
+                                    <span class="Kx-icon Kx-youtube copyableElement-fake">
+                                        <b>Kixne</b> (YouTube)
+                                    </span>
+                                    <input type="text" value="https://www.youtube.com/channel/UCqR_vxvL5YOSbNZw7Is7_Xw" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
                             </li>
                         </ul>
                     </div>
