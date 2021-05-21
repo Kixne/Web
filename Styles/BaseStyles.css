@@ -244,6 +244,9 @@ span{
     border-radius: 8%;
     border: .1rem solid var( --gray06);
 }
+.btnMenu::selection{
+    color: none;
+}
 .btnMenu:hover{
     color: var( --white);
     background: linear-gradient( var(--gray01), var(--gray02));
