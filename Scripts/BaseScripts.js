@@ -234,4 +234,4 @@ for (let i = 0; i < $mainSectionCardLinks.length; i++) {
     }
 }
 
-/* Adding mainSectionCards mainSrction toggling functionality */
+/* Adding mainSectionCards mainSection toggling functionality */
