@@ -373,7 +373,7 @@ span{
 
 
 /********* mainSection home styles *********/
-#mainSection__home{
+.main__mainSection:nth-child(1){
     background: none;
 }
 .greetingsContainer{

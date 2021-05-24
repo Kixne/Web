@@ -23,7 +23,7 @@
 
 
 <body>
-    <!-- Spiner (Really its just decorative, doesnt work with servers) -->
+    <!-- Spiner (Doesnt work with servers) -->
     <div class="spinerContent display-n">
         <div class="spinerContent__spiner"></div>
     </div>
@@ -125,7 +125,7 @@
     </nav>
     <!-- End Languages picker -->
 
-    
+
     <!-- KxWelcome / banner -->
     <div id="kxWelcome">
         <img loading="lazy" alt="Kx banner image" class="KxWelcome__image"
@@ -168,18 +168,19 @@
     <main class="main">
 
         <!-- mainSection Home -->
-        <section class="main__mainSection display-y" id="mainSection__home">
+        <section class="main__mainSection display-y">
             <div class="greetingsContainer">
                 <p class="text">
                     <div class="mainSection__subSection-header">
                         Greetings visitor!
                     </div>
-                    We are a community, professionals and specialists dedicated to education, principally through digital platforms.<br><br>We will give you knowledges at the forefront and of high-quality in technological areas, and therefore the ability to develop the best version of yourself.
+                    We are a <b>community</b>, professionals and specialists dedicated to education, principally through digital platforms.
+                    <br><br>We will give you knowledges at the forefront and of high-quality in technological areas, and therefore the ability to develop the best version of yourself.
                 </p>
             </div>
 
             <!-- This div contains mainSections linkCards -->
-            <div class="mainSectionLinksContainer">
+            <section class="mainSectionLinksContainer">
                 
                 <!-- mainSectionCard Courses -->
                 <div class="animatedBorderContainer">
@@ -353,14 +354,14 @@
                         </section>
                     </div>
                 </div>
-            </div>
+            </section>
             
         </section>
         <!-- End mainSection Home -->
 
 
         <!-- mainSection Courses -->
-        <section class="main__mainSection display-n" id="mainSection__courses">
+        <section class="main__mainSection display-n">
             
             <header class="mainSection__header">
                <span class="Kx-icon Kx-learn"></span>
@@ -370,9 +371,9 @@
             <p class="text mainSection__text">Learn about an technological area, or follow any of our guides to specialize in its preferred topic, and become a professional or specialist</p>
             
             <!-- subSection CoursesCards -->
-            <section class="mainSection__subSection subSection__courses">
+            <section class="mainSection__subSection">
                 <header class="mainSection__subSection-header">
-                    <span class="Kx-icon Kx-learn"></span>Courses
+                    Courses
                 </header>
 
                 <div class="coursesCardsContainer">                    
@@ -561,7 +562,7 @@
             <!-- subSection Course -->
             <section class="mainSection__subSection">
                 <header class="mainSection__subSection-header">
-                    <span class="Kx-learn"></span>Kx CourseName
+                    Kx CourseName
                 </header>
                 <img class="course__image" loading="lazy" alt="Course Image" title="Kx course image"
                     src="./Tests/Sources/Images/Test/Test0480px.png"
@@ -773,7 +774,7 @@
 
 
         <!-- mainSection Questions -->
-        <section class="main__mainSection display-n" id="mainSection__questions">
+        <section class="main__mainSection display-n">
             
             <header class="mainSection__header">
                 <span class="Kx-icon Kx-contact-question"></span>
@@ -975,7 +976,7 @@
 
 
         <!-- mainSection SupportUs -->
-        <section class="main__mainSection display-n" id="mainSection__supportUs">
+        <section class="main__mainSection display-n">
             
             <header class="mainSection__header">
                 <span class="Kx-icon Kx-heart"></span>
@@ -1179,11 +1180,38 @@
                         (max-widt:360px) 360w,
                         (max-widt:480px) 480w"
                     >
+                    <p>
                         Play a game, collect coins and help us while you have fun every day
                     </p>
 
                     <!-- method details -->
                     <div class="methodCard__details display-n">
+                        
+                        <!-- How to help? -->
+                        <ol>
+                            <header class="methodCard__details-header">
+                                How to help?
+                            </header>
+                            <li class="basicList__item">
+                                Install some Bling games from the PlayStore (We think 3 is not too much)
+                            </li>
+                            <li class="basicList__item">
+                                Play all 15 chances of each game
+                            </li>
+                            <li class="basicList__item">
+                                Wait until you accumulate 1,000 bling coins
+                            </li>
+                            <li class="basicList__item">
+                                Send the coins to your account <br>(If you don't have it, it will be created automatically with your email)
+                            </li>
+                            <li class="basicList__item">
+                                Wait until you receive the payment (maximum 48h)
+                            </li>
+                            <li class="basicList__item">
+                                If you still want to support us, send us your BTC to our BTC wallet
+                            </li>
+                        </ol>
+                        
                         <!-- Recommended games -->
                         <ol>
                             <header class="methodCard__details-header">
@@ -1203,31 +1231,6 @@
                             </li>
                         </ol>
 
-                        <!-- How to help? -->
-                        <ol>
-                            <header class="methodCard__details-header">
-                                How to help?
-                            </header>
-                            <li class="basicList__item">
-                                Install 3 or more bling games
-                            </li>
-                            <li class="basicList__item">
-                                Play all 15 chances of each game
-                            </li>
-                            <li class="basicList__item">
-                                Wait until you accumulate 1,000 bling coins
-                            </li>
-                            <li class="basicList__item">
-                                Send the coins to your account <br>(If you don't have it, it will be created automatically with your email)
-                            </li>
-                            <li class="basicList__item">
-                                Wait until you receive the payment (maximum 48h)
-                            </li>
-                            <li class="basicList__item">
-                                If you still want to support us, send us your BTC to our BTC wallet
-                            </li>
-                        </ol>
-                        
                         <!-- Tips: -->
                         <ul>
                             <header class="methodCard__details-header">
@@ -1319,7 +1322,7 @@
                                 How to help?
                             </header>
                             <li class="basicList__item">
-                                Install 1 or more big time games
+                                Install 1 or more BigTime games from the PlayStore
                             </li>
                             <li class="basicList__item">
                                 <div class="copyableElement-container">
@@ -1356,7 +1359,7 @@
                                 Recommended game
                             </header>
                             <li class="basicList__item">
-                                Total recall (main app)
+                                Total recall (It is in the main application)
                             </li>
                         </ol>
                         
@@ -1535,7 +1538,7 @@
 
 
         <!-- mainSection AboutUs -->
-        <section class="main__mainSection display-n" id="mainSection__aboutUs">
+        <section class="main__mainSection display-n">
             <header class="mainSection__header">
                 <i class="Kx-icon Kx-information"></i>
                 About Us
