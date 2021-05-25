@@ -16,6 +16,7 @@ function SpinerShow(show){
 
 
 
+
 /********* Toggle nav visibility function*********/
 function NavShow(x){
     let menu = document.querySelectorAll(".nav");
@@ -62,6 +63,7 @@ function TogglingToMainSection(mainSectionNumber){
     SpinerShow(true);
     /* StopAllPlayers(); */
     ToggleMainSectionVisibility(mainSectionNumber);
+    
     NavShow(0);
     SpinerShow(false);
 }
@@ -235,3 +237,152 @@ for (let i = 0; i < $mainSectionCardLinks.length; i++) {
 }
 
 /* Adding mainSectionCards mainSection toggling functionality */
+var currentCourse= -1,
+    currentCourseModule= -1;
+
+/* After work this with a real data base (DB)
+(That implies changing the code)*/
+const allCoursesData=[
+    /* If you change this order of the courses, ALSO MAKE SURE you sort
+    the array with the courses modules */
+
+    /* Course 00 (Web anatomy HTML) */{
+        title: "Web anatomy <HTML>",
+        imgAlt: "HTML course image",
+        imgTitle: "HTML course",
+        imgSrc: "./Sources/Images/HTML/CourseHTML0480px.webp",
+        quality: "##.#",
+        version: "21.##.##",
+        duration: "##:##",
+        description: "HTML and HTML5 course from scratch. We will learn what html is, how its content structure works and how to create semantically and syntactically correct elements, by using good practices and coding standards.",
+    },
+
+    /* Course 01 (CourseName) */{
+        title: "Course01 title",
+        imgAlt: "Course01 alt",
+        imgTitle: "Course01 title",
+        imgSrc: "../Tests/Sources/Images/Test/Test0320px.png",
+        quality: "##.#",
+        version: "21.##.##",
+        duration: "##:##",
+        description: "Some example text for the course01",
+    },
+];
+
+const allCoursesModulesData=[
+    /* Course 00 modules (Web anatomy HTML) */[
+        
+        /*Module 00 */{
+            title: "Module 00 name",
+            duration: "##:##",
+        },
+        
+        /*Module 01 */{
+            title: "Module 01 name",
+            duration: "##:##",
+        },
+        
+        /*Module 02 */{
+            title: "Module 02 name",
+            duration: "##:##",
+        },
+    ],
+
+    /* Course 01 modules (courseName) */[
+        
+        /*Module 00 */{
+            title: "Module 00 name",
+            duration: "##:##",
+        },
+    
+        /*Module 01 */{
+            title: "Module 01 name",
+            duration: "##:##",
+        },
+    ],
+];
+
+const allCoursesResourcesData=[
+    /* Follow this order
+    printable manual download link
+    digital manual download link
+    Proposed exercices download link
+    Modules videos maybe link to copy
+     */
+
+    /* Course 00 resources (Web anatomy HTML) */[
+        "",
+        "",
+        "",
+        "",
+    ],
+];
+ 
+
+function CreateSubSectionCourse(courseIndex){
+    let $courseSubSection= document.querySelectorAll(".mainSection__subSection")[1],
+    $fragment= document.createDocumentFragment(),
+    $template= document.getElementById("template-subSection__course").content,
+    courseData= allCoursesData[courseIndex];
+    
+    /* Checking if is necessary create the course subsection */
+    if(courseIndex!=currentCourse){
+        currentCourse= courseIndex;
+        currentCourseModule= -1;
+        
+        /* cloning the template */
+        let $cloned= document.importNode($template, true);
+        
+        /* Setting header data */
+        let $header= $cloned.querySelector("h2");
+        $cloned.querySelector("h2").textContent= courseData.title;
+        
+        /* Setting image data */
+        $cloned.querySelector("img").setAttribute("title", courseData.imgTitle);
+        $cloned.querySelector("img").setAttribute("alt", courseData.imgAlt);
+        $cloned.querySelector("img").setAttribute("src", courseData.imgSrc);
+        
+        /* Setting courseDetails items data */
+        let $courseDetail= $cloned.querySelectorAll(".course__details-item"); 
+        $courseDetail[0].querySelector("span").textContent= courseData.quality;
+        $courseDetail[1].querySelector("span").textContent= courseData.version;
+        $courseDetail[2].querySelector("span").textContent= courseData.duration;
+        
+        /* Setting course details data */
+        $cloned.querySelector("p").insertAdjacentText("beforeend", courseData.description);
+        
+        /* Setting modules list data */
+        let moduleData= allCoursesModulesData[currentCourse];
+        for (let i= 0; i< moduleData.length; i++) {
+            let item= document.createElement("li");
+            item.classList.add("course__modulesList-item");
+            
+            let item__title= document.createElement("span");
+            item__title.classList.add("Kx-icon", "Kx-button-play");
+            item__title.textContent= moduleData[i].title;
+            item.insertAdjacentElement("beforeend", item__title);
+            
+            let item__duration= document.createElement("span");
+            item__duration.classList.add("Kx-icon", "Kx-clock");
+            item__duration.textContent= moduleData[i].duration;
+            item.insertAdjacentElement("beforeend", item__duration);
+
+            $cloned.querySelector(".course__modulesList").insertAdjacentElement("beforeend", item)
+        }
+        
+        
+        $courseSubSection.innerHTML = '';   
+        
+        /* Adding the content to the HTML */
+        $fragment.appendChild($cloned);
+        $courseSubSection.appendChild($fragment);
+    }
+}
+
+/* After create a loop that declare all the course buttons onclick
+right now isnt necessary because we have only one active course */
+document.querySelector(".courseCard__button").onclick= function(){
+    SpinerShow(true);
+    CreateSubSectionCourse(0);
+    SpinerShow(false);
+};
