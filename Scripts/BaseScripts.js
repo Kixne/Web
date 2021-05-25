@@ -14,7 +14,11 @@ function SpinerShow(show){
 }
 
 
-
+/********* ScrollUp functionality *********/
+function ScrolllUp(){
+    let currentScroll= document.documentElement.scrollTop;
+    if(currentScroll> 0){ window.scrollTo( 0, 0); }
+}
 
 
 /********* Toggle nav visibility function*********/
@@ -63,7 +67,7 @@ function TogglingToMainSection(mainSectionNumber){
     SpinerShow(true);
     /* StopAllPlayers(); */
     ToggleMainSectionVisibility(mainSectionNumber);
-    
+    ScrolllUp();
     NavShow(0);
     SpinerShow(false);
 }
