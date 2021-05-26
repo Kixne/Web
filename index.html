@@ -371,7 +371,7 @@
             <p class="text mainSection__text">Learn about an technological area, or follow any of our guides to specialize in its preferred topic, and become a professional or specialist</p>
             
             <!-- subSection CoursesCards -->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection display-y">
                 <header class="mainSection__subSection-header">
                     Courses
                 </header>
@@ -525,11 +525,11 @@
                         
                     </section>
                     
-                    <!-- Mathematics (calculus) -->
+                    <!-- Mathematics (Calculus) -->
                     <section class="courseCard">
                         <header class="courseCard__header">
                             <h3 class="courseCard__header-title">
-                                Mathematics (calculus)
+                                Mathematics (Calculus)
                             </h3>
                         </header>
                         <img class="courseCard__image" loading="lazy" alt="Mathematics (Calculus) course image" title="Kx Mathematics (Calculus) course"
@@ -574,7 +574,7 @@
             </section>
 
             <!-- subSection Course -->
-            <section class="mainSection__subSection display-y">
+            <section class="mainSection__subSection nuevo display-n">
             </section>
 
             <!-- Template CourseSubSection -->
@@ -678,17 +678,30 @@
                         </a>
                     </li>
                 </ul>
+
+                <!-- Show again courseCards button -->
+                <span id="btnShowCourseCards">
+                    Return to all courses
+                </span>
+                
             </template>
 
             <!-- subSection CourseModule -->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection display-n">
+            </section>
+
+            <!-- Template ModuleSubSection -->
+            <template id="template-subSection__module">
                 <header class="mainSection__subSection-header">
-                    Kx Module Name
+                    <h2></h2>
                 </header>
-                
+
+                <!-- Module video -->
                 <div class="videoContainer">
-                    <iframe class="videoContainer__video" id="courses__moduleVideo" src="https://www.youtube.com/embed/XFbJrmdiv-s?enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+                    <iframe class="videoContainer__video" id="course__moduleVideo" src="https://www.youtube.com/embed/XFbJrmdiv-s?enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
                 </div>
+
+                <!-- Module controls -->
                 <div class="module__controls">
                     <span class="module__control-item">
                         <span class="Kx-icon Kx-button-rewind"></span> Prev
@@ -701,11 +714,12 @@
                     </span>
                 </div>
 
+                <!-- Description -->
                 <p class="module__description text">
-                    <b>Module description</b> <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, voluptatem!
+                    <b>Module description</b><br>
                 </p>
 
+                <!-- Module resource list -->
                 <ul class="course__resource-list">
                     <header class="course__resource-list-header">
                         <b><span class="Kx-icon Kx-directory"></span>Module resources</b>
@@ -724,7 +738,7 @@
                     </li>
                 </ul>
 
-            </section>
+            </template>
         </section>
         <!-- End mainSection Courses -->
 
@@ -945,7 +959,7 @@
             </p>
 
             <!-- subsection Make us recognizing -->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection display-y">
                 <header class="mainSection__subSection-header">
                     Make us recognizing
                 </header>
@@ -998,7 +1012,7 @@
             </section>
             
             <!-- subsection Talk with us -->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection display-y">
     
                 <header class="mainSection__subSection-header">
                     Talk with us
@@ -1091,7 +1105,7 @@
             </section>
 
             <!-- subsection Everyone can help -->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection display-y">
                 <header class="mainSection__subSection-header">
                     Everyone can help
                 </header>
@@ -1136,7 +1150,7 @@
                         (max-widt:360px) 360w,
                         (max-widt:480px) 480w"
                     >
-                    <p>
+                    <p class="text">
                         Play a game, collect coins and help us while you have fun every day
                     </p>
 
@@ -1376,7 +1390,7 @@
 
 
             <!-- subsection Donations -->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection display-y">
                 <header class="mainSection__subSection-header">
                     Donations
                 </header>
@@ -1502,7 +1516,7 @@
             </p>
             
             <!-- subSection KnowUs-->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection display-y">
                 <header class="mainSection__subSection-header">
                     Know Us
                 </header>
@@ -1551,7 +1565,7 @@
             </section>
 
             <!-- subSection Filosofy-->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection display-y">
                 <header class="mainSection__subSection-header">
                     Filosofy
                 </header>

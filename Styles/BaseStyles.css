@@ -128,7 +128,6 @@ span{
     color: var(--white);
 }
 .mainSection__subSection{
-    display: flex;
     align-items: center;
     flex-direction: column;
     width: 96%;
@@ -587,6 +586,21 @@ span{
 }
 .course__resource-item-link:hover{
     color: var(--purple);
+}
+#btnShowCourseCards{
+    margin-top: 1rem;
+    padding: .8rem;
+    width: 80%;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 1em 0;
+    border: .1em solid var(--gray02);
+    background: linear-gradient( var(--gray04), var(--gray02) );
+    color: white;
+}
+#btnShowCourseCards:hover{
+    background: linear-gradient( var(--gray02), var(--black) );
+    text-shadow: 0 0 .2em var(--purple);
 }
 
 /* subSection module styles */

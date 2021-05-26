@@ -13,7 +13,6 @@ function SpinerShow(show){
     }
 }
 
-
 /********* ScrollUp functionality *********/
 function ScrolllUp(){
     let currentScroll= document.documentElement.scrollTop;
@@ -279,16 +278,22 @@ const allCoursesModulesData=[
         /*Module 00 */{
             title: "Module 00 name",
             duration: "##:##",
+            src: "jONnGQOeA4M",
+            description: "This is an example module 00 description text",
         },
         
         /*Module 01 */{
             title: "Module 01 name",
             duration: "##:##",
+            src: "jONnGQOeA4M",
+            description: "This is an example module 01 description text",
         },
         
         /*Module 02 */{
             title: "Module 02 name",
             duration: "##:##",
+            src: "jONnGQOeA4M",
+            description: "This is an example module 02 description text",
         },
     ],
 
@@ -297,11 +302,15 @@ const allCoursesModulesData=[
         /*Module 00 */{
             title: "Module 00 name",
             duration: "##:##",
+            src: "jONnGQOeA4M",
+            description: "This is an example module 00 description text",
         },
     
         /*Module 01 */{
             title: "Module 01 name",
             duration: "##:##",
+            src: "jONnGQOeA4M",
+            description: "This is an example module 01 description text",
         },
     ],
 ];
@@ -347,7 +356,7 @@ function CreateSubSectionCourse(courseIndex){
         $cloned.querySelector("img").setAttribute("src", courseData.imgSrc);
         
         /* Setting courseDetails items data */
-        let $courseDetail= $cloned.querySelectorAll(".course__details-item"); 
+        let $courseDetail= $cloned.querySelectorAll(".course__details-item");
         $courseDetail[0].querySelector("span").textContent= courseData.quality;
         $courseDetail[1].querySelector("span").textContent= courseData.version;
         $courseDetail[2].querySelector("span").textContent= courseData.duration;
@@ -380,13 +389,101 @@ function CreateSubSectionCourse(courseIndex){
         /* Adding the content to the HTML */
         $fragment.appendChild($cloned);
         $courseSubSection.appendChild($fragment);
+
+        /* Adding show courseCards functionality */
+        ReturnToCoursesCards();
     }
 }
+
+/* return to courses cards button */
+function ReturnToCoursesCards(){
+    document.getElementById("btnShowCourseCards").onclick= function(){
+        SpinerShow(true);
+        ScrolllUp();
+        let $mainSection = document.querySelectorAll(".mainSection__subSection");
+        $mainSection[0].classList.replace("display-n", "display-y");
+        $mainSection[1].classList.replace("display-y", "display-n");
+        SpinerShow(false);
+    };
+}
+
 
 /* After create a loop that declare all the course buttons onclick
 right now isnt necessary because we have only one active course */
 document.querySelector(".courseCard__button").onclick= function(){
     SpinerShow(true);
+    ScrolllUp();
     CreateSubSectionCourse(0);
+    document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-y");
+    document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-n");
+    document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-y");
+    document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-n");
     SpinerShow(false);
+    CreateSubSectionModuleButtonLinks();
 };
+
+
+/* Course CreateModule buttons links (link to create the respective subSection__module) */
+function CreateSubSectionModuleButtonLinks(){
+    let $moduleItem= document.querySelectorAll(".mainSection__subSection")[1].querySelectorAll(".course__modulesList-item");
+    for (let i = 0; i < $moduleItem.length; i++) {        
+        $moduleItem[i].onclick= function(){
+            SpinerShow(true);
+            ScrolllUp();
+            CreateSubSectionModule(i);
+            document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-y");
+            document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-n");
+            document.querySelectorAll(".mainSection__subSection")[2].classList.toggle("display-y");
+            document.querySelectorAll(".mainSection__subSection")[2].classList.toggle("display-n");
+            SpinerShow(false);
+        };
+    }    
+}
+
+/* Create subSection__module */
+function CreateSubSectionModule(moduleIndex){
+    let $moduleSubSection= document.querySelectorAll(".mainSection__subSection")[2];
+    let $fragment= document.createDocumentFragment();
+    let moduleData= allCoursesModulesData[currentCourse][moduleIndex];
+    let $template= document.getElementById("template-subSection__module").content;
+    
+    /* Checking if is necessary create the course subsection */
+    if(moduleIndex!=currentCourseModule){
+        currentCourseModule= moduleIndex;
+
+        /* cloning the template */
+        let $cloned= document.importNode($template, true);
+
+        /* Setting header data */
+        let $header= $cloned.querySelector("h2");
+        $cloned.querySelector("h2").textContent= moduleData.title;
+
+        /* Setting module video url */
+        $cloned.getElementById("course__moduleVideo").setAttribute("src", "https://www.youtube.com/embed/"+ moduleData.src +"?enablejsapi=1&html5=1");
+
+        /* Description */
+        $cloned.querySelector(".module__description").insertAdjacentText("beforeend", moduleData.description);   
+        
+        /* Cleaning the old module content */
+        $moduleSubSection.innerHTML = '';
+
+        /* Adding the new module content to the HTML */
+        $fragment.appendChild($cloned);
+        $moduleSubSection.appendChild($fragment);
+
+        /* Adding the show modules functionality */
+        ShowAgainModules();
+    }
+        
+}
+
+/* Show Modules (module__control-item) */
+function ShowAgainModules(){
+    let $mainSection = document.querySelectorAll(".mainSection__subSection");
+    $mainSection[2].querySelectorAll(".module__control-item")[1].onclick= function(){
+        SpinerShow(true);
+        $mainSection[1].classList.replace("display-n", "display-y");
+        $mainSection[2].classList.replace("display-y", "display-n");
+        SpinerShow(false);
+    };
+}
