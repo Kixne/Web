@@ -285,7 +285,7 @@ const allCoursesModulesData=[
         /*Module 01 */{
             title: "Module 01 name",
             duration: "##:##",
-            src: "jONnGQOeA4M",
+            src: "XFbJrmdiv-s",
             description: "This is an example module 01 description text",
         },
         

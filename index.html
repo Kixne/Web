@@ -79,7 +79,11 @@
                     </a>
                 </li>
                 <li class="langsList-item">
-                    <a href="#">Spanish (es)
+                    <a href="#">Spanish (es)<br>(right now dont work)
+                    </a>
+                </li>
+                <li class="langsList-item">
+                    <a href="#">Japanese<br>(right now dont work)
                     </a>
                 </li>
             </ul>
@@ -112,11 +116,11 @@
         </span>
 
         <a href="#" class="nav__link">
-            <span class="Kx-icon Kx-languages"></span>Spanish <br>(right now dont work)
+            <span class="Kx-icon Kx-languages"></span>Spanish<br>(right now dont work)
         </a>
 
         <a href="#" class="nav__link">
-            <span class="Kx-icon Kx-languages"></span>Japanese <br>(right now dont work)
+            <span class="Kx-icon Kx-languages"></span>Japanese<br>(right now dont work)
         </a>
 
         <span class="btnMenuClose">
@@ -179,7 +183,7 @@
                 </p>
             </div>
 
-            <!-- This div contains mainSections linkCards -->
+            <!-- This section contains mainSections linkCards -->
             <section class="mainSectionLinksContainer">
                 
                 <!-- mainSectionCard Courses -->
@@ -261,7 +265,7 @@
                                 <strong>Questions</strong>
                             </header>
                             <p class="text">
-                                have you an inquiry of a part of the content, or do you want to make us a question about any topic, then, see how can we help you to solve your questions
+                                Have you an inquiry of a part of the content, or do you want to make us a question about any topic, then, see how can we help you to solve your questions
                             </p>
                             <span class="mainSectionCard__link">Solve my ask</span>
                         </section>
@@ -305,7 +309,7 @@
                                 <strong>Support us</strong>
                             </header>
                             <p class="text">
-                                did you like it our content, do you want to help us, or do you want to collaborate to upgrade or update our content, find out how to do it in this section 
+                                Did you like it our content, do you want to help us, or do you want to collaborate to upgrade or update our content, find out how to do it in this section 
                             </p>
                             <span class="mainSectionCard__link">View methods</span>
                         </section>
@@ -756,7 +760,7 @@
             </p>
 
             <!-- subSection Frequent questions-->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection display-y">
                 <header class="mainSection__subSection-header">
                     <i class="flaticon flaticon-question"></i>Frequent questions
                 </header>
@@ -767,7 +771,7 @@
             </section>
             
             <!-- subSection Help groups -->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection display-y">
                 <header class="mainSection__subSection-header">
                     <i class="flaticon flaticon-question"></i>Help groups
                 </header>
@@ -854,7 +858,17 @@
 
                 <!-- methodCard Mathematics (calculus) -->
                 <section class="subSection__subSection methodCard">
-                    <img loading="lazy" src="./Tests/Sources/Images/ContactUs.png" alt="Crypto wallets image" title="Kx Crypto Wallets">
+                    <img loading="lazy" alt="Crypto wallets image" title="Kx Crypto Wallets"
+                        src="./Sources/Images/MainSection_Courses/MathematicsCalculus/MathematicsCalculus0480px.png"
+                        srcset="
+                        ./Sources/Images/MainSection_Courses/MathematicsCalculus/MathematicsCalculus0320px.webp 320w,
+                        ./Sources/Images/MainSection_Courses/MathematicsCalculus/MathematicsCalculus0360px.webp 360w,
+                        ./Sources/Images/MainSection_Courses/MathematicsCalculus/MathematicsCalculus0480px.webp 480w"
+                        sizes="
+                        (max-widt:320px) 320w,
+                        (max-widt:360px) 360w,
+                        (max-widt:480px) 480w"
+                    >
                     <p class="text">
                         Mutual support to solve our doubts, and master mathematics (calculus)
                     </p>
@@ -887,7 +901,7 @@
             </section>
             
             <!-- subSection Ask us-->
-            <section class="mainSection__subSection">
+            <section class="mainSection__subSection display-y">
                 <header class="mainSection__subSection-header">
                     <i class="Kx-icon Kx-question"></i>Ask us!
                 </header>
@@ -955,7 +969,8 @@
             </header>
 
             <p class="text mainSection__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem exercitationem suscipit at, nisi magni reprehenderit.
+                First of all, thank you for be here.
+                <br> Support us to improve our content and our system, whether helping us from making us recognizing, suggesting improvements, help with the traductions or even providing financial support.
             </p>
 
             <!-- subsection Make us recognizing -->
@@ -1124,7 +1139,7 @@
                         (max-widt:480px) 480w"
                     >
                     <p class="text">
-                        Watch an ad and get a surprice advice from us, as a gratitude
+                        If you have less than a minute, you can support us watching a short ad
                     </p>
                     
                     <!-- method details -->
@@ -1181,6 +1196,23 @@
                                 If you still want to support us, send us your BTC to our BTC wallet
                             </li>
                         </ol>
+
+                        <!-- Coinbase. CryptoWallet email -->
+                        <ul>
+                            <header class="methodCard__details-header">
+                                Official wallet
+                            </header>
+                            <!-- CryptoWallet element -->
+                            <li class="basicList__item">
+                                <div class="copyableElement-container">
+                                    <span class="Kx-icon Kx-crypto-bitcoin copyableElement-fake">
+                                        <b>Bitcoin wallet (Coinbase)</b>
+                                    </span>
+                                    <input type="text" value="Kx.Donations@gmail.com" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
+                            </li>
+                        </ul>
                         
                         <!-- Recommended games -->
                         <ol>
@@ -1240,22 +1272,6 @@
                             </li>
                         </ul>
                         
-                        <!-- Coinbase. CryptoWallet email -->
-                        <ul>
-                            <header class="methodCard__details-header">
-                                Official wallet
-                            </header>
-                            <!-- CryptoWallet element -->
-                            <li class="basicList__item">
-                                <div class="copyableElement-container">
-                                    <span class="Kx-icon Kx-crypto-bitcoin copyableElement-fake">
-                                        <b>Bitcoin wallet (Coinbase)</b>
-                                    </span>
-                                    <input type="text" value="Kx.Donations@gmail.com" class="copyableElement display-n">
-                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                     
                     <span class="methodCard__button">
@@ -1320,6 +1336,23 @@
                             </li>
                         </ol>
                         
+                        <!-- Official account (PayPal) -->
+                        <ul>
+                            <header class="methodCard__details-header">
+                                Official account
+                            </header>
+                            <!-- Kixne Paypal account -->
+                            <li class="basicList__item">
+                                <div class="copyableElement-container">
+                                    <span class="Kx-icon Kx-paypal copyableElement-fake">
+                                        <b>Paypal account</b>
+                                    </span>
+                                    <input type="text" value="Kx.Donations@gmail.com" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
+                            </li>
+                        </ul>
+
                         <!-- Recommended game list -->
                         <ol>
                             <header class="methodCard__details-header">
@@ -1362,22 +1395,6 @@
                             </li>
                         </ul>
                         
-                        <!-- Official account (PayPal) -->
-                        <ul>
-                            <header class="methodCard__details-header">
-                                Official account
-                            </header>
-                            <!-- Kixne Paypal account -->
-                            <li class="basicList__item">
-                                <div class="copyableElement-container">
-                                    <span class="Kx-icon Kx-paypal copyableElement-fake">
-                                        <b>Paypal account</b>
-                                    </span>
-                                    <input type="text" value="Kx.Donations@gmail.com" class="copyableElement display-n">
-                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                     
                     <span class="methodCard__button">
@@ -1512,7 +1529,7 @@
                 <i class="Kx-icon Kx-information"></i>
             </header>
             <p class="text mainSection__text">
-                Know what is Kixne, learn how are part of this and what to be part of the community joining us, learn about our filosofy, and discover more interesting things about us 
+                Learn what Kixne is, know who we are, learn about our philosophy, about our community, and discover more interesting facts about us. 
             </p>
             
             <!-- subSection KnowUs-->
@@ -1530,6 +1547,10 @@
                         What is Kixne?
                     </header>
                     <ul class="basicList">
+                        <li class="basicList__item">
+                            Kixne is a community, based on mutual support and respect
+                        </li>
+
                         <li class="basicList__item">
                             Kixne is a technological learnin area and personal development
                         </li>
