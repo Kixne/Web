@@ -278,7 +278,7 @@ const allCoursesModulesData=[
         /*Module 00 */{
             title: "Module 00 name",
             duration: "##:##",
-            src: "jONnGQOeA4M",
+            src: "XFbJrmdiv-s",
             description: "This is an example module 00 description text",
         },
         
@@ -292,7 +292,7 @@ const allCoursesModulesData=[
         /*Module 02 */{
             title: "Module 02 name",
             duration: "##:##",
-            src: "jONnGQOeA4M",
+            src: "XFbJrmdiv-s",
             description: "This is an example module 02 description text",
         },
     ],
@@ -302,14 +302,14 @@ const allCoursesModulesData=[
         /*Module 00 */{
             title: "Module 00 name",
             duration: "##:##",
-            src: "jONnGQOeA4M",
+            src: "XFbJrmdiv-s",
             description: "This is an example module 00 description text",
         },
     
         /*Module 01 */{
             title: "Module 01 name",
             duration: "##:##",
-            src: "jONnGQOeA4M",
+            src: "XFbJrmdiv-s",
             description: "This is an example module 01 description text",
         },
     ],

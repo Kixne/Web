@@ -696,7 +696,7 @@ span{
     flex-direction: column;
 }
 .methodCard__details-header{
-    margin: .8em .8em 0;
+    margin: 1em .8em 0;
     font-size: 1.2em;
     font-weight: bold;
 }

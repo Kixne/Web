@@ -11,6 +11,16 @@
     <meta name= "robots" content= "index">
     <meta name="description" content="Professional content at the forefront and hight quality in technological areas. Learn, Develop the best version of yourself and become a technological specialist.">
     
+    <!-- Adding open graph protocol -->
+    <meta property="og:title" content="Kixne™ Web" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:url" content="https://kixne.github.io/web" />
+    <meta property="og:image" content="https://kixne.github.io/web/Sources/Images/KixneOpenGraphImage.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="Kixne web image" />
+    <meta property="og:description" content="Develop the best version of yourself and become a technological specialist. Learn about your preferred technological area and increase your skills.">
+
     <link rel="icon" type="image/png" sizes="16x16" href="./Sources/Icons/IconKx16px.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./Sources/Icons/IconKx32px.png">
     <link rel="icon" type="image/png" sizes="64x64" href="./Sources/Icons/IconKx64px.png">
@@ -74,7 +84,7 @@
         
         <div class="langsList-container display-n">
             <ul class="langsList">
-                <li class="langsList-item">
+                <li onclick="alert('You chose the current language.');" class="langsList-item">
                     <a href="#">English (en)
                     </a>
                 </li>
@@ -104,14 +114,14 @@
     <!-- End Nav -->
 
     <!-- Languages picker (Borrows nav styles) -->
-    <nav class="nav display-n">
+    <div class="nav display-n">
         <header class="nav__header">
             <span class="nav__header-text">
                 Languages <i class="Kx-icon Kx-languages"></i>
             </span>
         </header>
 
-        <span onclick="alert('You chose the current language.');"class="nav__link">
+        <span onclick="alert('You chose the current language.');" class="nav__link">
             <span class="Kx-icon Kx-languages"></span>English
         </span>
 
@@ -126,7 +136,7 @@
         <span class="btnMenuClose">
             Close <span class="Kx-icon Kx-button-cancel"></span>
         </span>
-    </nav>
+    </div>
     <!-- End Languages picker -->
 
 
@@ -372,7 +382,9 @@
                Courses
                <span class="Kx-icon Kx-learn"></span>
             </header>
-            <p class="text mainSection__text">Learn about an technological area, or follow any of our guides to specialize in its preferred topic, and become a professional or specialist</p>
+            <p class="text mainSection__text">
+                Learn about your preferred technological area, specialize on your preferred topic, increase your skills and become a Kx professional or Kx specialist
+            </p>
             
             <!-- subSection CoursesCards -->
             <section class="mainSection__subSection display-y">
@@ -781,7 +793,17 @@
 
                 <!-- methodCard Develpers (general purpose) -->
                 <section class="subSection__subSection methodCard">
-                    <img loading="lazy" src="./Tests/Sources/Images/ContactUs.png" alt="Crypto wallets image" title="Kx Crypto Wallets">
+                    <img loading="lazy" alt="Kx accounts image" title="Official Kx accounts"
+                        src="./Sources/Images/Contacts/Contacts0480px.png"
+                        srcset="
+                        ./Sources/Images/Contacts/Contacts0320px.webp 320w,
+                        ./Sources/Images/Contacts/Contacts0360px.webp 360w,
+                        ./Sources/Images/Contacts/Contacts0480px.webp 480w"
+                        sizes="
+                        (max-widt:320px) 320w,
+                        (max-widt:360px) 360w,
+                        (max-widt:480px) 480w"
+                    >
                     <p class="text">
                         If you need a group to ask any kind of questions about programming and developing. This is your group
                     </p>
@@ -911,7 +933,17 @@
 
                 <!-- methodCard direct contacts -->
                 <section class="subSection__subSection methodCard">
-                    <img loading="lazy" src="./Tests/Sources/Images/ContactUs.png" alt="Kx accounts image" title="Official Kx accounts">
+                    <img loading="lazy" alt="Kx accounts image" title="Official Kx accounts"
+                        src="./Sources/Images/Contacts/Contacts0480px.png"
+                        srcset="
+                        ./Sources/Images/Contacts/Contacts0320px.webp 320w,
+                        ./Sources/Images/Contacts/Contacts0360px.webp 360w,
+                        ./Sources/Images/Contacts/Contacts0480px.webp 480w"
+                        sizes="
+                        (max-widt:320px) 320w,
+                        (max-widt:360px) 360w,
+                        (max-widt:480px) 480w"
+                    >
                     <p class="text">
                         Ask us directly. we will try to solve your doubts as soon as a possible
                     </p>
@@ -970,7 +1002,7 @@
 
             <p class="text mainSection__text">
                 First of all, thank you for be here.
-                <br> Support us to improve our content and our system, whether helping us from making us recognizing, suggesting improvements, help with the traductions or even providing financial support.
+                <br><br>Support us to improve our content and system, whether helping us from making us recognizing, suggesting improvements, help with the traductions or even providing financial support.
             </p>
 
             <!-- subsection Make us recognizing -->
@@ -981,9 +1013,19 @@
 
                 <!-- methodCard Kx accounts -->
                 <section class="subSection__subSection methodCard">
-                    <img loading="lazy" src="./Tests/Sources/Images/ContactUs.png" alt="Kx accounts image" title="Official Kx accounts">
+                    <img loading="lazy" alt="Kx accounts image" title="Official Kx accounts"
+                        src="./Sources/Images/Contacts/Contacts0480px.png"
+                        srcset="
+                        ./Sources/Images/Contacts/Contacts0320px.webp 320w,
+                        ./Sources/Images/Contacts/Contacts0360px.webp 360w,
+                        ./Sources/Images/Contacts/Contacts0480px.webp 480w"
+                        sizes="
+                        (max-widt:320px) 320w,
+                        (max-widt:360px) 360w,
+                        (max-widt:480px) 480w"
+                    >
                     <p class="text">
-                        The easiest form to support us, is commenting and sharing ours sites
+                        The easiest form to support us, is commenting and sharing our sites
                     </p>
 
                     <!-- method details -->
@@ -995,16 +1037,17 @@
                             </header>
                             <li class="basicList__item">
                                 <a href="https://www.youtube.com/channel/UCqR_vxvL5YOSbNZw7Is7_Xw" target="_blank" rel="noopener noreferrer">
-                                    <span class="Kx-icon Kx-youtube"></span>Kixne (YouTube channel)
+                                    <span class="Kx-icon Kx-youtube"></span>Kixne (YouTube)
                                 </a>
                             </li>
                         </ul>
                         
-                        <!-- Official account copiables-->
+                        <!-- Official accounts copiables-->
                         <ul>
                             <header class="methodCard__details-header">
                                 Share and make our community grow
                             </header>
+
                             <!-- YouTube channel -->
                             <li class="basicList__item">
                                 <div class="copyableElement-container">
@@ -1012,6 +1055,17 @@
                                         <b>Kixne</b> (YouTube)
                                     </span>
                                     <input type="text" value="https://www.youtube.com/channel/UCqR_vxvL5YOSbNZw7Is7_Xw" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
+                            </li>
+
+                            <!-- Kixne web -->
+                            <li class="basicList__item">
+                                <div class="copyableElement-container">
+                                    <span class="Kx-icon Kx-languages copyableElement-fake">
+                                        <b>Kixne</b> (Web)
+                                    </span>
+                                    <input type="text" value="https://kixne.github.io/web" class="copyableElement display-n">
                                     <span class="Kx-icon Kx-copy button-copy">Copy</span>
                                 </div>
                             </li>
@@ -1047,15 +1101,43 @@
                         (max-widt:480px) 480w"
                     >
                     <p class="text">
-                        Contact us, and tell us your ideas to update or upgrade our UX and UI
+                        Contact us, and tell us how to update or upgrade our UX and UI
                     </p>
 
                     <!-- method details -->
                     <div class="methodCard__details display-n">
+                                                
+                        <ul>
+                            <header class="methodCard__details-header">
+                                How to help?
+                            </header>
+                            <li class="basicList__item">
+                                Colaborating with traductions or text corrections
+                            </li>
+                            <li class="basicList__item">
+                                Helping us add subtitles in the videos (YouTube)
+                            </li>
+                            <li class="basicList__item">
+                                If you find a new question (with their answer) in a group, tell us to add it to the system
+                            </li>
+                            <li class="basicList__item">
+                                Join a group and help us to aswer the newcomers questions
+                            </li>
+                            <li class="basicList__item">
+                                Make UI sugestions designs
+                            </li>
+                            <li class="basicList__item">
+                                Make UX sugestions
+                            </li>
+                            <li class="basicList__item">
+                                And any form that you want
+                            </li>
+                        </ul>
+
                         <!-- Kixne Gmail account -->
                         <ul>
                             <header class="methodCard__details-header">
-                                Official account
+                                Contact account
                             </header>
                             <li class="basicList__item">
                                 <div class="copyableElement-container">
@@ -1097,7 +1179,7 @@
                          <!-- Kixne Gmail account -->
                          <ul>
                              <header class="methodCard__details-header">
-                                 Official account
+                                 Contact account
                              </header>
                             <li class="basicList__item">
                                 <div class="copyableElement-container">
@@ -1152,14 +1234,75 @@
                     </span>
                 </section>
 
+                <!-- methodCard Chia faucets -->
+                <section class="subSection__subSection methodCard">
+                    <img loading="lazy" alt="Chia faucet image" title="Kx Chia faucet"
+                        src="./Sources/Images/MainSection_SupportUs/ChiaFaucet/ChiaFaucet0480px.png"
+                        srcset="
+                        ./Sources/Images/MainSection_SupportUs/ChiaFaucet/ChiaFaucet0320px.webp 320w,
+                        ./Sources/Images/MainSection_SupportUs/ChiaFaucet/ChiaFaucet0360px.webp 360w,
+                        ./Sources/Images/MainSection_SupportUs/ChiaFaucet/ChiaFaucet0480px.webp 480w"
+                        sizes="
+                        (max-widt:320px) 320w,
+                        (max-widt:360px) 360w,
+                        (max-widt:480px) 480w"
+                    >
+                    <p class="text">
+                        If you have little time , you can support us by completing a captcha. 
+                    </p>
+                    
+                    <!-- method details -->
+                    <div class="methodCard__details display-n">
+                        <ul>
+                            <header class="methodCard__details-header">
+                                How to help?
+                            </header>
+                            
+                            <p class="text">
+                                You only need a few moments to copy our wallet, go to a faucet and complete this captchas, that is just once a day, but that'll help us a lot
+                            </p>
+                            
+                            <!-- Wallet Chia -->
+                            <li class="basicList__item">
+                                <div class="copyableElement-container">
+                                    <span class="Kx-icon Kx-crypto-chia copyableElement-fake">
+                                        <b>Chia</b> wallet
+                                    </span>
+                                    <input type="text" value="xch17f7p9pmkgt7kyl9amna7l0cgardf5dme3v4gts7f02tm8yteahfq0ehqjw" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
+                            </li>
+
+                            <!-- Faucet 01 -->
+                            <li class="basicList__item">
+                                <a href="https://chia.togatech.org" target="_blank" rel="noopener noreferrer">
+                                    https://chia.togatech.org
+                                </a>
+                            </li>
+
+                            <!-- Faucet 02 -->
+                            <li class="basicList__item">
+                                <a href="https://faucet.chia.net" target="_blank" rel="noopener noreferrer">
+                                    https://faucet.chia.net
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <span class="methodCard__button">
+                        <span class="Kx-icon Kx-heart"></span>
+                        Support
+                    </span>
+                </section>
+
                 <!-- methodCard Bling -->
                 <section class="subSection__subSection methodCard">
                     <img loading="lazy" alt="Bling Games image" title="Kx Bling Games"
-                        src="../Sources/Images/MainSection_SupportUs/Bling/Bling0480px.png"
+                        src="./Sources/Images/MainSection_SupportUs/Bling/Bling0480px.png"
                         srcset="
-                        ../Sources/Images/MainSection_SupportUs/Bling/Bling0320px.webp 320w,
-                        ../Sources/Images/MainSection_SupportUs/Bling/Bling0360px.webp 360w,
-                        ../Sources/Images/MainSection_SupportUs/Bling/Bling0480px.webp 480w"
+                        ./Sources/Images/MainSection_SupportUs/Bling/Bling0320px.webp 320w,
+                        ./Sources/Images/MainSection_SupportUs/Bling/Bling0360px.webp 360w,
+                        ./Sources/Images/MainSection_SupportUs/Bling/Bling0480px.webp 480w"
                         sizes="
                         (max-widt:320px) 320w,
                         (max-widt:360px) 360w,
@@ -1193,7 +1336,7 @@
                                 Wait until you receive the payment (maximum 48h)
                             </li>
                             <li class="basicList__item">
-                                If you still want to support us, send us your BTC to our BTC wallet
+                                If you still want to support us, send us the btc to our btc wallet
                             </li>
                         </ol>
 
@@ -1206,7 +1349,7 @@
                             <li class="basicList__item">
                                 <div class="copyableElement-container">
                                     <span class="Kx-icon Kx-crypto-bitcoin copyableElement-fake">
-                                        <b>Bitcoin wallet (Coinbase)</b>
+                                        <b>Bitcoin wallet</b>
                                     </span>
                                     <input type="text" value="Kx.Donations@gmail.com" class="copyableElement display-n">
                                     <span class="Kx-icon Kx-copy button-copy">Copy</span>
@@ -1280,129 +1423,7 @@
                     </span>
                 </section>
                 
-                <!-- methodCard Big time -->
-                <section class="subSection__subSection methodCard">
-                    <img loading="lazy" alt="Big Time Games image" title="Kx Big Time Games"
-                        src="./Sources/Images/MainSection_SupportUs/BigTime/BigTime0480px.png"
-                        srcset="
-                        ./Sources/Images/MainSection_SupportUs/BigTime/BigTime0320px.webp 320w,
-                        ./Sources/Images/MainSection_SupportUs/BigTime/BigTime0360px.webp 360w,
-                        ./Sources/Images/MainSection_SupportUs/BigTime/BigTime0480px.webp 480w"
-                        sizes="
-                        (max-widt:320px) 320w,
-                        (max-widt:360px) 360w,
-                        (max-widt:480px) 480w"
-                    >
-                    <p class="text">
-                        Play a game, collect tikets and help us while you have fun every day
-                    </p>
-
-                    <!-- method details -->
-                    <div class="methodCard__details display-n">
-                        <!-- How to help list -->
-                        <ol>
-                            <header class="methodCard__details-header">
-                                How to help?
-                            </header>
-                            <li class="basicList__item">
-                                Install 1 or more BigTime games from the PlayStore
-                            </li>
-                            <li class="basicList__item">
-                                <div class="copyableElement-container">
-                                    <span class="copyableElement-fake">
-                                        Enter our referral code 
-                                    </span>
-                                    <input type="text" value="QX14W" class="copyableElement display-n">
-                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
-                                </div>
-                            </li>
-                            <li class="basicList__item">
-                                Play daily, 1 or 2 hours
-                            </li>
-                            <li class="basicList__item">
-                                Save your tikets in the bank
-                            </li>
-                            <li class="basicList__item">
-                                Wait until you accumulate 1,000,000 tikets
-                            </li>
-                            <li class="basicList__item">
-                                Claim all your tikets form the bank
-                            </li>
-                            <li class="basicList__item">
-                                Exchange the tikets (convert them)
-                            </li>
-                            <li class="basicList__item">
-                                If you still want to support us, send us the ammount to our paypal account
-                            </li>
-                        </ol>
-                        
-                        <!-- Official account (PayPal) -->
-                        <ul>
-                            <header class="methodCard__details-header">
-                                Official account
-                            </header>
-                            <!-- Kixne Paypal account -->
-                            <li class="basicList__item">
-                                <div class="copyableElement-container">
-                                    <span class="Kx-icon Kx-paypal copyableElement-fake">
-                                        <b>Paypal account</b>
-                                    </span>
-                                    <input type="text" value="Kx.Donations@gmail.com" class="copyableElement display-n">
-                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <!-- Recommended game list -->
-                        <ol>
-                            <header class="methodCard__details-header">
-                                Recommended game
-                            </header>
-                            <li class="basicList__item">
-                                Total recall (It is in the main application)
-                            </li>
-                        </ol>
-                        
-                        <!-- How much did you will play? -->
-                        <ul>
-                            <header class="methodCard__details-header">
-                                How much did you will play?
-                            </header>
-                            <li class="basicList__item">
-                                1:00h daily (aprox 5000 tikets),  you will get the tikets approximately 200 days
-                            </li>
-                            <li class="basicList__item">
-                                1:30h daily (aprox 7500 tikets),  you will get the tikets approximately 133 days
-                            </li>
-                            <li class="basicList__item">
-                                2:00h daily (aprox 10000 tikets),  you will get the tikets approximately 100 days
-                            </li>
-                        </ul>
-                        
-                        <!-- If you have high skills... -->
-                        <ul>
-                            <header class="methodCard__details-header">
-                                If you have high skills...
-                            </header>
-                            <li class="basicList__item">
-                                1:00h daily (aprox +6000 tikets),  you will get the tikets maximum in 167 days
-                            </li>
-                            <li class="basicList__item">
-                                1:30h daily (aprox +9000 tikets),  you will get the tikets maximum in 111 days
-                            </li>
-                            <li class="basicList__item">
-                                2:00h daily (aprox +12000 tikets),  you will get the tikets maximum in 83 days
-                            </li>
-                        </ul>
-                        
-                    </div>
-                    
-                    <span class="methodCard__button">
-                        <span class="Kx-icon Kx-games"></span>
-                        View games
-                    </span>
-                </section>
-
+                
             </section>
 
 
@@ -1458,19 +1479,72 @@
 
                     <!-- support method details -->
                     <div class="methodCard__details display-n">
-                        <!-- Wallets directions -->
+                        
+                        <!-- Cryptos Wallet direction (Just coinbase to coinbase) -->
+                        <ul>
+                            <header class="methodCard__details-header">
+                                CryptoWallet
+                            </header>
+
+                            <p class="text">Just use this option if you will send cryptoCoins with a coinbase account (This direction is for all the supported coins)</p>
+                            
+                            <!-- Wallet Coinbase -->
+                            <li class="basicList__item">
+                                <div class="copyableElement-container">
+                                    <span class="Kx-icon Kx-crypto-wallet copyableElement-fake">
+                                        Cryptos Wallet<br>(Just for coinbase)
+                                    </span>
+                                    <input type="text" value="Kx.Donations@gmail.com" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Cryptos Wallet direction (Just binance to binance) -->
+                        <ul>
+                            <header class="methodCard__details-header">
+                                CryptoWallet
+                            </header>
+
+                            <p class="text">Just use this option if you will send cryptoCoins with a binance account (This direction is for all the supported coins)</p>
+                            
+                            <!-- Wallet Binance -->
+                            <li class="basicList__item">
+                                <div class="copyableElement-container">
+                                    <span class="Kx-icon Kx-crypto-wallet copyableElement-fake">
+                                        Cryptos Wallet<br>(Just for binance)
+                                    </span>
+                                    <input type="text" value="bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
+                            </li>
+
+                            <li class="basicList__item">
+                                <div class="copyableElement-container">
+                                    <span class="copyableElement-fake">
+                                        Required MEMO
+                                    </span>
+                                    <input type="text" value="123414497" class="copyableElement display-n">
+                                    <span class="Kx-icon Kx-copy button-copy">Copy</span>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <!-- CryptoWallets directions (Wallet to Wallet) -->
                         <ul>
                             <header class="methodCard__details-header">
                                 CryptoWallets
                             </header>
 
+                            <p class="text">Use this options if you want to use your preferred cryptoWallet account to send the cryptoCoins</p>
+                            
                             <!-- Wallet Bitcoin -->
                             <li class="basicList__item">
                                 <div class="copyableElement-container">
                                     <span class="Kx-icon Kx-crypto-bitcoin copyableElement-fake">
                                         <b>Bitcoin</b> wallet
                                     </span>
-                                    <input type="text" value="This is just an example text" class="copyableElement display-n">
+                                    <input type="text" value="1Mp77sBUPws2TnTbf71vsJorCJGyb9gKpx" class="copyableElement display-n">
                                     <span class="Kx-icon Kx-copy button-copy">Copy</span>
                                 </div>
                             </li>
@@ -1481,7 +1555,7 @@
                                     <span class="Kx-icon Kx-crypto-chia copyableElement-fake">
                                         <b>Chia</b> wallet
                                     </span>
-                                    <input type="text" value="This is just an example text" class="copyableElement display-n">
+                                    <input type="text" value="xch17f7p9pmkgt7kyl9amna7l0cgardf5dme3v4gts7f02tm8yteahfq0ehqjw" class="copyableElement display-n">
                                     <span class="Kx-icon Kx-copy button-copy">Copy</span>
                                 </div>
                             </li>
@@ -1492,7 +1566,7 @@
                                     <span class="Kx-icon Kx-crypto-ethereum copyableElement-fake">
                                         <b>Ethereum</b> wallet
                                     </span>
-                                    <input type="text" value="This is just an example text" class="copyableElement display-n">
+                                    <input type="text" value="0x2e98d6cebc45634227b4eb4740395cedb34d93ed" class="copyableElement display-n">
                                     <span class="Kx-icon Kx-copy button-copy">Copy</span>
                                 </div>
                             </li>
@@ -1503,7 +1577,7 @@
                                     <span class="Kx-icon Kx-crypto-litecoin copyableElement-fake">
                                         <b>Litecoin</b> wallet
                                     </span>
-                                    <input type="text" value="This is just an example text" class="copyableElement display-n">
+                                    <input type="text" value="LbitysnXLtG4B5FYDSrUPDVq4ZWZiyAKdC" class="copyableElement display-n">
                                     <span class="Kx-icon Kx-copy button-copy">Copy</span>
                                 </div>
                             </li>
