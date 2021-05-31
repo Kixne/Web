@@ -1,4 +1,4 @@
-/********* Toggle spiner visibility *********/
+/********* Toggle spiner visibility funtionality *********/
 function SpinerShow(show){
     let $spiner = document.querySelector(".spinerContent");
     /* Show spiner */
@@ -12,21 +12,51 @@ function SpinerShow(show){
         }, 500);
     }
 }
+/********* End Toggle spiner visibility funtionality *********/
+
 
 /********* ScrollUp functionality *********/
 function ScrolllUp(){
     let currentScroll= document.documentElement.scrollTop;
     if(currentScroll> 0){ window.scrollTo( 0, 0); }
 }
+/* Ensuring that the page starts at the top */
+ScrolllUp();
+/********* End ScrollUp functionality *********/
 
 
-/********* Toggle nav visibility function*********/
+/********* CopyElement function *********/
+function CopyElement(x){
+    /* Fake copyable element is so that the user cannot modify the text that we want to be copied */
+    let $copyableElement= document.querySelectorAll(".copyableElement");
+    $copyableElement[x].classList.replace("display-n", "display-y");
+    $copyableElement[x].focus();
+    $copyableElement[x].select();
+    document.execCommand("copy");
+    $copyableElement[x].classList.replace("display-y", "display-n");
+    /* Showing that the text has been copied */
+    let $copyButton= document.querySelectorAll(".button-copy")[x];
+    $copyButton.textContent= "Copied";
+    setTimeout(function(){
+        $copyButton.textContent= "Copy";
+    }, 1000);
+}
+/* Adding copyButtons onclick functionality */
+const $copyButtons= document.querySelectorAll(".button-copy");
+for (let i = 0; i < $copyButtons.length; i++) {
+    $copyButtons[i].onclick= function(){
+        CopyElement(i);
+    }
+}
+/********* End CopyElement function *********/
+
+
+/********* Toggle nav visibility functionality *********/
 function NavShow(x){
     let menu = document.querySelectorAll(".nav");
     menu[x].classList.toggle("display-n");
     menu[x].classList.toggle("display-y");
 }
-
 /* Toggle Menu buttons Visibiility function */
 function ToggleMenuButtonsVisibility(){
     let $menuButton = document.querySelectorAll(".btnMenu");
@@ -35,7 +65,6 @@ function ToggleMenuButtonsVisibility(){
     $menuButton[1].classList.toggle("display-y");
     $menuButton[1].classList.toggle("display-n");
 }
-
 /* Nav toggler buttons (Kx web menu) */
 document.querySelectorAll(".btnMenu")[0].onclick= function(){
     NavShow(0);
@@ -46,9 +75,7 @@ document.querySelectorAll(".nav__header-text")[0].onclick= function(){
 document.querySelectorAll(".btnMenuClose")[0].onclick= function(){
     NavShow(0);
 }
-
-/* Language picker toggler buttons
-(Borrows nav scripts) */
+/* Language picker toggler buttons (Borrows nav scripts) */
 document.querySelectorAll(".btnMenu")[1].onclick= function(){
     NavShow(1);
 }
@@ -58,10 +85,10 @@ document.querySelectorAll(".nav__header-text")[1].onclick= function(){
 document.querySelectorAll(".btnMenuClose")[1].onclick= function(){
     NavShow(1);
 }
-/********* Toggle nav visibility function*********/
+/********* End Toggle nav visibility functionality *********/
 
 
-/********* ToglingToMainSection function *********/
+/********* ToglingToMainSection functionality *********/
 function TogglingToMainSection(mainSectionNumber){
     SpinerShow(true);
     /* StopAllPlayers(); */
@@ -70,7 +97,6 @@ function TogglingToMainSection(mainSectionNumber){
     NavShow(0);
     SpinerShow(false);
 }
-
 /* nav subSections links */
 const $navLinks = document.querySelectorAll(".nav__link");
 /* main__mainSection Home */
@@ -111,7 +137,7 @@ $navLinks[5].onclick = function(){
 
 
 
-/********* Toggle mainSection[x] visibility function *********/
+/********* Toggle mainSection[x] visibility functionality *********/
 /* indexes of the main__mainSections
     (if the values change, update the comment)
     0= Home     1= Courses      2= Questions
@@ -182,34 +208,6 @@ function StopAllPlayers(){
 
 
 
-/********* CopyElement function *********/
-function CopyElement(x){
-    /* In html, the fake copyable element is so that the user cannot modify the text that we want to be copied */
-    let $copyableElement= document.querySelectorAll(".copyableElement");
-    $copyableElement[x].classList.replace("display-n", "display-y");
-    $copyableElement[x].focus();
-    $copyableElement[x].select();
-    document.execCommand("copy");
-    $copyableElement[x].classList.replace("display-y", "display-n");
-    
-    let $copyButton= document.querySelectorAll(".button-copy")[x];
-    $copyButton.textContent= "Copied";
-    setTimeout(function(){
-        $copyButton.textContent= "Copy";
-    }, 1000);
-}
-const $copyButtons= document.querySelectorAll(".button-copy");
-/* copy buttons onclick "listeners" */
-for (let i = 0; i < $copyButtons.length; i++) {
-    $copyButtons[i].onclick= function(){
-        CopyElement(i);
-    }
-}
-/********* End CopyElement function *********/
-
-
-
-
 /********* Toggle methodDetails visibility function *********/
 function ToggleMethodDetails(x){
     let $methodCards= document.querySelectorAll(".methodCard__details");
@@ -249,17 +247,16 @@ const coursesFullData= [
     /* Follow the same the order to declare new items (All fields are required).
     If you change the something, please update the old code */
 
-    /* Course 00 */[
+    /* Course 00 (Web anatomy <HTML>)*/[
 
         /* CourseCard  and subsSection course */{
-            title: "Course title",
-            imageAlt: "Image alt",
-            imageTitle: "Image title",
-            imageSrc: "./Sources/Images/HTML/HTML0320px.webp", //this is a temporaly line, change after by the section and dirname automatly function src and srcset creator
+            title: "Web anatomy <HTML>",
+            imageAlt: "HTML & HTML5 course image",
+            imageTitle: "Kx HTML & HTML5 course",
             imageMainSection: 1,
             imageDirName:"HTML",
-            descriptionCard: "Some example text. This text will appears on the courseCard",
-            descriptionCourse: "Some example text. This text will appears on the course subSection text",
+            descriptionCard: "HTML & HTML5 course from scratch. Let's make our ideas come true, learning to create the structure of all our HTML projects and applications.",
+            descriptionCourse: "HTML & HTML5 course from scratch. In this course we will learn to use, declare and combine the diferent tags of the standard language HTML. Learning to create the structure of all our HTML projects and applications.",
             quality: "##.#",
             version: "21.##.##",
             duration: "##:##",
@@ -275,22 +272,12 @@ const coursesFullData= [
         /* Modules */[
 
             /* Module 00 */{
-                title: "Module 00 title",
+                title: "Introduction to the html course",
                 urlId: "XFbJrmdiv-s",
                 description: "Module description, some example text",
                 duration: "##:##",
                 version: "21.##.##",
                 moduleCopyLink: "copiable module url",
-            },
-
-            /* Module 01 */{
-                title: "Module 01 title",
-                urlId: "XFbJrmdiv-s",
-                description: "Module description, some example text",
-                duration: "##:##",
-                version: "21.##.##",
-                moduleCopyLink: "", 
-                moduleCopyLinkAd: "", 
             },
         ]
     ],

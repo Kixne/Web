@@ -176,8 +176,8 @@ span{
 .videoContainer{
     position: relative;
     height: 0;
+    width: 100%;
     padding-bottom: 56.25%;
-    width: 98%;
     margin: 0 auto;
 }
 .videoContainer__video{
@@ -605,6 +605,7 @@ span{
 
 /* subSection module styles */
 .module__controls{
+    width: 100%;
     display: flex;
     justify-content: space-around;
 }
@@ -618,7 +619,7 @@ span{
 .module__control-item:hover{
     color: var(--purple);
     border-bottom: .1em solid var(--purple);
-
+    cursor: pointer;
 }
 .module__description{
     margin-top: .8em;
