@@ -245,98 +245,62 @@ var currentCourse= -1,
 
 /* After work this with a real data base (DB)
 (That implies changing the code)*/
-const allCoursesData=[
-    /* If you change this order of the courses, ALSO MAKE SURE you sort
-    the array with the courses modules */
+const coursesFullData= [
+    /* Follow the same the order to declare new items (All fields are required).
+    If you change the something, please update the old code */
 
-    /* Course 00 (Web anatomy HTML) */{
-        title: "Web anatomy <HTML>",
-        imgAlt: "HTML course image",
-        imgTitle: "HTML course",
-        imgSrc: "./Sources/Images/HTML/CourseHTML0480px.webp",
-        quality: "##.#",
-        version: "21.##.##",
-        duration: "##:##",
-        description: "HTML and HTML5 course from scratch. We will learn what html is, how its content structure works and how to create semantically and syntactically correct elements, by using good practices and coding standards.",
-    },
+    /* Course 00 */[
 
-    /* Course 01 (CourseName) */{
-        title: "Course01 title",
-        imgAlt: "Course01 alt",
-        imgTitle: "Course01 title",
-        imgSrc: "../Tests/Sources/Images/Test/Test0320px.png",
-        quality: "##.#",
-        version: "21.##.##",
-        duration: "##:##",
-        description: "Some example text for the course01",
-    },
-];
+        /* CourseCard  and subsSection course */{
+            title: "Course title",
+            imageAlt: "Image alt",
+            imageTitle: "Image title",
+            imageSrc: "./Sources/Images/HTML/HTML0320px.webp", //this is a temporaly line, change after by the section and dirname automatly function src and srcset creator
+            imageMainSection: 1,
+            imageDirName:"HTML",
+            descriptionCard: "Some example text. This text will appears on the courseCard",
+            descriptionCourse: "Some example text. This text will appears on the course subSection text",
+            quality: "##.#",
+            version: "21.##.##",
+            duration: "##:##",
+        },
 
-const allCoursesModulesData=[
-    /* Course 00 modules (Web anatomy HTML) */[
-        
-        /*Module 00 */{
-            title: "Module 00 name",
-            duration: "##:##",
-            src: "XFbJrmdiv-s",
-            description: "This is an example module 00 description text",
+        /* Resources link*/{
+            bookPrintable: "",
+            bookDigital: "",
+            exercices: "",
+            modululesCopyUrl: "",
         },
-        
-        /*Module 01 */{
-            title: "Module 01 name",
-            duration: "##:##",
-            src: "XFbJrmdiv-s",
-            description: "This is an example module 01 description text",
-        },
-        
-        /*Module 02 */{
-            title: "Module 02 name",
-            duration: "##:##",
-            src: "XFbJrmdiv-s",
-            description: "This is an example module 02 description text",
-        },
-    ],
 
-    /* Course 01 modules (courseName) */[
-        
-        /*Module 00 */{
-            title: "Module 00 name",
-            duration: "##:##",
-            src: "XFbJrmdiv-s",
-            description: "This is an example module 00 description text",
-        },
-    
-        /*Module 01 */{
-            title: "Module 01 name",
-            duration: "##:##",
-            src: "XFbJrmdiv-s",
-            description: "This is an example module 01 description text",
-        },
+        /* Modules */[
+
+            /* Module 00 */{
+                title: "Module 00 title",
+                urlId: "XFbJrmdiv-s",
+                description: "Module description, some example text",
+                duration: "##:##",
+                version: "21.##.##",
+                moduleCopyLink: "copiable module url",
+            },
+
+            /* Module 01 */{
+                title: "Module 01 title",
+                urlId: "XFbJrmdiv-s",
+                description: "Module description, some example text",
+                duration: "##:##",
+                version: "21.##.##",
+                moduleCopyLink: "", 
+                moduleCopyLinkAd: "", 
+            },
+        ]
     ],
 ];
-
-const allCoursesResourcesData=[
-    /* Follow this order
-    printable manual download link
-    digital manual download link
-    Proposed exercices download link
-    Modules videos maybe link to copy
-     */
-
-    /* Course 00 resources (Web anatomy HTML) */[
-        "",
-        "",
-        "",
-        "",
-    ],
-];
- 
 
 function CreateSubSectionCourse(courseIndex){
     let $courseSubSection= document.querySelectorAll(".mainSection__subSection")[1],
     $fragment= document.createDocumentFragment(),
     $template= document.getElementById("template-subSection__course").content,
-    courseData= allCoursesData[courseIndex];
+    courseData= coursesFullData[courseIndex][0];
     
     /* Checking if is necessary create the course subsection */
     if(courseIndex!=currentCourse){
@@ -351,9 +315,10 @@ function CreateSubSectionCourse(courseIndex){
         $cloned.querySelector("h2").textContent= courseData.title;
         
         /* Setting image data */
-        $cloned.querySelector("img").setAttribute("title", courseData.imgTitle);
-        $cloned.querySelector("img").setAttribute("alt", courseData.imgAlt);
-        $cloned.querySelector("img").setAttribute("src", courseData.imgSrc);
+        $cloned.querySelector("img").setAttribute("title", courseData.imageTitle);
+        $cloned.querySelector("img").setAttribute("alt", courseData.imageAlt);
+        $cloned.querySelector("img").setAttribute("src", CreateSrcOrSrcSet(1, courseData.imageDirName, true));
+        $cloned.querySelector("img").setAttribute("srcset", CreateSrcOrSrcSet(1, courseData.imageDirName, false));
         
         /* Setting courseDetails items data */
         let $courseDetail= $cloned.querySelectorAll(".course__details-item");
@@ -362,10 +327,10 @@ function CreateSubSectionCourse(courseIndex){
         $courseDetail[2].querySelector("span").textContent= courseData.duration;
         
         /* Setting course details data */
-        $cloned.querySelector("p").insertAdjacentText("beforeend", courseData.description);
+        $cloned.querySelector("p").insertAdjacentText("beforeend", courseData.descriptionCourse);
         
         /* Setting modules list data */
-        let moduleData= allCoursesModulesData[currentCourse];
+        let moduleData= coursesFullData[courseIndex][2];
         for (let i= 0; i< moduleData.length; i++) {
             let item= document.createElement("li");
             item.classList.add("course__modulesList-item");
@@ -444,7 +409,8 @@ function CreateSubSectionModuleButtonLinks(){
 function CreateSubSectionModule(moduleIndex){
     let $moduleSubSection= document.querySelectorAll(".mainSection__subSection")[2];
     let $fragment= document.createDocumentFragment();
-    let moduleData= allCoursesModulesData[currentCourse][moduleIndex];
+    //let moduleData= allCoursesModulesData[currentCourse][moduleIndex];
+    let moduleData= coursesFullData[currentCourse][2][moduleIndex];
     let $template= document.getElementById("template-subSection__module").content;
     
     /* Checking if is necessary create the course subsection */
@@ -459,7 +425,7 @@ function CreateSubSectionModule(moduleIndex){
         $cloned.querySelector("h2").textContent= moduleData.title;
 
         /* Setting module video url */
-        $cloned.getElementById("course__moduleVideo").setAttribute("src", "https://www.youtube.com/embed/"+ moduleData.src +"?enablejsapi=1&html5=1");
+        $cloned.getElementById("course__moduleVideo").setAttribute("src", "https://www.youtube.com/embed/"+ moduleData.urlId +"?enablejsapi=1&html5=1");
 
         /* Description */
         $cloned.querySelector(".module__description").insertAdjacentText("beforeend", moduleData.description);   
@@ -486,4 +452,49 @@ function ShowAgainModules(){
         $mainSection[2].classList.replace("display-y", "display-n");
         SpinerShow(false);
     };
+}
+
+
+/* Create Src or SrcSet functionality */
+function CreateSrcOrSrcSet(mainSectionIndex, dirName, type){
+    let value= "./Sources/Images/MainSection_";
+
+    /* Check the read.me to verify the mainSectios index */
+    switch(mainSectionIndex){
+        case 0:
+            value+= "Home/";
+        break;
+
+        case 1:
+            value+= "Courses/";
+        break;
+
+        case 2:
+            value+= "Questions/";
+        break;
+
+        case 3:
+            value+= "SupportUs/";
+        break;
+
+        case 4:
+            value+= "AboutUs/";
+        break;
+    }
+
+    /* If type== true then, we create the src value */
+    if(type){
+        value+= dirName +"/" +dirName +"0480px.png";
+    }
+    /* Else, we create the srcSet value */
+    else{
+        let preValue= value +dirName +"/" +dirName;
+        value= "";
+        value+= preValue +"0320px.webp 320w,\n";
+        value+= preValue +"0360px.webp 360w,\n";
+        value+= preValue +"0480px.webp 480w";
+    }
+    
+    /* Returning the expected source value */
+    return value;
 }
