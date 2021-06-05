@@ -11,16 +11,17 @@
     <meta name= "robots" content= "index">
     <meta name="description" content="Professional content at the forefront and hight quality in technological areas. Learn, Develop the best version of yourself and become a technological specialist.">
     
+    <title>Kixne&#153</title>
+    
     <!-- Adding open graph protocol -->
-    <meta property="og:title" content="Kixne™ Web" />
+    <meta property="og:title" content="Kixne™ Web"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:locale" content="en" />
-    <meta property="og:url" content="https://kixne.github.io/web" />
+    <meta property="og:locale" content="en"/>
+    <meta property="og:url" content="https://kixne.github.io/web"/>
     <meta property="og:image" content="https://kixne.github.io/web/Sources/Images/KixneOpenGraphImage.webp"/>
     <meta property="og:image:secure_url" content="https://kixne.github.io/web/Sources/Images/KixneOpenGraphImage.webp"/>
-
-    <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="Kixne web image" />
+    <meta property="og:image:type" content="image/webp"/>
+    <meta property="og:image:alt" content="Kixne web image"/>
     <meta property="og:description" content="Develop the best version of yourself and become a technological specialist. Learn about your preferred technological area and increase your skills.">
 
     <!-- Kixne icons -->
@@ -28,11 +29,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./Sources/Icons/IconKx32px.png">
     <link rel="icon" type="image/png" sizes="64x64" href="./Sources/Icons/IconKx64px.png">
 
-    <title>Kixne&#153</title>
-    
     <link rel="stylesheet" type="text/css" href="./Sources/Icons/KxIcons-v1.0/KxIcons.css">
     <link rel="stylesheet" href="./Styles/BaseStyles.css">
-   
+
+    <!-- Responsive stylesheets -->
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 360px) and (max-width: 479px)" href="./Styles/Styles360px.css">
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 680px)" href="./Styles/Styles480px.css">
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 681px) and (max-width: 959px)" href="./Styles/Styles683px.css">
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 960px)" href="./Styles/Styles960px.css">
 </head>
 
 
@@ -45,10 +49,10 @@
 
      <!---------Header--------->
      <header class="header">
-        <div class="header__logo">
+        <a href="https://kixne.github.io/web" class="header__logo">
             <img src="./Sources/Icons/IconKx32px.png" alt="Kx Isologo" class="header__logo-image">
             <h1 class="header__logo-text">Kixne&#153</h1>
-        </div>
+        </a>
         <span class="btnMenu display-n">
             Menu
             <span class="Kx-icon Kx-menu"></span>
@@ -188,10 +192,10 @@
         <!-- mainSection Home -->
         <section class="main__mainSection display-y">
             <div class="greetingsContainer">
+                <header class="mainSection__subSection-header">
+                    Greetings visitor!
+                </header>
                 <p class="text">
-                    <div class="mainSection__subSection-header">
-                        Greetings visitor!
-                    </div>
                     We are a <b>community</b>, professionals and specialists dedicated to education, principally through digital platforms.
                     <br><br>We will give you knowledges at the forefront and of high-quality in technological areas, and therefore the ability to develop the best version of yourself.
                 </p>
@@ -409,12 +413,11 @@
                             srcset="
                             ./Sources/Images/MainSection_Courses/HTML/HTML0320px.webp 320w,
                             ./Sources/Images/MainSection_Courses/HTML/HTML0360px.webp 360w,
-                            ./Sources/Images/MainSection_Courses/HTML/HTML0480px.webp 480w
-                            "
+                            ./Sources/Images/MainSection_Courses/HTML/HTML0480px.webp 480w"
                             sizes="
                             (max-widt:320px) 320w,
                             (max-widt:360px) 360w,
-                            (max-widt:480px) 480w,"
+                            (max-widt:480px) 480w"
                         >
 
                         <div class="courseCard__body"> <!-- This div is to make the card responsive -->
@@ -452,20 +455,15 @@
                             </h3>
                         </header>
                         <img class="courseCard__image" loading="lazy" alt="CSS & CSS3 course Image" title="Kx CSS & CSS3 course"
-                            src="./Sources/Images/CSS/CourseCSS0480px.webp"
+                            src="./Sources/Images/MainSection_Courses/CSS/CSS0480px.png"
                             srcset="
-                            ./Sources/Images/CSS/CourseCSS0320px.webp 320w,
-                            ./Sources/Images/CSS/CourseCSS0360px.webp 360w,
-                            ./Sources/Images/CSS/CourseCSS0480px.webp 480w,
-                            ./Sources/Images/CSS/CourseCSS0683px.webp 683w,
-                            ./Sources/Images/CSS/CourseCSS0320px.webp 684w
-                            "
+                            ./Sources/Images/MainSection_Courses/CSS/CSS0320px.webp 320w,
+                            ./Sources/Images/MainSection_Courses/CSS/CSS0360px.webp 360w,
+                            ./Sources/Images/MainSection_Courses/CSS/CSS0480px.webp 480w"
                             sizes="
                             (max-widt:320px) 320w,
                             (max-widt:360px) 360w,
-                            (max-widt:480px) 480w,
-                            (max-widt:683px) 683w,
-                            (min-widt:684px) 684w"
+                            (max-widt:480px) 480w"
                         >
 
                         <div class="courseCard__body"> <!-- This div is to make the card responsive -->
@@ -657,12 +655,6 @@
                             <span class="Kx-icon Kx-direct-download"></span>Proposed exersices
                         </a>
                     </li>
-                    
-                    <li class="course__resource-item">
-                        <a href="#" class="course__resource-item-link">
-                            <span class="Kx-icon Kx-direct-download"></span>Modules (videos HD)
-                        </a>
-                    </li>
                 </ul>
 
                 <!-- Course resources links +ad -->
@@ -685,12 +677,6 @@
                     <li class="course__resource-item">
                         <a href="#" class="course__resource-item-link">
                             <span class="Kx-icon Kx-direct-download"></span>Proposed exersices (.pdf)
-                        </a>
-                    </li>
-                    
-                    <li class="course__resource-item">
-                        <a href="#" class="course__resource-item-link">
-                            <span class="Kx-icon Kx-direct-download"></span>All Modules (HD)
                         </a>
                     </li>
                 </ul>
@@ -719,14 +705,14 @@
 
                 <!-- Module controls -->
                 <div class="module__controls">
-                    <span class="module__control-item">
+                    <span class="module__control-item" onclick="alert('Sorry right now dont work')">
                         <span class="Kx-icon Kx-button-rewind"></span> Prev
                     </span>
                     <span class="module__control-item">
                         Modules
                     </span>
                     <span class="module__control-item">
-                        Next <span class="Kx-icon Kx-button-forward"></span>
+                        Next <span class="Kx-icon Kx-button-forward" onclick="alert('Sorry right now dont work')"></span>
                     </span>
                 </div>
 
@@ -777,8 +763,7 @@
                     <i class="flaticon flaticon-question"></i>Frequent questions
                 </header>
                 <p class="text">
-                    We are starting.<br>
-                    At this time, we have no content for this section, we apologyce.
+                    At this time, we have no content for this section because we are starting. We apologyce.
                 </p>
             </section>
             
@@ -840,14 +825,11 @@
                         srcset="
                         ./Sources/Images/MainSection_Questions/WebDevelopment/Frontend/FrontendWebDevelopment0320px.webp 320w,
                         ./Sources/Images/MainSection_Questions/WebDevelopment/Frontend/FrontendWebDevelopment0360px.webp 360w,
-                        ./Sources/Images/MainSection_Questions/WebDevelopment/Frontend/FrontendWebDevelopment0480px.webp 480w,
-                        ./Sources/Images/MainSection_Questions/WebDevelopment/Frontend/FrontendWebDevelopment0683px.webp 683w
-                        "
+                        ./Sources/Images/MainSection_Questions/WebDevelopment/Frontend/FrontendWebDevelopment0480px.webp 480w"
                         sizes="
                         (max-widt:320px) 320w,
                         (max-widt:360px) 360w,
-                        (max-widt:480px) 480w,
-                        (max-widt:683px) 683w"
+                        (min-widt:480px) 480w"
                     >
                     <p class="text">
                         Questions and mutual support about frameworks, languages and everything related to frontend web development
@@ -1322,8 +1304,7 @@
                             <li class="basicList__item">
                                 <div class="copyableElement-container">
                                     <span class="Kx-icon Kx-crypto-bitcoin copyableElement-fake">
-                                        <b>Bitcoin wallet</b>
-                                        <br>(Just coinbase)
+                                        <b>Bitcoin wallet</b> (Just coinbase)
                                     </span>
                                     <input type="text" value="Kx.Donations@gmail.com" class="copyableElement display-n">
                                     <span class="Kx-icon Kx-copy button-copy">Copy</span>
@@ -1465,7 +1446,7 @@
                             <li class="basicList__item">
                                 <div class="copyableElement-container">
                                     <span class="Kx-icon Kx-crypto-wallet copyableElement-fake">
-                                        Cryptos Wallet<br>(Just for coinbase)
+                                        Crypto Wallet (Just for coinbase)
                                     </span>
                                     <input type="text" value="Kx.Donations@gmail.com" class="copyableElement display-n">
                                     <span class="Kx-icon Kx-copy button-copy">Copy</span>
@@ -1485,7 +1466,7 @@
                             <li class="basicList__item">
                                 <div class="copyableElement-container">
                                     <span class="Kx-icon Kx-crypto-wallet copyableElement-fake">
-                                        Cryptos Wallet<br>(Just for binance)
+                                        Crypto Wallet (Just for binance)
                                     </span>
                                     <input type="text" value="bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23" class="copyableElement display-n">
                                     <span class="Kx-icon Kx-copy button-copy">Copy</span>
@@ -1681,7 +1662,7 @@
        <!--WebSite Content License-->
        <p class="footer__license">
             All this website content is under a cc license (by.nc.nd)
-           </br></br><em>Kixne&#153</em>
+           </br><em>Kixne&#153</em>
        </p>
        
     </footer>

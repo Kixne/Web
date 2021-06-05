@@ -313,6 +313,7 @@ function CreateSubSectionCourse(courseIndex){
         $courseDetail[1].querySelector("span").textContent= courseData.version;
         $courseDetail[2].querySelector("span").textContent= courseData.duration;
         
+        
         /* Setting course details data */
         $cloned.querySelector("p").insertAdjacentText("beforeend", courseData.descriptionCourse);
         
@@ -334,7 +335,6 @@ function CreateSubSectionCourse(courseIndex){
 
             $cloned.querySelector(".course__modulesList").insertAdjacentElement("beforeend", item)
         }
-        
         
         $courseSubSection.innerHTML = '';   
         

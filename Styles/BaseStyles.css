@@ -141,6 +141,8 @@ span{
     font-size: 2rem;
     font-family: aladin;
     margin: auto .4em 0;
+    width: 100%;
+    text-align: center;
 }
 .mainSection__subSection-header h2{
     margin: auto .4em 0;
@@ -224,7 +226,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: default;
+    cursor: pointer;
 }
 .header__logo-image{
     display: flex;
@@ -351,7 +353,7 @@ span{
 }
 .kxWelcome__text{
     position: absolute;
-    width: 70%;
+    width: 64%;
     margin-top: 10%;
     font-size: 2em;
     font-family: Aladin;
@@ -360,7 +362,7 @@ span{
 }
 .kxWelcome__text-tagLine{
     display: block;
-    width: 80%;
+    width: 75%;
     text-align: center;
     margin: 0 auto;
     font-size: .8rem;
@@ -370,7 +372,7 @@ span{
     bottom: 0;
     z-index: -1;
     width: 100%;
-    height: 1.6em;
+    height: 1.6rem;
     border-radius: 100% 100% 0 0;
     background: linear-gradient( var(--purple), #0000);
 }
@@ -406,13 +408,14 @@ span{
 .mainSectionCard__img{
     position: relative;
 }
+.mainSectionCard__icon, .mainSectionCard__title strong{
+    font-size: 2em;
+}
 .mainSectionCard__icon{
     margin-left: .8rem;
-    font-size: 1.5em;
 }
 .mainSectionCard__title strong{
     font-family: aladin;
-    font-size: 2rem;
     margin-left: .4rem;
 }
 .mainSectionCard__link{
@@ -477,6 +480,7 @@ span{
 /********* mainSection courses styles *********/
 /* subSection coursesCards styles */
 .coursesCardsContainer{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -691,7 +695,10 @@ span{
 
 /********* mainSection supportUs styles *********/
 
-/* supportUs__card styles */
+
+.methodCard{
+    max-width: 480px;
+}
 .methodCard__details{
     /* display, with display-y or display-n classes */
     flex-direction: column;
