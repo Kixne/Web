@@ -32,11 +32,14 @@
     <link rel="stylesheet" type="text/css" href="./Sources/Icons/KxIcons-v1.0/KxIcons.css">
     <link rel="stylesheet" href="./Styles/BaseStyles.css">
 
-    <!-- Responsive stylesheets -->
+    <!-- Responsive stylesheets (fist attemp)-->
     <link type="text/css" rel="stylesheet" media="screen and (min-width: 360px) and (max-width: 479px)" href="./Styles/Styles360px.css">
     <link type="text/css" rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 680px)" href="./Styles/Styles480px.css">
     <link type="text/css" rel="stylesheet" media="screen and (min-width: 681px) and (max-width: 959px)" href="./Styles/Styles683px.css">
-    <link type="text/css" rel="stylesheet" media="screen and (min-width: 960px)" href="./Styles/Styles960px.css">
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 960px) and (max-width: 1349px)" href="./Styles/Styles960px.css">
+    
+    <!-- Responsive stylesheets-->
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 1350px)" href="./Styles/Styles1366px.css">
 </head>
 
 
@@ -179,10 +182,14 @@
         (max-widt:1920px) 1920w"
         >
         <p class="kxWelcome__text">
-            Develop the best version of yourself<br>
-            <span class="kxWelcome__text-tagLine">and become a technological specialist.</span>
+            Develop the best
+            <br>version of yourself<br>
+            <span class="kxWelcome__text-tagLine">
+                and become a
+                <br>technological specialist.
+            </span>
         </p>
-        <span class="kxWelcome__ground"></span> 
+        <div class="kxWelcome__ground"></div> 
     </div>
     <!-- End KxWelcome -->
 
@@ -191,7 +198,7 @@
 
         <!-- mainSection Home -->
         <section class="main__mainSection display-y">
-            <div class="greetingsContainer">
+            <section class="greetingsContainer">
                 <header class="mainSection__subSection-header">
                     Greetings visitor!
                 </header>
@@ -199,7 +206,7 @@
                     We are a <b>community</b>, professionals and specialists dedicated to education, principally through digital platforms.
                     <br><br>We will give you knowledges at the forefront and of high-quality in technological areas, and therefore the ability to develop the best version of yourself.
                 </p>
-            </div>
+            </section>
 
             <!-- This section contains mainSections linkCards -->
             <section class="mainSectionLinksContainer">

@@ -100,20 +100,19 @@ span{
     flex-direction: column;
     align-items: center;
     margin: auto;
-    max-width: 1280px;
 }
 .main__mainSection{
     /* display are added with the class display-y */
     flex-direction: column;
     align-items: center;
-    width: 98%;
     margin-top: 1rem;
     padding-bottom:1em;
     background-color: var(--gray02);
-    border: 1px solid var(--gray06);
+    border-top: 1px solid var(--gray06);
+    border-bottom: 1px solid var(--gray06);
 }
 .main__mainSection:first-child{
-    /* Quit the border to minSection Home */
+    /* Removing the border to mainSection Home */
     border: none;
 }
 .mainSection__header{
@@ -125,6 +124,7 @@ span{
     cursor: default;
 }
 .mainSection__text{
+    text-align: centera;
     color: var(--white);
 }
 .mainSection__subSection{
@@ -136,16 +136,17 @@ span{
     border-radius: .8em;
     overflow: hidden;
     background: var(--white);
+    border: 2px solid var(--black);
 }
 .mainSection__subSection-header{
     font-size: 2rem;
     font-family: aladin;
-    margin: auto .4em 0;
+    padding: auto .4em 0;
     width: 100%;
     text-align: center;
 }
 .mainSection__subSection-header h2{
-    margin: auto .4em 0;
+    padding: auto .4em 0;
     font-size: 2rem;
     font-family: aladin;
     text-align: center;
@@ -353,7 +354,7 @@ span{
 }
 .kxWelcome__text{
     position: absolute;
-    width: 64%;
+    width: 70%;
     margin-top: 10%;
     font-size: 2em;
     font-family: Aladin;
@@ -419,13 +420,6 @@ span{
     margin-left: .4rem;
 }
 .mainSectionCard__link{
-
-
-
-
-
-
-
     width: 100%;
     text-align: center;
     padding: .8rem;

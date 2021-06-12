@@ -1,0 +1,40 @@
+.kxWelcome__text{
+    margin-top: 4rem;
+    font-size: 6rem;
+}
+.kxWelcome__text-tagLine{
+    font-size: 2rem;
+}
+.kxWelcome__ground{
+    height: 4rem;
+}
+
+
+/* Basic structure */
+.main__mainSection{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Home */
+.greetingsContainer .text{
+    text-align: center;
+}
+
+.main{
+    width: 100%;
+}
+
+.main__mainSection:nth-child(1){
+    width: 100%;
+}
+
+.mainSectionLinksContainer{
+    flex-direction: row;
+    width: 100%;
+}
+.animatedBorderContainer{
+    width: 24%;
+    max-width: 320px;
+}
