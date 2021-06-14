@@ -228,7 +228,7 @@ for (let i = 0; i < $methodCardButtons.length; i++) {
 
 
 /* Home mainSectionCards links*/
-const $mainSectionCardLinks = document.querySelectorAll(".mainSectionCard__link");
+const $mainSectionCardLinks = document.querySelectorAll(".mainSectionCard__button");
 for (let i = 0; i < $mainSectionCardLinks.length; i++) {
     $mainSectionCardLinks[i].onclick= function(){
         ToggleMenuButtonsVisibility();

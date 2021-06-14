@@ -100,20 +100,23 @@ span{
     flex-direction: column;
     align-items: center;
     margin: auto;
+    width: 100%;
 }
 .main__mainSection{
     /* display are added with the class display-y */
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 1280px;
     margin-top: 1rem;
     padding-bottom:1em;
     background-color: var(--gray02);
-    border-top: 1px solid var(--gray06);
-    border-bottom: 1px solid var(--gray06);
+    outline: 1px solid var(--gray06);
 }
 .main__mainSection:first-child{
-    /* Removing the border to mainSection Home */
-    border: none;
+    max-width: 1366px;
+    /* Removing the outline to mainSection Home */
+    outline: none;
 }
 .mainSection__header{
     margin-top: 1rem;
@@ -124,19 +127,20 @@ span{
     cursor: default;
 }
 .mainSection__text{
-    text-align: centera;
+    text-align: center;
     color: var(--white);
 }
 .mainSection__subSection{
     align-items: center;
     flex-direction: column;
-    width: 96%;
+    width: 100%;
+    max-width: 1200px;
     padding: 1em 0;
-    margin-top: .8em;
+    margin-top: 2rem;
     border-radius: .8em;
     overflow: hidden;
     background: var(--white);
-    border: 2px solid var(--black);
+    outline: 2px solid var(--black);
 }
 .mainSection__subSection-header{
     font-size: 2rem;
@@ -180,8 +184,13 @@ span{
     position: relative;
     height: 0;
     width: 100%;
+    max-width: 683px;
     padding-bottom: 56.25%;
     margin: 0 auto;
+}
+/* Media activated when .videoContainer reach his max-width */
+@media screen and (min-width:683px){
+    .videoContainer{padding-bottom: 384px;}
 }
 .videoContainer__video{
     position: absolute;
@@ -389,16 +398,19 @@ span{
     border-radius: .8em 0;
     overflow: hidden;
     padding: .8rem .4rem;
+    text-align: center;
 }
 
 .mainSectionCards-container{
     display: grid;
     grid-template-columns: 1fr;
     align-items: start;
+    width: 100%;
 }
 
 .mainSectionCard-container{
-    width: 90%;
+    width: 85%;
+    min-width: 300px;
     max-width: 480px;
     margin: 2rem auto 0;
 }
@@ -406,7 +418,6 @@ span{
 .mainSectionCard{
     overflow: hidden;
 }
-
 .mainSectionCard__img{
     position: relative;
 }
@@ -462,7 +473,7 @@ span{
 }
 .animatedBorder::before{
     /* animatedBorder::after acts like solid border */
-    filter: blur(.2rem);
+    filter: blur(.4rem);
 }
 .mainSectionCard, .animatedBorder, .animatedBorder:before, .animatedBorder:after{
     border-radius: 2rem 0;
@@ -480,25 +491,28 @@ span{
 
 /********* mainSection courses styles *********/
 /* subSection coursesCards styles */
-.coursesCardsContainer{
+.courseCards-container{
     width: 100%;
+    max-width: 1000px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
 .courseCard{
-    width: 96%;
-    display: flex;
-    margin-top: 1em;
-    align-items: center;
-    flex-direction: column;
+    flex-grow: 1;
+    width: 40%;
+    min-width: 312px; /* 312px +8px (margin)= 320px */
+    max-width: 480px;
+    margin: 1rem 4px 0;
+    color: var(--white);
     border-radius: 1em 0;
     overflow: hidden;
-    border: 2px solid var(--black);
+    outline: 2px solid var(--black);
     box-shadow: .2em .2em .8em var(--black);
-    background: var(--gray01);
-    color: var(--white);
+    background: var(--gray02);
 }
 .courseCard__header{
     width: 100%;
@@ -610,9 +624,10 @@ span{
 
 /* subSection module styles */
 .module__controls{
-    width: 100%;
     display: flex;
     justify-content: space-around;
+    width: 100%;
+    max-width: 683px;
 }
 .module__control-item{
     padding: .2em;
@@ -636,69 +651,29 @@ span{
 
 
 /********* mainSection questions styles *********/
-.form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 96%;    
-    margin: 1em auto;
-    overflow: hidden;
-    background-color: var(--gray06);
-    border-radius: 1em 0;
-    border: .2em solid #000;
-    box-shadow: .2em .2em .4em #000;
-}
-.form__header{
-    width: 100%;
-    padding: .4em 0;
-    color: white;
-    font-family: aladin;
-    font-size: 1.6rem;
-    text-align: center;
-    background-color: #000;
-}
-.form__item{
-    padding: .4em;
-    border: none;
-    width: 96%;
-    font-size: 1rem;
-    overflow: hidden;
-    background-color: var(--white);
-    box-shadow: .2em .2em .4em inset #000;
-    border-radius: .4em 0;
-}
-.form__item::placeholder{
-    font-weight: bold;
-}
-.form__item:nth-last-child(2){
-    height: 8em;
-}
-.form__item:focus{
-    outline: 2px solid #6400cc;
-}
-.form__button{
-    width: 100%;
-    padding: .8em;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 1rem;
-    background-color: var(--gray02);
-}
-.form__button:hover{
-    background-color: var(--black);
-}
-.form__item, .form__button{
-    margin-top: .8em;
-}
 /********* End mainSection questions styles *********/
 
 
 /********* mainSection supportUs styles *********/
-
+.methodCards-container{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
 
 .methodCard{
+    width: 40%;
+    min-width: 312px; /* 312px +8px (margin)= 320px */
     max-width: 480px;
+    flex-grow: 1;
+    margin: 1rem 4px 0;
+}
+.methodCard__text{
+    text-align: center;
 }
 .methodCard__details{
     /* display, with display-y or display-n classes */
@@ -751,6 +726,21 @@ span{
 
 
 /********* mainSection aboutUs styles *********/
+.main__mainSection:nth-child(5) .subSection__subSections-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.main__mainSection:nth-child(5) .subSection__subSection{
+    width: 30%;
+    min-width: 312px; /* 312px +8px (margin)= 320px */
+    max-width: 480px;
+    flex-grow: 1;
+    margin: 1rem 4px 0;
+}
 /********* End mainSection aboutUs styles */
 
 

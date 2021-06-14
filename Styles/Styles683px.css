@@ -3,8 +3,7 @@
 }
 
 .kxWelcome__text{
-    margin-top: 6rem;
-    font-size: 6rem;
+    font-size: 4rem;
 }
 .kxWelcome__text-tagLine{
     font-size: 2rem;
@@ -15,10 +14,6 @@
 
 
 /* Home */
-.main__mainSection:nth-child(1){
-    width: 100%;
-}
-
 .mainSectionCards-container{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
