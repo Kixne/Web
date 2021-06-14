@@ -17,3 +17,7 @@
 .mainSectionCards-container{
     grid-template-columns: 1fr 1fr;
 }
+
+.animatedBorder:before, .animatedBorder:after{
+    animation: BorderAnimation 10s linear infinite;
+}

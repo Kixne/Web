@@ -469,7 +469,6 @@ span{
     /* backGradient must be before backSize */
     background: linear-gradient( 90deg,#6400cc, cyan, magenta, #6400cc, cyan, magenta , #6400cc );
     background-size: 300%;
-    animation: BorderAnimation 10s linear infinite;
 }
 .animatedBorder::before{
     /* animatedBorder::after acts like solid border */
