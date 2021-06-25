@@ -511,7 +511,7 @@ span{
     outline: .2rem solid var(--black);
 }
 .courseCard__header{
-    width: 25%;
+    width: 50%;
     min-width: 100px;
     max-width: 128px;
     padding: .4rem;
@@ -549,7 +549,7 @@ span{
     color: #888;
 }
 .courseCard__body-title{
-    margin-top: .4rem;
+    margin-top: 1rem;
     font-family: aladin;
 }
 .courseCard__button{
@@ -604,9 +604,17 @@ span{
     color: var(--purple);
     cursor: pointer;
 }
+.course__resourcesList-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .course__resource-list{
     margin-top: 1.6em;
-    width: 90%;
+    min-width: 300px;
+    max-width: 480px;
+    width: 45%;
     list-style: none;
 }
 .course__resource-list-header{

@@ -259,7 +259,7 @@ const coursesFullData= [
             descriptionCourse: "HTML & HTML5 course from scratch. In this course we will learn to use, declare and combine the diferent tags of the standard language HTML. Learning to create the structure of all our HTML projects and applications.",
             quality: "##.#",
             version: "21.##.##",
-            duration: "##:##",
+            duration: "00:00",
         },
 
         /* Resources link*/{

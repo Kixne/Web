@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'KxIcons';
   src:
-    url('fonts/KxIcons.ttf?tdhl8f') format('truetype'),
-    url('fonts/KxIcons.woff?tdhl8f') format('woff'),
-    url('fonts/KxIcons.svg?tdhl8f#KxIcons') format('svg');
+    url('fonts/KxIcons.ttf?k7npmy') format('truetype'),
+    url('fonts/KxIcons.woff?k7npmy') format('woff'),
+    url('fonts/KxIcons.svg?k7npmy#KxIcons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,132 +24,165 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.Kx-youtube:before {
+.Kx-arduino:before {
   content: "\e900";
 }
-.Kx-video-player:before {
+.Kx-arrow-down:before {
   content: "\e901";
 }
-.Kx-version:before {
+.Kx-arrow-send:before {
   content: "\e902";
 }
-.Kx-telegram:before {
+.Kx-arrow-up:before {
   content: "\e903";
 }
-.Kx-technics:before {
+.Kx-bash:before {
   content: "\e904";
 }
-.Kx-star:before {
+.Kx-bitg-time:before {
   content: "\e905";
 }
-.Kx-button-play:before {
+.Kx-blender:before {
   content: "\e906";
 }
-.Kx-paypal:before {
+.Kx-bug-fixing:before {
   content: "\e907";
 }
-.Kx-menu:before {
+.Kx-button-forward:before {
   content: "\e908";
 }
-.Kx-learn:before {
+.Kx-button-rewind:before {
   content: "\e909";
 }
-.Kx-languages:before {
+.Kx-cancel:before {
   content: "\e90a";
 }
-.Kx-information:before {
+.Kx-clock:before {
   content: "\e90b";
 }
-.Kx-home:before {
+.Kx-contact:before {
   content: "\e90c";
 }
-.Kx-heart:before {
+.Kx-contact-chat:before {
   content: "\e90d";
 }
-.Kx-group-talking:before {
+.Kx-contact-mail:before {
   content: "\e90e";
 }
-.Kx-group:before {
+.Kx-contact-phone:before {
   content: "\e90f";
 }
-.Kx-github:before {
+.Kx-contact-phone-call:before {
   content: "\e910";
 }
-.Kx-git:before {
+.Kx-contact-question:before {
   content: "\e911";
 }
-.Kx-games:before {
+.Kx-copy:before {
   content: "\e912";
 }
-.Kx-facebook:before {
+.Kx-crypto-bitcoin:before {
   content: "\e913";
 }
-.Kx-directory:before {
+.Kx-crypto-chia:before {
   content: "\e914";
 }
-.Kx-direct-download:before {
+.Kx-crypto-ethereum:before {
   content: "\e915";
 }
-.Kx-crypto-wallet:before {
+.Kx-crypto-litecoin:before {
   content: "\e916";
 }
-.Kx-crypto-litecoin:before {
+.Kx-crypto-wallet:before {
   content: "\e917";
 }
-.Kx-crypto-ethereum:before {
+.Kx-css:before {
   content: "\e918";
 }
-.Kx-crypto-chia:before {
+.Kx-direct-download:before {
   content: "\e919";
 }
-.Kx-crypto-bitcoin:before {
+.Kx-directory:before {
   content: "\e91a";
 }
-.Kx-copy:before {
+.Kx-facebook:before {
   content: "\e91b";
 }
-.Kx-contact-question:before {
+.Kx-games:before {
   content: "\e91c";
 }
-.Kx-contact-phone-call:before {
+.Kx-git:before {
   content: "\e91d";
 }
-.Kx-contact-phone:before {
+.Kx-github:before {
   content: "\e91e";
 }
-.Kx-contact-mail:before {
+.Kx-group:before {
   content: "\e91f";
 }
-.Kx-contact-chat:before {
+.Kx-group-talking:before {
   content: "\e920";
 }
-.Kx-contact:before {
+.Kx-heart:before {
   content: "\e921";
 }
-.Kx-clock:before {
+.Kx-home:before {
   content: "\e922";
 }
-.Kx-button-cancel:before {
+.Kx-html:before {
   content: "\e923";
 }
-.Kx-button-rewind:before {
+.Kx-information:before {
   content: "\e924";
 }
-.Kx-button-forward:before {
+.Kx-js:before {
   content: "\e925";
 }
-.Kx-bug-fixing:before {
+.Kx-languages:before {
   content: "\e926";
 }
-.Kx-bitg-time:before {
+.Kx-learn:before {
   content: "\e927";
 }
-.Kx-arrow-up:before {
+.Kx-menu:before {
   content: "\e928";
 }
-.Kx-arrow-send:before {
+.Kx-micropython:before {
   content: "\e929";
 }
-.Kx-arrow-down:before {
+.Kx-mongodb:before {
   content: "\e92a";
+}
+.Kx-paypal:before {
+  content: "\e92b";
+}
+.Kx-python:before {
+  content: "\e92c";
+}
+.Kx-play-button:before {
+  content: "\e92d";
+}
+.Kx-raspberry:before {
+  content: "\e92e";
+}
+.Kx-star:before {
+  content: "\e92f";
+}
+.Kx-technics:before {
+  content: "\e930";
+}
+.Kx-telegram:before {
+  content: "\e931";
+}
+.Kx-termux:before {
+  content: "\e932";
+}
+.Kx-version:before {
+  content: "\e933";
+}
+.Kx-video-player:before {
+  content: "\e934";
+}
+.Kx-youtube:before {
+  content: "\e935";
 }
