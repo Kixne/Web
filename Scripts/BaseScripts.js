@@ -1,62 +1,22 @@
 /********* Toggle spiner visibility funtionality *********/
-function SpinerShow(show){
-    let $spiner = document.querySelector(".spinerContent");
-    /* Show spiner */
-    if(show){
-        $spiner.classList.replace("display-n", "display-y");
-    }
-    /* Hide spiner after wait 500ms */
-    else{
-        setTimeout(function(){
-            $spiner.classList.replace("display-y", "display-n");
-        }, 500);
-    }
-}
+
 /********* End Toggle spiner visibility funtionality *********/
 
 
 /********* ScrollUp functionality *********/
-function ScrolllUp(){
-    let currentScroll= document.documentElement.scrollTop;
-    if(currentScroll> 0){ window.scrollTo( 0, 0); }
-}
+
 /* Ensuring that the page starts at the top */
 ScrolllUp();
 /********* End ScrollUp functionality *********/
 
 
-/********* CopyElement function *********/
-function CopyElement(x){
-    /* Fake copyable element is so that the user cannot modify the text that we want to be copied */
-    let $copyableElement= document.querySelectorAll(".copyableElement");
-    $copyableElement[x].classList.replace("display-n", "display-y");
-    $copyableElement[x].focus();
-    $copyableElement[x].select();
-    document.execCommand("copy");
-    $copyableElement[x].classList.replace("display-y", "display-n");
-    /* Showing that the text has been copied */
-    let $copyButton= document.querySelectorAll(".button-copy")[x];
-    $copyButton.textContent= "Copied";
-    setTimeout(function(){
-        $copyButton.textContent= "Copy";
-    }, 1000);
-}
-/* Adding copyButtons onclick functionality */
-const $copyButtons= document.querySelectorAll(".button-copy");
-for (let i = 0; i < $copyButtons.length; i++) {
-    $copyButtons[i].onclick= function(){
-        CopyElement(i);
-    }
-}
-/********* End CopyElement function *********/
+/********* Function. CopyElement *********/
+
+/********* End Function. CopyElement *********/
 
 
 /********* Toggle nav visibility functionality *********/
-function NavShow(x){
-    let menu = document.querySelectorAll(".nav");
-    menu[x].classList.toggle("display-n");
-    menu[x].classList.toggle("display-y");
-}
+
 /* Toggle Menu buttons Visibiility function */
 function ToggleMenuButtonsVisibility(){
     let $menuButton = document.querySelectorAll(".btnMenu");
@@ -66,24 +26,16 @@ function ToggleMenuButtonsVisibility(){
     $menuButton[1].classList.toggle("display-n");
 }
 /* Nav toggler buttons (Kx web menu) */
-document.querySelectorAll(".btnMenu")[0].onclick= function(){
-    NavShow(0);
-}
-document.querySelectorAll(".nav__header-text")[0].onclick= function(){
-    NavShow(0);
-}
-document.querySelectorAll(".btnMenuClose")[0].onclick= function(){
-    NavShow(0);
-}
-/* Language picker toggler buttons (Borrows nav scripts) */
-document.querySelectorAll(".btnMenu")[1].onclick= function(){
-    NavShow(1);
-}
-document.querySelectorAll(".nav__header-text")[1].onclick= function(){
-    NavShow(1);
-}
-document.querySelectorAll(".btnMenuClose")[1].onclick= function(){
-    NavShow(1);
+for (let x= 0; x< 2; x++) {
+    document.querySelectorAll(".btnMenu")[x].onclick= function(){
+        NavShow(x);
+    }
+    document.querySelectorAll(".nav__header-text")[x].onclick= function(){
+        NavShow(x);
+    }
+    document.querySelectorAll(".btnMenuClose")[x].onclick= function(){
+        NavShow(x);
+    }
 }
 /********* End Toggle nav visibility functionality *********/
 
@@ -103,6 +55,7 @@ const $navLinks = document.querySelectorAll(".nav__link");
 $navLinks[0].onclick = function(){
     document.querySelectorAll(".btnMenu")[0].classList.replace("display-y", "display-n");
     document.querySelectorAll(".btnMenu")[1].classList.replace("display-n", "display-y");
+    document.getElementById("kxWelcome").classList.replace("display-n", "display-y");
     TogglingToMainSection(0);
     /* Hidding btnMenu (nav) */
 };
@@ -233,147 +186,20 @@ for (let i = 0; i < $mainSectionCardLinks.length; i++) {
     $mainSectionCardLinks[i].onclick= function(){
         ToggleMenuButtonsVisibility();
         NavShow(0);
+        document.getElementById("kxWelcome").classList.replace("display-y", "display-n");
         TogglingToMainSection(i+1);
-    }
-}
-
-/* Adding mainSectionCards mainSection toggling functionality */
-var currentCourse= -1,
-    currentCourseModule= -1;
-
-/* After work this with a real data base (DB)
-(That implies changing the code)*/
-const coursesFullData= [
-    /* Follow the same the order to declare new items (All fields are required).
-    If you change the something, please update the old code */
-
-    /* Course 00 (Web anatomy <HTML>)*/[
-
-        /* CourseCard  and subsSection course */{
-            title: "Web anatomy <HTML>",
-            imageAlt: "HTML & HTML5 course image",
-            imageTitle: "Kx HTML & HTML5 course",
-            imageMainSection: 1,
-            imageDirName:"HTML",
-            descriptionCard: "HTML & HTML5 course from scratch. Let's make our ideas come true, learning to create the structure of all our HTML projects and applications.",
-            descriptionCourse: "HTML & HTML5 course from scratch. In this course we will learn to use, declare and combine the diferent tags of the standard language HTML. Learning to create the structure of all our HTML projects and applications.",
-            quality: "##.#",
-            version: "21.##.##",
-            duration: "00:00",
-        },
-
-        /* Resources link*/{
-            bookPrintable: "",
-            bookDigital: "",
-            exercices: "",
-            modululesCopyUrl: "",
-        },
-
-        /* Modules */[
-
-            /* Module 00 */{
-                title: "Introduction to the html course",
-                //urlId: "XFbJrmdiv-s",
-                urlId: "jNQXAC9IVRw",
-                description: "Module description, some example text",
-                duration: "##:##",
-                version: "21.##.##",
-                moduleCopyLink: "copiable module url",
-            },
-        ]
-    ],
-];
-
-function CreateSubSectionCourse(courseIndex){
-    let $courseSubSection= document.querySelectorAll(".mainSection__subSection")[1],
-    $fragment= document.createDocumentFragment(),
-    $template= document.getElementById("template-subSection__course").content,
-    courseData= coursesFullData[courseIndex][0];
-    
-    /* Checking if is necessary create the course subsection */
-    if(courseIndex!=currentCourse){
-        currentCourse= courseIndex;
-        currentCourseModule= -1;
-        
-        /* cloning the template */
-        let $cloned= document.importNode($template, true);
-        
-        /* Setting header data */
-        let $header= $cloned.querySelector("h2");
-        $cloned.querySelector("h2").textContent= courseData.title;
-        
-        /* Setting image data */
-        $cloned.querySelector("img").setAttribute("title", courseData.imageTitle);
-        $cloned.querySelector("img").setAttribute("alt", courseData.imageAlt);
-        $cloned.querySelector("img").setAttribute("src", CreateSrcOrSrcSet(1, courseData.imageDirName, true));
-        $cloned.querySelector("img").setAttribute("srcset", CreateSrcOrSrcSet(1, courseData.imageDirName, false));
-        
-        /* Setting courseDetails items data */
-        let $courseDetail= $cloned.querySelectorAll(".course__details-item");
-        $courseDetail[0].querySelector("span").textContent= courseData.quality;
-        $courseDetail[1].querySelector("span").textContent= courseData.version;
-        $courseDetail[2].querySelector("span").textContent= courseData.duration;
-        
-        
-        /* Setting course details data */
-        $cloned.querySelector("p").insertAdjacentText("beforeend", courseData.descriptionCourse);
-        
-        /* Setting modules list data */
-        let moduleData= coursesFullData[courseIndex][2];
-        for (let i= 0; i< moduleData.length; i++) {
-            let item= document.createElement("li");
-            item.classList.add("course__modulesList-item");
-            
-            let item__title= document.createElement("span");
-            item__title.classList.add("Kx-icon", "Kx-button-play");
-            item__title.textContent= moduleData[i].title;
-            item.insertAdjacentElement("beforeend", item__title);
-            
-            let item__duration= document.createElement("span");
-            item__duration.classList.add("Kx-icon", "Kx-clock");
-            item__duration.textContent= moduleData[i].duration;
-            item.insertAdjacentElement("beforeend", item__duration);
-
-            $cloned.querySelector(".course__modulesList").insertAdjacentElement("beforeend", item)
-        }
-        
-        $courseSubSection.innerHTML = '';   
-        
-        /* Adding the content to the HTML */
-        $fragment.appendChild($cloned);
-        $courseSubSection.appendChild($fragment);
-
-        /* Adding show courseCards functionality */
-        ReturnToCoursesCards();
     }
 }
 
 /* return to courses cards button */
 function ReturnToCoursesCards(){
-    document.getElementById("btnShowCourseCards").onclick= function(){
-        SpinerShow(true);
-        ScrolllUp();
-        let $mainSection = document.querySelectorAll(".mainSection__subSection");
-        $mainSection[0].classList.replace("display-n", "display-y");
-        $mainSection[1].classList.replace("display-y", "display-n");
-        SpinerShow(false);
-    };
-}
-
-
-/* After create a loop that declare all the course buttons onclick
-right now isnt necessary because we have only one active course */
-document.querySelector(".courseCard__button").onclick= function(){
     SpinerShow(true);
     ScrolllUp();
-    CreateSubSectionCourse(0);
-    document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-y");
-    document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-n");
-    document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-y");
-    document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-n");
+    let $mainSection = document.querySelectorAll(".mainSection__subSection");
+    $mainSection[0].classList.replace("display-n", "display-y");
+    $mainSection[1].classList.replace("display-y", "display-n");
     SpinerShow(false);
-    CreateSubSectionModuleButtonLinks();
-};
+}
 
 
 /* Course CreateModule buttons links (link to create the respective subSection__module) */
@@ -383,7 +209,7 @@ function CreateSubSectionModuleButtonLinks(){
         $moduleItem[i].onclick= function(){
             SpinerShow(true);
             ScrolllUp();
-            CreateSubSectionModule(i);
+            CreateModuleSubSecrion(i);
             document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-y");
             document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-n");
             document.querySelectorAll(".mainSection__subSection")[2].classList.toggle("display-y");
@@ -393,43 +219,6 @@ function CreateSubSectionModuleButtonLinks(){
     }    
 }
 
-/* Create subSection__module */
-function CreateSubSectionModule(moduleIndex){
-    let $moduleSubSection= document.querySelectorAll(".mainSection__subSection")[2];
-    let $fragment= document.createDocumentFragment();
-    //let moduleData= allCoursesModulesData[currentCourse][moduleIndex];
-    let moduleData= coursesFullData[currentCourse][2][moduleIndex];
-    let $template= document.getElementById("template-subSection__module").content;
-    
-    /* Checking if is necessary create the course subsection */
-    if(moduleIndex!=currentCourseModule){
-        currentCourseModule= moduleIndex;
-
-        /* cloning the template */
-        let $cloned= document.importNode($template, true);
-
-        /* Setting header data */
-        let $header= $cloned.querySelector("h2");
-        $cloned.querySelector("h2").textContent= moduleData.title;
-
-        /* Setting module video url */
-        $cloned.getElementById("course__moduleVideo").setAttribute("src", "https://www.youtube.com/embed/"+ moduleData.urlId +"?enablejsapi=1&html5=1");
-
-        /* Description */
-        $cloned.querySelector(".module__description").insertAdjacentText("beforeend", moduleData.description);   
-        
-        /* Cleaning the old module content */
-        $moduleSubSection.innerHTML = '';
-
-        /* Adding the new module content to the HTML */
-        $fragment.appendChild($cloned);
-        $moduleSubSection.appendChild($fragment);
-
-        /* Adding the show modules functionality */
-        ShowAgainModules();
-    }
-        
-}
 
 /* Show Modules (module__control-item) */
 function ShowAgainModules(){
@@ -445,7 +234,7 @@ function ShowAgainModules(){
 
 /* Create Src or SrcSet functionality */
 function CreateSrcOrSrcSet(mainSectionIndex, dirName, type){
-    let value= "./Sources/Images/MainSection_";
+    let value= "../Sources/Images/MainSection_";
 
     /* Check the read.me to verify the mainSectios index */
     switch(mainSectionIndex){
@@ -480,9 +269,225 @@ function CreateSrcOrSrcSet(mainSectionIndex, dirName, type){
         value= "";
         value+= preValue +"0320px.webp 320w,\n";
         value+= preValue +"0360px.webp 360w,\n";
-        value+= preValue +"0480px.webp 480w";
+        value+= preValue +"0480px.webp 480w,\n";
+        value+= preValue +"0512px.webp 512w,\n";
+        value+= preValue +"0534px.webp 534w,\n";
+        value+= preValue +"0600px.webp 600w,\n";
+        value+= preValue +"0640px.webp 640w,\n";
+        value+= preValue +"0683px.webp 683w,\n";
+        value+= preValue +"0720px.webp 720w,\n";
+        value+= preValue +"0768px.webp 768w,\n";
+        value+= preValue +"0960px.webp 960w,\n";
+        value+= preValue +"1024px.webp 1024w,\n";
+        value+= preValue +"1068px.webp 1068w,\n";
+        value+= preValue +"1200px.webp 1200w";
     }
     
     /* Returning the expected source value */
     return value;
 }
+
+
+
+
+
+
+
+
+/********* ********* Block. Create module content ********* *********/
+
+var currentCourse= -1,
+    currentCourseModule= -1;
+
+/* Courses data on english (After do this with conditions and json files) */
+const CoursesData= [
+    /* Course HTML*/{
+        category: "Frontend Web Development",
+        topic:"HTML",
+        title: "Web anatomy: HTML5 course from scratch",
+        iconName: "Kx-html",
+
+        descriptionCard: "Let's make our ideas come true, learning to create the structure of all our HTML projects and applications.",
+        descriptionCourse: "HTML & HTML5 course. Let's make our ideas come true, learning the semantic, the sintactic, the correct use and their correct combinations to create the structure of all our HTML projects and applications.",
+        imageSrc: "../Sources/Images/MainSection_Courses/HTML/HTML0320px.webp",
+        imageAlt: "Web anatomy: HTML5 course image",
+        imageTitle: "Web anatomy: HTML5 course",
+        imageSection: "1",
+        release: "21.##.##",
+        lastUpdate: "##.##.##",
+        quality: "This is a new course",
+        manualName: "WebAnathomy_HTML_en.v21.06",
+
+        requirements: [
+            "Computer or mobile device",
+            [
+                "Code editor or IDE",
+                "For PC, we suggest the visual studio code program",
+                "For mobile, we suggest the Acode app",
+            ],
+            [
+                "Visualizator",
+                "In the case of using PC, it is a browser (We do not recommend IE)",    
+                "In the case of using a phone, it can be a browser or the same application we have downloaded",
+            ]
+        ],
+
+        optionalRequirements: [
+            "Basic computer course"
+        ],
+
+        modules: [
+            {
+                title: "Introduction to HTML",
+                description: "Sample text for module description",
+                duration: "00:00",
+                urlId: "exampleYoutubeUrlId",
+                moduleCopyLink: "sample url"
+            }
+        ]        
+    }
+];
+
+/* After create a loop that declare all the course buttons onclick
+right now isnt necessary because we have only one active course */
+document.querySelector(".courseCard__button").onclick= function(){
+    SpinerShow(true);
+    ScrolllUp();
+    CreateCourseSubSection(0);
+    document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-y");
+    document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-n");
+    document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-y");
+    document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-n");
+    SpinerShow(false);
+    CreateSubSectionModuleButtonLinks();
+};
+
+/* Funtion. Create course subSection */
+function CreateCourseSubSection(courseIndex){
+    if( currentCourse!= courseIndex){
+        currentCourse= courseIndex;
+        currentModule= -1;
+        let courseData= CoursesData[currentCourse];
+        
+        /* Making the necesary elements to create the content */
+        let $courseSubSection= document.querySelectorAll(".mainSection__subSection")[1],
+        $template= document.getElementById("template-subSection__course").content,
+        $fragment= document.createDocumentFragment(),
+        $cloned= document.importNode($template, true);
+    
+        /* Setting image data */
+        $cloned.querySelector("img").setAttribute("src", CreateSrcOrSrcSet(1, courseData.topic, true));
+        $cloned.querySelector("img").setAttribute("srcset", CreateSrcOrSrcSet(1, courseData.topic, false));
+        $cloned.querySelector("img").setAttribute("alt", courseData.imageAlt);
+        $cloned.querySelector("img").setAttribute("title", courseData.imageTitle);
+        
+        /* Setting header data */
+        $cloned.querySelector(".course__header-title").textContent= courseData.title;
+        
+        /* Setting description pharraph data */
+        $cloned.querySelector(".course__description").textContent= courseData.descriptionCourse;
+        
+        /* Setting course "meta" data */
+        $cloned.querySelectorAll(".Kx-icon")[0].textContent= courseData.release;
+        $cloned.querySelectorAll(".Kx-icon")[1].textContent= courseData.lastUpdate;
+        $cloned.querySelectorAll(".Kx-icon")[2].textContent= courseData.quality;
+        
+        /* Setting requirements data */
+        let $list1= $cloned.querySelector(".container-genericElement").querySelector(".list");
+        courseData.requirements.forEach(element => {
+            let $item= document.createElement("li");
+            $item.classList.add("listItem");
+            /* Just create the item */
+            if( typeof element== "string"){
+                $item.textContent= element;
+                $list1.appendChild($item);
+            }
+            /* Create the item and his nested elements */
+            else{
+                $item.textContent= element[0];
+                let $subList= document.createElement("ul");
+                $subList.classList.add("listSubItem")
+                $item.appendChild($subList);
+                for (let i= 1; i< element.length; i++) {
+                    let $subItem= document.createElement("li");
+                    $subItem.textContent= element[i];
+                    $subList.appendChild($subItem);
+                }
+                $list1.appendChild($item);
+            }
+        });
+        
+        /* Setting optional requirements data */
+        let $list2= $cloned.querySelector(".container-genericElement").querySelectorAll(".list")[1];
+        courseData.optionalRequirements.forEach(element => {
+            let $item= document.createElement("li");
+            $item.classList.add("listItem");
+            /* Just create the item */
+            if( typeof element== "string"){
+                $item.textContent= element;
+                $list2.appendChild($item);
+            }
+            /* Create the item and his nested elements */
+            else{
+                $item.textContent= element[0];
+                let $subList= document.createElement("ul");
+                $subList.classList.add("listSubItem")
+                $item.appendChild($subList);
+                for (let i= 1; i< element.length; i++) {
+                    let $subItem= document.createElement("li");
+                    $subItem.textContent= element[i];
+                    $subList.appendChild($subItem);
+                }
+                $list2.appendChild($item);
+            }
+        });
+        
+        
+        /* Setting modules data */
+        $cloned.querySelectorAll(".Kx-icon")[3].classList.add(courseData.iconName);
+        let $modulesList= $cloned.querySelectorAll(".container-genericElement")[1].querySelector("ul");
+        
+        $modulesList.classList.add("listItem");
+        
+        for (let i= 0; i< courseData.modules.length; i++) {
+            let $element= courseData.modules[i],
+                $item= document.createElement("li"),
+                $span= document.createElement("span");
+
+            $item.classList.add("course__modulesList-item");
+            $item.textContent= $element.title;
+            $span.classList.add("Kx-icon", "Kx-clock");
+            $span.textContent= $element.duration;
+            $item.appendChild($span);
+            $modulesList.appendChild($item);
+        }
+        
+        
+        /* Setting resources data */
+        //let $resoutces= $cloned.querySelectorAll(".container-genericElement")[1].querySelectorAll("ul")[1].querySelectorAll("");
+        let $resources= $cloned.querySelectorAll(".resources__item");
+        $resources[0].setAttribute("download", courseData.manualName +".pdf");
+        $resources[0].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf");
+        $resources[1].setAttribute("download", courseData.manualName +".pdf");
+        $resources[1].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf");
+        $resources[2].setAttribute("download", courseData.manualName +"-exercices.pdf");
+        $resources[2].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf");
+
+        /* Setting return to courses button onclick */
+        $cloned.getElementById("btnShowCourseCards").onclick= function(){
+            ReturnToCoursesCards();
+        }
+    
+        /* Adding the content to the document */
+        $fragment.appendChild($cloned);
+        $courseSubSection.appendChild($fragment);
+    }
+}
+
+/* Funtion. Create module subSection */
+function CreateModuleSubSection(moduleIndex){
+    SpinerShow(true);
+    SpinerShow(false);
+}
+
+/********* ********* End Block. Create module content ********* *********/
