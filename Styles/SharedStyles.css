@@ -15,6 +15,7 @@
 }
 /********* ********* End Variables ********* *********/
 
+
 /********* ********* Importing fonts ********* *********/
 @font-face {
   font-family: "nunito";
@@ -25,6 +26,7 @@
   src: url(../Sources/Fonts/Aladin-Regular.ttf);
 }
 /********* End Importing fonts *********/
+
 
 /********* ********* Reseting styles ********* *********/
 body,
@@ -62,7 +64,11 @@ button{
     background: none;
     outline: 1px solid var(--gray02);
 }
+iframe{
+  border: none;
+}
 /********* ********* End Reseting styles ********* *********/
+
 
 /********* ********* Block modifiers ********* *********/
 
@@ -93,21 +99,23 @@ button{
   color: var(--white);
 }
 
-.videoContainer {
+.container-video {
   position: relative;
   height: 0;
   width: 100%;
   max-width: 683px;
   padding-bottom: 56.25%;
-  margin: 0 auto;
+  outline: 1px solid var(--black);
+  box-shadow: .0rem .0rem .8rem var(--black), .0rem .0rem .4rem var(--black);
+  margin: 0rem auto;
 }
 @media screen and (min-width: 683px) {
   /* Media activated when .videoContainer reach his max-width */
-  .videoContainer {
+  .container-video {
     padding-bottom: 384px;
   }
 }
-.videoContainer__video {
+.container-video__video {
   position: absolute;
   top: 0;
   left: 0;
@@ -132,6 +140,15 @@ button{
   margin: 1rem 4px 0;
 }
 
+.box{
+  padding: .4rem;
+  border-radius: 1rem 0;
+  overflow: hidden;
+  outline: 1px solid var(--gray04);
+  box-shadow: .2rem .2rem .4rem var(--black);
+  background-image: linear-gradient(90deg, var(--black), var(--gray01));
+}
+
 .list {
   margin-left: 1.4rem;
 }
@@ -152,6 +169,10 @@ button{
 }
 
 /********* ********* End Block modifiers ********* *********/
+
+
+
+
 
 /********* ********* Block spiner ********* *********/
 
@@ -200,7 +221,7 @@ button{
 main, .mainSection, .mainSection__subSection {
     width: 100%;
 }
-.mainSection{
+.mainSection, .mainSection__subSection{
   flex-direction: column;
 }
 .mainSection__header{
@@ -220,7 +241,29 @@ main, .mainSection, .mainSection__subSection {
     color: var(--black);
 }
 .mainSection__subSection{
+  width: 100%;
   max-width: 1200px;
+  margin: 1rem auto 0;
+  padding-bottom: 1rem;
+  align-items: center;
+  background-image: linear-gradient(90deg, var(--gray02), var(--black));
+  outline: 1px solid var(--gray06);
+  border-radius: .8em;
+  overflow: hidden;
+}
+.mainSection__subSection-header{
+    font-size: 2rem;
+    font-family: aladin;
+    padding: auto .4em 0;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.mainSection__subSection-header h2{
+    padding: auto .4em 0;
+    font-size: 2rem;
+    font-family: aladin;
+    text-align: center;
 }
 
 /********* ********* End Block Main structure styles ********* *********/
@@ -585,6 +628,9 @@ main, .mainSection, .mainSection__subSection {
   box-shadow: .2rem .2rem .2rem var(--black);
 }
 /* End CoursesCards */
+
+/* Course subSection */
+/* End Course subSection */
 
 
 /********* ********* Block Courses styles ********* *********/

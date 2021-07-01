@@ -194,5 +194,29 @@ for (let x= 0; x<2; x++) {
 
 
 
-/********* ********* Block nav ********* *********/
-/********* ********* End Block nav ********* *********/
+/********* ********* Block courses ********* *********/
+/* Course card create course section butotnAfter create a loop that declare all the course buttons onclick
+right now isnt necessary because we have only one active course */
+document.querySelector(".courseCard__button").onclick= function(){
+    alert("Hello");
+    /* SpinerShow(true);
+    ScrolllUp();
+    CreateCourseSubSection(0);
+    document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-y");
+    document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-n");
+    document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-y");
+    document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-n");
+    SpinerShow(false);
+    CreateSubSectionModuleButtonLinks(); */
+};
+/********* ********* End Block courses ********* *********/
+
+
+
+
+
+
+
+
+/********* ********* Block courses ********* *********/
+/********* ********* End Block courses ********* *********/

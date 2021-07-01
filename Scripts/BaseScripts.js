@@ -1,33 +1,3 @@
-/* Toggle Menu buttons Visibiility function */
-function ToggleMenuButtonsVisibility(){
-    let $menuButton = document.querySelectorAll(".btnMenu");
-    $menuButton[0].classList.toggle("display-y");
-    $menuButton[0].classList.toggle("display-n");
-    $menuButton[1].classList.toggle("display-y");
-    $menuButton[1].classList.toggle("display-n");
-}
-/* Nav toggler buttons (Kx web menu) */
-
-
-/********* ToglingToMainSection functionality *********/
-
-/* nav subSections links */
-const $navLinks = document.querySelectorAll(".nav__link");
-/* main__mainSection Home */
-$navLinks[0].onclick = function(){
-    document.querySelectorAll(".btnMenu")[0].classList.replace("display-y", "display-n");
-    document.querySelectorAll(".btnMenu")[1].classList.replace("display-n", "display-y");
-    document.getElementById("kxWelcome").classList.replace("display-n", "display-y");
-    TogglingToMainSection(0);
-    /* Hidding btnMenu (nav) */
-};
-
-
-
-
-
-
-
 
 /********* Youtube API scripts
 These should be the indexes of the videos
@@ -57,6 +27,8 @@ function onYouTubePlayerAPIReady() {
 function onPlayerReady(event) {
     /* here you can declare the onclick or listener videos buttons controllers */
 }
+
+
 /* Later, change this function by one that pause only the playing videos */
 function StopAllPlayers(){
     player[0].pauseVideo();
@@ -86,16 +58,6 @@ for (let i = 0; i < $methodCardButtons.length; i++) {
 
 
 
-/* Home mainSectionCards links*/
-const $mainSectionCardLinks = document.querySelectorAll(".mainSectionCard__button");
-for (let i = 0; i < $mainSectionCardLinks.length; i++) {
-    $mainSectionCardLinks[i].onclick= function(){
-        ToggleMenuButtonsVisibility();
-        NavShow(0);
-        document.getElementById("kxWelcome").classList.replace("display-y", "display-n");
-        TogglingToMainSection(i+1);
-    }
-}
 
 /* return to courses cards button */
 function ReturnToCoursesCards(){
@@ -257,7 +219,8 @@ const CoursesData= [
 /* After create a loop that declare all the course buttons onclick
 right now isnt necessary because we have only one active course */
 document.querySelector(".courseCard__button").onclick= function(){
-    SpinerShow(true);
+    alert("Hello");
+    /* SpinerShow(true);
     ScrolllUp();
     CreateCourseSubSection(0);
     document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-y");
@@ -265,7 +228,7 @@ document.querySelector(".courseCard__button").onclick= function(){
     document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-y");
     document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-n");
     SpinerShow(false);
-    CreateSubSectionModuleButtonLinks();
+    CreateSubSectionModuleButtonLinks(); */
 };
 
 /* Funtion. Create course subSection */
