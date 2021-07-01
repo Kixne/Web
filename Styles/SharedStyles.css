@@ -172,7 +172,10 @@ button{
   border-radius: 50%;
   border: 0.8em solid #222;
   border-left: 0.8em solid #6400cc;
-  animation: 0.15s linear infinite;
+}
+.spin{
+  /* Remove this class when discover how to set animation-name with JS */
+  animation: Spin 0.15s linear infinite;
 }
 @keyframes Spin {
   0% {
@@ -336,12 +339,14 @@ main, .mainSection, .mainSection__subSection {
   padding: .4rem;
   font-family: aladin;
   font-size: 1.6rem;
+  color: var(--gray06); 
   border-top: 1px solid var(--gray02);
   background: var(--black);
 }
 .btnMenuClose:hover{
   background: linear-gradient( var(--gray01), var(--black));
   cursor: pointer;
+  color: var(--white);
 }
 /* End Nav */
 

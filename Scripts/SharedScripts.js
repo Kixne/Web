@@ -1,14 +1,16 @@
 /********* ********* Block basics ********* *********/
 
 /* Funtion Show/Hide spiner */
-function ShowOrHideSpiner(x){
+function ShowHideSpiner(show){
     //x gets true (show) or false (hide)
     let $spiner= document.querySelector(".container-spiner");
     if(show){
+        document.querySelector(".spiner").classList.toggle("spin")
         $spiner.classList.replace("display-n", "display-y");
     }
     else{
         setTimeout(function(){
+            document.querySelector(".spiner").classList.toggle("spin")
             $spiner.classList.replace("display-y", "display-n");
         }, 500);
     }
@@ -19,9 +21,67 @@ function ScrollUp(){
     let currentScroll= document.documentElement.scrollTop;
     if(currentScroll> 0){ window.scrollTo( 0, 0); }
 }
+/* Ensuring that the page starts at the top */
+ScrollUp();
+
+/* Function Show/Hide header__buttons */
+function ShowHideHeaderButton(x){
+    let $button= document.querySelectorAll(".header__button");
+    /* if x= 0 show nav, else show langs button */
+    if(x==0){
+        if( $button[0].classList.contains("display-n")){
+            $button[0].classList.remove("display-n");
+            $button[1].classList.add("display-n");
+        }
+    }
+    else{
+        if(x==1){
+            $button[1].classList.remove("display-n");
+            $button[0].classList.add("display-n");
+        }
+    }
+}
 
 /* Function Switch to mainSection */
-function SwitchToMainSection(mainSectionIndex){    
+function SwitchToMainSection(mainSectionIndex){
+    /* StopAllPlayers(); */
+    ScrollUp();
+    ShowHideNav(0);
+    ShowHideSpiner(true);
+    const $toggleMainSection= document.querySelectorAll(".mainSection");
+    /* Traversing the mainSections (The code should define the value of the 'i' var automatically) */
+    for(i=0; i<=4; i++){
+        
+        /* Showing the expected main__mainSection */
+        if(i==mainSectionIndex){
+            if(!$toggleMainSection[mainSectionIndex].classList.contains("display-y")){
+                $toggleMainSection[mainSectionIndex].classList.toggle("display-y");
+            }
+            if($toggleMainSection[mainSectionIndex].classList.contains("display-n")){
+                $toggleMainSection[mainSectionIndex].classList.toggle("display-n");
+            }
+        }
+        /* Hiding the unexpexted main__mainSection */
+        else{
+            if($toggleMainSection[i].classList.contains("display-y")){
+                $toggleMainSection[i].classList.toggle("display-y");
+            }
+            if(!$toggleMainSection[i].classList.contains("display-n")){
+                $toggleMainSection[i].classList.toggle("display-n");
+            }
+        }
+    }
+    ShowHideSpiner(false);
+}
+
+/* Function setting onclick mainSectionCard__button */
+const $mainSectionCardLinks = document.querySelectorAll(".mainSectionCard__button");
+for (let i= 0; i < $mainSectionCardLinks.length; i++) {
+    $mainSectionCardLinks[i].onclick= function(){
+        ShowHideNav(0);
+        SwitchToMainSection(i+1);
+        ShowHideHeaderButton(0);
+    }
 }
 
 /* Function CopyElements */
@@ -85,6 +145,39 @@ for (let x= 0; x<2; x++) {
     }
 }
 
+/* Setting onclick nav-items */
+const $navLinks = document.querySelectorAll(".nav__item");
+/* mainSection Home */
+$navLinks[0].onclick = function(){
+    SwitchToMainSection(0);
+    ShowHideHeaderButton(1);
+};
+/* mainSection Courses */
+$navLinks[1].onclick = function(){
+    SwitchToMainSection(1);
+};
+/* mainSection Questions */
+$navLinks[2].onclick = function(){
+    SwitchToMainSection(2);
+};
+/* $navLinks[3] correspond to toggle langs visibility */
+$navLinks[3].onclick= function(){
+    document.querySelector(".container-langsList").classList.toggle("display-n");
+    document.querySelectorAll(".arrow")[0].classList.toggle("display-n");
+    document.querySelectorAll(".arrow")[1].classList.toggle("display-n");
+};
+/* mainSection SupporUs */
+$navLinks[4].onclick = function(){
+    SwitchToMainSection(3);
+};
+/* mainSection AboutUs */
+$navLinks[5].onclick = function(){
+    SwitchToMainSection(4);
+};
+
+
+
+
 /* Setting onclick btnMenuClose */
 for (let x= 0; x<2; x++) {
     document.querySelectorAll(".btnMenuClose")[x].onclick= function(){
@@ -97,4 +190,9 @@ for (let x= 0; x<2; x++) {
 
 
 
-/* Function onclick nav/languages button */
+
+
+
+
+/********* ********* Block nav ********* *********/
+/********* ********* End Block nav ********* *********/

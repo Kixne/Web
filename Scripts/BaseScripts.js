@@ -1,22 +1,3 @@
-/********* Toggle spiner visibility funtionality *********/
-
-/********* End Toggle spiner visibility funtionality *********/
-
-
-/********* ScrollUp functionality *********/
-
-/* Ensuring that the page starts at the top */
-ScrolllUp();
-/********* End ScrollUp functionality *********/
-
-
-/********* Function. CopyElement *********/
-
-/********* End Function. CopyElement *********/
-
-
-/********* Toggle nav visibility functionality *********/
-
 /* Toggle Menu buttons Visibiility function */
 function ToggleMenuButtonsVisibility(){
     let $menuButton = document.querySelectorAll(".btnMenu");
@@ -26,29 +7,10 @@ function ToggleMenuButtonsVisibility(){
     $menuButton[1].classList.toggle("display-n");
 }
 /* Nav toggler buttons (Kx web menu) */
-for (let x= 0; x< 2; x++) {
-    document.querySelectorAll(".btnMenu")[x].onclick= function(){
-        NavShow(x);
-    }
-    document.querySelectorAll(".nav__header-text")[x].onclick= function(){
-        NavShow(x);
-    }
-    document.querySelectorAll(".btnMenuClose")[x].onclick= function(){
-        NavShow(x);
-    }
-}
-/********* End Toggle nav visibility functionality *********/
 
 
 /********* ToglingToMainSection functionality *********/
-function TogglingToMainSection(mainSectionNumber){
-    SpinerShow(true);
-    /* StopAllPlayers(); */
-    ToggleMainSectionVisibility(mainSectionNumber);
-    ScrolllUp();
-    NavShow(0);
-    SpinerShow(false);
-}
+
 /* nav subSections links */
 const $navLinks = document.querySelectorAll(".nav__link");
 /* main__mainSection Home */
@@ -59,66 +21,10 @@ $navLinks[0].onclick = function(){
     TogglingToMainSection(0);
     /* Hidding btnMenu (nav) */
 };
-/* main__mainSection Courses */
-$navLinks[1].onclick = function(){
-    TogglingToMainSection(1);
-};
-/* main__mainSection Questions */
-$navLinks[2].onclick = function(){
-    TogglingToMainSection(2);
-};
-/* $navLinks[3] correspond to toggle langs visibility */
-$navLinks[3].onclick = function(){
-    /* show/hide languages */
-    document.querySelector(".langsList-container").classList.toggle("display-y");
-    document.querySelector(".langsList-container").classList.toggle("display-n");
-    /* toggling arrows icons visibility*/
-    document.querySelector(".navLinkLangs .Kx-arrow-down").classList.toggle("display-y");
-    document.querySelector(".navLinkLangs .Kx-arrow-down").classList.toggle("display-n");
-    document.querySelector(".navLinkLangs .Kx-arrow-up").classList.toggle("display-y");
-    document.querySelector(".navLinkLangs .Kx-arrow-up").classList.toggle("display-n");
-};
-/* main__mainSection SupporUs */
-$navLinks[4].onclick = function(){
-    TogglingToMainSection(3);
-};
-/* main__mainSection AboutUs */
-$navLinks[5].onclick = function(){
-    TogglingToMainSection(4);
-};
 
 
 
 
-/********* Toggle mainSection[x] visibility functionality *********/
-/* indexes of the main__mainSections
-    (if the values change, update the comment)
-    0= Home     1= Courses      2= Questions
-    3= AboutUs  4= SupportUs */
-function ToggleMainSectionVisibility(mainSectionNumber){
-    const $toggleMainSection= document.querySelectorAll(".main__mainSection");
-    /* Traversing the mainSections (The code should define the value of the 'i' var automatically) */
-    for(i=0; i<=4; i++){
-        /* Showing the expected main__mainSection */
-        if(i==mainSectionNumber){
-            if(!$toggleMainSection[mainSectionNumber].classList.contains("display-y")){
-                $toggleMainSection[mainSectionNumber].classList.toggle("display-y");
-            }
-            if($toggleMainSection[mainSectionNumber].classList.contains("display-n")){
-                $toggleMainSection[mainSectionNumber].classList.toggle("display-n");
-            }
-        }
-        /* Hiding the unexpexted main__mainSection */
-        else{
-            if($toggleMainSection[i].classList.contains("display-y")){
-                $toggleMainSection[i].classList.toggle("display-y");
-            }
-            if(!$toggleMainSection[i].classList.contains("display-n")){
-                $toggleMainSection[i].classList.toggle("display-n");
-            }
-        }
-    }
-}
 
 
 

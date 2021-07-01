@@ -46,46 +46,21 @@
                 <img class="header__logo-image" src="./Sources/Icons/IconKx32px.png" alt="Kixne™ logo image" title="Kixne™ logo">
                 <h1 class="header__logo-text">Kixne™</h1>
             </a>
-            <button class="Kx-button header__button display-y">
-                Langs
-                <span class="Kx-icon Kx-languages"></span>
-            </button>
             <button class="Kx-button header__button display-n">
                 Menu
                 <span class="Kx-icon Kx-menu"></span>
             </button>
-
-            <!-- Languages -->
-            <div class="nav display-n">
-                <header class="nav__header">
-                    <span class="nav__header-text">
-                        Languages <i class="Kx-icon Kx-languages"></i>
-                    </span>
-                </header>
-        
-                <span onclick="alert('You chose the current language.');" class="nav__link">
-                    <span class="Kx-icon Kx-languages"></span>English
-                </span>
-        
-                <a href="#" class="nav__link">
-                    <span class="Kx-icon Kx-languages"></span>Spanish<br>(right now dont work)
-                </a>
-        
-                <a href="#" class="nav__link">
-                    <span class="Kx-icon Kx-languages"></span>Japanese<br>(right now dont work)
-                </a>
-        
-                <span class="btnMenuClose">
-                    Close <span class="Kx-icon Kx-button-cancel"></span>
-                </span>
-            </div>
-            <!-- End Languages -->
-
+            <button class="Kx-button header__button">
+                Langs
+                <span class="Kx-icon Kx-languages"></span>
+            </button>
+            
             <!-- Nav -->
             <nav class="nav display-n">
                 <header class="nav__header">
                     <span class="nav__header-text">
-                        Menu <span class="Kx-icon Kx-menu"></span>
+                        Menu
+                        <span class="Kx-icon Kx-menu"></span>
                     </span>
                 </header>
                 
@@ -103,10 +78,10 @@
 
                 <span class="nav__item navLinkLangs">
                     <span class="Kx-icon Kx-languages"></span>Languajes
-                    <span class="Kx-icon arrow Kx-arrow-down display-y"></span>
+                    <span class="Kx-icon arrow Kx-arrow-down"></span>
                     <span class="Kx-icon arrow Kx-arrow-up display-n"></span>
                 </span>
-                <div class="langsList-container display-n">
+                <div class="container-langsList display-n">
                     <ul class="langsList">
                         <li onclick="alert('You chose the current language.');" class="langsList-item">
                             <a href="#">
@@ -120,12 +95,11 @@
                         </li>
                     </ul>
                 </div>
-                
-                
+                              
                 <span class="nav__item">
-                    <span class="Kx-icon Kx-heart"></span>Support Us!
+                    <span class="Kx-icon Kx-heart"></span>Support Us
                 </span>
-    
+
                 <span class="nav__item">
                     <span class="Kx-icon Kx-information"></span>About Us
                 </span>
@@ -135,6 +109,34 @@
                 </span>
             </nav>
             <!-- End Nav -->
+
+            <!-- Languages -->
+            <div class="nav display-n">
+                <header class="nav__header">
+                    <span class="nav__header-text">
+                        Languages
+                        <span class="Kx-icon Kx-languages"></span>
+                    </span>
+                </header>
+        
+                <span class="nav__item" onclick="alert('You chose the current language.');">
+                    <span class="Kx-icon Kx-languages"></span>English
+                </span>
+        
+                <a href="#" class="nav__item">
+                    <span class="Kx-icon Kx-languages"></span>Spanish<br>(right now dont work)
+                </a>
+        
+                <a href="#" class="nav__item">
+                    <span class="Kx-icon Kx-languages"></span>Japanese<br>(right now dont work)
+                </a>
+        
+                <span class="btnMenuClose">
+                    Close <span class="Kx-icon Kx-button-cancel"></span>
+                </span>
+            </div>
+            <!-- End Languages -->
+
         </header>
         <div id="margin"></div>
         <!-- End Header -->
