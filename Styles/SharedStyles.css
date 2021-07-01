@@ -200,7 +200,6 @@ button{
 main, .mainSection, .mainSection__subSection {
     width: 100%;
 }
-
 .mainSection{
   flex-direction: column;
 }
@@ -220,7 +219,10 @@ main, .mainSection, .mainSection__subSection {
 .mainSection__header, .mainSection__header span, .mainSection__header p{
     color: var(--black);
 }
-  
+.mainSection__subSection{
+  max-width: 1200px;
+}
+
 /********* ********* End Block Main structure styles ********* *********/
 
 
@@ -256,10 +258,8 @@ main, .mainSection, .mainSection__subSection {
   font-family: aladin;
   font-size: 2rem;
 }
-
 #margin {
   height: 3.4rem;
-  outline: 1px solid var(--purple);
 }
 /* End Header */
 
@@ -506,3 +506,85 @@ main, .mainSection, .mainSection__subSection {
 /* End mainSectionCards */
 
 /********* ********* Block Home styles ********* *********/
+
+
+
+
+
+
+
+
+/********* ********* Courses styles ********* *********/
+
+/* CoursesCards */
+.courseCard{
+  display: flex;
+  border-radius: 1rem 0;
+  overflow: hidden;
+  box-shadow: .2rem .2rem .2rem var(--black);
+  outline: .2rem solid var(--black);
+}
+.courseCard__header{
+  width: 50%;
+  min-width: 100px;
+  max-width: 128px;
+  padding: .4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(var(--purple), var(--black));
+}
+.courseCard__header-title{
+  font-family: aladin;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: .2rem .2rem var(--black);
+}
+.courseCard__header-subTitle{
+  font-size: .8rem;
+  color: #888;
+  text-align: center;
+}
+.courseCard__header .Kx-icon{
+  font-size: 3rem;
+}
+.courseCard__body{
+  padding: .4rem;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(#444, #111);
+}
+.courseCard__body-lastUpdate{
+  display: flex;
+  justify-content: flex-end;
+}
+.courseCard__body-lastUpdate span{
+  margin-left: .4rem;
+  color: #888;
+}
+.courseCard__body-title{
+  margin-top: 1rem;
+  font-family: aladin;
+  font-size: 1.6rem;
+  text-shadow: .2rem .2rem var(--black);
+}
+.courseCard__button{
+  align-self: end;
+  padding: .4rem;
+  margin: 1rem .4rem .2rem 0;
+  width: 150px;
+  font-size: 1.2rem;
+  font-family: aladin;
+  background: linear-gradient(var(--purple), var(--black));
+  border-radius: .4rem 0;
+  overflow: hidden;
+}
+.courseCard__button:hover{
+  cursor: pointer;
+  box-shadow: .2rem .2rem .2rem var(--black);
+}
+/* End CoursesCards */
+
+
+/********* ********* Block Courses styles ********* *********/
