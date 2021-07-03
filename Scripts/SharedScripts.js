@@ -48,7 +48,7 @@ function SwitchToMainSection(mainSectionIndex){
     ScrollUp();
     ShowHideNav(0);
     ShowHideSpiner(true);
-    const $toggleMainSection= document.querySelectorAll(".mainSection");
+    let $toggleMainSection= document.querySelectorAll(".mainSection");
     /* Traversing the mainSections (The code should define the value of the 'i' var automatically) */
     for(i=0; i<=4; i++){
         
@@ -84,6 +84,24 @@ for (let i= 0; i < $mainSectionCardLinks.length; i++) {
     }
 }
 
+/* Function ShowHide methodCard destails */
+function ShowHideMethodDetails(x){
+    let $methodCards= document.querySelectorAll(".methodCard__details");
+    $methodCards[x].classList.toggle("display-y");
+    $methodCards[x].classList.toggle("display-n");
+}
+
+/* Function Setting onclick show/hide methods details */
+function SetShowHideMethodDetails(){
+    let $methodCardButtons= document.querySelectorAll(".methodCard__button");
+    for (let i = 0; i < $methodCardButtons.length; i++) {
+        $methodCardButtons[i].onclick= function(){
+            ShowHideMethodDetails(i);
+        }
+    }
+}
+SetShowHideMethodDetails();
+
 /* Function CopyElements */
 function CopyElement(x){
     /* Fake copyable element is so that the user cannot modify the text that we want to be copied */
@@ -109,13 +127,70 @@ function SetCopyElements(){
         }
     }
 }
-//Activate the next lines after create some copiable elements on html
-//CopyElement();
-//SetCopyElements();
+SetCopyElements();
+
+/* Function Create image src or srcset */
+/* Create Src or SrcSet functionality */
+function CreateSrcOrSrcSet(mainSectionIndex, dirName, type){
+    let value= "../Sources/Images/MainSection_";
+
+    /* Check the read.me to verify the mainSectios index */
+    switch(mainSectionIndex){
+        case 0:
+            value+= "Home/";
+        break;
+
+        case 1:
+            value+= "Courses/";
+        break;
+
+        case 2:
+            value+= "Questions/";
+        break;
+
+        case 3:
+            value+= "SupportUs/";
+        break;
+
+        case 4:
+            value+= "AboutUs/";
+        break;
+    }
+
+    /* If type== true then, we create the src value */
+    if(type){
+        value+= dirName +"/" +dirName +"0480px.png";
+    }
+    /* Else, we create the srcSet value */
+    else{
+        let preValue= value +dirName +"/" +dirName;
+        value= "";
+        value+= preValue +"0320px.webp 320w,\n";
+        value+= preValue +"0360px.webp 360w,\n";
+        value+= preValue +"0480px.webp 480w,\n";
+        value+= preValue +"0512px.webp 512w,\n";
+        value+= preValue +"0534px.webp 534w,\n";
+        value+= preValue +"0600px.webp 600w,\n";
+        value+= preValue +"0640px.webp 640w,\n";
+        value+= preValue +"0683px.webp 683w,\n";
+        value+= preValue +"0720px.webp 720w,\n";
+        value+= preValue +"0768px.webp 768w,\n";
+        value+= preValue +"0960px.webp 960w,\n";
+        value+= preValue +"1024px.webp 1024w,\n";
+        value+= preValue +"1068px.webp 1068w,\n";
+        value+= preValue +"1200px.webp 1200w";
+    }
+    
+    /* Returning the expected source value */
+    return value;
+}
 
 /* Function switch to mainSection X */
 
 
+
+var currentCourse= -1,
+    currentCourseModule= -1;
 
 /********* ********* End Block basics ********* *********/
 
@@ -198,10 +273,9 @@ for (let x= 0; x<2; x++) {
 /* Course card create course section butotnAfter create a loop that declare all the course buttons onclick
 right now isnt necessary because we have only one active course */
 document.querySelector(".courseCard__button").onclick= function(){
-    alert("Hello");
+    CreateCourseSubSection(0);
     /* SpinerShow(true);
     ScrolllUp();
-    CreateCourseSubSection(0);
     document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-y");
     document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-n");
     document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-y");
@@ -209,14 +283,126 @@ document.querySelector(".courseCard__button").onclick= function(){
     SpinerShow(false);
     CreateSubSectionModuleButtonLinks(); */
 };
-/********* ********* End Block courses ********* *********/
 
+/* Function Create course section */
+function CreateCourseSubSection(courseIndex){
+    if( currentCourse!= courseIndex){
+        currentCourse= courseIndex;
+        currentModule= -1;
+        let courseData= CoursesData[currentCourse];
+        
+        /* Making the necesary elements to create the content */
+        let $courseSubSection= document.querySelectorAll(".mainSection__subSection")[1],
+        $template= document.getElementById("template-subSection__course").content,
+        $fragment= document.createDocumentFragment(),
+        $cloned= document.importNode($template, true);
+    
+        /* Setting image data */
+        $cloned.querySelector("img").setAttribute("src", CreateSrcOrSrcSet(1, courseData.topic, true));
+        $cloned.querySelector("img").setAttribute("srcset", CreateSrcOrSrcSet(1, courseData.topic, false));
+        $cloned.querySelector("img").setAttribute("alt", courseData.imageAlt);
+        $cloned.querySelector("img").setAttribute("title", courseData.imageTitle);
+        
+        /* Setting header data */
+        $cloned.querySelector(".course__header-title").textContent= courseData.title;
+        
+        /* Setting description pharraph data */
+        $cloned.querySelector(".course__description").textContent= courseData.descriptionCourse;
+        
+        /* Setting course "meta" data */
+        $cloned.querySelectorAll(".Kx-icon")[0].textContent= courseData.release;
+        $cloned.querySelectorAll(".Kx-icon")[1].textContent= courseData.lastUpdate;
+        $cloned.querySelectorAll(".Kx-icon")[2].textContent= courseData.quality;
+        
+        /* Setting requirements data */
+        let $list1= $cloned.querySelector(".container-genericElement").querySelector(".list");
+        courseData.requirements.forEach(element => {
+            let $item= document.createElement("li");
+            /* Just create the item */
+            if( typeof element== "string"){
+                $item.textContent= element;
+                $list1.appendChild($item);
+            }
+            /* Create the item and his nested elements */
+            else{
+                $item.textContent= element[0];
+                let $subList= document.createElement("ul");
+                $subList.classList.add("listSubItem")
+                $item.appendChild($subList);
+                for (let i= 1; i< element.length; i++) {
+                    let $subItem= document.createElement("li");
+                    $subItem.textContent= element[i];
+                    $subList.appendChild($subItem);
+                }
+                $list1.appendChild($item);
+            }
+        });
+        
+        /* Setting optional requirements data */
+        let $list2= $cloned.querySelector(".container-genericElement").querySelectorAll(".list")[1];
+        courseData.optionalRequirements.forEach(element => {
+            let $item= document.createElement("li");
+            $item.classList.add("listItem");
+            /* Just create the item */
+            if( typeof element== "string"){
+                $item.textContent= element;
+                $list2.appendChild($item);
+            }
+            /* Create the item and his nested elements */
+            else{
+                $item.textContent= element[0];
+                let $subList= document.createElement("ul");
+                $subList.classList.add("listSubItem")
+                $item.appendChild($subList);
+                for (let i= 1; i< element.length; i++) {
+                    let $subItem= document.createElement("li");
+                    $subItem.textContent= element[i];
+                    $subList.appendChild($subItem);
+                }
+                $list2.appendChild($item);
+            }
+        });
+        
+        
+        /* Setting modules data */
+        $cloned.querySelectorAll(".Kx-icon")[3].classList.add(courseData.iconName);
+        let $modulesList= $cloned.querySelectorAll(".container-genericElement")[1].querySelector("ul");
+        
+        $modulesList.classList.add("listItem");
+        
+        for (let i= 0; i< courseData.modules.length; i++) {
+            let $element= courseData.modules[i],
+                $item= document.createElement("li"),
+                $span= document.createElement("span");
 
+            $item.classList.add("course__modulesList-item");
+            $item.textContent= $element.title;
+            $span.classList.add("Kx-icon", "Kx-clock");
+            $span.textContent= $element.duration;
+            $item.appendChild($span);
+            $modulesList.appendChild($item);
+        }
+        
+        
+        /* Setting resources data */
+        //let $resoutces= $cloned.querySelectorAll(".container-genericElement")[1].querySelectorAll("ul")[1].querySelectorAll("");
+        let $resources= $cloned.querySelectorAll(".resources__item");
+        $resources[0].setAttribute("download", courseData.manualName +".pdf");
+        $resources[0].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf");
+        $resources[1].setAttribute("download", courseData.manualName +".pdf");
+        $resources[1].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf");
+        $resources[2].setAttribute("download", courseData.manualName +"-exercices.pdf");
+        $resources[2].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf");
 
+        /* Setting return to courses button onclick */
+        $cloned.getElementById("btnShowCourseCards").onclick= function(){
+            ReturnToCoursesCards();
+        }
+    
+        /* Adding the content to the document */
+        $fragment.appendChild($cloned);
+        $courseSubSection.appendChild($fragment);
+    }
+}
 
-
-
-
-
-/********* ********* Block courses ********* *********/
 /********* ********* End Block courses ********* *********/

@@ -46,9 +46,10 @@ body {
   font-size: 16px;
   background: var(--gray01);
 }
-a, a span {
+a, a * {
   display: inline-block;
   color: var(--purple);
+  text-shadow: .1rem .1rem .1rem var(--black);
 }
 span {
   display: inline-block;
@@ -172,7 +173,24 @@ iframe{
   font-family: aladin;
 }
 .text{
-  padding: 0 .2rem;
+  padding: 0 .8rem;
+}
+
+.copyableElement-container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.copyableElement-fake{
+  width: 25%;
+  flex-grow: 1;
+  font-size: 1rem;
+  border: none;
+}
+.button-copy{
+  cursor: pointer;
+  padding: .4rem;
+  padding-left: 0;
 }
 /********* ********* End Block modifiers ********* *********/
 
@@ -299,7 +317,7 @@ main, .mainSection, .mainSection__subSection {
   display: flex;
   align-items: center;
 }
-.header__logo:hover {
+.header__logo:hover *{
   text-shadow: 0.1rem 0.1rem 0.1rem var(--purple);
 }
 .header__logo-image {
@@ -310,6 +328,7 @@ main, .mainSection, .mainSection__subSection {
 .header__logo-text {
   font-family: aladin;
   font-size: 2rem;
+  color: var(--white);
 }
 #margin {
   height: 3.4rem;
@@ -406,6 +425,61 @@ main, .mainSection, .mainSection__subSection {
 
 /* main styles are on main structure and their respective code blocks */
 
+/* MethodCard */
+.methodCard{
+  /* Some are the same styles that container-genericElemetn, but is used to reduce add more html classes */
+  width: 46%;
+  min-width: 312px; /* 312px +8px (margin)= 320px */
+  max-width: 480px;
+  flex-grow: 1;
+  margin: 1rem 4px 0;
+
+  border-radius: 1rem 0;
+  overflow: hidden;
+  outline: .1rem solid var(--gray06);
+  box-shadow: .2rem .2rem .4rem var(--black);
+  background-image: linear-gradient(90deg, var(--black), var(--gray02));
+}
+.methodCard img{
+  border-bottom: .1rem solid var(--gray06);
+}
+.methodCard__text{
+  text-align: center;
+}
+.methodCard__details{
+  /* display, with display-y or display-n classes */
+  flex-direction: column;
+}
+.methodCard__details-header{
+  margin: 1em .8em 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.methodCard__button{
+  width: 100%;
+  display: inline-block;
+  margin-top: .4em;
+  padding: .4em;
+  text-align: center;
+  text-decoration: none;
+  background: var(--gray04);
+  outline: none;
+  border-top: 1px solid var(--gray06);
+}
+.methodCard__button:hover{
+  cursor: pointer;
+  outline: none;
+  background: var(--black);
+  border-color: var(--purple);
+}
+.methodCard__button, .methodCard__button span{
+  color: var(--white);
+  font-size: 1.2rem;
+}
+.methodCard__button:hover, .methodCard__button:hover span{
+  color: var(--purple);
+}
+/* End MethodCard */
 
 /* Footer */
 .footer {
@@ -640,61 +714,29 @@ main, .mainSection, .mainSection__subSection {
 /* End CoursesCards */
 
 /* Course subSection */
+.course__header{
+  width: 100%
+}
+.course__header-title{
+  font-family: aladin;
+  font-size: 2rem;
+}
+#btnShowCourseCards{
+  display: block;
+  margin: 2rem auto 0;
+  padding: .8rem;
+  width: 80%;
+  text-align: center;
+  font-size: 1.2em;
+  border-radius: 1em 0;
+  border: .1em solid var(--gray02);
+  background: linear-gradient( var(--gray04), var(--gray02) );
+}
+#btnShowCourseCards:hover{
+  background: linear-gradient( var(--gray02), var(--black) );
+  text-shadow: 0 0 .2em var(--purple);
+}
 /* End Course subSection */
 
 
 /********* ********* Block Courses styles ********* *********/
-
-
-/* Method card */
-.methodCard{
-  /* Some are the same styles that container-genericElemetn, but is used to reduce add more html classes */
-  width: 46%;
-  min-width: 312px; /* 312px +8px (margin)= 320px */
-  max-width: 480px;
-  flex-grow: 1;
-  margin: 1rem 4px 0;
-
-  border-radius: 1rem 0;
-  overflow: hidden;
-  outline: .1rem solid var(--gray06);
-  box-shadow: .2rem .2rem .4rem var(--black);
-  background-image: linear-gradient(90deg, var(--black), var(--gray02));
-}
-.methodCard__text{
-  text-align: center;
-}
-.methodCard__details{
-  /* display, with display-y or display-n classes */
-  flex-direction: column;
-}
-.methodCard__details-header{
-  margin: 1em .8em 0;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-.methodCard__button{
-  width: 100%;
-  display: inline-block;
-  margin-top: .4em;
-  padding: .4em;
-  text-align: center;
-  text-decoration: none;
-  background: var(--gray04);
-  outline: none;
-  border-top: 1px solid var(--gray06);
-}
-.methodCard__button:hover{
-  cursor: pointer;
-  outline: none;
-  background: var(--black);
-  border-color: var(--purple);
-}
-.methodCard__button, .methodCard__button span{
-  color: var(--white);
-  font-size: 1.2rem;
-}
-.methodCard__button:hover, .methodCard__button:hover span{
-  color: var(--purple);
-}
-/* End Method card */

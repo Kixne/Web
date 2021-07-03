@@ -40,19 +40,10 @@ function StopAllPlayers(){
 
 
 /********* Toggle methodDetails visibility function *********/
-function ToggleMethodDetails(x){
-    let $methodCards= document.querySelectorAll(".methodCard__details");
-    $methodCards[x].classList.toggle("display-y");
-    $methodCards[x].classList.toggle("display-n");
-}
 
-const $methodCardButtons= document.querySelectorAll(".methodCard__button");
+
 /* methods buttons onclick "listeners" */
-for (let i = 0; i < $methodCardButtons.length; i++) {
-    $methodCardButtons[i].onclick= function(){
-        ToggleMethodDetails(i);
-    }
-}
+
 /********* End Toggle methodDetails visibility function *********/
 
 
@@ -100,60 +91,6 @@ function ShowAgainModules(){
 }
 
 
-/* Create Src or SrcSet functionality */
-function CreateSrcOrSrcSet(mainSectionIndex, dirName, type){
-    let value= "../Sources/Images/MainSection_";
-
-    /* Check the read.me to verify the mainSectios index */
-    switch(mainSectionIndex){
-        case 0:
-            value+= "Home/";
-        break;
-
-        case 1:
-            value+= "Courses/";
-        break;
-
-        case 2:
-            value+= "Questions/";
-        break;
-
-        case 3:
-            value+= "SupportUs/";
-        break;
-
-        case 4:
-            value+= "AboutUs/";
-        break;
-    }
-
-    /* If type== true then, we create the src value */
-    if(type){
-        value+= dirName +"/" +dirName +"0480px.png";
-    }
-    /* Else, we create the srcSet value */
-    else{
-        let preValue= value +dirName +"/" +dirName;
-        value= "";
-        value+= preValue +"0320px.webp 320w,\n";
-        value+= preValue +"0360px.webp 360w,\n";
-        value+= preValue +"0480px.webp 480w,\n";
-        value+= preValue +"0512px.webp 512w,\n";
-        value+= preValue +"0534px.webp 534w,\n";
-        value+= preValue +"0600px.webp 600w,\n";
-        value+= preValue +"0640px.webp 640w,\n";
-        value+= preValue +"0683px.webp 683w,\n";
-        value+= preValue +"0720px.webp 720w,\n";
-        value+= preValue +"0768px.webp 768w,\n";
-        value+= preValue +"0960px.webp 960w,\n";
-        value+= preValue +"1024px.webp 1024w,\n";
-        value+= preValue +"1068px.webp 1068w,\n";
-        value+= preValue +"1200px.webp 1200w";
-    }
-    
-    /* Returning the expected source value */
-    return value;
-}
 
 
 
@@ -164,57 +101,7 @@ function CreateSrcOrSrcSet(mainSectionIndex, dirName, type){
 
 /********* ********* Block. Create module content ********* *********/
 
-var currentCourse= -1,
-    currentCourseModule= -1;
 
-/* Courses data on english (After do this with conditions and json files) */
-const CoursesData= [
-    /* Course HTML*/{
-        category: "Frontend Web Development",
-        topic:"HTML",
-        title: "Web anatomy: HTML5 course from scratch",
-        iconName: "Kx-html",
-
-        descriptionCard: "Let's make our ideas come true, learning to create the structure of all our HTML projects and applications.",
-        descriptionCourse: "HTML & HTML5 course. Let's make our ideas come true, learning the semantic, the sintactic, the correct use and their correct combinations to create the structure of all our HTML projects and applications.",
-        imageSrc: "../Sources/Images/MainSection_Courses/HTML/HTML0320px.webp",
-        imageAlt: "Web anatomy: HTML5 course image",
-        imageTitle: "Web anatomy: HTML5 course",
-        imageSection: "1",
-        release: "21.##.##",
-        lastUpdate: "##.##.##",
-        quality: "This is a new course",
-        manualName: "WebAnathomy_HTML_en.v21.06",
-
-        requirements: [
-            "Computer or mobile device",
-            [
-                "Code editor or IDE",
-                "For PC, we suggest the visual studio code program",
-                "For mobile, we suggest the Acode app",
-            ],
-            [
-                "Visualizator",
-                "In the case of using PC, it is a browser (We do not recommend IE)",    
-                "In the case of using a phone, it can be a browser or the same application we have downloaded",
-            ]
-        ],
-
-        optionalRequirements: [
-            "Basic computer course"
-        ],
-
-        modules: [
-            {
-                title: "Introduction to HTML",
-                description: "Sample text for module description",
-                duration: "00:00",
-                urlId: "exampleYoutubeUrlId",
-                moduleCopyLink: "sample url"
-            }
-        ]        
-    }
-];
 
 /* After create a loop that declare all the course buttons onclick
 right now isnt necessary because we have only one active course */
