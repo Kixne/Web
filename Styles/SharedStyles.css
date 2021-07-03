@@ -152,6 +152,10 @@ iframe{
 .box__header{
   font-family: aladin;
   font-size: 1.6rem;
+  text-shadow: .1rem .1rem .2rem var(--purple);
+}
+.box__header span{
+  font-size: 1.2rem;
 }
 
 .list li{
@@ -720,6 +724,29 @@ main, .mainSection, .mainSection__subSection {
 .course__header-title{
   font-family: aladin;
   font-size: 2rem;
+  text-shadow: .2rem .2rem var(--black);
+}
+.course__modulesList-item{
+  padding: .2rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.course__modulesList-item span{
+  margin: 0 1rem;
+}
+.course__modulesList-item:hover, .course__modulesList-item:hover *{
+  color: var(--purple);
+  cursor: pointer;
+}
+.resources__item, .resources__item *{
+  padding: .2rem;
+  padding-left: 0;
+  color: var(--white);
+}
+.resources__item:hover, .resources__item:hover *{
+  color: var(--purple);
 }
 #btnShowCourseCards{
   display: block;

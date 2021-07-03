@@ -43,6 +43,6 @@ const CoursesData= [
                 urlId: "exampleYoutubeUrlId",
                 moduleCopyLink: "sample url"
             }
-        ]        
+        ]
     }
 ];

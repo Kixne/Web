@@ -12,7 +12,7 @@ function ShowHideSpiner(show){
         setTimeout(function(){
             document.querySelector(".spiner").classList.toggle("spin")
             $spiner.classList.replace("display-y", "display-n");
-        }, 500);
+        }, 1000);
     }
 }
 
@@ -89,6 +89,35 @@ function ShowHideMethodDetails(x){
     let $methodCards= document.querySelectorAll(".methodCard__details");
     $methodCards[x].classList.toggle("display-y");
     $methodCards[x].classList.toggle("display-n");
+}
+
+/* Function Switch to course subSection */
+function SwitchToCourseSubSection(subSectionIndex){
+    ScrollUp();
+    ShowHideSpiner(true);
+    let $subSection= document.querySelectorAll(".mainSection")[1].querySelectorAll(".mainSection__subSection");
+    for(i=0; i< 3; i++){
+        /* Showing the expected main__mainSection */
+        if(i==subSectionIndex){
+            if(!$subSection[subSectionIndex].classList.contains("display-y")){
+                $subSection[subSectionIndex].classList.toggle("display-y");
+            }
+            if($subSection[subSectionIndex].classList.contains("display-n")){
+                $subSection[subSectionIndex].classList.toggle("display-n");
+            }
+        }    
+        /* Hiding the unexpexted main__mainSection */
+        else{
+            ShowHideSpiner(false);
+            if($subSection[i].classList.contains("display-y")){
+                $subSection[i].classList.toggle("display-y");
+            }
+            if(!$subSection[i].classList.contains("display-n")){
+                $subSection[i].classList.toggle("display-n");
+            }
+        }
+    }
+    ShowHideSpiner(false);
 }
 
 /* Function Setting onclick show/hide methods details */
@@ -270,19 +299,6 @@ for (let x= 0; x<2; x++) {
 
 
 /********* ********* Block courses ********* *********/
-/* Course card create course section butotnAfter create a loop that declare all the course buttons onclick
-right now isnt necessary because we have only one active course */
-document.querySelector(".courseCard__button").onclick= function(){
-    CreateCourseSubSection(0);
-    /* SpinerShow(true);
-    ScrolllUp();
-    document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-y");
-    document.querySelectorAll(".mainSection__subSection")[0].classList.toggle("display-n");
-    document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-y");
-    document.querySelectorAll(".mainSection__subSection")[1].classList.toggle("display-n");
-    SpinerShow(false);
-    CreateSubSectionModuleButtonLinks(); */
-};
 
 /* Function Create course section */
 function CreateCourseSubSection(courseIndex){
@@ -342,7 +358,6 @@ function CreateCourseSubSection(courseIndex){
         let $list2= $cloned.querySelector(".container-genericElement").querySelectorAll(".list")[1];
         courseData.optionalRequirements.forEach(element => {
             let $item= document.createElement("li");
-            $item.classList.add("listItem");
             /* Just create the item */
             if( typeof element== "string"){
                 $item.textContent= element;
@@ -368,13 +383,14 @@ function CreateCourseSubSection(courseIndex){
         $cloned.querySelectorAll(".Kx-icon")[3].classList.add(courseData.iconName);
         let $modulesList= $cloned.querySelectorAll(".container-genericElement")[1].querySelector("ul");
         
-        $modulesList.classList.add("listItem");
-        
         for (let i= 0; i< courseData.modules.length; i++) {
             let $element= courseData.modules[i],
                 $item= document.createElement("li"),
                 $span= document.createElement("span");
 
+            $item.onclick= function(){
+                alert("Hello " +i);
+            };
             $item.classList.add("course__modulesList-item");
             $item.textContent= $element.title;
             $span.classList.add("Kx-icon", "Kx-clock");
@@ -396,7 +412,7 @@ function CreateCourseSubSection(courseIndex){
 
         /* Setting return to courses button onclick */
         $cloned.getElementById("btnShowCourseCards").onclick= function(){
-            ReturnToCoursesCards();
+            SwitchToCourseSubSection(0);
         }
     
         /* Adding the content to the document */
@@ -404,5 +420,12 @@ function CreateCourseSubSection(courseIndex){
         $courseSubSection.appendChild($fragment);
     }
 }
+
+/* Course card create course section butotnAfter create a loop that declare all the course buttons onclick
+right now isnt necessary because we have only one active course */
+document.querySelector(".courseCard__button").onclick= function(){
+    CreateCourseSubSection(0); /* with loop 0 -> iterationNumber */
+    SwitchToCourseSubSection(1);
+};
 
 /********* ********* End Block courses ********* *********/
