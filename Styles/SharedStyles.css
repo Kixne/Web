@@ -91,8 +91,7 @@ iframe{
   color: var(--gray06);
 }
 .Kx-button:hover {
-  outline: 1px solid var(--black);
-  box-shadow: 0 0 0.4rem var(--white);
+  outline-color: var(--purple);
   background: radial-gradient(var(--purple), var(--black));
   cursor: pointer;
 }
@@ -195,6 +194,10 @@ iframe{
   cursor: pointer;
   padding: .4rem;
   padding-left: 0;
+  border-bottom: 1px solid transparent;
+}
+.button-copy:hover{
+  border-color: var(--white);
 }
 /********* ********* End Block modifiers ********* *********/
 
@@ -308,7 +311,7 @@ main, .mainSection, .mainSection__subSection {
 /* Header */
 .header {
   position: fixed;
-  z-index: 9998;
+  z-index: 9997;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -346,6 +349,7 @@ main, .mainSection, .mainSection__subSection {
   top: 0;
   right: 0;
   width: 80%;
+  max-width: 320px;
   max-height: 100%;
   flex-direction: column;
   overflow: scroll;
@@ -469,6 +473,7 @@ main, .mainSection, .mainSection__subSection {
   background: var(--gray04);
   outline: none;
   border-top: 1px solid var(--gray06);
+  text-shadow: .1rem .1rem .1rem var(--black);
 }
 .methodCard__button:hover{
   cursor: pointer;
@@ -562,7 +567,6 @@ main, .mainSection, .mainSection__subSection {
     max-width: 480px;
     margin: 2rem auto 0;
 }
-
 .mainSectionCard{
     overflow: hidden;
 }
@@ -707,13 +711,15 @@ main, .mainSection, .mainSection__subSection {
   width: 150px;
   font-size: 1.2rem;
   font-family: aladin;
+  color: var(--white);
+  text-shadow: .1rem .1rem var(--black);
   background: linear-gradient(var(--purple), var(--black));
   border-radius: .4rem 0;
   overflow: hidden;
 }
 .courseCard__button:hover{
   cursor: pointer;
-  box-shadow: .2rem .2rem .2rem var(--black);
+  outline-color: var(--gray06);
 }
 /* End CoursesCards */
 
@@ -748,7 +754,7 @@ main, .mainSection, .mainSection__subSection {
 .resources__item:hover, .resources__item:hover *{
   color: var(--purple);
 }
-#btnShowCourseCards{
+.btnShowCourseCards{
   display: block;
   margin: 2rem auto 0;
   padding: .8rem;
@@ -759,11 +765,42 @@ main, .mainSection, .mainSection__subSection {
   border: .1em solid var(--gray02);
   background: linear-gradient( var(--gray04), var(--gray02) );
 }
-#btnShowCourseCards:hover{
+.btnShowCourseCards:hover{
   background: linear-gradient( var(--gray02), var(--black) );
   text-shadow: 0 0 .2em var(--purple);
 }
 /* End Course subSection */
 
+/* Module subSection */
+.module__controls{
+  display: flex;
+  justify-content: space-evenly;
+}
+.module__controls-control{
+  margin: .4rem 0;
+}
+.module__header{
+  width: 100%
+}
+.module__header-title{
+  font-family: aladin;
+  font-size: 2rem;
+  text-shadow: .2rem .2rem var(--black);
+}
+.module__contentList-item{
+  padding: .2rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.module__contentList-item span{
+  margin: 0 1rem;
+}
+.module__contentList-item:hover, .module__contentList-item:hover *{
+  color: var(--purple);
+  cursor: pointer;
+}
+/* End Module subSection */
 
 /********* ********* Block Courses styles ********* *********/

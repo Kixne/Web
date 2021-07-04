@@ -1,7 +1,3 @@
-.nav{
-    width: 400px;
-}
-
 .kxWelcome__text{
     margin-top: 6rem;
     font-size: 6rem;
@@ -15,10 +11,6 @@
 
 
 /* Home */
-.main__mainSection:nth-child(1){
-    width: 100%;
-}
-
-.mainSectionCards-container{
+.container-mainSectionCards{
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }

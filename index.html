@@ -29,8 +29,8 @@
         <link rel="stylesheet" href="./Styles/SharedStyles.css">
         
         <!-- Responsive stylesheets-->
-        <link type="text/css" rel="stylesheet" media="screen and (min-width: 670px)" href="./Styles/Styles683px.css">
-        <link type="text/css" rel="stylesheet" media="screen and (min-width: 1350px)" href="./Styles/Styles1366px.css">
+        <link type="text/css" rel="stylesheet" media="screen and (min-width: 669px) and (max-width: 1353px)" href="./Styles/Styles683px.css">
+        <link type="text/css" rel="stylesheet" media="screen and (min-width: 1354px)" href="./Styles/Styles1366px.css">
     </head>
 
     <body>
@@ -51,7 +51,7 @@
                 <span class="Kx-icon Kx-menu"></span>
             </button>
             <button class="Kx-button header__button">
-                Langs
+                Languages
                 <span class="Kx-icon Kx-languages"></span>
             </button>
             
@@ -89,8 +89,8 @@
                             </a>
                         </li>
                         <lspan class="langsList-item">
-                            <a href="https://kixne.github.io/web/spanish" title="Go to https://kixne.github.io/web/spanish">
-                                Spanish (es)<br>(right now dont work)
+                            <a class="nav__item" href="https://kixne.github.io/web/spanish" title="Go to Kixne web in spanish (https://kixne.github.io/web/spanish)">
+                                Spanish (es)
                             </a>
                         </li>
                     </ul>
@@ -120,15 +120,11 @@
                 </header>
         
                 <span class="nav__item" onclick="alert('You chose the current language.');">
-                    <span class="Kx-icon Kx-languages"></span>English
+                    <span class="Kx-icon Kx-languages"></span>English (en)
                 </span>
         
-                <a href="#" class="nav__item">
-                    <span class="Kx-icon Kx-languages"></span>Spanish<br>(right now dont work)
-                </a>
-        
-                <a href="#" class="nav__item">
-                    <span class="Kx-icon Kx-languages"></span>Japanese<br>(right now dont work)
+                <a class="nav__item" href="https://kixne.github.io/web/spanish" title="Go to Kixne web in spanish (https://kixne.github.io/web/spanish)">
+                    <span class="Kx-icon Kx-languages"></span>Spanish (es)
                 </a>
         
                 <span class="btnMenuClose">
@@ -141,10 +137,8 @@
         <div id="margin"></div>
         <!-- End Header -->
 
-
         <main class="main">
             
-            <div class="testingcontainer"></div>
             <!-- mainSection Home -->
             <section class="mainSection display-y">
                 <!-- KxWelcome / banner -->
@@ -438,7 +432,7 @@
                             <div class="courseCard__body">
                                 <div class="courseCard__body-lastUpdate">
                                     Last update
-                                    <span>21.06</span>
+                                    <span>##.##.##</span>
                                 </div>
                                 <h2 class="courseCard__body-title">
                                     Web anatomy: CSS3 course from scratch
@@ -464,7 +458,7 @@
                             <div class="courseCard__body">
                                 <div class="courseCard__body-lastUpdate">
                                     Last update
-                                    <span>21.06</span>
+                                    <span>##.##.##</span>
                                 </div>
                                 <h2 class="courseCard__body-title">
                                     Git course from scratch
@@ -490,7 +484,7 @@
                             <div class="courseCard__body">
                                 <div class="courseCard__body-lastUpdate">
                                     Last update
-                                    <span>21.06</span>
+                                    <span>##.##.##</span>
                                 </div>
                                 <h2 class="courseCard__body-title">
                                     GitHub & GitHub Pages course from scratch
@@ -506,28 +500,28 @@
                     </div>
                 </section>
 
-                <!-- Template Course section -->
+                <!-- Template SubSection Course -->
                 <template id="template-subSection__course">
                     <img loading="lazy">
                     <header class="course__header">
                         <h2 class="course__header-title"></h2>
                     </header>
-                    <p class="course__description"></p>
+                    <p class="course__description text"></p>
                     <ul class="list genericElement box">
                         <header class="box__header">
                             Course data
                         </header>
                         <li>
-                            Last version
+                            Release
                             <span class="Kx-icon Kx-version"></span>
                         </li>
                         <li>
-                            Total duration
-                            <span class="Kx-icon Kx-clock"></span>
+                            Last update
+                            <span class="Kx-icon Kx-version"></span>
                         </li>
                         <li>
                             Quality
-                            <span class="Kx-icon Kx-star"></span>
+                            <span class="Kx-icon Kx-clock"></span>
                         </li>
                     </ul>
                     
@@ -575,16 +569,72 @@
                         </ul>
                     </div>
             
-                    <button id="btnShowCourseCards">Return to courses</button>
+                    <button class="btnShowCourseCards">Return to courses</button>
                 </template>
 
-                <!-- Course section -->
+                <!-- SubSection Course -->
                 <section class="mainSection__subSection display-n">
                 </section>
                 
-                <!-- Template Module section -->
+                <!-- Template SubSection Module -->
+    <template id="template-subSection__module">
+        <div class="container-video">
+            <iframe id="" class="container-video__video"></iframe>
+        </div>
+        <div class="module__controls">
+            <button class="module__controls-control Kx-button">
+                <span class="Kx-icon Kx-arrow-rewind"></span>Prev
+            </button>
+            <button class="module__controls-control Kx-button">
+                <span class="Kx-icon Kx-menu"></span>
+                Modules
+                <span class="Kx-icon Kx-menu"></span>
+            </button>
+            <button class="module__controls-control Kx-button">
+                Next<span class="Kx-icon Kx-arrow-forward"></span>
+            </button>
+        </div>
+        <header class="module__header">
+            <h2 class="module__header-title">somesome</h2>
+        </header>
+        <p class="module__description text">somesomesomesomesomesomesomesome</p>
 
-                <!-- Module section -->
+        
+        <div class="container-genericElement">
+            <!-- Module "meta" data -->
+            <ul class="list genericElement box">
+                <header class="box__header">
+                    Module data
+                </header>
+                <li>
+                    Release
+                    <span class="Kx-icon Kx-version"></span>
+                </li>
+                <li>
+                    Last update
+                    <span class="Kx-icon Kx-version"></span>
+                </li>
+                <li>
+                    Duration
+                    <span class="Kx-icon Kx-clock"></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container-genericElement">
+            <!-- Module content -->
+            <ul class="list genericElement box">
+                <header class="box__header">
+                    Module content
+                </header>
+            </ul>
+        </div>
+
+        <button class="btnShowCourseCards">Return to courses</button>
+        
+    </template>
+
+                <!-- SubSection Module -->
                 <section class="mainSection__subSection display-n">
                 </section>
 
@@ -1247,7 +1297,7 @@
                                     <li>
                                         <div class="copyableElement-container">
                                             <span class="Kx-icon Kx-crypto-wallet copyableElement-fake">
-                                                Crypto Wallet
+                                                Coinbase Wallet
                                             </span>
                                             <input type="text" value="Kx.Donations@gmail.com" class="copyableElement display-n">
                                             <span class="Kx-icon Kx-copy button-copy">Copy</span>
@@ -1293,7 +1343,7 @@
                                     <li>
                                         <div class="copyableElement-container">
                                             <span class="Kx-icon Kx-crypto-wallet copyableElement-fake">
-                                                Crypto Wallet
+                                                Binance Wallet
                                             </span>
                                             <input type="text" value="bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23" class="copyableElement display-n">
                                             <span class="Kx-icon Kx-copy button-copy">Copy</span>
@@ -1491,5 +1541,8 @@
 
         <script src="./Scripts/SharedScripts.js"></script>
         <script src="./Scripts/CoursesDataEn.js"></script>
+
+        <!-- YouTube player API temporarily disabled -->
+        <!-- <script src="https://www.youtube.com/player_api"></script> -->
     </body>
 </html>

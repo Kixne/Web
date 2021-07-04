@@ -120,6 +120,11 @@ function SwitchToCourseSubSection(subSectionIndex){
     ShowHideSpiner(false);
 }
 
+/* Function Switch to module */
+function SwitchToModule(moduleIndex){
+    alert("Switching to module " +moduleIndex);
+}
+
 /* Function Setting onclick show/hide methods details */
 function SetShowHideMethodDetails(){
     let $methodCardButtons= document.querySelectorAll(".methodCard__button");
@@ -214,12 +219,6 @@ function CreateSrcOrSrcSet(mainSectionIndex, dirName, type){
     return value;
 }
 
-/* Function switch to mainSection X */
-
-
-
-var currentCourse= -1,
-    currentCourseModule= -1;
 
 /********* ********* End Block basics ********* *********/
 
@@ -279,9 +278,6 @@ $navLinks[5].onclick = function(){
     SwitchToMainSection(4);
 };
 
-
-
-
 /* Setting onclick btnMenuClose */
 for (let x= 0; x<2; x++) {
     document.querySelectorAll(".btnMenuClose")[x].onclick= function(){
@@ -300,7 +296,10 @@ for (let x= 0; x<2; x++) {
 
 /********* ********* Block courses ********* *********/
 
-/* Function Create course section */
+var currentCourse= -1,
+    currentModule= -1;
+
+/* Function Create course subSection */
 function CreateCourseSubSection(courseIndex){
     if( currentCourse!= courseIndex){
         currentCourse= courseIndex;
@@ -326,7 +325,7 @@ function CreateCourseSubSection(courseIndex){
         $cloned.querySelector(".course__description").textContent= courseData.descriptionCourse;
         
         /* Setting course "meta" data */
-        $cloned.querySelectorAll(".Kx-icon")[0].textContent= courseData.release;
+        $cloned.querySelector(".Kx-icon").textContent= courseData.release;
         $cloned.querySelectorAll(".Kx-icon")[1].textContent= courseData.lastUpdate;
         $cloned.querySelectorAll(".Kx-icon")[2].textContent= courseData.quality;
         
@@ -389,7 +388,8 @@ function CreateCourseSubSection(courseIndex){
                 $span= document.createElement("span");
 
             $item.onclick= function(){
-                alert("Hello " +i);
+                CreateModuleSubSection(i);
+                SwitchToCourseSubSection(2);
             };
             $item.classList.add("course__modulesList-item");
             $item.textContent= $element.title;
@@ -411,13 +411,92 @@ function CreateCourseSubSection(courseIndex){
         $resources[2].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf");
 
         /* Setting return to courses button onclick */
-        $cloned.getElementById("btnShowCourseCards").onclick= function(){
+        $cloned.querySelector(".btnShowCourseCards").onclick= function(){
             SwitchToCourseSubSection(0);
         }
     
         /* Adding the content to the document */
         $fragment.appendChild($cloned);
+        $courseSubSection.innerHTML="";
         $courseSubSection.appendChild($fragment);
+    }
+}
+
+/* Function Create module subSection */
+function CreateModuleSubSection(moduleIndex){
+    if(currentModule!=moduleIndex){
+        currentModule= moduleIndex;
+        let moduleData= CoursesData[currentCourse].modules[moduleIndex];
+/*         let moduleData= CoursesData[currentCourse].modules[moduleIndex]; */
+
+        /* Making the necesary elements to create the content */
+        let $moduleSubSection= document.querySelectorAll(".mainSection__subSection")[2],
+        $template= document.getElementById("template-subSection__module").content,
+        $fragment= document.createDocumentFragment(),
+        $cloned= document.importNode($template, true);
+
+        /* Setting video data */
+        $cloned.querySelector(".container-video__video").setAttribute("src", "https://www.youtube.com/embed/" +moduleData.urlId +"?enablejsapi=1&html5=1");
+        
+        /* Setting onclick module controller buttons */
+        $cloned.querySelector(".module__controls-control").onclick= function(){
+            if(currentModule>0){
+                SwitchModule(currentModule-1);
+            }
+            else{
+                alert("No more previous modules")
+            }
+        }
+        $cloned.querySelectorAll(".module__controls-control")[1].onclick= function(){
+            SwitchToCourseSubSection(1);
+        }
+        $cloned.querySelectorAll(".module__controls-control")[2].onclick= function(){
+            if(currentModule+1< CoursesData[currentCourse].modules.length){
+                SwitchModule(currentModule+1);
+            }
+            else{
+                alert("No more modules")
+            }
+        }
+        
+        /* Setting header data */
+        $cloned.querySelector(".module__header-title").textContent= moduleData.title;
+        
+        /* Setting description pharraph data */
+        $cloned.querySelector(".module__description").textContent= moduleData.description;
+
+        /* Setting module "meta" data */
+        $cloned.querySelector(".list").querySelector(".Kx-icon").textContent= moduleData.release;
+        $cloned.querySelector(".list").querySelectorAll(".Kx-icon")[1].textContent= moduleData.lastUpdate;
+        $cloned.querySelector(".list").querySelectorAll(".Kx-icon")[2].textContent= moduleData.duration;
+
+        /* Setting module content data */
+        let $contentList= $cloned.querySelectorAll(".container-genericElement")[1].querySelector("ul");
+        for (let i= 0; i< moduleData.content.length; i++) {
+            let $element= moduleData.content[i],
+                $item= document.createElement("li"),
+                $span= document.createElement("span");
+
+            $item.onclick= function(){
+                alert("This button should position the module at " +$element.time)
+            };
+            $item.classList.add("module__contentList-item");
+            $item.textContent= $element.title;
+            $span.classList.add("Kx-icon", "Kx-clock");
+            $span.textContent= $element.time;
+            $item.appendChild($span);
+            $contentList.appendChild($item);
+        }
+
+        /* Setting return to courses button onclick */
+        $cloned.querySelector(".btnShowCourseCards").onclick= function(){
+            SwitchToCourseSubSection(0);
+        }
+    
+        /* Adding the content to the document */
+        $fragment.appendChild($cloned);
+        $moduleSubSection.innerHTML="";
+        $moduleSubSection.appendChild($fragment);
     }
 }
 

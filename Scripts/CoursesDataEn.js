@@ -8,7 +8,6 @@ const CoursesData= [
 
         descriptionCard: "Let's make our ideas come true, learning to create the structure of all our HTML projects and applications.",
         descriptionCourse: "HTML & HTML5 course. Let's make our ideas come true, learning the semantic, the sintactic, the correct use and their correct combinations to create the structure of all our HTML projects and applications.",
-        imageSrc: "../Sources/Images/MainSection_Courses/HTML/HTML0320px.webp",
         imageAlt: "Web anatomy: HTML5 course image",
         imageTitle: "Web anatomy: HTML5 course",
         imageSection: "1",
@@ -37,12 +36,20 @@ const CoursesData= [
 
         modules: [
             {
-                title: "Introduction to HTML",
+                title: "Introduction to HTML course",
                 description: "Sample text for module description",
+                release: "##.##.##",
+                lastUpdate: "##.##.##",
                 duration: "00:00",
                 urlId: "exampleYoutubeUrlId",
-                moduleCopyLink: "sample url"
+                moduleCopyLink: "sample url",
+                content: [
+                    {
+                        title: "sampleText",
+                        time: "##:##",
+                    }
+                ]
             }
         ]
-    }
+    },
 ];

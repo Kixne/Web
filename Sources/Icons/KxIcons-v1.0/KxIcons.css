@@ -36,6 +36,12 @@
 .Kx-arrow-up:before {
   content: "\e903";
 }
+.Kx-arrow-forward:before {
+  content: "\e908";
+}
+.Kx-arrow-rewind:before {
+  content: "\e909";
+}
 .Kx-bash:before {
   content: "\e904";
 }
@@ -47,12 +53,6 @@
 }
 .Kx-bug-fixing:before {
   content: "\e907";
-}
-.Kx-button-forward:before {
-  content: "\e908";
-}
-.Kx-button-rewind:before {
-  content: "\e909";
 }
 .Kx-cancel:before {
   content: "\e90a";
