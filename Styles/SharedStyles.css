@@ -46,6 +46,10 @@ body {
   font-size: 16px;
   background: var(--gray01);
 }
+a{
+  padding: .4rem;
+  padding-left: 0;
+}
 a, a * {
   display: inline-block;
   color: var(--purple);
@@ -773,6 +777,8 @@ main, .mainSection, .mainSection__subSection {
 
 /* Module subSection */
 .module__controls{
+  width: 100%;
+  max-width: 683px;
   display: flex;
   justify-content: space-evenly;
 }
