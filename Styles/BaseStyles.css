@@ -1,0 +1,152 @@
+/********* ********* Block spiner ********* *********/
+.container-spiner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.spiner {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 0.8rem solid #222;
+  border-left: 0.8em solid #6400cc;
+}
+.spin{
+  /* Remove this class when discover how to set animation-name with JS */
+  animation: Spin 0.15s linear infinite;
+}
+@keyframes Spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/********* ********* End Block spiner ********* *********/
+
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--headerHeight);
+  background-color: #000;
+  border-bottom: 1px solid var(--purple);
+}
+.margin2header{
+  height: var(--headerHeight);
+}
+
+/* Logo styles */
+.header__logo{
+  display: flex;
+  align-items: center;
+}
+.header__logo:hover *{
+  text-shadow: 0.1rem 0.1rem 0.1rem var(--purple);
+}
+.header__logo-image{
+  margin: 0 .2rem;
+  border-radius: 20% 0;
+}
+.header__logo-text{
+  font-family: aladin;
+  font-size: 1.5rem;
+}
+/* End Logo styles */
+
+.menuButton{
+  margin-right: .2rem;
+  font-family: aladin;
+  font-size: 1.1rem;
+  color: #666;
+  background: #000;
+}
+.menuButton:hover{
+  color: #fff;
+  outline-color: #fff;
+  cursor: pointer;
+}
+.nav{
+  z-index: 999;
+  max-height: 100vh;
+  background-color: #000;
+}
+.nav__item{
+  padding: .4rem;
+  color: #666;
+  background: #000;
+  outline: none;
+}
+.nav__item:nth-child(5){
+  /* languages selector */
+  position: relative;
+}
+.nav__item:hover{
+  color: #fff;
+  background: radial-gradient(#222, #000);
+  cursor: pointer;
+}
+.languages{
+  margin-top: .4rem;
+  position: static;
+  width: 100%;
+  flex-direction: column;
+}
+.language__item{
+  display: block;
+  padding: .4rem;
+  color: #666;
+}
+.language__item:hover{
+  color: #fff;
+  background: radial-gradient(#222, #000);
+}
+
+
+.welcomeBanner{
+  position: relative;
+  margin: 0 auto;
+  background-image: linear-gradient( var(--purple), 20%, #000);
+}
+.welcomeBanner__container{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  text-align: center;
+}
+.welcomeBanner__container-text1{
+  display: block;
+  font-family: aladin;
+  font-size: 2rem;
+}
+.welcomeBanner__container-text2{
+  display: block;
+  font-size: .5em;
+}
+
+
+.footer{
+  margin-top: 1rem;
+  padding: .4rem;
+  text-align: center;
+  font-size: .8rem;
+  border-top: 1px solid var(--purple);
+  background-color: #000;
+}
+.footer em{
+  font-family: aladin;
+  font-size: 1.2rem;
+}

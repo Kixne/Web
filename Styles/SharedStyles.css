@@ -1,221 +1,10 @@
-/********* ********* Variables ********* *********/
-:root {
-  --purple: #6400cc;
-
-  --white: #fff;
-  --black: #000;
-
-  --gray01: #111;
-  --gray02: #222;
-  --gray04: #444;
-  --gray06: #666;
-
-  --magenta: #f0f;
-  --cyan: #0ff;
-}
-/********* ********* End Variables ********* *********/
-
-
-/********* ********* Importing fonts ********* *********/
-@font-face {
-  font-family: "nunito";
-  src: url(../Sources/Fonts/Nunito-Regular.ttf);
-}
-@font-face {
-  font-family: "aladin";
-  src: url(../Sources/Fonts/Aladin-Regular.ttf);
-}
-/********* End Importing fonts *********/
-
-
-/********* ********* Reseting styles ********* *********/
-body,
-body * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  max-width: 100%;
-  font-size: 1rem;
-  font-family: nunito;
-  text-decoration: none;
-  color: var(--white);
-}
-body {
-  max-width: 1366px;
-  margin: 0 auto;
-  font-size: 16px;
-  background: var(--gray01);
-}
-a{
-  padding: .4rem;
-  padding-left: 0;
-}
-a, a * {
-  display: inline-block;
-  color: var(--purple);
-  text-shadow: .1rem .1rem .1rem var(--black);
-}
-span {
-  display: inline-block;
-}
-.Kx-icon {
-  margin: 0 0.2rem;
-}
-em {
-  font-style: normal;
-}
-button{
-    border: none;
-    background: none;
-    outline: 1px solid var(--gray02);
-}
-iframe{
-  border: none;
-}
-/********* ********* End Reseting styles ********* *********/
-
-
-/********* ********* Block modifiers ********* *********/
-
-.display-y {
-  display: flex;
-}
-.display-n {
-  display: none;
-}
-
-.Kx-button {
-  padding: 0.6rem;
-  border-radius: 0.8rem 0;
-  outline: 1px solid var(--gray04);
-  background: #111;
-  background: radial-gradient(var(--gray02), var(--black));
-}
-.Kx-button, .Kx-button span {
-  color: var(--gray06);
-}
-.Kx-button:hover {
-  outline-color: var(--purple);
-  background: radial-gradient(var(--purple), var(--black));
-  cursor: pointer;
-}
-.Kx-button:hover, .Kx-button:hover span {
-  color: var(--white);
-}
-
-.container-video {
-  position: relative;
-  height: 0;
-  width: 100%;
-  max-width: 683px;
-  padding-bottom: 56.25%;
-  outline: 1px solid var(--black);
-  box-shadow: .0rem .0rem .8rem var(--black), .0rem .0rem .4rem var(--black);
-  margin: 0rem auto;
-}
-@media screen and (min-width: 683px) {
-  /* Media activated when .videoContainer reach his max-width */
-  .container-video {
-    padding-bottom: 384px;
-  }
-}
-.container-video__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.container-genericElement{
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
-}
-.genericElement{
-  width: 46%;
-  min-width: 312px; /* 312px +8px (margin)= 320px */
-  max-width: 480px;
-  flex-grow: 1;
-  margin: 1rem 4px 0;
-}
-
-.box{
-  padding: .4rem;
-  border-radius: 1rem 0;
-  overflow: hidden;
-  outline: 1px solid var(--gray04);
-  box-shadow: .2rem .2rem .4rem var(--black);
-  background-image: linear-gradient(90deg, var(--black), var(--gray01));
-}
-.box__header{
-  font-family: aladin;
-  font-size: 1.6rem;
-  text-shadow: .1rem .1rem .2rem var(--purple);
-}
-.box__header span{
-  font-size: 1.2rem;
-}
-
-.list li{
-  margin-left: 1.4rem;
-}
-.list-h li{
-  margin-left: 1.4rem;
-  list-style: none;
-}
-.subList li{
-  margin-left: 0.8rem;
-}
-.subList-h li{
-  margin-left: 0.8rem;
-  list-style: none;
-}
-.list__header {
-  font-size: 2rem;
-  font-family: aladin;
-}
-.text{
-  padding: 0 .8rem;
-}
-
-.copyableElement-container{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.copyableElement-fake{
-  width: 25%;
-  flex-grow: 1;
-  font-size: 1rem;
-  border: none;
-}
-.button-copy{
-  cursor: pointer;
-  padding: .4rem;
-  padding-left: 0;
-  border-bottom: 1px solid transparent;
-}
-.button-copy:hover{
-  border-color: var(--white);
-}
-/********* ********* End Block modifiers ********* *********/
-
-
-
-
-
 /********* ********* Block spiner ********* *********/
 
 .container-spiner {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000;
+  z-index: 1000;
   height: 100%;
   width: 100%;
   justify-content: center;
@@ -313,7 +102,7 @@ main, .mainSection, .mainSection__subSection {
 /********* ********* Block template styles ********* *********/
 
 /* Header */
-.header {
+/* .header {
   position: fixed;
   z-index: 9997;
   display: flex;
@@ -323,7 +112,7 @@ main, .mainSection, .mainSection__subSection {
   padding: 0.4rem 0.8rem;
   outline: 1px solid var(--purple);
   background-color: var(--black);
-}
+} */
 .header__logo {
   display: flex;
   align-items: center;
@@ -534,7 +323,7 @@ main, .mainSection, .mainSection__subSection {
 }
 .kxWelcome__text {
     position: absolute;
-    margin-top: 8%;
+    margin-top: 20%;
     font-size: 2rem;
     font-family: aladin;
     text-align: center;

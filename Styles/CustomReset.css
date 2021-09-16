@@ -1,0 +1,107 @@
+/********* ********* Variables ********* *********/
+:root {
+  --purple: #6400cc;
+
+  --headerHeight: 2rem;
+  --themeBackground: #111;
+}
+/********* ********* End Variables ********* *********/
+
+
+/********* ********* Importing fonts ********* *********/
+@font-face {
+  font-family: "nunito";
+  src: url(../Sources/Fonts/Nunito-Regular.ttf);
+}
+@font-face {
+  font-family: "aladin";
+  src: url(../Sources/Fonts/Aladin-Regular.ttf);
+}
+/********* End Importing fonts *********/
+
+
+/********* ********* Reseting styles ********* *********/
+body, body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: 1rem;
+  font-family: nunito;
+  text-decoration: none;
+  color: #fff;
+}
+body {
+  font-size: 16px;
+  background: #111;
+}
+.main{
+  max-width: 1366px;
+  margin: auto;
+}
+em {
+  font-style: normal;
+}
+button{
+  align-items: center;
+  border: none;
+  background: none;
+  outline: 1px solid #222;
+  border-radius: .2rem 0;
+  padding: .2rem;
+  background: radial-gradient(#222, #000)
+}
+iframe{
+  border: none;
+}
+/********* ********* End Reseting styles ********* *********/
+
+
+/********* ********* Block modifiers ********* *********/
+
+.display-y {
+  display: flex;
+}
+.display-yi {
+  display: inline-flex;
+}
+.display-n {
+  display: none;
+}
+.Kx-icon{
+  margin: 0 .2rem;
+  color: inherit;
+}
+/* .container-video {
+  position: relative;
+  height: 0;
+  width: 100%;
+  max-width: 683px;
+  padding-bottom: 56.25%;
+  outline: 1px solid var(--black);
+  box-shadow: .0rem .0rem .8rem var(--black), .0rem .0rem .4rem var(--black);
+  margin: 0rem auto;
+}
+@media screen and (min-width: 683px) {
+  .container-video {
+    padding-bottom: 384px;
+  }
+}
+.container-video__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+} */
+
+/********* ********* End Block modifiers ********* *********/
+
+
+/********* ********* Main styles ********* *********/
+.mainSection{
+  flex-direction: column;
+  border: 1px dashed cyan;
+  min-height: 200px;
+}
+/********* ********* End Main styles ********* *********/
