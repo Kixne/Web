@@ -33,7 +33,7 @@ body, body * {
 }
 body {
   font-size: 16px;
-  background: #111;
+  background: #000;
 }
 .main{
   max-width: 1366px;
@@ -50,6 +50,9 @@ button{
   border-radius: .2rem 0;
   padding: .2rem;
   background: radial-gradient(#222, #000)
+}
+button:hover{
+  cursor: pointer;
 }
 iframe{
   border: none;
@@ -96,12 +99,3 @@ iframe{
 } */
 
 /********* ********* End Block modifiers ********* *********/
-
-
-/********* ********* Main styles ********* *********/
-.mainSection{
-  flex-direction: column;
-  border: 1px dashed cyan;
-  min-height: 200px;
-}
-/********* ********* End Main styles ********* *********/

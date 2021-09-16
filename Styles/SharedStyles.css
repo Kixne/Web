@@ -101,129 +101,6 @@ main, .mainSection, .mainSection__subSection {
 
 /********* ********* Block template styles ********* *********/
 
-/* Header */
-/* .header {
-  position: fixed;
-  z-index: 9997;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0.4rem 0.8rem;
-  outline: 1px solid var(--purple);
-  background-color: var(--black);
-} */
-.header__logo {
-  display: flex;
-  align-items: center;
-}
-.header__logo:hover *{
-  text-shadow: 0.1rem 0.1rem 0.1rem var(--purple);
-}
-.header__logo-image {
-  margin-right: 0.4rem;
-  border-radius: 20% 0;
-  outline: 0.1em solid var(--gray06);
-}
-.header__logo-text {
-  font-family: aladin;
-  font-size: 2rem;
-  color: var(--white);
-}
-#margin {
-  height: 3.4rem;
-}
-/* End Header */
-
-/* Nav */
-.nav{
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  right: 0;
-  width: 80%;
-  max-width: 320px;
-  max-height: 100%;
-  flex-direction: column;
-  overflow: scroll;
-  color: var(--white);
-  background: var(--gray01);
-  border-left: .1em solid var(--gray06);
-}
-.nav__header{
-  display: flex;
-  justify-content: flex-end;
-  border-bottom: 1px solid var(--gray02);
-  background-color: var(--black);
-}
-.nav__header:hover{
-  background: linear-gradient( var(--gray02), var(--black));
-}
-.nav__header-text{
-  padding: .4rem 1rem;
-  font-family: aladin;
-}
-.nav__header-text, .nav__header-text span{
-  font-size: 2rem;
-  color: var(--gray06);
-}
-.nav__header-text:hover, .nav__header-text:hover span{
-  color: var(--white);
-  cursor: pointer;
-}
-
-.nav__item{
-  display: flex;
-  padding: 1rem;
-  padding-left: 1.6rem;
-  cursor: pointer;
-}
-.nav__item, .nav__item span{
-  color: var(--gray06);
-}
-.nav__item:hover, .nav__item:hover span{
-  color: var(--white);
-  background: var(--black);
-}
-
-.navLinkLangs .arrow{
-  position: absolute;
-  right: 0;
-  margin-right: 10%;
-}
-
-.langsList{
-  width: 100%;
-  list-style: none;
-}
-.langsList-item a{
-  width: 100%;
-  padding: 1em 1em 1em 3em;
-  color: var(--gray06);
-}
-.langsList-item:hover, .langsList-item:hover a{
-  color: var(--white);
-  background: var(--black);
-}
-
-.btnMenuClose{
-  display: flex;
-  justify-content: center;
-  padding: .4rem;
-  font-family: aladin;
-  font-size: 1.6rem;
-  color: var(--gray06); 
-  border-top: 1px solid var(--gray02);
-  background: var(--black);
-}
-.btnMenuClose:hover{
-  background: linear-gradient( var(--gray01), var(--black));
-  cursor: pointer;
-  color: var(--white);
-}
-/* End Nav */
-
-
 /* main styles are on main structure and their respective code blocks */
 
 /* MethodCard */
@@ -310,87 +187,42 @@ main, .mainSection, .mainSection__subSection {
 
 /********* ********* End Block Home styles ********* *********/
 
-/* KxWelcome styles */
-#kxWelcome {
-    position: relative;
-    justify-content: center;
-    cursor: default;
-    overflow: hidden;
-    background-image: linear-gradient(var(--purple), var(--black));
-}
-.kxWelcome__image {
-    width: 100%;
-}
-.kxWelcome__text {
-    position: absolute;
-    margin-top: 20%;
-    font-size: 2rem;
-    font-family: aladin;
-    text-align: center;
-    text-shadow: 0 0 0.1rem var(--black), 0 0 0.4rem var(--magenta),
-    0 0 0.2rem var(--cyan);
-}
-.kxWelcome__text-tagLine {
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 0.8rem;
-}
-.kxWelcome__ground {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 1.6rem;
-    border-top: 1px solid var(--gray04);
-    border-radius: 100% 100% 0 0;
-    background: linear-gradient(var(--black), #111);
-}
-/* End KxWelcome styles */
 
-/* mainSectionCards */
-.container-mainSectionCards{
+/* sectionCards */
+.container-sectionCards{
     display: grid;
     grid-template-columns: 1fr;
     align-items: start;
-    width: 100%;
 }
-.container-mainSectionCard{
+.container-sectionCard{
     width: 85%;
     min-width: 300px;
     max-width: 480px;
     margin: 2rem auto 0;
 }
-.mainSectionCard{
+.sectionCard{
     overflow: hidden;
 }
-.mainSectionCard__img{
+.sectionCard__img{
     position: relative;
 }
-.mainSectionCard__title{
-    text-align: center;
-}
-.mainSectionCard__icon, .mainSectionCard__title-text{
+.sectionCard__icon, .sectionCard__title-text{
     font-size: 2rem;
 }
-.mainSectionCard__title-text{
+.sectionCard__title-text{
     font-family: aladin;
     margin: 0 .4rem;
 }
-.mainSectionCard .text{
-    text-align: center;
-}
-.mainSectionCard__button{
+.sectionCard__button{
     width: 100%;
     padding: .8rem;
     margin-top: .8rem;
-    text-align: center;
     font-size: 1.2rem;
-    color: var(--black);
-    background: linear-gradient( 90deg, var(--gray04) , var(--white));
+    color: #000;
     border: none;
     border-top: .1rem solid var(--purple);
 }
-.mainSectionCard__button:hover{
+.sectionCard__button:hover{
     background: linear-gradient( 90deg, var(--black) , var(--gray02));
     border-top: .1rem solid var(--gray06);
     color: var(--white);
@@ -420,7 +252,7 @@ main, .mainSection, .mainSection__subSection {
     /* animatedBorder::after acts like solid border */
     filter: blur(.4rem);
 }
-.mainSectionCard, .animatedBorder, .animatedBorder:before, .animatedBorder:after{
+.sectionCard, .animatedBorder, .animatedBorder:before, .animatedBorder:after{
     border-radius: 2rem 0;
 }
 @keyframes BorderAnimation{
@@ -431,7 +263,7 @@ main, .mainSection, .mainSection__subSection {
         background-position-x: 300%;
     }
 }
-/* End mainSectionCards */
+/* End sectionCards */
 
 /********* ********* Block Home styles ********* *********/
 

@@ -25,3 +25,27 @@
   margin-top: 0;
   background: inherit;
 }
+
+@media screen and (min-width: 960px) {
+  .welcomeBanner__container-text1{
+    font-size: 5rem;
+  }
+  .container-sectionCards{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1064px) {
+  .welcomeBanner__container-text1{
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .welcomeBanner__container-text1{
+    font-size: 7rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container-sectionCards{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

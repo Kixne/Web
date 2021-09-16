@@ -98,4 +98,13 @@ let $menuButton= document.querySelectorAll(".menuButton");
   function SwitchToMainSection(sectionIndex){
     console.log("Section " +sectionIndex);
   }
+
+  let $sectionCardButton= document.querySelector(".mainSection").querySelectorAll(".sectionCard__button");
+  for (let i = 0; i < 4; i++) {
+    $sectionCardButton[i].onclick= function(){
+      isHomeSection= false;
+      ShowMenuButton(isHomeSection);
+      SwitchToMainSection(i);
+    }
+  }
 }
