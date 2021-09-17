@@ -54,7 +54,7 @@
   align-items: center;
 }
 .header__logo:hover *{
-  text-shadow: 0.1rem 0.1rem 0.1rem var(--purple);
+  text-shadow: 0.1em 0.1em 0.1em var(--purple);
 }
 .header__logo-image{
   margin: 0 .2rem;
