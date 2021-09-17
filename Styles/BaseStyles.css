@@ -208,11 +208,18 @@
   width: calc(100% -.6rem);
   min-width: 316px;
   max-width: 480px;
-
 }
 .sectionCard{
+  margin-top: 1rem;
   text-align: center;
   overflow: hidden;
+}
+.sectionCard__icon, .sectionCard__title-text{
+  font-size: 2rem;
+}
+.sectionCard__title-text{
+  font-family: aladin;
+  margin: 0 .4rem;
 }
 .sectionCard__button{
   width: 100%;
@@ -225,15 +232,7 @@
   background: #000;
 }
 .sectionCard__button:hover{
-  border-color: var(--purple);
-  text-shadow: 0 0 1rem var(--purple);
-}
-.sectionCard__icon, .sectionCard__title-text{
-  font-size: 2rem;
-}
-.sectionCard__title-text{
-  font-family: aladin;
-  margin: 0 .4rem;
+  text-shadow: 0 0 1rem var(--purple), 0 0 1rem var(--purple);
 }
 
 

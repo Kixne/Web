@@ -96,15 +96,30 @@ let $menuButton= document.querySelectorAll(".menuButton");
 
 /* Main sections scope */{
   function SwitchToMainSection(sectionIndex){
-    console.log("Section " +sectionIndex);
+    let $section= document.querySelectorAll(".mainSection");
+    for (let i = 0; i < $section.length; i++) {
+      if(i==sectionIndex){
+        $section[i].classList.replace("display-n", "display-y");
+      }
+      else{
+        $section[i].classList.replace("display-y", "display-n");
+      }
+    }
   }
 
+  /* secttionCard button onclick */
   let $sectionCardButton= document.querySelector(".mainSection").querySelectorAll(".sectionCard__button");
   for (let i = 0; i < 4; i++) {
     $sectionCardButton[i].onclick= function(){
       isHomeSection= false;
       ShowMenuButton(isHomeSection);
-      SwitchToMainSection(i);
+      SwitchToMainSection(i+1);
+      if($nav[0].classList.contains("display-y")){
+        $nav[0].classList.replace("display-y", "display-n");
+      }
     }
   }
 }
+
+
+console.log(document.documentElement.clientWidth);
