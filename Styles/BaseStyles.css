@@ -89,8 +89,8 @@
   background: #000;
   outline: none;
 }
+/* languages item selector */
 .nav__item:nth-child(5){
-  /* languages selector */
   position: relative;
 }
 .nav__item:nth-child(5)::selection{
@@ -119,44 +119,71 @@
 
 
 .welcomeBanner{
-  position: relative;
-  margin: 0 auto;
-  background-image: linear-gradient( var(--purple), 20%, #000);
+ position: relative;
+ margin: 0 auto;
+ background-image: linear-gradient( var(--purple), 20%, #000);
 }
-.welcomeBanner__container{
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  width: 80%;
-  text-align: center;
+.welcomeBanner__preContainer{
+ position: absolute;
+ top: 20%;
+ left: 10%;
+ width: 80%;
+ display: flex;
+ justify-content: center;
 }
-.welcomeBanner__container-text1{
-  display: block;
-  font-family: aladin;
-  font-size: 2rem;
+.container{
+ display: flex;
+ flex-direction: column;
+ font-size: 2rem;
 }
-.welcomeBanner__container-text2{
-  display: block;
-  font-size: .5em;
+.container .text{
+ z-index: 2;
+ position: relative;
+ text-align: center;
 }
-
-@media screen and (min-width: 1068px) {
-  .welcomeBanner__container-text1{
-    font-size: 6rem;
-  }
+.container .text:nth-child(1){
+ font-family: aladin;
+ font-size: 1em;
 }
-@media screen and (min-width: 1200px) {
-  .welcomeBanner__container-text1{
-    font-size: 7rem;
-  }
+.container .text:nth-child(2){
+ font-size: .5em;
 }
-
+.container .text__shadow{
+ font-size: inherit;
+ font-family: inherit;
+}
+.container .text__shadow::before{
+ z-index: -1;
+ position: absolute;
+ top: 0;
+ left: 0;
+ filter: blur(.2em);
+ background: linear-gradient(90deg, #0ff, #f0f);
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+}
+.container .text__shadow1::before{
+ content: "Develop the best version of yourself";
+}
+.container .text__shadow2::before{
+ content: "and become a technological specialist.";
+}
 
 
 /********* ********* Main styles ********* *********/
-.mainSection{
+.mainSection, .mainSection__subSection{
   flex-direction: column;
   min-height: 200px;
+}
+.mainSection__header {
+ padding: .8rem;
+ margin: 1rem auto 0;
+ font-family: aladin;
+ text-align: center;
+ border-radius: 1rem 0;
+ outline: .1rem solid var(--white);
+ background-image: radial-gradient(var(--white), var(--white), var(--gray06));
+ box-shadow: .2rem .2rem .4rem var(--black);
 }
 /********* ********* End Main styles ********* *********/
 
@@ -171,7 +198,7 @@
 .animatedBorder{
   position: relative;
   width: 100%;
-  background: linear-gradient( 90deg, #000, #222);
+  background: linear-gradient( 90deg, #000, #111);
 }
 .animatedBorder:before, .animatedBorder:after{
   content: '';
@@ -235,9 +262,139 @@
   text-shadow: 0 0 1rem var(--purple), 0 0 1rem var(--purple);
 }
 
+.container-coursesCards{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+}
+.courseCard{
+ display: flex;
+ margin-top: 1rem;
+ width: 312px;
+ max-width: 480px;
+ flex-grow: 1;
+ margin: 1rem 4px 0;
+ outline: 2px solid #222;
+ border-radius: 1rem 0;
+ overflow: hidden;
+}
+.courseCard:hover{
+ outline-color: #fff;
+}
+.courseCard__header{
+ min-width: 100px;
+ width: 100px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+ text-align: center;
+ background-color: #000;
+}
+.courseCard__header em{
+ font-size: .8rem;
+ color: #666;
+}
+.courseCard__header-title{
+ font-family: aladin;
+ font-size: 2rem;
+}
+.courseCard__header span{
+ font-size: 3rem;
+}
+.courseCard__body {
+ padding: .4rem;
+ display: flex;
+ flex-direction: column;
+ background-image: linear-gradient(#444, #111);
+}
+.courseCard__body-lastUpdate {
+ display: flex;
+ justify-content: flex-end;
+}
+.courseCard__body-lastUpdate span {
+ margin-left: .4rem;
+ color: #888;
+}
+.courseCard__body-title {
+ margin-top: 1rem;
+ font-family: aladin;
+ font-size: 1.6rem;
+ text-shadow: .2rem .2rem #000;
+}
+.courseCard__body-button {
+ align-self: end;
+ padding: .4rem;
+ margin: 1rem .4rem .2rem 0;
+ width: 150px;
+ font-size: 1.2rem;
+ font-family: aladin;
+ border-radius: .4rem 0;
+ overflow: hidden;
+ background: #111;
+ outline-color: #444;
+}
+.courseCard__body-button:hover {
+ outline-color: #fff;
+ background-color: #000;
+}
 
+.subSection__header{
+ margin-top: 1rem;
+ font-family: aladin;
+ font-size: 2rem;
+ text-align: center;
+ text-shadow: 0 0 .4em #6400cc, 0 0 .4em #6400cc;
+}
+.subSection__header span{
+ font-size: inherit;
+}
+.subSection__header p{
+ text-shadow: none;
+}
+
+/* course data */
+.course__header-title{
+ font-family: aladin;
+ font-size: 2rem;
+}
+.courseModules__module{
+ margin-top: .4rem;
+ margin-left: 1rem;
+ display: flex;
+}
+.courseModules__module:hover{
+ cursor: pointer;
+ background: linear-gradient(#111, #000);
+}
+.courseModules__module div{
+ flex-grow: 1;
+ display: flex;
+ padding: .4rem;
+ justify-content: space-between;
+ align-items: center;
+}
+.courseModules__module-image{
+ display: none;
+ margin-right: 1rem;
+ width: 200px;
+}
+.resourceItem{
+ padding: .2rem;
+ padding-left: 0;
+}
+.btnShowCourseCards{
+ align-self: center;
+ margin-top: 1rem;
+ padding: .4rem;
+ width: 80%;
+ max-width: 300px;
+}
+
+/* Footer */
 .footer{
   margin-top: 1rem;
+  max-height: 82px;
   padding: .4rem;
   text-align: center;
   font-size: .8rem;

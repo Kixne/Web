@@ -57,11 +57,17 @@ button:hover{
 iframe{
   border: none;
 }
+a{
+ display: inline-block;
+}
+a:hover{
+ color: #6400cc;
+ cursor: pointer;
+}
 /********* ********* End Reseting styles ********* *********/
 
 
 /********* ********* Block modifiers ********* *********/
-
 .display-y {
   display: flex;
 }
@@ -74,6 +80,21 @@ iframe{
 .Kx-icon{
   margin: 0 .2rem;
   color: inherit;
+}
+.list__header{
+ margin-top: 1rem;
+ font-family: aladin;
+ font-size: 1.6rem;
+}
+.list__header span{
+ font-size: 1em;
+}
+.list li{
+ margin-left: 1rem;
+}
+.list-h li{
+ margin-left: 1rem;
+ list-style: none;
 }
 /* .container-video {
   position: relative;
@@ -97,5 +118,4 @@ iframe{
   height: 100%;
   width: 100%;
 } */
-
 /********* ********* End Block modifiers ********* *********/

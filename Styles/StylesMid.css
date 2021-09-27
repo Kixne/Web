@@ -1,52 +1,81 @@
 :root{
-  --headerHeight: 3rem;
+ --headerHeight: 3rem;
 }
 
 .header__logo-image{
-  width: 40px;
-  height: 40px;
+ width: 40px;
+ height: 40px;
 }
 .header__logo-text{
-  font-size: 2.5rem;
+ font-size: 2.5rem;
 }
 .nav__item{
-  border: 1px solid transparent;
+ border: 1px solid transparent;
 }
 .nav__item:hover{
-  border-color: #666;
+ border-color: #666;
 }
 .nav__header, .nav__closeMenu{
-  display: none;
+ display: none;
 }
 
 .languages{
-  position: absolute;
-  top: 2.5rem;
-  left: -.2rem;
-  margin-top: 0;
-  background: inherit;
+ position: absolute;
+ top: 2.5rem;
+ left: -.2rem;
+ margin-top: 0;
+ background: inherit;
 }
 
 @media screen and (min-width: 960px) {
-  .welcomeBanner__container-text1{
-    font-size: 5rem;
-  }
-  .container-sectionCards{
-    grid-template-columns: 1fr 1fr;
-  }
+ .welcomeBanner__preContainer .container{
+  font-size: 6rem;
+ }
+ .container-sectionCards{
+  grid-template-columns: 1fr 1fr;
+ }
+ .main{
+  /* header +footer +foorerMargin */
+  min-height: calc(100vh - 146px);
+ }
+ .courseDataSection{
+  flex-direction: row;
+  flex-wrap: nowrap;
+ }
+ .courseDataSection .container{
+  width: 40%;
+  min-width: 360px;
+  max-width: 480px;
+ }
+ .courseModules{
+  padding: 0 .4rem;
+  border-left: 1px solid #222;
+  flex-grow: 1;
+  min-height: calc(100vh - 146px);
+ }
+ .courseModules__module{
+  border: #111 1px solid;
+ }
+ .courseModules__module-image{
+  display: block;
+ }
 }
 @media screen and (min-width: 1064px) {
-  .welcomeBanner__container-text1{
-    font-size: 6rem;
-  }
+ .welcomeBanner__preContainer .container{
+  font-size: 6.5rem;
+ }
 }
 @media screen and (min-width: 1200px) {
-  .welcomeBanner__container-text1{
-    font-size: 7rem;
-  }
+ .welcomeBanner__preContainer .container{
+  font-size: 7.5rem;
+ }
 }
 @media screen and (min-width: 1280px) {
-  .container-sectionCards{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+ .container-sectionCards{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+ }
+ .courseCard{
+  width: 412px;
+  flex-grow: 0;
+ }
 }

@@ -1,67 +1,75 @@
 .header__logo-image{
-  width: 24px;
-  height: 24px;
+ width: 24px;
+ height: 24px;
 }
 
 /* Menu styles */
 .nav{
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 150px;
-  flex-direction: column;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  border-left: 1px solid var(--purple);
+ position: fixed;
+ top: 0;
+ right: 0;
+ width: 172px;
+ flex-direction: column;
+ overflow-x: hidden;
+ overflow-y: scroll;
+ border-left: 1px solid var(--purple);
 }
 .nav__item{
-  text-align: left;
+ text-align: left;
 }
 /* End Menu styles */
 
 .nav__header{
-  padding: .2rem 1rem;
-  font-family: aladin;
-  font-size: 1.5rem;
-  text-align: center;
-  border-bottom: 1px solid #222;
+ padding: .2rem 1rem;
+ font-family: aladin;
+ font-size: 1.5rem;
+ text-align: center;
+ border-bottom: 1px solid #222;
 }
 .nav__header:hover{
-  background-image: radial-gradient(#222, #000);
-  cursor: pointer;
+ background-image: radial-gradient(#222, #000);
+ cursor: pointer;
 }
 .nav__closeMenu{
-  padding: .2rem;
-  text-align: center;
-  font-family: aladin;
-  font-size: 1.2rem;
-  border-top: 1px solid #222;
+ padding: .2rem;
+ text-align: center;
+ font-family: aladin;
+ font-size: 1.2rem;
+ border-top: 1px solid #222;
 }
 .nav__closeMenu:hover{
-  background-image: radial-gradient(#222, #000);
-  cursor: pointer;
+ background-image: radial-gradient(#222, #000);
+ cursor: pointer;
 }
 
 .mainSection{
-  flex-direction: column;
+ flex-direction: column;
+}
+
+
+.container-coursesModules{
+ margin-top: 1rem;
 }
 
 
 @media screen and (min-width: 480px) {
-  .welcomeBanner__container-text1{
-    font-size: 3rem;
-  }
+ .welcomeBanner__preContainer .container{
+  font-size: 3rem;
+ }
+}
+@media screen and (min-width: 600px) {
+ .welcomeBanner__preContainer .container{
+  font-size: 4rem;
+ }
+ .courseModules__module{
+  border: #111 1px solid;
+ }
+ .courseModules__module-image{
+  display: block;
+ }
 }
 @media screen and (min-width: 640px) {
-  .welcomeBanner__container-text1{
-    font-size: 3.5rem;
-  }
-  .container-sectionCards{
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (min-width: 683px) {
-  .welcomeBanner__container-text1{
-    font-size: 4rem;
-  }
+ .container-sectionCards{
+  grid-template-columns: 1fr 1fr;
+ }
 }
