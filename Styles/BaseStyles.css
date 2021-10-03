@@ -31,6 +31,7 @@
 }
 /********* ********* End Block spiner ********* *********/
 
+
 .header{
   position: fixed;
   width: 100%;
@@ -84,7 +85,7 @@
   background-color: #000;
 }
 .nav__item{
-  padding: .4rem;
+  padding: .8rem;
   color: #666;
   background: #000;
   outline: none;
@@ -98,7 +99,6 @@
 }
 .nav__item:hover{
   color: #fff;
-  background: radial-gradient(#222, #000);
   cursor: pointer;
 }
 .languages{
@@ -109,12 +109,11 @@
 }
 .language__item{
   display: block;
-  padding: .4rem;
+  padding: .8rem;
   color: #666;
 }
 .language__item:hover{
   color: #fff;
-  background: radial-gradient(#222, #000);
 }
 
 
@@ -152,7 +151,7 @@
  font-size: inherit;
  font-family: inherit;
 }
-.container .text__shadow::before{
+.container .text__shadow::before, .container .text__shadow::after{
  z-index: -1;
  position: absolute;
  top: 0;
@@ -162,10 +161,10 @@
  -webkit-text-fill-color: transparent;
  background-clip: text;
 }
-.container .text__shadow1::before{
+.container .text__shadow1::before, .container .text__shadow1::after{
  content: "Develop the best version of yourself";
 }
-.container .text__shadow2::before{
+.container .text__shadow2::before, .container .text__shadow2::after{
  content: "and become a technological specialist.";
 }
 
@@ -383,7 +382,7 @@
  padding: .2rem;
  padding-left: 0;
 }
-.btnShowCourseCards{
+.btnShowCourseSection{
  align-self: center;
  margin-top: 1rem;
  padding: .4rem;
@@ -391,10 +390,23 @@
  max-width: 300px;
 }
 
+/* Module data */
+.module__header-title{
+ font-family: aladin;
+ font-size: 2rem;
+}
+.moduleContentList li{
+ display: flex;
+ justify-content: space-between;
+ padding: .4rem;
+}
+.moduleContentList li:hover{
+ cursor: pointer;
+ background: linear-gradient(#111, #000);
+}
+
 /* Footer */
 .footer{
-  margin-top: 1rem;
-  max-height: 82px;
   padding: .4rem;
   text-align: center;
   font-size: .8rem;

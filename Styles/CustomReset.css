@@ -96,26 +96,21 @@ a:hover{
  margin-left: 1rem;
  list-style: none;
 }
-/* .container-video {
-  position: relative;
-  height: 0;
-  width: 100%;
-  max-width: 683px;
-  padding-bottom: 56.25%;
-  outline: 1px solid var(--black);
-  box-shadow: .0rem .0rem .8rem var(--black), .0rem .0rem .4rem var(--black);
-  margin: 0rem auto;
-}
-@media screen and (min-width: 683px) {
-  .container-video {
-    padding-bottom: 384px;
-  }
+.container-video {
+ position: relative;
+ height: 0;
+ width: 100%;
+ margin: 0rem auto;
+ padding-bottom: 56.25%;
+ border-radius: .4rem;
+ overflow: hidden;
 }
 .container-video__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-} */
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+}
+
 /********* ********* End Block modifiers ********* *********/

@@ -5,9 +5,12 @@ let $menuButton= document.querySelectorAll(".menuButton");
 /* Functions scope */{
  /* Function Scroll up of the page */
  function ScrollUp(){
-  let currentScroll= document.documentElement.scrollTop;
-  if(currentScroll> 0){ window.scrollTo( 0, 0); }
+  let $documentScroll= document.documentElement,
+  $mainScroll= document.querySelector("main");
+  if($documentScroll.scrollTop>0){$documentScroll.scrollTo(0, 0);}
+  else if($mainScroll.scrollTop> 0){$mainScroll.scrollTo(0, 0);}
  }
+
  //gets true (show) or false (hide)
  function ShowHideSpiner(show){
   let $spiner= document.querySelector(".container-spiner");
@@ -180,6 +183,7 @@ let $menuButton= document.querySelectorAll(".menuButton");
   currentModule= -1;
 
  function SwitchToCourseSection(index){
+  ScrollUp();
   let $courseSection= document.querySelectorAll(".mainSection")[1].querySelectorAll(".mainSection__subSection");
   for (let i = 0; i < 3; i++) {
    if(i==index){
@@ -202,134 +206,202 @@ let $menuButton= document.querySelectorAll(".menuButton");
 
    /* Elements to create the content */
    let $template= document.getElementById("template-courseSection").content,
-    $courseSection= document.querySelectorAll(".mainSection")[1].querySelectorAll(".mainSection__subSection")[1],
-    $fragment= document.createDocumentFragment(),
-    $cloned= document.importNode($template, true);
+   $courseSection= document.querySelectorAll(".mainSection")[1].querySelectorAll(".mainSection__subSection")[1],
+   $fragment= document.createDocumentFragment(),
+   $cloned= document.importNode($template, true);
 
-    /* Setting image data */
-    $cloned.querySelector("img").setAttribute("src", CreateSrcOrSrcSet(courseData.topic, true));
-    $cloned.querySelector("img").setAttribute("srcset", CreateSrcOrSrcSet(courseData.topic, false));
-    $cloned.querySelector("img").setAttribute("alt", courseData.imageAlt);
-    $cloned.querySelector("img").setAttribute("title", courseData.imageTitle);
+   /* Setting image data */
+   $cloned.querySelector("img").setAttribute("src", CreateSrcOrSrcSet(courseData.topic, true));
+   $cloned.querySelector("img").setAttribute("srcset", CreateSrcOrSrcSet(courseData.topic, false));
+   $cloned.querySelector("img").setAttribute("alt", courseData.imageAlt);
+   $cloned.querySelector("img").setAttribute("title", courseData.imageTitle);
 
-    /* Setting header data */
-    $cloned.querySelector(".course__header-title").textContent= courseData.title;
-
-    /* Setting description pharraph data */
-    $cloned.querySelector(".course__header-text").textContent= courseData.descriptionCourse;
-        
-    /* Setting course "meta" data */
-    $cloned.querySelectorAll(".Kx-icon")[0].textContent= courseData.modules.length;
-    /* remove display-n on html $cloned.querySelectorAll(".Kx-icon")[1].textContent= courseData.duration; */
-    $cloned.querySelectorAll(".Kx-icon")[2].textContent= courseData.release;
-    $cloned.querySelectorAll(".Kx-icon")[3].textContent= courseData.lastUpdate;
-    
-    /* Setting requirements data */
-    let $list1= $cloned.querySelector(".container").querySelectorAll(".list")[1];
-    courseData.requirements.forEach(element => {
-     let $item= document.createElement("li");
-     /* Just create the item */
-     if( typeof element== "string"){
-      $item.textContent= element;
-      $list1.appendChild($item);
+   /* Setting header data */
+   $cloned.querySelector(".course__header-title").textContent= courseData.title;
+   $cloned.querySelector(".course__header-text").textContent= courseData.descriptionCourse;
+       
+   /* Setting course "meta" data */
+   $cloned.querySelectorAll(".Kx-icon")[0].textContent= courseData.modules.length;
+   $cloned.querySelectorAll(".Kx-icon")[1].textContent= "##:##:##";
+   $cloned.querySelectorAll(".Kx-icon")[2].textContent= courseData.release;
+   $cloned.querySelectorAll(".Kx-icon")[3].textContent= courseData.lastUpdate;
+   
+   /* Setting requirements data */
+   let $list1= $cloned.querySelector(".container").querySelectorAll(".list")[1];
+   courseData.requirements.forEach(element => {
+    let $item= document.createElement("li");
+    /* Just create the item */
+    if( typeof element== "string"){
+     $item.textContent= element;
+     $list1.appendChild($item);
+    }
+    /* Create the item and his nested elements */
+    else{
+     $item.textContent= element[0];
+     let $subList= document.createElement("ul");
+     $subList.classList.add("listSubItem")
+     $item.appendChild($subList);
+     for (let i= 1; i< element.length; i++) {
+      let $subItem= document.createElement("li");
+      $subItem.textContent= element[i];
+      $subList.appendChild($subItem);
      }
-     /* Create the item and his nested elements */
-     else{
-      $item.textContent= element[0];
-      let $subList= document.createElement("ul");
-      $subList.classList.add("listSubItem")
-      $item.appendChild($subList);
-      for (let i= 1; i< element.length; i++) {
-       let $subItem= document.createElement("li");
-       $subItem.textContent= element[i];
-       $subList.appendChild($subItem);
-      }
-      $list1.appendChild($item);
+     $list1.appendChild($item);
+    }
+   });
+
+   /* Setting optional requirements data */
+   let $list2= $cloned.querySelector(".container").querySelectorAll(".list")[2];
+   courseData.optionalRequirements.forEach(element => {
+    let $item= document.createElement("li");
+    /* Just create the item */
+    if( typeof element== "string"){
+     $item.textContent= element;
+     $list2.appendChild($item);
+    }
+    /* Create the item and his nested elements */
+    else{
+     $item.textContent= element[0];
+     let $subList= document.createElement("ul");
+     $subList.classList.add("listSubItem")
+     $item.appendChild($subList);
+     for (let i= 1; i< element.length; i++) {
+      let $subItem= document.createElement("li");
+      $subItem.textContent= element[i];
+      $subList.appendChild($subItem);
      }
-    });
+     $list2.appendChild($item);
+    }
+   });
 
-    /* Setting optional requirements data */
-    let $list2= $cloned.querySelector(".container").querySelectorAll(".list")[2];
-    courseData.optionalRequirements.forEach(element => {
-     let $item= document.createElement("li");
-     /* Just create the item */
-     if( typeof element== "string"){
-      $item.textContent= element;
-      $list2.appendChild($item);
+   /* Setting resources data */
+   let $resources= $cloned.querySelectorAll(".resourceItem");
+   $resources[0].setAttribute("download", courseData.manualName +".pdf");
+   $resources[0].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf");
+   /* remember remove html display -n
+   $resources[1].setAttribute("download", courseData.manualName +".pdf");
+   $resources[1].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf");
+   $resources[2].setAttribute("download", courseData.manualName +"-exercices.pdf");
+   $resources[2].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf"); */
+
+   /* Setting modules data */
+   let $modulesList= $cloned.querySelector(".courseModules");
+   $modulesList.querySelector(".Kx-icon").classList.add(courseData.iconName);
+   
+   for (let i= 0; i< courseData.modules.length; i++) {
+    let $element= courseData.modules[i],
+    $item= document.createElement("li"),
+    $moduleImg= document.createElement("img"),
+    $moduleDiv= document.createElement("div"),
+    $span= document.createElement("span");
+
+    $item.classList.add("courseModules__module");
+    $item.onclick= function(){
+     CreateModuleSection(i);
+     if(player01===true){
+      CreateYoutubePlayer01();
      }
-     /* Create the item and his nested elements */
-     else{
-      $item.textContent= element[0];
-      let $subList= document.createElement("ul");
-      $subList.classList.add("listSubItem")
-      $item.appendChild($subList);
-      for (let i= 1; i< element.length; i++) {
-       let $subItem= document.createElement("li");
-       $subItem.textContent= element[i];
-       $subList.appendChild($subItem);
-      }
-      $list2.appendChild($item);
-     }
-    });
+     SwitchToCourseSection(2);
+    };
 
-    /* Setting resources data */
-    let $resources= $cloned.querySelectorAll(".resourceItem");
-    $resources[0].setAttribute("download", courseData.manualName +".pdf");
-    $resources[0].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf");
-    /* remember remove html display -n
-    $resources[1].setAttribute("download", courseData.manualName +".pdf");
-    $resources[1].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf");
-    $resources[2].setAttribute("download", courseData.manualName +"-exercices.pdf");
-    $resources[2].setAttribute("href", "../Sources/Manuals/English/" +courseData.manualName +".pdf"); */
-
-    /* Setting modules data */
-    let $modulesList= $cloned.querySelector(".courseModules");
-    $modulesList.querySelector(".Kx-icon").classList.add(courseData.iconName);
-    
-    for (let i= 0; i< courseData.modules.length; i++) {
-     let $element= courseData.modules[i],
-     $item= document.createElement("li"),
-     $moduleImg= document.createElement("img"),
-     $moduleDiv= document.createElement("div"),
-     $span= document.createElement("span");
-
-     $item.classList.add("courseModules__module");
-     $item.onclick= function(){
-      CreateModuleSection(i);
-      SwitchToCourseSection(2);
-     };
-
-     /* Setting img data */
-     $moduleImg.classList.add("courseModules__module-image");
-     $moduleImg.setAttribute("alt", "Module image")
-     if(i<10){
-      $moduleImg.setAttribute("src", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + i +".png");
-      $moduleImg.setAttribute("srcset", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + i +".webp");
-     }
-     else{
-      $moduleImg.setAttribute("src", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + i +".png");
-      $moduleImg.setAttribute("srcset", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + i +".webp");
-     }
-
-     /* Setting module name */
-     $moduleDiv.innerText= $element.title;
-
-     /* Setting span data */
-     $span.classList.add("Kx-icon", "Kx-play-button");
-     $span.innerText= $element.duration;
-
-
-     /* Adding the content to the module */
-     $item.appendChild($moduleImg);
-     $moduleDiv.appendChild($span);
-     $item.appendChild($moduleDiv);
-     $modulesList.appendChild($item);
+    /* Setting img data */
+    $moduleImg.classList.add("courseModules__module-image");
+    $moduleImg.setAttribute("alt", "Module image")
+    if(i<10){
+     $moduleImg.setAttribute("src", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + i +".png");
+     $moduleImg.setAttribute("srcset", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + i +".webp");
+    }
+    else{
+     $moduleImg.setAttribute("src", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + i +".png");
+     $moduleImg.setAttribute("srcset", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + i +".webp");
     }
 
-    /* Adding the content to the document */
-    $fragment.appendChild($cloned);
-    $courseSection.innerHTML="";
-    $courseSection.appendChild($fragment);
+    /* Setting module name */
+    $moduleDiv.innerText= $element.title;
+
+    /* Setting span data */
+    $span.classList.add("Kx-icon", "Kx-play-button");
+    $span.innerText= $element.duration;
+
+    /* Adding the content to the module */
+    $item.appendChild($moduleImg);
+    $moduleDiv.appendChild($span);
+    $item.appendChild($moduleDiv);
+    $modulesList.appendChild($item);
+   }
+
+   /* Adding the content to the document */
+   $fragment.appendChild($cloned);
+   $courseSection.innerHTML="";
+   $courseSection.appendChild($fragment);
+  }
+ }
+
+ function CreateModuleSection(index){
+  if(currentModule!= index){
+   currentModule= index;
+
+   let moduleData= CoursesData[currentCourse].modules[index];
+
+   /* Elements to create the content */
+   let $template= document.getElementById("template-moduleSection").content,
+   $moduleSection= document.querySelectorAll(".mainSection")[1].querySelectorAll(".mainSection__subSection")[2],
+   $fragment= document.createDocumentFragment(),
+   $cloned= document.importNode($template, true);
+
+   /* Setting video data */
+   $cloned.querySelector(".container-video__video").setAttribute("src", "https://www.youtube.com/embed/" +moduleData.youtubeId +"?enablejsapi=1");
+
+   /* Setting header data */
+   $cloned.querySelector(".module__header-title").textContent= moduleData.title;
+   $cloned.querySelector(".module__header-text").textContent= moduleData.description;
+
+   /* Setting module "meta" data */
+   $cloned.querySelectorAll(".Kx-icon")[0].textContent= moduleData.content.length;
+   $cloned.querySelectorAll(".Kx-icon")[1].textContent= moduleData.duration;
+   $cloned.querySelectorAll(".Kx-icon")[2].textContent= moduleData.lastUpdate;
+   $cloned.querySelectorAll(".Kx-icon")[3].textContent= moduleData.release;
+
+   /* Setting module sections */
+   let $moduleContent= $cloned.querySelector(".moduleContentList"),
+   $contentFragment= document.createDocumentFragment();
+
+   for (let i = 0; i < moduleData.content.length; i++) {
+    let moduleTheme= moduleData.content[i],
+    $item= document.createElement("li"),
+    $span= document.createElement("span");
+    $span.classList.add("Kx-icon", "Kx-clock");
+    
+    $item.innerText= moduleTheme[0];
+    if(typeof moduleTheme[1]== "string") {
+     $span.innerText= moduleTheme[1];
+     $item.appendChild($span);
+    } else {
+     $item.style.setProperty("flex-direction", "column");
+     $item.style.setProperty("padding-right", "0");
+
+     let $subList= document.createElement("ul");
+     $subList.classList.add("list");
+
+     for (let j = 0; j < moduleTheme.length; j++) {
+      let $subItem= document.createElement("li"),
+      $span2= document.importNode($span);
+
+      $subItem.innerText= moduleTheme[i][j][0];
+      $span2.innerText= moduleTheme[i][j][1];
+      $subItem.appendChild($span2);
+      $subList.appendChild($subItem);
+     }
+     $item.appendChild($subList);
+    }
+    $contentFragment.appendChild($item);
+   }
+   $moduleContent.appendChild($contentFragment);
+
+   /* Adding the content to the document */
+   $fragment.appendChild($cloned);
+   $moduleSection.innerHTML="";
+   $moduleSection.appendChild($fragment);
   }
  }
  
@@ -340,4 +412,32 @@ let $menuButton= document.querySelectorAll(".menuButton");
   CreateCourseSection(0);
   SwitchToCourseSection(1);
  }
+}
+
+/* Youtube videos scope */{
+ var player01, player02;
+
+ function CreateYoutubePlayer01(){
+  player01 = new YT.Player('player-module', {
+   events: {
+    /* 'onReady': onPlayerReady, */
+   }
+  });
+ }
+
+ function onYouTubeIframeAPIReady() {
+  player01= true;
+  player02 = new YT.Player('player-aboutUs', {
+   events: {
+    /* 'onReady': onPlayerReady, */
+   }
+  });
+ }
+
+ /* function onPlayerReady(){
+ } */
+
+ /* function onPlayerStateChange() {
+  console.log("hello");
+ } */
 }

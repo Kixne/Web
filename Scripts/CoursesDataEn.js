@@ -25,8 +25,8 @@ const CoursesData= [
    ],
    [
     "Visualizator",
-    "In the case of using PC, it is a browser (We do not recommend IE)",    
-    "In the case of using a phone, it can be a browser or the same application we have downloaded",
+    "In the case of using PC, it is a browser",    
+    "In the case of using a phone, it can be a browser or the application we have downloaded",
    ]
   ],
   
@@ -35,19 +35,22 @@ const CoursesData= [
   ],
   
   modules: [
-   {
-    title: "Introduction to HTML course",
+   /* module */{
+    title: "Introduction to HTML/HTML5 course",
     description: "Sample text for module description",
     release: "##.##.##",
     lastUpdate: "##.##.##",
     duration: "##:##",
-    urlId: "exampleYoutubeUrlId",
-    moduleCopyLink: "sample url",
+    youtubeId: "M7lc1UVf-VE",
     content: [
-     {
-      title: "sampleText",
-      time: "##:##",
-     }
+     ["PrimaryTheme", "0:00"],
+     [
+      "PrimaryTheme",
+      [
+       ["subTheme1", "0:00"],
+       ["subTheme2", "0:00"],
+      ]
+     ],
     ]
    }
   ]
