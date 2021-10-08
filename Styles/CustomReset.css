@@ -35,9 +35,13 @@ body {
   font-size: 16px;
   background: #000;
 }
-.main{
-  max-width: 1366px;
-  margin: auto;
+.mainSection{
+ margin: 0 auto;
+ max-width: 1366px;
+}
+.subSection__header{
+ max-width: 720px;
+ margin: 0 auto;
 }
 em{
   font-style: normal;
@@ -59,6 +63,10 @@ iframe{
 }
 a{
  display: inline-block;
+ padding: .2rem;
+}
+a *{
+ color: inherit;
 }
 a:hover{
  color: #6400cc;
@@ -80,6 +88,7 @@ a:hover{
 .Kx-icon{
   margin: 0 .2rem;
   color: inherit;
+  font-size: inherit;
 }
 .list__header{
  margin-top: 1rem;
@@ -104,6 +113,7 @@ a:hover{
  padding-bottom: 56.25%;
  border-radius: .4rem;
  overflow: hidden;
+ background-color: #6400cc;
 }
 .container-video__video {
  position: absolute;

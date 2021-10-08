@@ -3,7 +3,7 @@ let $nav= document.querySelectorAll(".nav");
 let $menuButton= document.querySelectorAll(".menuButton");
 
 /* Functions scope */{
- /* Function Scroll up of the page */
+ /* Scroll up the page */
  function ScrollUp(){
   let $documentScroll= document.documentElement,
   $mainScroll= document.querySelector("main");
@@ -11,7 +11,7 @@ let $menuButton= document.querySelectorAll(".menuButton");
   else if($mainScroll.scrollTop> 0){$mainScroll.scrollTo(0, 0);}
  }
 
- //gets true (show) or false (hide)
+ /* gets true (show) or false (hide) */
  function ShowHideSpiner(show){
   let $spiner= document.querySelector(".container-spiner");
   if(show){
@@ -25,6 +25,35 @@ let $menuButton= document.querySelectorAll(".menuButton");
    }, 500);
   }
  }
+
+ /* setting buttons-copy */
+ document.querySelectorAll(".copyableElement__button").forEach($copyButton => {
+  $copyButton.onclick= function(){
+   CopyElement(this.parentElement);
+   /* setTimeout(() => { this.innerText= "Copy"; }, 1000); */
+  }
+ });
+ function CopyElement($copyableElementContainer){
+  /* Selecting the value */
+  let $copyableItem= $copyableElementContainer.querySelector(".copyableElement"),
+  $copyButton= $copyableElementContainer.querySelector(".copyableElement__button");
+  $copyableItem.select();
+  $copyableItem.setSelectionRange(0, -1); /* For mobile devices */;
+  /* Copying the value */
+  navigator.clipboard.writeText($copyableItem.value);
+  console.log("copied element");
+  /* Showing that the value has been copied */
+  $copyButton.innerText= "Copied";
+  setTimeout(() => { $copyButton.innerText= "Copy"; }, 1000);
+ }
+
+ /* GenericElement button, hider data */
+ document.querySelectorAll(".genericElement__button").forEach(button => {
+  button.onclick= function(){
+   this.parentElement.querySelector(".genericElement__data").classList.toggle("display-n");
+   this.parentElement.querySelector(".genericElement__data").classList.toggle("display-y");
+  }
+ });
 
  /* Create course section Src or SrcSet  */
  function CreateSrcOrSrcSet(dirName, type){
@@ -54,7 +83,6 @@ let $menuButton= document.querySelectorAll(".menuButton");
   /* Returning the expected source value */
   return value;
  }
-
 }
 
 /* Nav scope */{
@@ -198,6 +226,7 @@ let $menuButton= document.querySelectorAll(".menuButton");
  }
 
  function CreateCourseSection(index){
+  /* index= courseIndex to be created */
   if(currentCourse!= index){
    currentCourse= index;
    currentModule= -1;
@@ -337,11 +366,11 @@ let $menuButton= document.querySelectorAll(".menuButton");
   }
  }
 
- function CreateModuleSection(index){
-  if(currentModule!= index){
-   currentModule= index;
-
-   let moduleData= CoursesData[currentCourse].modules[index];
+ function CreateModuleSection(currentModuleIndex){
+  if(!(currentModule== currentModuleIndex)){
+   currentModule= currentModuleIndex;
+   
+   let moduleData= CoursesData[currentCourse].modules[currentModuleIndex];
 
    /* Elements to create the content */
    let $template= document.getElementById("template-moduleSection").content,
@@ -350,7 +379,7 @@ let $menuButton= document.querySelectorAll(".menuButton");
    $cloned= document.importNode($template, true);
 
    /* Setting video data */
-   $cloned.querySelector(".container-video__video").setAttribute("src", "https://www.youtube.com/embed/" +moduleData.youtubeId +"?enablejsapi=1");
+   $cloned.querySelector(".container-video__video").setAttribute("src", "https://www.youtube.com/embed/" +moduleData.youtubeId +"?controls=0&rel=0&disablekb=0&enablejsapi=1");
 
    /* Setting header data */
    $cloned.querySelector(".module__header-title").textContent= moduleData.title;
@@ -362,40 +391,54 @@ let $menuButton= document.querySelectorAll(".menuButton");
    $cloned.querySelectorAll(".Kx-icon")[2].textContent= moduleData.lastUpdate;
    $cloned.querySelectorAll(".Kx-icon")[3].textContent= moduleData.release;
 
-   /* Setting module sections */
+   /* Setting module content (temary) */
    let $moduleContent= $cloned.querySelector(".moduleContentList"),
    $contentFragment= document.createDocumentFragment();
 
-   for (let i = 0; i < moduleData.content.length; i++) {
-    let moduleTheme= moduleData.content[i],
-    $item= document.createElement("li"),
-    $span= document.createElement("span");
-    $span.classList.add("Kx-icon", "Kx-clock");
+   /* Traversing module themes */
+   moduleData.content.forEach(moduleTheme => {
+    let $itemTheme= document.createElement("li"),
+    $itemSpan= document.createElement("span");
     
-    $item.innerText= moduleTheme[0];
-    if(typeof moduleTheme[1]== "string") {
-     $span.innerText= moduleTheme[1];
-     $item.appendChild($span);
-    } else {
-     $item.style.setProperty("flex-direction", "column");
-     $item.style.setProperty("padding-right", "0");
-
-     let $subList= document.createElement("ul");
-     $subList.classList.add("list");
-
-     for (let j = 0; j < moduleTheme.length; j++) {
-      let $subItem= document.createElement("li"),
-      $span2= document.importNode($span);
-
-      $subItem.innerText= moduleTheme[i][j][0];
-      $span2.innerText= moduleTheme[i][j][1];
-      $subItem.appendChild($span2);
-      $subList.appendChild($subItem);
+    $itemSpan.classList.add("Kx-icon", "Kx-clock");
+    /* setting module theme */
+    $itemTheme.textContent= moduleTheme[0];
+    if(typeof moduleTheme[1] == "string"){
+     $itemSpan.textContent= moduleTheme[1];
+     $itemTheme.appendChild($itemSpan);
+     
+     $itemTheme.onclick= function(){
+      ScrollUp();
+      player01.seekTo(ModuleTime(moduleTheme[1]));
      }
-     $item.appendChild($subList);
     }
-    $contentFragment.appendChild($item);
-   }
+    /* setting module nested themes */
+    else{
+     let $nestedThemes= document.createElement("ul");
+
+     moduleTheme[1].forEach(nestedModuleTheme => {
+      let $nestedItemTheme= document.createElement("li"),
+      $nestedItemSpan= document.createElement("span");
+      
+      $nestedItemTheme.textContent= nestedModuleTheme[0];
+      $nestedItemSpan.textContent= nestedModuleTheme[1];
+      $nestedItemSpan.classList.add("Kx-icon", "Kx-clock");
+      $nestedItemTheme.appendChild($nestedItemSpan);
+      $nestedItemTheme.onclick= function(){
+       ScrollUp();
+       player01.seekTo(ModuleTime(nestedModuleTheme[1]));
+      }
+
+      $nestedThemes.appendChild($nestedItemTheme)
+     });
+
+     $itemTheme.style.setProperty("flex-direction", "column");
+     $itemTheme.style.setProperty("padding-right", "0");
+     $itemTheme.appendChild($nestedThemes);
+    }
+
+    $moduleContent.appendChild($itemTheme);
+   });
    $moduleContent.appendChild($contentFragment);
 
    /* Adding the content to the document */
@@ -404,40 +447,65 @@ let $menuButton= document.querySelectorAll(".menuButton");
    $moduleSection.appendChild($fragment);
   }
  }
+
+ function ModuleTime(x){
+  let preTime= x.split(":"),
+  time;
+
+  preTime.reverse();
+  time= parseInt(preTime[0])+ (parseInt(preTime[1])*60);
+  if( preTime[2]!=undefined){ time+= (parseInt(preTime[2])*3600);}
+  if(time>0){ time-=1;}
+  return time;
+ }
  
  let $courseCardButton= document.querySelectorAll(".courseCard__body-button");
- /* $courseButton will be declared with a loop */
- $courseCardButton[0].onclick= function(){
-  /* we will send a index that verify course index */
-  CreateCourseSection(0);
-  SwitchToCourseSection(1);
+ $courseCardButton.forEach(element => {
+  element.onclick= function(){
+   alert("Course available coming soon!")
+  }
+ });
+ for (let i = 0; i < $courseCardButton.length; i++) {
+  if(i==0){
+   $courseCardButton[i].onclick= function(){
+    CreateCourseSection(i);
+    SwitchToCourseSection(1);
+   }
+   continue;
+  }
+  $courseCardButton[i].onclick= function(){alert("Course available coming soon!");}
  }
 }
 
 /* Youtube videos scope */{
  var player01, player02;
 
- function CreateYoutubePlayer01(){
-  player01 = new YT.Player('player-module', {
-   events: {
-    /* 'onReady': onPlayerReady, */
-   }
-  });
- }
-
  function onYouTubeIframeAPIReady() {
   player01= true;
   player02 = new YT.Player('player-aboutUs', {
-   events: {
-    /* 'onReady': onPlayerReady, */
+   events:{
+    'onStateChange': onPlayerStateChange
    }
   });
  }
 
- /* function onPlayerReady(){
- } */
+ function CreateYoutubePlayer01(){
+  player01 = new YT.Player('player-module', {
+   events: {
+    'onStateChange': onPlayerStateChange
+   }
+  });
+ }
 
- /* function onPlayerStateChange() {
-  console.log("hello");
- } */
+ function onPlayerStateChange(event) {
+  switch (event.data) {
+   case 0: //0== video ended
+    event.target.stopVideo();
+    break;
+
+   case 1: //1== video play
+    //stop the other player
+    break;
+  }
+ }
 }

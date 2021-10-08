@@ -71,6 +71,7 @@
  /* header +footer +foorerMargin */
  height: calc(100vh - 130px);
  overflow-y: scroll;
+ padding-bottom: 1rem;
 }
 .footer{
  height: 82px;
@@ -83,8 +84,6 @@
  .container-sectionCards{
   grid-template-columns: 1fr 1fr;
  }
-}
-@media screen and (min-width: 983px){
  .container-video {
   max-width: 683px;
   padding-bottom: 384px; /* =.container-video max-width *(16/9) */

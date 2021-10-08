@@ -40,15 +40,20 @@ const CoursesData= [
     description: "Sample text for module description",
     release: "##.##.##",
     lastUpdate: "##.##.##",
-    duration: "##:##",
-    youtubeId: "M7lc1UVf-VE",
+    duration: "0:00",
+    youtubeId: "X7PtXt1fRjk",
     content: [
-     ["PrimaryTheme", "0:00"],
-     [
-      "PrimaryTheme",
-      [
+     ["Title1", "0:00"],
+     ["Title2",[
        ["subTheme1", "0:00"],
        ["subTheme2", "0:00"],
+       ["subTheme3", "0:00"]
+      ]
+     ],
+     ["Title3",[
+       ["subTheme1", "0:00"],
+       ["subTheme2", "0:00"],
+       ["subTheme3", "0:00"]
       ]
      ],
     ]
