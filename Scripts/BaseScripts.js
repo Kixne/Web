@@ -57,7 +57,7 @@ let $menuButton= document.querySelectorAll(".menuButton");
 
  /* Create course section Src or SrcSet  */
  function CreateSrcOrSrcSet(dirName, type){
-  let value= "../Sources/Images/MainSection_Courses/";
+  let value= "./Sources/Images/MainSection_Courses/";
 
   /* If type== true then, we create the src value */
   if(type){
@@ -337,12 +337,12 @@ let $menuButton= document.querySelectorAll(".menuButton");
     $moduleImg.classList.add("courseModules__module-image");
     $moduleImg.setAttribute("alt", "Module image")
     if(i<10){
-     $moduleImg.setAttribute("src", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + i +".png");
-     $moduleImg.setAttribute("srcset", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + i +".webp");
+     $moduleImg.setAttribute("src", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + i +".png");
+     $moduleImg.setAttribute("srcset", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + i +".webp");
     }
     else{
-     $moduleImg.setAttribute("src", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + i +".png");
-     $moduleImg.setAttribute("srcset", "../Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + i +".webp");
+     $moduleImg.setAttribute("src", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + i +".png");
+     $moduleImg.setAttribute("srcset", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + i +".webp");
     }
 
     /* Setting module name */
