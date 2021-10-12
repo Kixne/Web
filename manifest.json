@@ -1,0 +1,109 @@
+{
+ "name": "Kixne Web (english)",
+ "short_name": "Kixne Web",
+ "description": "",
+ "background_color": "#000",
+ "theme_color": "#6400cc",
+ "orientation": "portrait",
+ "display": "standalone",
+ "start_url": "./?utm_source=web_app_manifest",
+ "scope": "./",
+ "lang": "en",
+ "icons": [
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon1024px.webp",
+   "sizes": "1024x1024",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon512px.webp",
+   "sizes": "512x512",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon384px.webp",
+   "sizes": "384x384",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon256px.webp",
+   "sizes": "256x256",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon192px.webp",
+   "sizes": "192x192",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon180px.webp",
+   "sizes": "180x180",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon152px.webp",
+   "sizes": "152x152",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon144px.webp",
+   "sizes": "144x144",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon128px.webp",
+   "sizes": "128x128",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon120px.webp",
+   "sizes": "120x120",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon114px.webp",
+   "sizes": "114x114",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon96px.webp",
+   "sizes": "96x96",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon76px.webp",
+   "sizes": "76x76",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon72px.webp",
+   "sizes": "72x72",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon64px.webp",
+   "sizes": "64x64",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon60px.webp",
+   "sizes": "60x60",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon57px.webp",
+   "sizes": "57x57",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon32px.webp",
+   "sizes": "32x32",
+   "type": "image/webp"
+  },
+  {
+   "src": "./Sources/Icons/IconKx/KxIcon16px.webp",
+   "sizes": "16x16",
+   "type": "image/webp"
+  }
+ ]
+}
