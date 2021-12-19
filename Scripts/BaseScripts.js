@@ -5,6 +5,7 @@ let $menuButton= document.querySelectorAll(".menuButton");
 /* Functions scope */{
  /* ServiceWorker */
  if("serviceWorker" in navigator){
+  console.info("ServiceWorker available \n(js scope line07)");
   navigator.serviceWorker.register("./ServiceWorker_En.js")
   .then(reg => console.info("ServiceWorked registered", reg))
   .catch(err => console.warn("Error during ServiceWorked registry", err))
@@ -337,26 +338,26 @@ let $menuButton= document.querySelectorAll(".menuButton");
      SwitchToCourseSection(2);
     };
     
-    /* Setting img data */
+    /* Setting module img data */
     $moduleImg.classList.add("courseModules__module-image");
     $moduleImg.setAttribute("alt", "Module image")
-    if(i<10){
-     $moduleImg.setAttribute("src", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + i +".png");
-     $moduleImg.setAttribute("srcset", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + i +".webp");
+    if(i<9){
+     $moduleImg.setAttribute("src", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + (i+1) +"Thumbnail.png");
+     $moduleImg.setAttribute("srcset", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module0" + (i+1) +"Thumbnail.webp");
     }
     else{
-     $moduleImg.setAttribute("src", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + i +".png");
-     $moduleImg.setAttribute("srcset", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + i +".webp");
+     $moduleImg.setAttribute("src", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + (i+1) +"Thumbnail.png");
+     $moduleImg.setAttribute("srcset", "./Sources/Images/MainSection_Courses/" +courseData.topic +"/Modules/"  + "Module" + (i+1) +"Thumbnail.webp");
     }
     
     /* Setting module name */
     $moduleDiv.innerText= $element.title;
     
-    /* Setting span data */
+    /* Setting module span data */
     $span.classList.add("Kx-icon", "Kx-play-button");
     $span.innerText= $element.duration;
     
-    /* Adding the content to the module */
+    /* Adding the content to the module list and item */
     $item.appendChild($moduleImg);
     $moduleDiv.appendChild($span);
     $item.appendChild($moduleDiv);

@@ -381,7 +381,8 @@
 .courseModules__module-image{
  display: none;
  margin-right: 1rem;
- width: 200px;
+ width: 128px;
+ height: 72px;
 }
 .resourceItem{
  padding: .2rem;
